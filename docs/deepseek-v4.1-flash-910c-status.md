@@ -8,6 +8,14 @@
 
 最新确定的输入路线：**直接使用官方 `deepseek-ai/DeepSeek-V4.1-Flash-1017`，不采用第三方 W4A8 权重或离线重新量化/转换链。** 第三方仓库仅提供算子实现与适配经验参考。必要的运行时局部解码、精度提升、布局重排封装在 DeepInfer 的 910C 后端中，保留官方权重和 scale 语义；当前尚未实现或验证这条整模型路径。
 
+执行计划与最新资产盘点已放入目标 fork：
+
+- [910C 适配 TODO](../ref/DeepInfer/TODO.md)
+- [syf 可复用资产清单](../ref/DeepInfer/doc/ascend910c-syf-assets.md)
+- [环境搭建进展](../ref/DeepInfer/doc/ascend910c-environment.md)：已创建 Python 3.12 基础环境，已有 CANN9.1/Torch2.10 容器的独立 BF16 smoke 通过；DeepInfer 目标依赖和整模型尚未验收。
+
+官方权重命名接入已完成：[`/root/yuhao/DeepSeek-V4.1-Flash-1017-HF` 的标准软链接视图与审计记录](../ref/DeepInfer/doc/ascend910c-checkpoint.md)。原始归档未改动、未转换或复制权重；这不代表完整 loader 或 910C 推理已验证。
+
 本机优先考察的具体 checkpoint 是 **V4.1-Flash-1017**，包括原始权重归档和 Ascend W8A8 权重。后续应固定 checkpoint、配置、框架版本和镜像 digest，不能假设其他 V4.1 发布版本完全等价。
 
 本文整理本轮只读盘点和讨论。证据分为：
@@ -17,6 +25,14 @@
 - **待验证/计划**：尚未完成的模型加载、算子适配及端到端评估。
 
 本轮没有启动模型、运行 benchmark、修改远端环境、停止服务或重新计算大权重文件散列。本文是工作起点，不是整模型性能验收报告。
+
+### 2026-11-11 增量：PR267 复用审阅与 CPU 检查
+
+- 已固定外层参考副本 `ref/DeepInfer-ascend910c-pr267@7c67f061`，没有合并到工作 fork；[复用矩阵与原始权重阻塞](../ref/DeepInfer/doc/ascend910c-pr267-reuse.md)已记录到代码接点。
+- PR 的专用离线入口要求 ModelSlim W8A8，但通用 loader 保留官方 FP8/FP4 分支，且已有独立原始格式解码/参考 GEMM；不能据此宣称原始 checkpoint 的 910C 整模型路径已经打通。
+- 只读扫描全部 48 分片、96,085 个张量 header，并检查 47,589 对量化 weight/scale。确认专家 I8 是 packed FP4 容器；普通 FP8 block32×32 与专家/Engram 逐行 group32 不可混用。
+- 原样 PR 量化模块的 21 项合成 CPU 检查通过，未导入 torch_npu；本地标准库测试 25 项通过。JSON 证据位于 [`docs/evidence/ascend910c/`](evidence/ascend910c/)。不请求官方权重 payload，不占用 NPU，不改现有服务。
+- 下一切入点是原始格式 scale/operand adapter 与不依赖 950 packing 的加载/merge 接点；不是直接删除 W8A8 检查、套用 INT8 fused-MoE 或把全部权重展开为 BF16。
 
 ## 2. 模型结构与优化含义
 
@@ -280,7 +296,8 @@ W8A8 目录额外注意：两个 Engram 分片各约 101.38 GB。索引 `metadat
 
 ## 7. 工作约束
 
-- 尊重 `/root/syf/OWNERSHIP_yf.txt`：新任务远端文件使用 `_yf` 命名，不修改已有服务或归档。
+- 尊重 `/root/syf/OWNERSHIP_yf.txt` 及已有服务/归档边界；用户本次明确要求自己的工作区改用 `_yh`，覆盖此前借用 `_yf` 的命名约定。共享挂载点 `/root/syf/data_yf`、官方归档及 syf 原有资产仍保留 `_yf`。
+- 本项目入口改为 `/root/yuhao/deepinfer_910c_yh`，通过软链接指向实际数据盘目录 `/root/syf/data_yf/yuhao_deepinfer_910c_yh`；root 盘仅约 1.2 GB 可用，约 29 GB 工作区必须留数据盘，不能称为已搬入 root 盘。已于 2026-11-09 完成远端命名迁移，保留隔离的 `.compat_yh/legacy_layout` 旧路径兼容层，避免已安装二进制绝对路径失效。新 Python/CANN 前缀、DeepInfer 原生扩展导入与 CPU 检查已验证；未运行 NPU/整模型验证，SDK 分析工具依赖冲突仍待处理。迁移证据为 `reports_yh/naming_migration_yh.json` 和 `reports_yh/naming_migration_validation_yh.json`；细节见[环境记录](../ref/DeepInfer/doc/ascend910c-environment.md#1-工作区入口与命名)。
 - 默认只读盘点；任何模型启动、转换、编译和 profiling 需先确认资源及输出目录。
 - 不使用 V4 结果冒充 V4.1 结果，不使用软件解码后的 BF16 计算冒充原生低比特计算。
 - benchmark 必须注明 reference、形状、格式、设备、环境、eager/Graph、计时方法与数值门限。

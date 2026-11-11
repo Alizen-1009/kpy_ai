@@ -1,0 +1,129 @@
+{
+  "scope": "synthetic CPU storage/dequantization and BF16-rounded reference GEMM only",
+  "pr_commit": "7c67f0617044ff416e63db73fe772e818a552a90",
+  "source": "/root/yuhao/deepinfer_910c_yh/references_yh/pr267_7c67f06_yh/quantization.py",
+  "source_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "device": "cpu",
+  "num_threads": 1,
+  "torch_npu_imported": false,
+  "checkpoint_payload_opened": false,
+  "not_verified": [
+    "910C kernels",
+    "native FP8xFP4 numerical equivalence",
+    "official checkpoint payloads",
+    "model quality",
+    "distributed inference",
+    "performance"
+  ],
+  "cases": [
+    {
+      "name": "all_256_e4m3fn_encodings",
+      "passed": true,
+      "seconds": 0.440055946004577
+    },
+    {
+      "name": "all_256_packed_e2m1_bytes_torch.int8",
+      "passed": true,
+      "seconds": 0.0012739580124616623
+    },
+    {
+      "name": "all_256_packed_e2m1_bytes_torch.uint8",
+      "passed": true,
+      "seconds": 0.00048774899914860725
+    },
+    {
+      "name": "all_ue8m0_bytes_torch.int16_column_major_False",
+      "passed": true,
+      "seconds": 0.0004904089728370309
+    },
+    {
+      "name": "all_ue8m0_bytes_torch.int16_column_major_True",
+      "passed": true,
+      "seconds": 0.0005045089637860656
+    },
+    {
+      "name": "all_ue8m0_bytes_torch.int32_column_major_False",
+      "passed": true,
+      "seconds": 0.00036946404725313187
+    },
+    {
+      "name": "all_ue8m0_bytes_torch.int32_column_major_True",
+      "passed": true,
+      "seconds": 0.0004108159337192774
+    },
+    {
+      "name": "fp8_block32x32_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.007249193964526057
+    },
+    {
+      "name": "fp8_block32x32_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.007007855107076466
+    },
+    {
+      "name": "fp8_block32x32_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.006454753922298551
+    },
+    {
+      "name": "reject_raw_e8m0_scales_fp4_False",
+      "passed": true,
+      "seconds": 0.00010800408199429512
+    },
+    {
+      "name": "reject_wrong_scale_granularity_fp4_False",
+      "passed": true,
+      "seconds": 7.727195043116808e-05
+    },
+    {
+      "name": "fp4_row_group32_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.005890812957659364
+    },
+    {
+      "name": "fp4_row_group32_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0068127489648759365
+    },
+    {
+      "name": "fp4_row_group32_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.006740635959431529
+    },
+    {
+      "name": "reject_raw_e8m0_scales_fp4_True",
+      "passed": true,
+      "seconds": 9.425298776477575e-05
+    },
+    {
+      "name": "reject_wrong_scale_granularity_fp4_True",
+      "passed": true,
+      "seconds": 7.265293970704079e-05
+    },
+    {
+      "name": "bf16_inputs_fp32_accumulate_alias_output",
+      "passed": true,
+      "seconds": 0.002341198967769742
+    },
+    {
+      "name": "empty_dimensions_(0, 5, 32)",
+      "passed": true,
+      "seconds": 0.000296490965411067
+    },
+    {
+      "name": "empty_dimensions_(3, 0, 32)",
+      "passed": true,
+      "seconds": 0.0002183190081268549
+    },
+    {
+      "name": "empty_dimensions_(3, 5, 0)",
+      "passed": true,
+      "seconds": 0.0002802599919959903
+    }
+  ],
+  "passed": true,
+  "case_count": 21
+}

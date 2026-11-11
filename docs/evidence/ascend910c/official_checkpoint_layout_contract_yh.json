@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-11-11T06:36:08.578825+00:00",
+  "source_report": "official_checkpoint_headers_yh.json",
+  "source_report_sha256": "1b42b3376ac4165299aa39c2dda10b553042bc393acf486661ca779881be392d",
+  "header_digests_match_previous_scan": true,
+  "all_tensor_storage_sizes_and_contiguous_offsets_valid": true,
+  "tensor_count": 96085,
+  "paired_quantized_tensors_checked": 47589,
+  "layout_counts": {
+    "fp8_matrix_block32x32": 355,
+    "packed_fp4_expert": 47232,
+    "fp8_engram_row_group32": 2
+  },
+  "expert_projection_shape_counts": {
+    "w1:weight(2304, 2560),scale(2304, 160)": 15744,
+    "w2:weight(5120, 1152),scale(5120, 72)": 15744,
+    "w3:weight(2304, 2560),scale(2304, 160)": 15744
+  },
+  "header_declared_payload_bytes": 510286023000,
+  "explicit_weight_payload_bytes_read": 0,
+  "scope": "config/header shape contracts only; not payload contents or numerical execution",
+  "passed": true
+}
