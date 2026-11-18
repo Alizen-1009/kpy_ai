@@ -1,0 +1,7 @@
+{
+  "host_die": 8,
+  "remaining_test_containers": [],
+  "die8_hbm_mib_before": 3155,
+  "die8_hbm_mib_after": 3154,
+  "test_die_has_running_process": false
+}

@@ -1,0 +1,66 @@
+{
+  "scope": "synthetic adapter and BF16-rounded reference GEMM smoke; not native FP8xFP4/model equivalence",
+  "device": "npu:0",
+  "exposure": {
+    "host_die": 8,
+    "davinci_nodes": [
+      8
+    ],
+    "container_local_device": 0,
+    "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "f96ccc0d10d3ad26a1720404ee0fe3ad65d6070634c20b739114b6e93f945ed5",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "2d8c7bb7a5452705ea97f336170b71ccab2b2b0f1709c8aa27c0c259e0bdf884",
+  "ascend_home": "/root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0",
+  "checkpoint_payload_read": false,
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.2972555479500443
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.020428702933713794
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.08104986697435379
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int16",
+      "passed": false,
+      "error": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-17-02:18:31 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-17-02:18:31.679.423 AclNN_Parameter_Error(EZ1001): Shape of out should be [7, 2, 2], but current is [7, 2, 1].\n"
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int32",
+      "passed": false,
+      "error": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-17-02:18:31 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-17-02:18:31.684.814 AclNN_Parameter_Error(EZ1001): Shape of out should be [7, 1, 4], but current is [7, 1, 1].\n"
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.004440037999302149
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int16",
+      "passed": false,
+      "error": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-17-02:18:31 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-17-02:18:31.690.927 AclNN_Parameter_Error(EZ1001): Shape of out should be [2, 2, 2], but current is [2, 2, 1].\n"
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int32",
+      "passed": false,
+      "error": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-17-02:18:31 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-17-02:18:31.691.919 AclNN_Parameter_Error(EZ1001): Shape of out should be [2, 1, 4], but current is [2, 1, 1].\n"
+    }
+  ],
+  "case_count": 8,
+  "passed": false,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 104448,
+  "hf32_enabled": false
+}

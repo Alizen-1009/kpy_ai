@@ -1,0 +1,13 @@
+{
+  "scope": "official operand and scale adapter, CPU synthetic tests only",
+  "torch": "2.13.0+cpu",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "torch_npu_imported": false,
+  "source_sha256": "e87afbd34a745b5cffabe2df3d1ccfa1fe97b67d992d2208222d65dbb36ebb20",
+  "test_source_sha256": "38208033bb5daee62fecd1f987f9dca2b9dc657edbc60dd524dcb2e3cf297e8f",
+  "checkpoint_payload_read": false
+}

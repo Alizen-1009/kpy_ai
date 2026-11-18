@@ -1,0 +1,80 @@
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "cpu",
+  "exposure": null,
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "b583c8b1b869b8123f0fa5cc3aab0a37df65bf2b3b3be1a12472d81ab797bd61",
+  "materializer_sha256": "508c381e99e70190f5b760f6924e7a8a91029e5cf1806815bf070e7b4caf655b",
+  "fp4_compute_sha256": "1fad4d686e9483314b1efce1d7c6fe0f94ca9bf04503ea734240d9d9088ce578",
+  "hf_loader_sha256": "7777423c105648937b1f0011ad0958488a943d1e4c7443989e53e98ed7a38d39",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "5db1b891083701ddce11233f521590122550faa6024c787b6ca91473580f8716",
+  "ascend_home": null,
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "all",
+  "diagnostics": {},
+  "known_limitations": [],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.43968877592124045
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.0006039037834852934
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0009452069643884897
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006790671031922102
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.0006318138912320137
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0006695559713989496
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006334248464554548
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.0006048129871487617
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.48749312409199774
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.00795000116340816
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.007735582999885082
+    }
+  ],
+  "case_count": 11,
+  "passed": true,
+  "torch_npu_imported": false
+}

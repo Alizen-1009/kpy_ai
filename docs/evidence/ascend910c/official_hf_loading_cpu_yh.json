@@ -1,0 +1,18 @@
+{
+  "scope": "ordinary FP8 HF loading seam and operand adapter, synthetic CPU tests",
+  "torch": "2.13.0+cpu",
+  "tests_run": 38,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "torch_npu_imported": false,
+  "source_sha256": {
+    "deepinfer/quantization/official.py": "b583c8b1b869b8123f0fa5cc3aab0a37df65bf2b3b3be1a12472d81ab797bd61",
+    "deepinfer/hugging_face/weights.py": "7b05ee5a4592cbebbdaa41986eda63fc44fedf4215474811d653bf04691c2b21",
+    "tests/quantization/test_official_operand.py": "1c2849c10c3c667798b5eaf4e579c4a1fdca3b1bd415a2970af2d685e3cf9c33",
+    "tests/quantization/test_official_hf_loading.py": "69cb48b791d03031085e42152560eb2fa332710ca8d8596c680b3ef443d0afbd"
+  },
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true
+}

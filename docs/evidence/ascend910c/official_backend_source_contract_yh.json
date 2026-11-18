@@ -1,0 +1,29 @@
+{
+  "scope": "read-only pinned package source contract; not native instruction/numerical parity",
+  "package": "tile_kernels",
+  "version": "2.1.0",
+  "root": "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/tile_kernels",
+  "source_sha256": {
+    "torch/norm.py": "a2950098c71c93ad9a2d6e92ee459be3d10b7f870c7dd373839b43f98c960a41",
+    "torch/mhc.py": "9f37ef9a1a7d99f14c2e878056b5f53a56932275e3ec0fc94de125e79953fd52",
+    "torch/cast.py": "41a49e4bc6d70eb328a05bea7d2c43178d3ec10f13c4f0b5e5c258567caddedf",
+    "quant/norm_forward_kernel.py": "8ed9c4e92cb346f58be0e9561661e44cc3575b9ec61990708dcfa9a23ef42dd7",
+    "quant/norm_forward_asc.py": "9f863b521f9638a9f8591ad95e697d615ed63c546cd33d5c24f8c919d913cb85",
+    "quant/rstd.py": "71b97f6eeb5a24f9284d91b5c68011ef586d707f3a41e9637be60ce406327bdf",
+    "config.py": "d081ab35dec0d1e949425405ffbacb9ca4797bc07062011f664a64ef7f03920f",
+    "mhc/norm_fn_asc.py": "3a5431d306ec3dbe6f4de1d9876b61fd0f3a3fe616c386885e03f8fbc00d0b5e",
+    "mhc/pre_split_mixes_asc.py": "a72d46198dcc6a5d32a9bf742ba1d670dbcacb8f6daebaa59ba2f6d75949b75e",
+    "mhc/sinkhorn_asc.py": "d820140532211c7403529abdcd2bcfa289ff4643445243f10fb054083d0c436e",
+    "mhc/pre_apply_mix_asc.py": "e750f43ed9defd2faf39df92a04486c807fa32de73186ea90bbd02b403966509",
+    "mhc/post_asc.py": "5c24bb24baf7d3f05a8cb70c1f9cc97010339ff6a43dc34182a4599a79e40163",
+    "mhc/head_compute_mix_asc.py": "6ba321b9afc191ce9f3501c55dd1eaf87ef1d74b26076765b4f4cae252cf4940",
+    "moe/moe_topk_gate_forward_kernel.py": "0236df78c5c0f601aeb611311ba0255238ec14c5a8e8ba2c5f0b4e02033cd9d2",
+    "moe/moe_topk_gate_forward_asc.py": "7bd78f3e5c5e948bbab880b176c70500cf13e02def10dd47195467f9c05dbf4f",
+    "moe/sqrt_softplus.py": "40732a4f026d5596f7a9bc328f3fe904329fbb246aaeadd65c38076585250fc6"
+  },
+  "norm_rounds_to_input_dtype_before_fp8": true,
+  "gate_normalization": "sum+1e-20",
+  "gate_tie": "lowest expert index",
+  "mhc_reference": "torch/mhc.py",
+  "native_rstd_and_sqrtsoftplus_approximation_parity_unverified": true
+}

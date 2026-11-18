@@ -1,0 +1,13 @@
+{
+  "scope": "Human-written summary of the observed initial CPU unittest failure; not a machine-generated test report",
+  "observed_command": "python -m unittest tests.quantization.test_official_linear -v",
+  "observed_tests_run": 7,
+  "observed_errors": 1,
+  "test": "test_tails_chunk_boundaries_add_before_store_and_row_padding",
+  "error": "ValueError: Activation tile exceeds aligned decode bounds",
+  "cause": "The first ordinary-matrix implementation passed a 128-row weight tile to FP8Activation._tile, whose verified row bound is 64",
+  "fix": "Decode two at-most-64-row tiles and concatenate their FP32 outputs for the existing 128-column GEMM tile",
+  "decoder_bound_relaxed": false,
+  "acceptance_tolerances_relaxed": false,
+  "revalidated_by": ["official_backend_cpu_yh.json", "official_backend_linear_npu_yh.json", "official_backend_hccl_yh.json"]
+}

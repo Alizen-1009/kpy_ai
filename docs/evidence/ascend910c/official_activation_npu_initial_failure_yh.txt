@@ -1,0 +1,68 @@
+[W1117 08:13:55.814995586 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/quantization/official.py:29: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  bits = exponents << 23
+[INFO 11-17 08:13:55 weights.py:54] HF load phase ordinary: 0.024s
+[INFO 11-17 08:13:55 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-17 08:13:55 weights.py:54] HF load phase engram: 0.001s
+[INFO 11-17 08:13:55 weights.py:584] HF weights loaded: {'params': 2, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-17 08:13:55 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-17 08:13:55 weights.py:54] HF load phase experts: 0.003s
+[INFO 11-17 08:13:55 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-17 08:13:55 weights.py:584] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[E1117 08:13:56.516771630 OpParamMaker.cpp:653] operator():../third_party/op-plugin/op_plugin/utils/op_api_common.h:207 NPU function error: call failed, error code is 507018
+[ERROR] 2026-11-17-08:13:56 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed
+[Error]: The aicpu execution is abnormal. 
+        Rectify the fault based on the error information in the ascend log.
+[PID: 1] 2026-11-17-08:13:56.085.462 AclNN_Runtime_Error(EZ9903): aclrtLaunchKernelWithHostArgs failed: 507018
+        Solution: In this scenario, collect the plog when the fault occurs and locate the fault based on the plog.
+TraceBack (most recent call last):
+        The error from device(chipId:4, dieId:0), serial number is 4, an exception occurred during AICPU execution, stream_id:47, task_id:1498, errcode:5, msg:aicpu execute failed.[FUNC:ProcessStarsAicpuErrorInfo][FILE:device_error_proc.cc][LINE:1247]
+        An error occurred in the kernel task, retCode=0x2a, [aicpu exception].[FUNC:PreCheckTaskErr][FILE:davinci_kernel_task.cc][LINE:1030]
+        AI CPU kernel execution failed, device_id=0, stream_id=47, task_id=1498, soName=libtf_kernels.so, funcName=TFOperateAPI, kernelName=Slice, errorCode=0x2a, paramAddr=0x12c100001000, argsSize=1648, soNameDevAddr=0x12c0c0032000, funcNameDevAddr=0x12c0c0033000, headParamOffset=0, aicpuKernelType=TS_AICPU_KERNEL_FMK(1).[FUNC:PrintAicpuErrorInfo][FILE:davinci_kernel_task.cc][LINE:734]
+        AI CPU kernel execution failed, device_id=0, stream_id=47,task_id=1498, soName=libtf_kernels.so, funcName=TFOperateAPI, kernelName=Slice.[FUNC:PrintAicpuErrorInfo][FILE:davinci_kernel_task.cc][LINE:767]
+        Failed to submit kernel task, retCode=0x715002a.[FUNC:InternalLaunchKernelSubmit][FILE:aix_stars.cc][LINE:535]
+        kernel launch submit failed.[FUNC:StreamLaunchKernelV2][FILE:aix_stars.cc][LINE:701]
+        rtsLaunchKernelWithHostArgs execution failed, reason=aicpu exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:76]
+        aclrtLaunchKernelWithHostArgs failed: 507018
+        Kernel launch from cache failed.
+        OpExecCache run fail.
+
+Exception raised from operator() at ../third_party/op-plugin/op_plugin/utils/op_api_common.h:207 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xc8 (0xffff947de158 in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xc8 (0xffff94779194 in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x17e0674 (0xffff852c0674 in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)
+frame #3: <unknown function> + 0x4c6c4cc (0xffff8874c4cc in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)
+frame #4: <unknown function> + 0x1a13250 (0xffff854f3250 in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)
+frame #5: <unknown function> + 0x1a13fd0 (0xffff854f3fd0 in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)
+frame #6: <unknown function> + 0x1a1194c (0xffff854f194c in /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/lib/libtorch_npu.so)
+frame #7: <unknown function> + 0xb09b3c (0xffff83809b3c in /root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0/lib64/libhccl.so)
+frame #8: <unknown function> + 0x803c8 (0xffffa1eb03c8 in /lib/aarch64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0xe9edc (0xffffa1f19edc in /lib/aarch64-linux-gnu/libc.so.6)
+
+[W1117 08:13:56.542710091 CopyKernelOpApi.cpp:103] Warning: EE9999: Internal error!
+EE9999[PID: 1] 2026-11-17-08:13:56.112.402 (EE9999):  rtStreamSynchronize execution failed, reason=aicpu exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:76]
+TraceBack (most recent call last):
+ (function copy_between_host_and_device_opapi)
+[W1117 08:13:56.543168468 CopyKernelOpApi.cpp:103] Warning: EE9999: Internal error!
+EE9999[PID: 1] 2026-11-17-08:13:56.112.894 (EE9999):  rtStreamSynchronize execution failed, reason=aicpu exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:76]
+TraceBack (most recent call last):
+ (function copy_between_host_and_device_opapi)
+{
+  "passed": false,
+  "device": "npu",
+  "error": "RuntimeError: ACL stream synchronize failed, error code:507018"
+}
+[W1117 08:13:56.545307399 NPUStream.cpp:829] Warning: NPU warning, error code is 507018[Error]: 
+[Error]: The aicpu execution is abnormal. 
+        Rectify the fault based on the error information in the ascend log.
+EE9999: Internal error!
+EE9999[PID: 1] 2026-11-17-08:13:56.114.868 (EE9999):  rtDeviceSynchronizeWithTimeout execution failed, reason=aicpu exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:76]
+TraceBack (most recent call last):
+ (function npuSynchronizeUsedDevices)
+[W1117 08:13:56.545858870 NPUStream.cpp:812] Warning: NPU warning, error code is 507018[Error]: 
+[Error]: The aicpu execution is abnormal. 
+        Rectify the fault based on the error information in the ascend log.
+EE9999: Internal error!
+EE9999[PID: 1] 2026-11-17-08:13:56.115.548 (EE9999):  rtDeviceSynchronizeWithTimeout execution failed, reason=aicpu exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:76]
+TraceBack (most recent call last):
+ (function npuSynchronizeDevice)

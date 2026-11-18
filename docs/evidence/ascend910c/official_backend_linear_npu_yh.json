@@ -1,0 +1,160 @@
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "npu:0",
+  "exposure": {
+    "host_die": 8,
+    "davinci_nodes": [
+      8
+    ],
+    "container_local_device": 0,
+    "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+  "activation_sha256": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+  "ordinary_linear_sha256": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+  "ordinary_linear_fixture_sha256": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+  "materializer_sha256": "508c381e99e70190f5b760f6924e7a8a91029e5cf1806815bf070e7b4caf655b",
+  "fp4_compute_sha256": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+  "hf_loader_sha256": "7777423c105648937b1f0011ad0958488a943d1e4c7443989e53e98ed7a38d39",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "9c2ee6a217ea45f13b7d2b934d42af4ec06cddb1a63820a1c08bbfd87e1196bc",
+  "ascend_home": "/root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0",
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "fp32",
+  "ascend_launch_blocking": "0",
+  "diagnostics": {
+    "right_shift_broadcast": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-18-02:48:54 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-18-02:48:54.852.240 AclNN_Parameter_Error(EZ1001): Shape of out should be [1, 2, 2], but current is [1, 2, 1].\n",
+    "right_shift_materialized_equal_shapes": "passed"
+  },
+  "operator_probes": {
+    "torch_round_half_ties": {
+      "cpu": [
+        -0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "device": [
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ]
+    },
+    "pow_div_midpoint": {
+      "step_bits": [
+        989855743
+      ],
+      "expected_step_bits": [
+        989855744
+      ],
+      "division_at_tie": [
+        0.5000000596046448
+      ],
+      "exact_power2_multiply_at_tie": [
+        0.5
+      ]
+    },
+    "quantization_first_mismatches": [],
+    "activation_native_scale_stride_torch.int16": [
+      1,
+      510
+    ],
+    "activation_native_scale_stride_torch.int32": [
+      1,
+      510
+    ],
+    "ordinary_fp8_linear": {
+      "shape_mnk": [
+        65,
+        129,
+        258
+      ],
+      "output_exact": true,
+      "raw_weight_bytes": true,
+      "c_added_before_store": true
+    },
+    "bf16_gate_fp32_output": {
+      "max_abs_error": 0.0,
+      "dtype": "torch.float32"
+    }
+  },
+  "known_limitations": [
+    "Unmodified PR267 packed-scale GEMM fails on this NPU runtime's right-shift broadcasting; use explicit FP32 scales"
+  ],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.26163819897919893
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.01881489809602499
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.07930202386341989
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0038443158846348524
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.03045623190701008
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.06517458613961935
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.06827246397733688
+    },
+    {
+      "name": "fp8_activation_partial_row_byte_decode_probe",
+      "passed": true,
+      "seconds": 0.001611481886357069
+    },
+    {
+      "name": "fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales",
+      "passed": true,
+      "seconds": 0.08859420916996896
+    },
+    {
+      "name": "fp8_activation_to_fp4_expert_tiled_gemm",
+      "passed": true,
+      "seconds": 0.05400302982889116
+    },
+    {
+      "name": "swiglu_fp32_intermediate_route_weight_clamp_to_fp8",
+      "passed": true,
+      "seconds": 0.005130924982950091
+    },
+    {
+      "name": "ordinary_fp8_linear_tails_module_migration_outacc_and_bf16_gate",
+      "passed": true,
+      "seconds": 0.07482807384803891
+    }
+  ],
+  "case_count": 12,
+  "passed": true,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 33758720,
+  "hf32_enabled": false
+}

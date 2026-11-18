@@ -1,0 +1,39 @@
+{
+  "scope": "two-rank synthetic raw-FP8/FP4 EP correctness; not full model/native-kernel equivalence",
+  "backend": "hccl",
+  "official_checkpoint_payload_read": false,
+  "world_size": 2,
+  "host_dies": [
+    8,
+    9
+  ],
+  "exposed_davinci_nodes": [
+    8,
+    9
+  ],
+  "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de",
+  "source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "d83e1ad095fb28270907699adc599d709363786b6597104cab6873fcc4897305",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "tests/quantization/test_official_ep.py": "9df4b6605d4cdddedc213736a4f6228d3a622182676e4aac439d911769f18a0b",
+    "check_official_ep_yh.py": "4858ed2e64f2b817f6ae0066bb906ad8b0c10962224724a824acf15960a6bbb3"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "ascend_launch_blocking": "0",
+  "passed": false,
+  "error": "ProcessRaisedException: \n\n-- Process 0 terminated with the following error:\nTraceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/multiprocessing/spawn.py\", line 87, in _wrap\n    fn(i, *args)\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_ep_yh.py\", line 62, in worker\n    raise RuntimeError(f\"Rank {rank} failed: {result.get('error', result.get('teardown_error'))}\")\nRuntimeError: Rank 0 failed: RuntimeError: createHCCLCommOrigin:../torch_npu/csrc/distributed/ProcessGroupHCCL.cpp:2693 HCCL function error: hcclGetRootInfo(&hcclID), error code is 1 \n[ERROR] 2026-11-17-08:56:49 (PID:80, Device:0, RankID:-1) ERR02200 DIST call hccl api failed.\n[PID: 80] 2026-11-17-08:56:49.096.370 Config_Error_Invalid_Environment_Variable(EI0001): Value 30 for environment variable HCCL_CONNECT_TIMEOUT is invalid. Expected value: a number greater than or equal to 120s and less than or equal to 7200s.\n\n",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_ep_yh.py\", line 103, in main\n    mp.spawn(worker, args=(args.backend, str(directory)), nprocs=2, join=True)\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/multiprocessing/spawn.py\", line 340, in spawn\n    return start_processes(fn, args, nprocs, join, daemon, start_method=\"spawn\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/multiprocessing/spawn.py\", line 296, in start_processes\n    while not context.join():\n              ^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/multiprocessing/spawn.py\", line 211, in join\n    raise ProcessRaisedException(msg, error_index, failed_process.pid)\ntorch.multiprocessing.spawn.ProcessRaisedException: \n\n-- Process 0 terminated with the following error:\nTraceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/multiprocessing/spawn.py\", line 87, in _wrap\n    fn(i, *args)\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_ep_yh.py\", line 62, in worker\n    raise RuntimeError(f\"Rank {rank} failed: {result.get('error', result.get('teardown_error'))}\")\nRuntimeError: Rank 0 failed: RuntimeError: createHCCLCommOrigin:../torch_npu/csrc/distributed/ProcessGroupHCCL.cpp:2693 HCCL function error: hcclGetRootInfo(&hcclID), error code is 1 \n[ERROR] 2026-11-17-08:56:49 (PID:80, Device:0, RankID:-1) ERR02200 DIST call hccl api failed.\n[PID: 80] 2026-11-17-08:56:49.096.370 Config_Error_Invalid_Environment_Variable(EI0001): Value 30 for environment variable HCCL_CONNECT_TIMEOUT is invalid. Expected value: a number greater than or equal to 120s and less than or equal to 7200s.\n\n\n",
+  "ranks": [
+    {
+      "rank": 0,
+      "backend": "hccl",
+      "passed": false,
+      "error": "RuntimeError: createHCCLCommOrigin:../torch_npu/csrc/distributed/ProcessGroupHCCL.cpp:2693 HCCL function error: hcclGetRootInfo(&hcclID), error code is 1 \n[ERROR] 2026-11-17-08:56:49 (PID:80, Device:0, RankID:-1) ERR02200 DIST call hccl api failed.\n[PID: 80] 2026-11-17-08:56:49.096.370 Config_Error_Invalid_Environment_Variable(EI0001): Value 30 for environment variable HCCL_CONNECT_TIMEOUT is invalid. Expected value: a number greater than or equal to 120s and less than or equal to 7200s.\n",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_ep_yh.py\", line 41, in worker\n    cases = run_cases(rank, dist.group.WORLD, device)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/tests/quantization/test_official_ep.py\", line 146, in run_cases\n    check_call(ep, a, ids, weights, PHYSICAL_TO_LOGICAL, device)\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/tests/quantization/test_official_ep.py\", line 112, in check_call\n    actual = ep(move_activation(a, device), ids.to(device), weights.to(device))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/model_executor/models/v4_modules/official_moe.py\", line 237, in forward\n    self._agree(error)\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/model_executor/models/v4_modules/official_moe.py\", line 211, in _agree\n    dist.all_reduce(flag, op=dist.ReduceOp.MAX, group=self.group)\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py\", line 83, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py\", line 3245, in all_reduce\n    work = group.allreduce([tensor], opts)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: createHCCLCommOrigin:../torch_npu/csrc/distributed/ProcessGroupHCCL.cpp:2693 HCCL function error: hcclGetRootInfo(&hcclID), error code is 1 \n[ERROR] 2026-11-17-08:56:49 (PID:80, Device:0, RankID:-1) ERR02200 DIST call hccl api failed.\n[PID: 80] 2026-11-17-08:56:49.096.370 Config_Error_Invalid_Environment_Variable(EI0001): Value 30 for environment variable HCCL_CONNECT_TIMEOUT is invalid. Expected value: a number greater than or equal to 120s and less than or equal to 7200s.\n\n"
+    }
+  ]
+}

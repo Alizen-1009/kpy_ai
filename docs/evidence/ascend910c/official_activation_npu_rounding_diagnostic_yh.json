@@ -1,0 +1,190 @@
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "npu:0",
+  "exposure": {
+    "host_die": 8,
+    "davinci_nodes": [
+      8
+    ],
+    "container_local_device": 0,
+    "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+  "activation_sha256": "093e0d9bbe0648c36378403ceb1745020c4d31eb05a07fdb34f2217ac0a05fb8",
+  "materializer_sha256": "508c381e99e70190f5b760f6924e7a8a91029e5cf1806815bf070e7b4caf655b",
+  "fp4_compute_sha256": "768a5d6c8fbda334add90263d53edc608b741877b700349e754689166b10e171",
+  "hf_loader_sha256": "7777423c105648937b1f0011ad0958488a943d1e4c7443989e53e98ed7a38d39",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "5207bbe051b793673e9f5569675c9c951c388e316dc6b624eac8a3f929e087f3",
+  "ascend_home": "/root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0",
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "fp32",
+  "ascend_launch_blocking": "1",
+  "diagnostics": {},
+  "operator_probes": {
+    "torch_round_half_ties": {
+      "cpu": [
+        -0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "device": [
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ]
+    },
+    "quantization_first_mismatches": [
+      {
+        "row": 95,
+        "col": 0,
+        "input": 2.3283064365386963e-10,
+        "expected_byte": 0,
+        "actual_byte": 1,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 97,
+        "col": 32,
+        "input": 1.1641532182693481e-09,
+        "expected_byte": 2,
+        "actual_byte": 3,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 98,
+        "col": 16,
+        "input": 2.0954757928848267e-09,
+        "expected_byte": 4,
+        "actual_byte": 5,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 98,
+        "col": 80,
+        "input": 3.026798367500305e-09,
+        "expected_byte": 6,
+        "actual_byte": 7,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 99,
+        "col": 8,
+        "input": 3.958120942115784e-09,
+        "expected_byte": 8,
+        "actual_byte": 9,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 99,
+        "col": 40,
+        "input": 4.889443516731262e-09,
+        "expected_byte": 10,
+        "actual_byte": 11,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 99,
+        "col": 72,
+        "input": 5.820766091346741e-09,
+        "expected_byte": 12,
+        "actual_byte": 13,
+        "expected_scale": 105,
+        "actual_scale": 105
+      },
+      {
+        "row": 99,
+        "col": 104,
+        "input": 6.752088665962219e-09,
+        "expected_byte": 14,
+        "actual_byte": 15,
+        "expected_scale": 105,
+        "actual_scale": 105
+      }
+    ]
+  },
+  "known_limitations": [
+    "Unmodified PR267 packed-scale GEMM fails on this NPU runtime's right-shift broadcasting; use explicit FP32 scales"
+  ],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.27608911297284067
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.023482398129999638
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.10012697707861662
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.006455304101109505
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.031799523159861565
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.07131112716160715
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.10603875108063221
+    },
+    {
+      "name": "fp8_activation_partial_row_byte_decode_probe",
+      "passed": true,
+      "seconds": 0.0031381789594888687
+    },
+    {
+      "name": "fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales",
+      "passed": false,
+      "error": "AssertionError: Tensor-likes are not equal!\n\nMismatched elements: 80 / 65280 (0.1%)\nGreatest absolute difference: 1 at index (95, 0)\nGreatest relative difference: inf at index (95, 0)",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_operand_yh.py\", line 70, in case\n    fn()\n  File \"/root/yuhao/deepinfer_910c_yh/scripts_yh/check_official_operand_yh.py\", line 291, in fp8_activation_quantization\n    torch.testing.assert_close(actual_bytes, expected.view(torch.uint8), rtol=0, atol=0)\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/testing/_comparison.py\", line 1631, in assert_close\n    raise error_metas[0].to_error(msg)\nAssertionError: Tensor-likes are not equal!\n\nMismatched elements: 80 / 65280 (0.1%)\nGreatest absolute difference: 1 at index (95, 0)\nGreatest relative difference: inf at index (95, 0)\n"
+    },
+    {
+      "name": "fp8_activation_to_fp4_expert_tiled_gemm",
+      "passed": false,
+      "skipped": true,
+      "reason": "prior NPU failure; no retry on poisoned stream"
+    },
+    {
+      "name": "swiglu_fp32_intermediate_route_weight_clamp_to_fp8",
+      "passed": false,
+      "skipped": true,
+      "reason": "prior NPU failure; no retry on poisoned stream"
+    }
+  ],
+  "case_count": 11,
+  "passed": false,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 33757696,
+  "hf32_enabled": false
+}

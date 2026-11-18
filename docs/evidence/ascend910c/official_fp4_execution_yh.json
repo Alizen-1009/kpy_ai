@@ -1,0 +1,6 @@
+{
+  "docker_exit_code": 0,
+  "container_still_running": false,
+  "test_started": true,
+  "report_dir": "/root/yuhao/deepinfer_910c_yh/reports_yh/operand_die8_20261117T114228665900223_yh"
+}

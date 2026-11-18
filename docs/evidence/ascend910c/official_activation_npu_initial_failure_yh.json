@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "device": "npu",
+  "error": "RuntimeError: ACL stream synchronize failed, error code:507018"
+}

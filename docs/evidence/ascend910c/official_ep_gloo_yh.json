@@ -1,0 +1,109 @@
+{
+  "scope": "two-rank synthetic raw-FP8/FP4 EP correctness; not full model/native-kernel equivalence",
+  "backend": "gloo",
+  "official_checkpoint_payload_read": false,
+  "world_size": 2,
+  "source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "33004560aab6715d4fbe0d9865dda1410d5848eff43be267f52b1b2c92a76830",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "tests/quantization/test_official_ep.py": "a206811830cbb8d82ab4dc26da96e8831916b0cc2c5da95eeb7363934b92c351",
+    "check_official_ep_yh.py": "4858ed2e64f2b817f6ae0066bb906ad8b0c10962224724a824acf15960a6bbb3"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "ascend_launch_blocking": null,
+  "passed": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "backend": "gloo",
+      "passed": true,
+      "device": "cpu",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 0,
+          "tokens": 3,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 0,
+          "passed": true
+        }
+      ],
+      "torch_npu_imported": false
+    },
+    {
+      "rank": 1,
+      "backend": "gloo",
+      "passed": true,
+      "device": "cpu",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 1,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 1,
+          "passed": true
+        }
+      ],
+      "torch_npu_imported": false
+    }
+  ]
+}

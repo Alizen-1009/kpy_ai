@@ -1,0 +1,33 @@
+{
+  "scope": "Read-only inspection of installed tile-kernels source; not execution of native 950 kernels or upstream package integrity certification",
+  "distribution": "tile-kernels",
+  "installed_version": "2.1.0",
+  "source_root": "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/tile_kernels",
+  "source_sha256": {
+    "config.py": "d081ab35dec0d1e949425405ffbacb9ca4797bc07062011f664a64ef7f03920f",
+    "quant/common.py": "8fad63ecdfcc0c3e84aef1bb1edf8c63071da641f56e8744e88b3d5a9037998e",
+    "quant/per_token_cast_asc.py": "af80e7a43413265b546eab70f093f49bf409b79dfc7165d8cdbb94bdc56adb43",
+    "quant/per_token_cast_kernel.py": "7335b8371726fc089f4e335b756ab4d7bf81e36c6f2b1b6b454841ef4e8d966b",
+    "quant/swiglu_forward_asc.py": "c3ce8417ab9636eab2df2345bdc8b0cc5aaf7da74f56c5ad5d390fa20e66aa2f"
+  },
+  "local_inspection_copies_match_remote_sha256": true,
+  "activation_policy": {
+    "data": "E4M3FN [M,K]",
+    "scale_groups": "per row, consecutive 32 K channels",
+    "amax_floor": 0.0001,
+    "max_quantized_value": 448,
+    "scale_rounding": "ceil(log2(amax/448)), exponent extracted from FP32 reciprocal multiply",
+    "narrowing": "deterministic E4M3 RNE; stochastic path not implemented",
+    "native_packing": "INT16 on Ascend, INT32 on GPU; adjacent K-group exponent bytes; column-major optional",
+    "native_scale_specials": "packed exponent0 reinterprets as FP32zero, unlike raw E8M0byte0=2^-127; explicit adapter rejects logical exponent0/255, ignores pad bytes"
+  },
+  "swiglu_policy": {
+    "input_order": "[gate;up] matching [w1;w3]",
+    "clamp": "gate upper-only, up symmetric +/- clamp",
+    "operation_order": "FP32 gate/(1+exp(-gate)) * up, then optional route weight, then FP8 quantization; no intermediate BF16 rounding"
+  },
+  "implementation_decision": "Explicit pure-Torch software activation producer and descriptor; keep native model dispatch unchanged until validated integration",
+  "official_checkpoint_payload_read": false,
+  "npu_initialized_during_source_inspection": false,
+  "native_kernel_parity_hardware_tested": false
+}

@@ -1,0 +1,68 @@
+{
+  "scope": "synthetic ordinary-FP8 HF loading, adapter and BF16-rounded reference GEMM; not model equivalence",
+  "device": "cpu",
+  "exposure": null,
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "b583c8b1b869b8123f0fa5cc3aab0a37df65bf2b3b3be1a12472d81ab797bd61",
+  "hf_loader_sha256": "7b05ee5a4592cbebbdaa41986eda63fc44fedf4215474811d653bf04691c2b21",
+  "hf_test_fixture_sha256": "69cb48b791d03031085e42152560eb2fa332710ca8d8596c680b3ef443d0afbd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "0ab6ee40aed53f7e617dcd7000bd99d76945d4ec35b3cb9fab45c17e7fe6ea06",
+  "ascend_home": null,
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "all",
+  "diagnostics": {},
+  "known_limitations": [],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.43029705295339227
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.000729207880795002
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0010215789079666138
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006883358582854271
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.000643803970888257
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0006904159672558308
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006428239867091179
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.0006193029694259167
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.47971244319342077
+    }
+  ],
+  "case_count": 9,
+  "passed": true,
+  "torch_npu_imported": false
+}

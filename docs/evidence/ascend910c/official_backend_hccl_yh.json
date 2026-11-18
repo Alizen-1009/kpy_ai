@@ -1,0 +1,209 @@
+{
+  "scope": "two-rank synthetic raw-FP8/FP4 EP correctness; not full model/native-kernel equivalence",
+  "backend": "hccl",
+  "official_checkpoint_payload_read": false,
+  "world_size": 2,
+  "host_dies": [
+    8,
+    10
+  ],
+  "exposed_davinci_nodes": [
+    8,
+    10
+  ],
+  "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de",
+  "source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "a9acfc4f2e048ba652fb9569d3ec55cdffec8007b49f80d51dd036789d330227",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "tests/quantization/test_official_ep.py": "a206811830cbb8d82ab4dc26da96e8831916b0cc2c5da95eeb7363934b92c351",
+    "deepinfer/quantization/linear.py": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+    "deepinfer/model_executor/models/v4_modules/official_backend.py": "396959e723bf13e74d83686d421c66ebe97ec06bba5933fe6cf97f3a8dbaea49",
+    "tests/quantization/test_official_backend.py": "c7e803a5149d265f1796a3e236010d8a417b44ec48eecc650d515e8775751323",
+    "tests/quantization/test_official_linear.py": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+    "tests/quantization/test_official_moe.py": "db54663a7851047249f2cb322b5cbdfc306ba2d38e405700afcff8dc1e97413f",
+    "deepinfer/model_executor/models/decoder_layer.py": "44d25dad48a45c28ce00074347e1e820a9aae394c6f8a06d421ad120b9fc2f2a",
+    "tests/quantization/test_official_norm.py": "3bb1031bf6bd3fd88c51b5eb991b6f4a75aa95a19865826bdb979b42ec888978",
+    "deepinfer/model_executor/models/v4_modules/official_norm.py": "eba96de3ca1001ba230e69508398d1d52bbffefe76309b35c7c99b907c2acfee",
+    "deepinfer/model_executor/models/v4_modules/utils.py": "787dfff3dc48ffda27298cfd1c4c77d027c6209410352e27872df300f2686dd1",
+    "deepinfer/model_executor/models/deepseek.py": "8165483b7320ae5aa19f9acc7bad381a4559f7d9fef246c83f987a7b0b82fa3a",
+    "deepinfer/model_executor/model_loader.py": "5052b65e6ba298751c93450caeab8e48fbcb0d76360ba79717f9fe57baa80a9b",
+    "check_official_ep_yh.py": "1861a4ae5a353b95784bb6b0c875f63d8a0cf80835df6582f973b77b954f03e2"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "ascend_launch_blocking": "0",
+  "passed": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 33609728,
+      "hf32_enabled": false,
+      "container_local_device": 0,
+      "device": "npu:0",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 0,
+          "tokens": 3,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 0,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 0,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 0,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 0,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 0,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 0,
+          "passed": true,
+          "tokens": 0,
+          "residual_norm_gate_shared_routed_combine": true
+        }
+      ],
+      "torch_npu_imported": true
+    },
+    {
+      "rank": 1,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 33614848,
+      "hf32_enabled": false,
+      "container_local_device": 1,
+      "device": "npu:1",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 1,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 1,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 1,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 1,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 1,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        }
+      ],
+      "torch_npu_imported": true
+    }
+  ]
+}

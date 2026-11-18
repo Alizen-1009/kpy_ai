@@ -34,6 +34,54 @@
 - 原样 PR 量化模块的 21 项合成 CPU 检查通过，未导入 torch_npu；本地标准库测试 25 项通过。JSON 证据位于 [`docs/evidence/ascend910c/`](evidence/ascend910c/)。不请求官方权重 payload，不占用 NPU，不改现有服务。
 - 下一切入点是原始格式 scale/operand adapter 与不依赖 950 packing 的加载/merge 接点；不是直接删除 W8A8 检查、套用 INT8 fused-MoE 或把全部权重展开为 BF16。
 
+### 2026-11-17 增量：独立官方 operand/scale 适配层
+
+- 已新增 `ref/DeepInfer/deepinfer/quantization/official.py`，显式区分 packed FP4、FP8 block32×32、FP8 Engram 逐行 group32；scale 精确解码/打包，先 gather 被查询行，不展开整表。随后已接入普通 FP8 HF 加载的显式选项，尚未自动接整模型入口或 grouped-MoE。
+- 新模块 21 项 CPU 单元测试、8 项 CPU 互操作检查通过；仅使用用户许可的 die8，4 项显式 FP32-scale NPU 微测试通过，测试容器已清理，未使用 die0–7。
+- 原样 PR267 的 packed-scale GEMM 在设备上仍有 4 项失败，已用最小复现定位到右移广播形状问题；当前明确选择 FP32 scale 消费接口，不能把 packed 消费端也写成已支持。完整原始权重推理和质量仍未验证。
+- 后续普通 FP8 接点新增 `fp8_scale_format="fp32"`，默认 `native` 保留；跨 shard byte 读入、weight/scale 对齐合并、header-only staging 预检和旧 packed cache 清理已实现。最新 38 项 CPU 单元测试、9 项 CPU 互操作及 die8 的 5 项微测试通过；没有读取官方 payload。
+- 代码、限制、首次失败与最新通过证据见[官方适配层记录](../ref/DeepInfer/doc/ascend910c-official-operand.md)。没有自动切换 GPU/950 默认加载策略，完整 GPU/950 硬件回归尚未执行；此记录不表示整模型完成。
+
+### 2026-11-17 增量：packed FP4 专家受控接点
+
+- 新增独立 `fp4_scale_format="raw"` 加载：保留官方 E2M1/E8M0 字节、跨 shard 配对、本地 physical slot/replica 顺序；整 bank metadata 预检后才读取 payload。默认 native 不变。
+- 新增显式 BF16 输入的有界分块专家 GEMM，不展开全体专家；**没有改模型 FP8 激活策略，没有接入 raw materialization/native grouped-MoE 或整模型入口**。
+- 最新 **55 项 CPU 单元测试、11 项 CPU 微检查、仅 die8 的 7 项 NPU 微检查通过**。无官方 payload 读取；临时合成 safetensors 已清理。容器移除，die8 结束无进程；HBM 前后 3154/3155 MiB，Torch allocator 峰值 17,945,600 bytes，不是全模型预算。
+- 原样 PR packed-scale 消费端右移广播失败仍保留。新证据为 `docs/evidence/ascend910c/official_fp4_*_yh.json`，接口、预算与未测范围见[记录第 6 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#6-packed-fp4-专家raw-加载和有界计算)。下一步是 raw 目标分配、FP8 激活契约及 grouped-MoE 接入。
+
+### 2026-11-17 增量：raw FP4 目标分配（第 1 步）
+
+- `materialize_hf_parameter` 新增显式 `fp4_scale_format="raw"`：从容器 meta 声明直接分配 INT8 packed 权重和 raw E8M0 scale，不依赖 native 950 scale 布局；平台/vendor imports 改为按需发生。保留所有权元数据，但分配本身不标记为已加载。
+- raw loader 复用已分配的 scale 存储，并拒绝策略不匹配、损坏/重叠存储。默认 native 路径及完整模型构造调用未切换。
+- 最新 **66 项 CPU 单元测试、11 项 CPU 微检查、仅 die8 的 7 项 NPU 微检查通过**。链路覆盖真实分配→合成跨 shard 加载→单专家计算；未读官方 payload。容器清理完成，die8 前后 HBM 3155/3155 MiB、结束无进程。
+- 新证据为 `official_fp4_materialization_*_yh.json`，fork 内自包含副本位于 `ref/DeepInfer/doc/evidence/ascend910c/`。[接口与结果见第 7 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#7-raw-fp4-专家目标分配显式-opt-in)。下一步为 FP8 激活计算契约，grouped-MoE/整模型仍未接入。
+
+### 2026-11-17 增量：五阶段目标 · FP8 激活契约
+
+- 新增 `quantization/activation.py`：显式 E4M3/group32 E8M0 descriptor、native INT16/INT32 packed scale 的 lossless adapter、有限 BF16/FP32 的确定性 RNE producer、无 BF16 中间舍入的 FP32 SwiGLU→FP8；专家 GEMM 新增显式 FP8Activation 输入。
+- 只读核对已安装 tile-kernels2.1.0 的 producer 源码/hash；没有执行其 950 kernel。保留所有数值及边界失败证据，修复 NPU `pow` 低 1 ULP 导致的 80 个舍入中点误差，未放宽 byte-exact 门限。
+- 最新 **85 项 CPU 单测、15 项 CPU 微检查、仅 die8 的 11 项 NPU 微检查通过**；包括全 65,280 个有限 BF16 编码、真 column-major packed scale、FP8→FP4 与 SwiGLU producer。同步和最终异步模式均通过；容器全部清理，最终 die8 HBM 3156/3155 MiB、结束无进程。
+- 第 1 阶段的独立契约/受控验证完成；仍未切换实际模型入口，没有 native FP8×FP4/整模型质量等价性结论。**阶段 2–5 未完成**。下一项为 contiguous grouped FFN、psum/空专家/padding，然后 dispatch/combine 与多 rank。
+- 证据为 `official_activation_*_yh.json`（初始 AICPU 失败日志另有 `.txt`）；接口、负结果及边界见[记录第 8 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#8-五阶段目标--阶段-1fp8-激活契约与受控计算)。
+
+### 2026-11-17 增量：阶段 2 · grouped FFN 与真实跨卡 EP
+
+- 修复 `reconstruct_param` 丢失 raw/official FP4 role 标记的问题，新增真实 `OfficialFP4Experts`/`OfficialExpertParallel` nn.Module runtime；按真实 counts/alignment 分组、只计算 active 行，保持 route weight 在 Down 输入 FP8 量化之前、combine 为 FP32。
+- 原始激活/scale 以 U8 dispatch，无重新量化；positive dummy peer splits 仅用于通信，不能进入 FFN。支持物理 rank-major IDs、replica、乱序/重复选择、masked routes、零 peer/token；普通验证/compute 错误通过 collective agreement 一致退出。
+- **105 项 CPU 量化/runtime 测试（无 skip）、真实双进程 Gloo 通过**；实际 HCCL 在 dies8/9 同卡和 **dies8/10 跨物理卡4/5** 分别通过，每 rank 各 6 组结果，最终 BF16 对独立 CPU oracle 严格相等。没有把同卡双 die 冒充跨卡证据。
+- 修复 sparse 输入可能阻塞 peer、module.to 未迁移 scale 的问题；CPU 与真实 NPU module migration 都已验证。初次 HCCL 的非法 connect timeout30 报告保留，仅将任务容器参数改为120，未改共享环境。
+- 跨卡容器移除、结束无进程；die8 HBM3160→3159 MiB、die10 3162→3165 MiB。未使用die0–7、未读官方 payload，没有驱动/Docker重启或其他服务中断。
+- 接口、边界与证据见[记录第 9 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#9-五阶段目标--阶段-2grouped-ffn-与真实-ep)。阶段2只验收独立路由子系统；gate/shared/model 绑定与其余执行链属于接下来的阶段3。动态 EPLB migration、native psum、整模型与质量仍未验证，阶段3–5未完成。
+
+### 2026-11-18 增量：阶段3部分组件通过，整模型仍未验收
+
+- 新增普通 FP8 Linear、BF16→FP32 gate、显式 MoE factory 和 RMSNorm。实际 decoder 选择入口/HF分配及加载模式已写入代码；默认 GPU/950 路径不变。实际验证执行共用 factory 与 Norm→MoE 子链，不是完整decoder。
+- gate 修复最低expert ID优先ties、sum+1e-20分母和负大logit的tiny-score保持；shared结果加入FP32 routed accumulator后才BF16 store，避免额外舍入。Norm则先按输入dtype舍入再FP8，与SwiGLU无中间BF16舍入不同。
+- **128项CPU测试无skip通过**；真实Gloo及 **dies8/10跨物理卡HCCL各rank11组通过**，包含Norm输出FP8 bytes严格一致、完整子链最终BF16严格一致、一个origin零token仍为peer计算。另有die8的12项operand检查通过。
+- 本轮5个任务容器全部移除、结束快照无进程；最终die8 HBM3157→3160 MiB、die10 3164→3165 MiB。未使用0–7、未读取官方tensor payload、未改checkpoint或共享软件/服务。
+- 证据和source hashes：`docs/evidence/ascend910c/official_backend_*_yh.json`；完整说明见[适配记录第10节](../ref/DeepInfer/doc/ascend910c-official-operand.md)。128项是量化/加载/组件CPU测试，不是完整repo/GPU/950 CI。
+- 下一项：ordinary Linear在attention/vision/einsum等完整调用端的backend/role与merge/ownership，随后mHC/RoPE、Engram、attention/cache和decoder/engine装配。当前whole-model load对Engram未就绪fail-fast。**阶段3尚未完成，阶段4–5未开始，不具备GOAL_COMPLETE证据。**
+
 ## 2. 模型结构与优化含义
 
 ### 2.1 总体结构

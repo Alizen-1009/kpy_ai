@@ -1,0 +1,79 @@
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "cpu",
+  "exposure": null,
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "adapter_sha256": "b583c8b1b869b8123f0fa5cc3aab0a37df65bf2b3b3be1a12472d81ab797bd61",
+  "fp4_compute_sha256": "1fad4d686e9483314b1efce1d7c6fe0f94ca9bf04503ea734240d9d9088ce578",
+  "hf_loader_sha256": "80df86a3bf58114d99fa8cfb3129f700ba3795c5e15220a838b693e7b904d313",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "61edca4ad86af54d275bb7152366a004edcb7ccb4b08b2b1872104b3f4643117",
+  "ascend_home": null,
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "all",
+  "diagnostics": {},
+  "known_limitations": [],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.4354260058607906
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.000664025079458952
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0010063981171697378
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006724661216139793
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.0006347240414470434
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.0007002258207648993
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int16",
+      "passed": true,
+      "seconds": 0.0006336539518088102
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.int32",
+      "passed": true,
+      "seconds": 0.0006152139976620674
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.4804016179405153
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.007778695086017251
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.008042474975809455
+    }
+  ],
+  "case_count": 11,
+  "passed": true,
+  "torch_npu_imported": false
+}
