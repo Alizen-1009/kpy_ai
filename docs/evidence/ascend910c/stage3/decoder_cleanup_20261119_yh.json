@@ -1,0 +1,50 @@
+{
+  "runs": {
+    "operand_die8_20261119T105612275775474_yh": {
+      "container_id": "f440a137fb56784627a9c78ca6a5c3f10ec1b416424d591437b99b40d751a8f3",
+      "container_absent": true,
+      "before": {
+        "hbm_mib": 3158,
+        "has_process": false
+      },
+      "after": {
+        "hbm_mib": 3156,
+        "has_process": false
+      }
+    },
+    "operand_die8_20261119T105804981025756_yh": {
+      "container_id": "b56defe78587fa35ad5eacc263fc7b7bff3b2901a2b6edaa70036f819063ecd0",
+      "container_absent": true,
+      "before": {
+        "hbm_mib": 3157,
+        "has_process": false
+      },
+      "after": {
+        "hbm_mib": 3156,
+        "has_process": false
+      }
+    },
+    "operand_die8_20261119T110016284476171_yh": {
+      "container_id": "8bf11c862ac4a4d8888a4db7905579ae1d9675de5b3d8107477c8a7323ac104f",
+      "container_absent": true,
+      "before": {
+        "hbm_mib": 3156,
+        "has_process": false
+      },
+      "after": {
+        "hbm_mib": 3155,
+        "has_process": false
+      }
+    }
+  },
+  "fresh_authorized_dies": {
+    "8": {
+      "hbm_mib": 3155,
+      "has_process": false
+    },
+    "10": {
+      "hbm_mib": 3164,
+      "has_process": false
+    }
+  }
+}

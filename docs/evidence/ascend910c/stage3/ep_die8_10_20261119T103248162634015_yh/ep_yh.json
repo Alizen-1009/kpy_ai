@@ -1,0 +1,300 @@
+{
+  "scope": "two-rank synthetic raw-FP8/FP4 EP, CPU-table Engram owner gather and HC orchestration; not full model/native-kernel equivalence",
+  "backend": "hccl",
+  "official_checkpoint_payload_read": false,
+  "world_size": 2,
+  "host_dies": [
+    8,
+    10
+  ],
+  "exposed_davinci_nodes": [
+    8,
+    10
+  ],
+  "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de",
+  "source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "a9acfc4f2e048ba652fb9569d3ec55cdffec8007b49f80d51dd036789d330227",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "tests/quantization/test_official_ep.py": "a206811830cbb8d82ab4dc26da96e8831916b0cc2c5da95eeb7363934b92c351",
+    "deepinfer/quantization/linear.py": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+    "deepinfer/model_executor/models/v4_modules/official_backend.py": "7f2b5748df6be8491456482e5d79a80edc04b5b27af11777e099a7835fb27c7b",
+    "tests/quantization/test_official_backend.py": "0f2e769919b0364cb443e13863d395386d096c1be792594827d77c213bd54629",
+    "tests/quantization/test_official_linear.py": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+    "tests/quantization/test_official_moe.py": "db54663a7851047249f2cb322b5cbdfc306ba2d38e405700afcff8dc1e97413f",
+    "deepinfer/model_executor/models/decoder_layer.py": "cf9b9b1c0e3c41eb60a110de78578363665a6ca9e722dc0a876129a4f18dee45",
+    "tests/quantization/test_official_norm.py": "3bb1031bf6bd3fd88c51b5eb991b6f4a75aa95a19865826bdb979b42ec888978",
+    "deepinfer/model_executor/models/v4_modules/official_norm.py": "eba96de3ca1001ba230e69508398d1d52bbffefe76309b35c7c99b907c2acfee",
+    "deepinfer/model_executor/models/v4_modules/utils.py": "f7ba78bca8f92c74f8895fc255043764bef3f5b2ee83a5efecc65236033e50bd",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "54bc127a2f2ad701ff0bfa5f991f7fcddf572782852917a409b24fc9a355290f",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/quantization/runtime_linear.py": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+    "tests/quantization/test_official_engram.py": "a8d7ef85c4cda71b009357cdcb364ee902320aa89b7bba9ac06e1a1f6f9f7c5c",
+    "tests/quantization/test_official_hc_runtime.py": "fe3de5a767ec1e07189b44ed76d5f9921605b294299f496211257d7301f292fd",
+    "tests/quantization/test_official_mhc.py": "5320142a3452d68b9c2a2e82bc35b3d372566e805a5b795e0133a3a744c944c8",
+    "deepinfer/model_executor/models/deepseek.py": "f2bc4f6c3cad34f7e3884c8bfc10c8eda7cabd87232cdeedc70f5c19df7d5b84",
+    "deepinfer/model_executor/model_loader.py": "171c773a99e404ddf1e1ec707f59565d28717737cafad80650c9c87778d4f04c",
+    "check_official_ep_yh.py": "476516f5ed49392192c24c7c782d094e3599bb77d13702c317e8267326613869"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "ascend_launch_blocking": "0",
+  "passed": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 33638912,
+      "hf32_enabled": false,
+      "container_local_device": 0,
+      "device": "npu:0",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 0,
+          "tokens": 3,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 0,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 0,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 0,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 0,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 0,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 0,
+          "passed": true,
+          "tokens": 0,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "engram_raw_owner_gather_projection_gate",
+          "rank": 0,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_empty_origin",
+          "rank": 0,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": true
+        },
+        {
+          "case": "engram_collective_contract_rejections",
+          "rank": 0,
+          "passed": true,
+          "runtime_errors_agreed": 4,
+          "ordering_and_counts_validated": true,
+          "peer_source_mutation_rejected": true
+        },
+        {
+          "case": "actual_hc_runtime_shifted_and_head",
+          "rank": 0,
+          "passed": true,
+          "actual_hc_runtime": true,
+          "ordinary_and_shifted": true,
+          "lazy_consumption_and_head": true,
+          "fp32_parameter_dtype_preserved": true,
+          "bf16_results_exact_fixture": true
+        }
+      ],
+      "torch_npu_imported": true
+    },
+    {
+      "rank": 1,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 33638912,
+      "hf32_enabled": false,
+      "container_local_device": 1,
+      "device": "npu:1",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 1,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 1,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 1,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 1,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 1,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "engram_raw_owner_gather_projection_gate",
+          "rank": 1,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_empty_origin",
+          "rank": 1,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_collective_contract_rejections",
+          "rank": 1,
+          "passed": true,
+          "runtime_errors_agreed": 4,
+          "ordering_and_counts_validated": true,
+          "peer_source_mutation_rejected": true
+        },
+        {
+          "case": "actual_hc_runtime_shifted_and_head",
+          "rank": 1,
+          "passed": true,
+          "actual_hc_runtime": true,
+          "ordinary_and_shifted": true,
+          "lazy_consumption_and_head": true,
+          "fp32_parameter_dtype_preserved": true,
+          "bf16_results_exact_fixture": true
+        }
+      ],
+      "torch_npu_imported": true
+    }
+  ]
+}

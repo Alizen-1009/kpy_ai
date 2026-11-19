@@ -1,0 +1,208 @@
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "npu:0",
+  "exposure": {
+    "host_die": 8,
+    "davinci_nodes": [
+      8
+    ],
+    "container_local_device": 0,
+    "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "stage3_checks_selected": "model",
+  "adapter_sha256": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+  "activation_sha256": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+  "ordinary_linear_sha256": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+  "stage3_source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "3735ec11c0899780903f646e3ab4b91b890ef444675bb0d2fdcd796a615ad75a",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/model_executor/models/v4_modules/official_rope.py": "c9987e04dd3cf65b45052a8445ae42e2733aa2ab24949a97fc25a11cab2cb747",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_cache.py": "85c8a3b883a6e530c24ab96aa4ea3d2f59940616dc155988a0874023162e2693",
+    "deepinfer/model_executor/models/v4_modules/official_attention.py": "5cfc55d0052ed42125b134d62bfdca4286b48cbaf645ac712b110889da14db50",
+    "deepinfer/model_executor/models/v4_modules/official_compression.py": "80cf1c789a311d35baf81129aadc89a559ba4b2e1662a873d18227fbbe3e6ace",
+    "tests/quantization/test_official_attention.py": "eb993d4c40f59ef7ac6488e582fd394e554596b990c51208d328e9acb14b6561",
+    "tests/quantization/test_official_compression.py": "ae8113d8639acf633bf2ed38e4aea40a5782a218b54423f1979044e105bcbcfb",
+    "tests/quantization/test_official_model_runtime.py": "ca7dd19e81c02e0bfebc484775413768af92bf59642754413bf85b5d56c69c9e",
+    "deepinfer/model_executor/models/v4_modules/attn.py": "471873bd4ef5e309e225cb45ce8ca4712494349e91d780143f5f0a5fe7125ca5",
+    "deepinfer/model_executor/models/v4_modules/compress.py": "e8e17922c5351f682cb0067348b5caabbd57970761a704e2c94234c2362cdbf7",
+    "deepinfer/model_executor/models/v4_modules/index_attn.py": "a38864facc91510ffc3ecd44b7249f47cb079eac6997f3b0127117774aa4abd3",
+    "deepinfer/worker/model_runner.py": "4b5919066cf9171e779854741131114ba19734834379e417af9c2f9e2fec685a",
+    "tests/quantization/test_official_cache.py": "e2e5484122c5009bcc3b1914e370a316dbbd25224f4d0b5a5e75ca119a419a42",
+    "tests/quantization/test_official_mhc.py": "47a2ce936276da86012f1667084b30f406677ed7bc50b71cc32ace202f06dab0",
+    "tests/quantization/test_official_hc_runtime.py": "fe3de5a767ec1e07189b44ed76d5f9921605b294299f496211257d7301f292fd",
+    "tests/quantization/test_official_rope.py": "9abda813a0338700fd7cc96e136c8c3d6b0ac24fa1cb2baf67201304d5e6ca40",
+    "tests/quantization/test_official_engram.py": "a8d7ef85c4cda71b009357cdcb364ee902320aa89b7bba9ac06e1a1f6f9f7c5c"
+  },
+  "runtime_linear_sha256": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+  "runtime_linear_fixture_sha256": "139ae9458d7efc7d252127c77e65c058ea9558137da3dff8c6c995b180d224fd",
+  "ordinary_linear_fixture_sha256": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+  "materializer_sha256": "508c381e99e70190f5b760f6924e7a8a91029e5cf1806815bf070e7b4caf655b",
+  "fp4_compute_sha256": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+  "hf_loader_sha256": "07adc03b268e148681764cd3bb63d15168fc83eb0efd6c1baee1de20f02d9346",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "6e1262f4ba97b60b584d5efcaca0481a9d45dc7e959aae40f06339ea79837b43",
+  "ascend_home": "/root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0",
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "fp32",
+  "ascend_launch_blocking": "0",
+  "diagnostics": {
+    "right_shift_broadcast": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-19-02:50:55 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-19-02:50:55.768.546 AclNN_Parameter_Error(EZ1001): Shape of out should be [1, 2, 2], but current is [1, 2, 1].\n",
+    "right_shift_materialized_equal_shapes": "passed"
+  },
+  "operator_probes": {
+    "torch_round_half_ties": {
+      "cpu": [
+        -0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "device": [
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ]
+    },
+    "pow_div_midpoint": {
+      "step_bits": [
+        989855743
+      ],
+      "expected_step_bits": [
+        989855744
+      ],
+      "division_at_tie": [
+        0.5000000596046448
+      ],
+      "exact_power2_multiply_at_tie": [
+        0.5
+      ]
+    },
+    "quantization_first_mismatches": [],
+    "activation_native_scale_stride_torch.int16": [
+      1,
+      510
+    ],
+    "activation_native_scale_stride_torch.int32": [
+      1,
+      510
+    ],
+    "ordinary_fp8_linear": {
+      "shape_mnk": [
+        65,
+        129,
+        258
+      ],
+      "output_exact": true,
+      "raw_weight_bytes": true,
+      "c_added_before_store": true
+    },
+    "bf16_gate_fp32_output": {
+      "max_abs_error": 0.0,
+      "dtype": "torch.float32"
+    },
+    "ordinary_projection_consumers": {
+      "bf16_3d_fp32_noncontiguous_accumulator": true,
+      "grouped_wv_and_output_projection_exact": true,
+      "vision_bias_before_store": true,
+      "module_dtype_preserves_weight_bits": true,
+      "output_row_alignment_bytes": 32
+    },
+    "model_runtime": {
+      "shared_v4_attention_layers": 2,
+      "prefill_tokens": 3,
+      "decode_steps": 5,
+      "prefill_replay_agrees": true,
+      "raw_swa_main_index_cache_and_c2_state_agree": true
+    }
+  },
+  "known_limitations": [
+    "Unmodified PR267 packed-scale GEMM fails on this NPU runtime's right-shift broadcasting; use explicit FP32 scales"
+  ],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.2923359600827098
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.019238485023379326
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.08353016199544072
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.003991252975538373
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.059196222107857466
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.0654169199988246
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.06818628613837063
+    },
+    {
+      "name": "fp8_activation_partial_row_byte_decode_probe",
+      "passed": true,
+      "seconds": 0.0016143820248544216
+    },
+    {
+      "name": "fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales",
+      "passed": true,
+      "seconds": 0.09549515903927386
+    },
+    {
+      "name": "fp8_activation_to_fp4_expert_tiled_gemm",
+      "passed": true,
+      "seconds": 0.054524683859199286
+    },
+    {
+      "name": "swiglu_fp32_intermediate_route_weight_clamp_to_fp8",
+      "passed": true,
+      "seconds": 0.005158636951819062
+    },
+    {
+      "name": "ordinary_fp8_linear_tails_module_migration_outacc_and_bf16_gate",
+      "passed": true,
+      "seconds": 0.07583308685570955
+    },
+    {
+      "name": "ordinary_projection_bf16_3d_grouped_wv_output_and_vision_bias",
+      "passed": true,
+      "seconds": 0.1588414900470525
+    },
+    {
+      "name": "actual_v4_attention_shared_prefill_decode",
+      "passed": true,
+      "seconds": 3.0935096978209913
+    }
+  ],
+  "case_count": 14,
+  "passed": true,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 34572288,
+  "hf32_enabled": false
+}

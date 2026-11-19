@@ -1,0 +1,32 @@
+{
+  "runs": {
+    "operand_die8_20261119T110842211806929_yh": {
+      "container_id": "a84b2dd1f0a8c2bd43fd8b56343657591fd92dbe9476177c246248374c2174e0",
+      "container_absent": true,
+      "before": {
+        "hbm_mib": 3155,
+        "has_process": false
+      },
+      "after": {
+        "hbm_mib": 3156,
+        "has_process": false
+      }
+    },
+    "operand_die8_20261119T110926837218581_yh": {
+      "container_id": "6583eb1a9ebfa2ecb6c35d573145d3d39d70f4dde84dc94a5345e6b9c30f2912",
+      "container_absent": true,
+      "before": {
+        "hbm_mib": 3155,
+        "has_process": false
+      },
+      "after": {
+        "hbm_mib": 3154,
+        "has_process": false
+      }
+    }
+  },
+  "fresh_die8": {
+    "hbm_mib": 3155,
+    "has_process": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "container_id": "df4cc9b9d15477cf7c9ef6ea1fc4dfdc457e32d57d8f42b48a5fcc2b5f9204e8",
+  "container_absent": true,
+  "before": {
+    "hbm_mib": 3154,
+    "has_process": false
+  },
+  "after": {
+    "hbm_mib": 3155,
+    "has_process": false
+  },
+  "fresh_die8": {
+    "hbm_mib": 3155,
+    "has_process": false
+  }
+}

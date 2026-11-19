@@ -1,0 +1,126 @@
+{
+  "rank": 1,
+  "backend": "hccl",
+  "passed": true,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 33638912,
+  "hf32_enabled": false,
+  "container_local_device": 1,
+  "device": "npu:1",
+  "cases": [
+    {
+      "case": 0,
+      "rank": 1,
+      "tokens": 2,
+      "passed": true
+    },
+    {
+      "case": 1,
+      "rank": 1,
+      "tokens": 1,
+      "passed": true
+    },
+    {
+      "case": 2,
+      "rank": 1,
+      "tokens": 1,
+      "passed": true
+    },
+    {
+      "case": 3,
+      "rank": 1,
+      "tokens": 2,
+      "passed": true
+    },
+    {
+      "case": 4,
+      "rank": 1,
+      "tokens": 0,
+      "passed": true
+    },
+    {
+      "case": "preflight_and_compute_recovery",
+      "rank": 1,
+      "passed": true
+    },
+    {
+      "case": "bound_gate_shared_raw_moe",
+      "rank": 1,
+      "tokens": 12,
+      "passed": true
+    },
+    {
+      "case": "gate_ties_tiny_scores_epsilon",
+      "rank": 1,
+      "passed": true,
+      "lowest_index_ties": true,
+      "tiny_score_logit": -100.0,
+      "denominator": "sum+1e-20"
+    },
+    {
+      "case": "residual_norm_fp8_rounding",
+      "rank": 1,
+      "passed": true,
+      "norm_rounds_before_fp8": true,
+      "fp8_bytes_exact": true,
+      "residual_bf16_exact": true
+    },
+    {
+      "case": "norm_gate_shared_raw_moe",
+      "rank": 1,
+      "passed": true,
+      "tokens": 13,
+      "residual_norm_gate_shared_routed_combine": true
+    },
+    {
+      "case": "norm_moe_empty_origin",
+      "rank": 1,
+      "passed": true,
+      "tokens": 13,
+      "residual_norm_gate_shared_routed_combine": true
+    },
+    {
+      "case": "engram_raw_owner_gather_projection_gate",
+      "rank": 1,
+      "passed": true,
+      "raw_gather_bytes_exact": true,
+      "hash_exact": true,
+      "zero_dot_ascend_sign_branch": true,
+      "no_embedding_decode_or_requantization": true,
+      "gate_projection_exact_fixture": true,
+      "cpu_residency_bytes": 198,
+      "empty_origin": false
+    },
+    {
+      "case": "engram_empty_origin",
+      "rank": 1,
+      "passed": true,
+      "raw_gather_bytes_exact": true,
+      "hash_exact": true,
+      "zero_dot_ascend_sign_branch": true,
+      "no_embedding_decode_or_requantization": true,
+      "gate_projection_exact_fixture": true,
+      "cpu_residency_bytes": 198,
+      "empty_origin": false
+    },
+    {
+      "case": "engram_collective_contract_rejections",
+      "rank": 1,
+      "passed": true,
+      "runtime_errors_agreed": 4,
+      "ordering_and_counts_validated": true,
+      "peer_source_mutation_rejected": true
+    },
+    {
+      "case": "actual_hc_runtime_shifted_and_head",
+      "rank": 1,
+      "passed": true,
+      "actual_hc_runtime": true,
+      "ordinary_and_shifted": true,
+      "lazy_consumption_and_head": true,
+      "fp32_parameter_dtype_preserved": true,
+      "bf16_results_exact_fixture": true
+    }
+  ],
+  "torch_npu_imported": true
+}

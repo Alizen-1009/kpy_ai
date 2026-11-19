@@ -1,0 +1,390 @@
+CASE_START all_e8m0_codes_bit_exact_and_packed_bytes
+[W1119 03:09:33.813109484 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/quantization/official.py:29: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  bits = exponents << 23
+CASE_PASS all_e8m0_codes_bit_exact_and_packed_bytes
+CASE_START engram_selected_rows_byte_gather
+CASE_PASS engram_selected_rows_byte_gather
+CASE_START fp4_expert_adapter_to_reference_gemm_torch.float32
+CASE_PASS fp4_expert_adapter_to_reference_gemm_torch.float32
+CASE_START fp8_matrix_adapter_to_reference_gemm_torch.float32
+CASE_PASS fp8_matrix_adapter_to_reference_gemm_torch.float32
+CASE_START synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale
+[INFO 11-19 03:09:33 weights.py:54] HF load phase ordinary: 0.023s
+[INFO 11-19 03:09:33 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-19 03:09:33 weights.py:54] HF load phase engram: 0.001s
+[INFO 11-19 03:09:33 weights.py:593] HF weights loaded: {'params': 2, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+CASE_PASS synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale
+CASE_START synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute
+[INFO 11-19 03:09:33 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-19 03:09:33 weights.py:54] HF load phase experts: 0.003s
+[INFO 11-19 03:09:33 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-19 03:09:33 weights.py:593] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+CASE_PASS synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute
+CASE_START fp4_expert_compute_tile_boundaries_tail_and_empty_k
+CASE_PASS fp4_expert_compute_tile_boundaries_tail_and_empty_k
+CASE_START fp8_activation_partial_row_byte_decode_probe
+CASE_PASS fp8_activation_partial_row_byte_decode_probe
+CASE_START fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales
+CASE_PASS fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales
+CASE_START fp8_activation_to_fp4_expert_tiled_gemm
+CASE_PASS fp8_activation_to_fp4_expert_tiled_gemm
+CASE_START swiglu_fp32_intermediate_route_weight_clamp_to_fp8
+CASE_PASS swiglu_fp32_intermediate_route_weight_clamp_to_fp8
+CASE_START ordinary_fp8_linear_tails_module_migration_outacc_and_bf16_gate
+CASE_PASS ordinary_fp8_linear_tails_module_migration_outacc_and_bf16_gate
+CASE_START ordinary_projection_bf16_3d_grouped_wv_output_and_vision_bias
+CASE_PASS ordinary_projection_bf16_3d_grouped_wv_output_and_vision_bias
+CASE_START mhc_projection_sinkhorn_pre_post_head
+MHC_LEGACY_BLAS_DIAGNOSTIC={"path": "pre", "portable_cpu_vs_legacy_cpu_bf16": 2, "portable_target_vs_legacy_cpu_bf16": 2, "portable_target_vs_portable_cpu_bf16": 0}
+MHC_LEGACY_BLAS_DIAGNOSTIC={"path": "head", "portable_cpu_vs_legacy_cpu_bf16": 1, "portable_target_vs_legacy_cpu_bf16": 1, "portable_target_vs_portable_cpu_bf16": 0}
+CASE_PASS mhc_projection_sinkhorn_pre_post_head
+CASE_START actual_hc_runtime_ordinary_shifted_lazy_head
+CASE_PASS actual_hc_runtime_ordinary_shifted_lazy_head
+CASE_START rope_layout_offsets_conjugate_and_cache
+CASE_PASS rope_layout_offsets_conjugate_and_cache
+CASE_START engram_cpu_raw_table_hash_projection_gate
+CASE_PASS engram_cpu_raw_table_hash_projection_gate
+CASE_START cache_fp4_fp8_codecs_paged_store_load
+CASE_PASS cache_fp4_fp8_codecs_paged_store_load
+CASE_START c1_c2_prefill_decode_state
+CASE_PASS c1_c2_prefill_decode_state
+CASE_START fp4_index_scoring_topk_sparse_attention
+CASE_PASS fp4_index_scoring_topk_sparse_attention
+CASE_START actual_v4_attention_shared_prefill_decode
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:393: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:312: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+CASE_PASS actual_v4_attention_shared_prefill_decode
+CASE_START prepared_model_runner_engram_mhc_attention_moe
+[W1119 03:09:37.006211172 ProcessGroupGloo.cpp:524] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[rank0]:[W1119 03:09:37.140464588 ArgSortKernelNpuOpApi.cpp:45] Warning: Warning: kernel [ArgSort] can not support dtype int32 or int64 on AiCore, Now this kernel is running on AiCpu.If you are more concerned about high-performance execution,please cast dtype to float32. (function operator())
+CASE_PASS prepared_model_runner_engram_mhc_attention_moe
+CASE_START actual_v4_attention_candidate_block_prefill_decode
+CASE_PASS actual_v4_attention_candidate_block_prefill_decode
+{
+  "scope": "synthetic FP8/packed-FP4 HF loading and BF16-rounded tiled expert/reference GEMM; not model equivalence",
+  "device": "npu:0",
+  "exposure": {
+    "host_die": 8,
+    "davinci_nodes": [
+      8
+    ],
+    "container_local_device": 0,
+    "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "stage3_checks_selected": "all",
+  "adapter_sha256": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+  "activation_sha256": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+  "ordinary_linear_sha256": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+  "stage3_source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "3735ec11c0899780903f646e3ab4b91b890ef444675bb0d2fdcd796a615ad75a",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/model_executor/models/v4_modules/official_rope.py": "c9987e04dd3cf65b45052a8445ae42e2733aa2ab24949a97fc25a11cab2cb747",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_cache.py": "0c627010f473365f081ffb4b73be3fdac9767b7d37f34a4215941afe5559de61",
+    "deepinfer/model_executor/models/v4_modules/official_attention.py": "5cfc55d0052ed42125b134d62bfdca4286b48cbaf645ac712b110889da14db50",
+    "deepinfer/model_executor/models/v4_modules/official_compression.py": "80cf1c789a311d35baf81129aadc89a559ba4b2e1662a873d18227fbbe3e6ace",
+    "tests/quantization/test_official_attention.py": "eb993d4c40f59ef7ac6488e582fd394e554596b990c51208d328e9acb14b6561",
+    "tests/quantization/test_official_compression.py": "ae8113d8639acf633bf2ed38e4aea40a5782a218b54423f1979044e105bcbcfb",
+    "tests/quantization/test_official_model_runtime.py": "ca7dd19e81c02e0bfebc484775413768af92bf59642754413bf85b5d56c69c9e",
+    "tests/quantization/test_official_decoder_runtime.py": "1726e9916f05cba60207751d34d63a3939d53e77d5c7bba7d2e8be3bc2db7f9a",
+    "deepinfer/model_executor/models/decoder_layer.py": "d000cec7ed89700786525853732f290435504a034778a5581337898f37d78d1a",
+    "deepinfer/model_executor/models/deepseek.py": "1be0f3e8e79b66464de9e7f9f16c279d8b3d51d4201b7634614c1973b70195a8",
+    "deepinfer/model_executor/models/v4_modules/engram_metadata.py": "3fc548d9ce782796f0810f6d753edd20cbcf40fbb86980c890254137a194acea",
+    "deepinfer/model_executor/layers/vocab_parallel_embedding.py": "3d75b92c2ba5cb934b57b8ad02e7b5dcc1fcc1c433e52e1c5a46ff7eecdb3a3b",
+    "deepinfer/model_executor/models/v4_modules/attn.py": "471873bd4ef5e309e225cb45ce8ca4712494349e91d780143f5f0a5fe7125ca5",
+    "deepinfer/model_executor/models/v4_modules/compress.py": "e8e17922c5351f682cb0067348b5caabbd57970761a704e2c94234c2362cdbf7",
+    "deepinfer/model_executor/models/v4_modules/index_attn.py": "38c0c2c76c3c1a94edf6ff63b9776e99718635a8495ac53b0891614853a3bc96",
+    "deepinfer/model_executor/models/v4_modules/cross_layer.py": "b7d0ca65aa96f715e6189f511c592c4341a4eff7898b8c4366a6912252bce7c5",
+    "tests/quantization/test_official_candidate_runtime.py": "09b933a72360dea8757973bb4e3cbaa50464bf6b7d2cbf4183a0288ec75f74ef",
+    "deepinfer/worker/model_runner.py": "4b5919066cf9171e779854741131114ba19734834379e417af9c2f9e2fec685a",
+    "tests/quantization/test_official_cache.py": "ce636a5693d815619b0891c47d0450054365e95671c37f8c28a63cb770abea18",
+    "tests/quantization/test_official_mhc.py": "47a2ce936276da86012f1667084b30f406677ed7bc50b71cc32ace202f06dab0",
+    "tests/quantization/test_official_hc_runtime.py": "fe3de5a767ec1e07189b44ed76d5f9921605b294299f496211257d7301f292fd",
+    "tests/quantization/test_official_rope.py": "9abda813a0338700fd7cc96e136c8c3d6b0ac24fa1cb2baf67201304d5e6ca40",
+    "tests/quantization/test_official_engram.py": "a8d7ef85c4cda71b009357cdcb364ee902320aa89b7bba9ac06e1a1f6f9f7c5c"
+  },
+  "runtime_linear_sha256": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+  "runtime_linear_fixture_sha256": "139ae9458d7efc7d252127c77e65c058ea9558137da3dff8c6c995b180d224fd",
+  "ordinary_linear_fixture_sha256": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+  "materializer_sha256": "508c381e99e70190f5b760f6924e7a8a91029e5cf1806815bf070e7b4caf655b",
+  "fp4_compute_sha256": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+  "hf_loader_sha256": "07adc03b268e148681764cd3bb63d15168fc83eb0efd6c1baee1de20f02d9346",
+  "hf_test_fixture_sha256": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+  "reference_sha256": "b5ea4e08728f1f6c4e50ef9fb86608510bedc06a3e9821da28bea01cf08775d9",
+  "runner_sha256": "cfcf53366df0f6d616b106bf0b83e1e74f57c97150a8296ac42cfe80e8e80bc0",
+  "ascend_home": "/root/yuhao/deepinfer_910c_yh/cann92_sdk_yh/cann-9.2.0",
+  "official_checkpoint_payload_read": false,
+  "synthetic_checkpoint_payload_read": true,
+  "gemm_scale_interface": "fp32",
+  "ascend_launch_blocking": "0",
+  "diagnostics": {
+    "right_shift_broadcast": "RuntimeError: __rshift__:../third_party/op-plugin/op_plugin/ops/opapi/__Rshift__KernelNpuOpApi.cpp:26 NPU function error: call aclnnRightShift failed, error code is 161002\n[ERROR] 2026-11-19-03:09:43 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.\n[PID: 1] 2026-11-19-03:09:43.498.203 AclNN_Parameter_Error(EZ1001): Shape of out should be [1, 2, 2], but current is [1, 2, 1].\n",
+    "right_shift_materialized_equal_shapes": "passed"
+  },
+  "operator_probes": {
+    "torch_round_half_ties": {
+      "cpu": [
+        -0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "device": [
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ]
+    },
+    "pow_div_midpoint": {
+      "step_bits": [
+        989855743
+      ],
+      "expected_step_bits": [
+        989855744
+      ],
+      "division_at_tie": [
+        0.5000000596046448
+      ],
+      "exact_power2_multiply_at_tie": [
+        0.5
+      ]
+    },
+    "quantization_first_mismatches": [],
+    "activation_native_scale_stride_torch.int16": [
+      1,
+      510
+    ],
+    "activation_native_scale_stride_torch.int32": [
+      1,
+      510
+    ],
+    "ordinary_fp8_linear": {
+      "shape_mnk": [
+        65,
+        129,
+        258
+      ],
+      "output_exact": true,
+      "raw_weight_bytes": true,
+      "c_added_before_store": true
+    },
+    "bf16_gate_fp32_output": {
+      "max_abs_error": 0.0,
+      "dtype": "torch.float32"
+    },
+    "ordinary_projection_consumers": {
+      "bf16_3d_fp32_noncontiguous_accumulator": true,
+      "grouped_wv_and_output_projection_exact": true,
+      "vision_bias_before_store": true,
+      "module_dtype_preserves_weight_bits": true,
+      "output_row_alignment_bytes": 32
+    },
+    "mhc": {
+      "full_trunk_rms_projection": true,
+      "fixed_tree_dot_mean_fp32_exact": true,
+      "sinkhorn_sequence": true,
+      "pre_post_head_bf16_exact_fixture": true,
+      "empty_tokens": true,
+      "native_instruction_parity_claimed": false
+    },
+    "hc_runtime": {
+      "actual_hc_runtime": true,
+      "ordinary_and_shifted": true,
+      "lazy_consumption_and_head": true,
+      "fp32_parameter_dtype_preserved": true,
+      "bf16_results_exact_fixture": true
+    },
+    "rope": {
+      "passed": true,
+      "cases": 9,
+      "native_parity_claimed": false,
+      "cache_constructed_on_requested_device": true,
+      "fp32_cache_preserved_on_dtype_move": true
+    },
+    "engram": {
+      "raw_gather_bytes_exact": true,
+      "hash_exact": true,
+      "zero_dot_ascend_sign_branch": true,
+      "no_embedding_decode_or_requantization": true,
+      "gate_projection_exact_fixture": true,
+      "cpu_residency_bytes": 396,
+      "empty_origin": false
+    },
+    "cache": true,
+    "compression": null,
+    "attention": null,
+    "model_runtime": {
+      "shared_v4_attention_layers": 2,
+      "prefill_tokens": 3,
+      "decode_steps": 5,
+      "prefill_replay_agrees": true,
+      "raw_swa_main_index_cache_and_c2_state_agree": true
+    },
+    "decoder_runtime": {
+      "prepared_runner": true,
+      "decoder_layers": 1,
+      "prefill_tokens": 3,
+      "decode_steps": 3,
+      "prefill_replay_agrees": true,
+      "engram": true
+    },
+    "candidate_runtime": {
+      "shared_v4_attention_layers": 2,
+      "prefill_tokens": 160,
+      "decode_steps": 20,
+      "prefill_dense_winners_excluded": 8,
+      "decode_dense_winners_excluded": 5,
+      "newest_blocks_kept_despite_score": 24
+    }
+  },
+  "known_limitations": [
+    "Unmodified PR267 packed-scale GEMM fails on this NPU runtime's right-shift broadcasting; use explicit FP32 scales"
+  ],
+  "cases": [
+    {
+      "name": "all_e8m0_codes_bit_exact_and_packed_bytes",
+      "passed": true,
+      "seconds": 0.2545538591220975
+    },
+    {
+      "name": "engram_selected_rows_byte_gather",
+      "passed": true,
+      "seconds": 0.018312508007511497
+    },
+    {
+      "name": "fp4_expert_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.09655662905424833
+    },
+    {
+      "name": "fp8_matrix_adapter_to_reference_gemm_torch.float32",
+      "passed": true,
+      "seconds": 0.003720272099599242
+    },
+    {
+      "name": "synthetic_cross_shard_hf_byte_load_merge_and_fp32_scale",
+      "passed": true,
+      "seconds": 0.029112610034644604
+    },
+    {
+      "name": "synthetic_fp4_expert_raw_load_local_replicas_and_tiled_compute",
+      "passed": true,
+      "seconds": 0.06321111903525889
+    },
+    {
+      "name": "fp4_expert_compute_tile_boundaries_tail_and_empty_k",
+      "passed": true,
+      "seconds": 0.06755762407556176
+    },
+    {
+      "name": "fp8_activation_partial_row_byte_decode_probe",
+      "passed": true,
+      "seconds": 0.001530888956040144
+    },
+    {
+      "name": "fp8_activation_all_finite_bf16_quant_bytes_and_native_packed_scales",
+      "passed": true,
+      "seconds": 0.08670078404247761
+    },
+    {
+      "name": "fp8_activation_to_fp4_expert_tiled_gemm",
+      "passed": true,
+      "seconds": 0.05319385603070259
+    },
+    {
+      "name": "swiglu_fp32_intermediate_route_weight_clamp_to_fp8",
+      "passed": true,
+      "seconds": 0.0049979910254478455
+    },
+    {
+      "name": "ordinary_fp8_linear_tails_module_migration_outacc_and_bf16_gate",
+      "passed": true,
+      "seconds": 0.07411194406449795
+    },
+    {
+      "name": "ordinary_projection_bf16_3d_grouped_wv_output_and_vision_bias",
+      "passed": true,
+      "seconds": 0.14562319917604327
+    },
+    {
+      "name": "mhc_projection_sinkhorn_pre_post_head",
+      "passed": true,
+      "seconds": 0.10453736409544945
+    },
+    {
+      "name": "actual_hc_runtime_ordinary_shifted_lazy_head",
+      "passed": true,
+      "seconds": 0.03711273381486535
+    },
+    {
+      "name": "rope_layout_offsets_conjugate_and_cache",
+      "passed": true,
+      "seconds": 0.0829471901524812
+    },
+    {
+      "name": "engram_cpu_raw_table_hash_projection_gate",
+      "passed": true,
+      "seconds": 0.1323220517951995
+    },
+    {
+      "name": "cache_fp4_fp8_codecs_paged_store_load",
+      "passed": true,
+      "seconds": 0.23873908608220518
+    },
+    {
+      "name": "c1_c2_prefill_decode_state",
+      "passed": true,
+      "seconds": 0.012794907903298736
+    },
+    {
+      "name": "fp4_index_scoring_topk_sparse_attention",
+      "passed": true,
+      "seconds": 0.14209286379627883
+    },
+    {
+      "name": "actual_v4_attention_shared_prefill_decode",
+      "passed": true,
+      "seconds": 2.5727095778565854
+    },
+    {
+      "name": "prepared_model_runner_engram_mhc_attention_moe",
+      "passed": true,
+      "seconds": 0.7831840119324625
+    },
+    {
+      "name": "actual_v4_attention_candidate_block_prefill_decode",
+      "passed": true,
+      "seconds": 5.157308727037162
+    }
+  ],
+  "case_count": 23,
+  "passed": true,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 41550336,
+  "hf32_enabled": false
+}

@@ -82,6 +82,21 @@
 - 证据和source hashes：`docs/evidence/ascend910c/official_backend_*_yh.json`；完整说明见[适配记录第10节](../ref/DeepInfer/doc/ascend910c-official-operand.md)。128项是量化/加载/组件CPU测试，不是完整repo/GPU/950 CI。
 - 下一项：ordinary Linear在attention/vision/einsum等完整调用端的backend/role与merge/ownership，随后mHC/RoPE、Engram、attention/cache和decoder/engine装配。当前whole-model load对Engram未就绪fail-fast。**阶段3尚未完成，阶段4–5未开始，不具备GOAL_COMPLETE证据。**
 
+### 2026-11-18 增量：普通投影调用端与grouped Wv接点
+
+- 新增显式普通FP8/BF16 projection factory；接入attention的Q/KV/compressor/index-weight/output projection、index-K与vision/aligner的Linear handoff。默认仍选native；官方merge保留输入storage，不经native SF packing，不重新量化。
+- 分组Wv按原逐token/group32 FP8量化→分组GEMM→BF16/clamp→out projection；BF16投影支持3D、FP32输出、非连续C、32-byte行stride，并区分ReplicatedLinear后store bias与vision前store bias。新增明确角色、父模块to_empty/meta和storage别名保护。
+- **138项CPU测试无skip、仅die8的13项NPU operand smoke通过**。新增grouped链M65/H2/D160/R288及BF16 M6/N129/K258；合成fixture对独立CPU oracle严格相等。CPU实际调用方法体测试绕过完整vendor类初始化，inverse RoPE是显式测试替身；不能写成完整attention/vision验证。
+- 两个任务容器已移除，最终die8 HBM3158→3157 MiB、结束无进程；未访问官方tensor payload、未改量化/cache策略或共享环境。本轮未重跑HCCL；既有Norm→MoE跨卡结果不扩展为新调用端覆盖。
+- 初始测试夹具AttributeError与较小fixture的通过报告保留。证据为`official_projection_*_yh.json`；接口、hash、历史来源及限制见[适配记录第11节](../ref/DeepInfer/doc/ascend910c-official-operand.md#11-2026-11-18--普通-linear-调用端非破坏性-merge-与分组-wv)。后续进展见下文。
+
+### 阶段 3 续作：真实双层 attention prefill/decode 通过
+
+- 固定顺序 FP32 mHC 规约通过 die 8 严格 BF16 压测，未放宽容差；旧 CPU BLAS/NPU 差异报告保留。RoPE、CPU 常驻 Engram、原始 FP4/FP8 cache、C1/C2 与 sparse attention 通过受控验证。
+- 最终 196 项 CPU、die 8 的 22 项用例通过，覆盖真实双层 `V4Attention` 的 3-token prefill、5 步 decode 和逐字节 cache replay，以及 prepared `ModelRunner` 驱动的单层 `DeepseekModel`（Engram、mHC、C2/index/SWA、FP8/FP4 MoE）prefill/3 步 decode。HCCL 仅使用跨物理卡 dies 8/10，两 rank 各 15 个组件用例通过。见[适配记录第 12 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#12-阶段-3mhcropeengram原始-kv-及-eager-attention)和[证据目录](evidence/ascend910c/stage3/)。
+- 官方 candidate-block 已接通并验证双层 160-token prefill、20 步 decode；197 项 CPU、die 8 的 23 项 all 用例通过。[记录第 13 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#13-阶段-3candidate-block-源层与消费层)。
+- **阶段 3 不标记完成**：vision/VL、实际 scheduler/sampler 及多 rank 模型组合执行仍需各自的运行证据。未读取官方权重 payload，未开始阶段 4–5。
+
 ## 2. 模型结构与优化含义
 
 ### 2.1 总体结构

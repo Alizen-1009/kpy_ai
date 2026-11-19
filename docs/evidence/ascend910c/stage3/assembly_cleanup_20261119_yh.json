@@ -1,0 +1,52 @@
+{
+  "operand_die8_20261119T105044636247826_yh": {
+    "container_id": "250417b65f423aaa6ef3975b45f52ab18cc69970d583ac51e1b655c612ae0f08",
+    "container_absent": true,
+    "before": {
+      "8": {
+        "hbm_mib": 3156,
+        "has_process": false
+      }
+    },
+    "after": {
+      "8": {
+        "hbm_mib": 3156,
+        "has_process": false
+      }
+    }
+  },
+  "ep_die8_10_20261119T105134999971207_yh": {
+    "container_id": "bc431feac51b1e51a816614474cf236952b8c0ccd319d9e5a696e8e580ff2ab9",
+    "container_absent": true,
+    "before": {
+      "8": {
+        "hbm_mib": 3156,
+        "has_process": false
+      },
+      "10": {
+        "hbm_mib": 3165,
+        "has_process": false
+      }
+    },
+    "after": {
+      "8": {
+        "hbm_mib": 3160,
+        "has_process": false
+      },
+      "10": {
+        "hbm_mib": 3165,
+        "has_process": false
+      }
+    }
+  },
+  "fresh_authorized_dies": {
+    "8": {
+      "hbm_mib": 3159,
+      "has_process": false
+    },
+    "10": {
+      "hbm_mib": 3164,
+      "has_process": false
+    }
+  }
+}
