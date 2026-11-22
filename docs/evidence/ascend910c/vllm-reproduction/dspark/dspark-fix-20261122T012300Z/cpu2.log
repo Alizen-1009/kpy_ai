@@ -1,0 +1,10 @@
+NameError name 'self' is not defined
+plain oracle/shape/alias PASS
+output oracle/shape/alias PASS
+buffer oracle/shape/alias PASS
+both oracle/shape/alias PASS
+NameError name 'self' is not defined
+RuntimeError [DYNSPEC-DIAG] build_dspark_swa_indices 行数不一致: block_table=(2, 2) safe_nums=(1, 8) seq_lens=(1,) query_start_loc=(2,) num_decode_tokens=2 index_width=8
+ValueError DSpark SWA indices output shape does not match active metadata: output=(1, 1, 8), active=(2, 1, 8)
+AssertionError dspark_swa_indices needs 2 rows but `buffer` only has 1
+PASS all CPU regression cases; torch 2.10.0+cpu

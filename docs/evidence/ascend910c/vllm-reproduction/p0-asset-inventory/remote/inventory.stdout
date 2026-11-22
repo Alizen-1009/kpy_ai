@@ -1,0 +1,187 @@
+Sat Nov 21 06:41:02 AM UTC 2026
+aarch64
+Filesystem                                             Size  Used Avail Use% Mounted on
+/dev/mapper/openeuler-root                              69G   61G  4.4G  94% /
+/dev/mapper/openeuler-root                              69G   61G  4.4G  94% /
+/dev/mapper/uuid.c1130000-0000-0100-edd9-b01cd12f83ae  3.5T  2.7T  816G  78% /root/syf/data_yf
+/dev/mapper/uuid.11130000-0000-0100-ed4b-ac7772890feb  3.5T  2.6T  725G  79% /data2
+/dev/mapper/openeuler-home                             364G  290G   56G  84% /home
+               total        used        free      shared  buff/cache   available
+Mem:           1.0Ti        25Gi       309Gi       616Mi       676Gi       980Gi
+Swap:          4.0Gi       114Mi       3.9Gi
++------------------------------------------------------------------------------------------------+
+| npu-smi 25.5.1                   Version: 25.5.1                                               |
++---------------------------+---------------+----------------------------------------------------+
+| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|
+| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |
++===========================+===============+====================================================+
+| 0     Ascend910           | OK            | 160.8       39                0    / 0             |
+| 0     0                   | 0000:9D:00.0  | 0           0    / 0          3156 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 0     Ascend910           | OK            | -           39                0    / 0             |
+| 1     1                   | 0000:9F:00.0  | 0           0    / 0          2887 / 65536         |
++===========================+===============+====================================================+
+| 1     Ascend910           | OK            | 164.2       41                0    / 0             |
+| 0     2                   | 0000:99:00.0  | 0           0    / 0          3166 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 1     Ascend910           | OK            | -           40                0    / 0             |
+| 1     3                   | 0000:9B:00.0  | 0           0    / 0          2874 / 65536         |
++===========================+===============+====================================================+
+| 2     Ascend910           | OK            | 162.3       41                0    / 0             |
+| 0     4                   | 0000:95:00.0  | 0           0    / 0          3161 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 2     Ascend910           | OK            | -           41                0    / 0             |
+| 1     5                   | 0000:97:00.0  | 0           0    / 0          2878 / 65536         |
++===========================+===============+====================================================+
+| 3     Ascend910           | OK            | 158.7       41                0    / 0             |
+| 0     6                   | 0000:91:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 3     Ascend910           | OK            | -           40                0    / 0             |
+| 1     7                   | 0000:93:00.0  | 0           0    / 0          2890 / 65536         |
++===========================+===============+====================================================+
+| 4     Ascend910           | OK            | 162.1       39                0    / 0             |
+| 0     8                   | 0000:8D:00.0  | 0           0    / 0          3157 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 4     Ascend910           | OK            | -           39                0    / 0             |
+| 1     9                   | 0000:8F:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
+| 5     Ascend910           | OK            | 162.4       40                0    / 0             |
+| 0     10                  | 0000:89:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 5     Ascend910           | OK            | -           39                0    / 0             |
+| 1     11                  | 0000:8B:00.0  | 0           0    / 0          2877 / 65536         |
++===========================+===============+====================================================+
+| 6     Ascend910           | OK            | 166.7       41                0    / 0             |
+| 0     12                  | 0000:85:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 6     Ascend910           | OK            | -           41                0    / 0             |
+| 1     13                  | 0000:87:00.0  | 0           0    / 0          2892 / 65536         |
++===========================+===============+====================================================+
+| 7     Ascend910           | OK            | 175.4       40                0    / 0             |
+| 0     14                  | 0000:81:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 7     Ascend910           | OK            | -           40                0    / 0             |
+| 1     15                  | 0000:83:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
++---------------------------+---------------+----------------------------------------------------+
+| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |
++===========================+===============+====================================================+
+| No running processes found in NPU 0                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 1                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 2                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 3                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 4                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 5                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 6                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 7                                                            |
++===========================+===============+====================================================+
+
+DRIVER/CANN
+Version=25.5.1
+ascendhal_version=7.35.23
+aicpu_version=1.0
+tdt_version=1.0
+log_version=1.0
+prof_version=2.0
+dvppkernels_version=1.1
+tsfw_version=1.0
+Innerversion=V100R001C23SPC006B220
+compatible_version=[V100R001C19],[V100R001C20],[V100R001C21],[V100R001C22],[V100R001C23]
+compatible_version_fw=[7.0.0,8.9.9]
+package_version=25.5.1
+
+IMAGES
+REPOSITORY                                                     TAG                                                            DIGEST                                                                    IMAGE ID                                                                  CREATED         SIZE
+quay.io/ascend/vllm-ascend                                     v0.30.0-a3                                                     <none>                                                                    sha256:77aea90962507771cfaf5304c926ee3f3539907eb59d37edb560177e7e7b4033   3 weeks ago     23.9GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/cann                9.2.1-a3-openeuler24.03-py3.11                                 sha256:448f431efd0aa159a904f77c7103d3538d80996fd60717a99b7d7920c0b5d428   sha256:abd3fa92199b26daeb9a176cd07ae64d2f00fd0a25c9eb6f52643962c3ed02a8   3 weeks ago     12.7GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/cann                9.2.1-a3-ubuntu22.04-py3.11                                    sha256:0024a098daff5b35b8fd28dadba7fee3de16a85a09ca022da592f31b167717e2   sha256:dfa38b64faa206272b7ad19bd08feafec432e164ec3dd5d2028537fb75304b80   3 weeks ago     12.2GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/cann                9.2.1-a3-ubuntu22.04-py3.12                                    sha256:2d08537973cf274a1d185855d811cdbc3d6eecbcad86e3e4e27e3da73f9da74e   sha256:12373c41afcc173f0527a3081156588bc645a7c937da89d98e34ee9b1162382c   3 weeks ago     12.2GB
+quay.io/ascend/vllm-ascend                                     v0.30.0rc2-a3                                                  <none>                                                                    sha256:ce42d65b2403992ad2e2b06c61f4f048babb57e455cfe307b018345e36c5e98b   5 weeks ago     24GB
+train910c                                                      qwen35-4b                                                      <none>                                                                    sha256:640ceedfb1262a3306b3958a54953a1f171542669bf865f75b70a7918154d309   6 weeks ago     17.1GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/mindspeed-llm       v26.1.0-cann9.1.0-torch_npu2.7.1.post8-a3-ubuntu22.04-py3.12   sha256:0f5a361fda2b697e0e1a7bd28ceac3aa204cbef54bb390447d8bdd86479323d3   sha256:f0912fa5f95638510313ebbfb9d6ef8afa9657a6dac03e420075c6c23c96f1bf   2 months ago    15.8GB
+quay.io/ascend/vllm-ascend                                     qwen3.8-a3                                                     sha256:3ca5f78aab3114e34ae1a033fbf07aa2a36dcdbc562aab79cd722eee689c595c   sha256:41dab489874e4983324d9d960a6c57f8bd45ebb5172a3b7672bd64461f9d96b7   3 months ago    17.9GB
+quay.io/ascend/vllm-ascend                                     DeepSeekV4-flash-0731-a3                                       <none>                                                                    sha256:fe705b00b250b7b40e4103b668ed2434c9bfec257611f4a9674315223f138af3   3 months ago    16.9GB
+quay.m.daocloud.io/ascend/vllm-ascend                          DeepSeekV4-flash-0731-a3                                       sha256:ee01558f5928b969586a798036ef76ad24f0c312d297523cd993765a19736595   sha256:fe705b00b250b7b40e4103b668ed2434c9bfec257611f4a9674315223f138af3   3 months ago    16.9GB
+quay.nju.edu.cn/ascend/sglang                                  cann9.0.0-a3-v0.5.16                                           sha256:d26b1aec41ac4bfe77ccea785e44eb8b7f4053e3ea3b2a02111cb90e876653c8   sha256:008d2ebcd28a18f4dfbc855d23d763a2bdc63c4ce82c6b7b761580ad6d15d0a7   3 months ago    16.1GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/drivingsdk          26.0.0-cann9.0.0-a3-openeuler24.03                             sha256:a32b8f35915e7a9452e19504570fdf8364bfa454489a18b66fee5ab7684b339a   sha256:4b37ab85220df79c9bc7576551dd4108eca5c6609aad41b3f36e91d67eacd126   6 months ago    20.8GB
+frysong/chitu-910c-fallback                                    v0.5.4-20260925                                                <none>                                                                    sha256:3081145aff5217b43b02933aa89e35f26145afd4ddcc3bb97aacafa04281a995   7 months ago    17.5GB
+qingcheng-ai-cn-beijing.cr.volces.com/public/chitu-ascend_a3   <none>                                                         sha256:5dd7e1ebbe68d01e7e364961d2b0de0abfc07fe87734609ed498312f01744ea0   sha256:3081145aff5217b43b02933aa89e35f26145afd4ddcc3bb97aacafa04281a995   7 months ago    17.5GB
+swr.cn-south-1.myhuaweicloud.com/ascendhub/drivingsdk          8.3.RC1_alpha001-arm64                                         sha256:42db9c489392a8ac53c2dd9543fc448f699031f977b6aeb82a2cbbc5618847d9   sha256:d285e365eab1af2b2cc9c5a09b5c782c597a8daa848171782368383757f85739   14 months ago   20.3GB
+sha256:fe705b00b250b7b40e4103b668ed2434c9bfec257611f4a9674315223f138af3 ["quay.io/ascend/vllm-ascend:DeepSeekV4-flash-0731-a3","quay.m.daocloud.io/ascend/vllm-ascend:DeepSeekV4-flash-0731-a3"] ["quay.m.daocloud.io/ascend/vllm-ascend@sha256:ee01558f5928b969586a798036ef76ad24f0c312d297523cd993765a19736595"] 16880922268
+
+
+BOUNDED ROOTS
+total 20
+drwxr-xr-x   3 root root 4096 Nov  9 14:18 .
+dr-xr-x---. 43 root root 4096 Nov 21 01:37 ..
+lrwxrwxrwx   1 root root   29 Nov  9 14:18 deepinfer_910c -> /root/yuhao/deepinfer_910c_yh
+lrwxrwxrwx   1 root root   41 Nov  9 14:18 deepinfer_910c_yh -> /root/syf/data_yf/yuhao_deepinfer_910c_yh
+lrwxrwxrwx   1 root root   54 Nov  5 20:18 DeepSeek-V4.1-Flash-1017 -> /root/syf/data_yf/DeepSeek-V4.1-Flash-1017-original_yf
+drwxr-xr-x   4 root root 4096 Nov  5 20:48 DeepSeek-V4.1-Flash-1017-HF
+-rwx------   1 root root 6918 Nov  9 14:18 migrate_deepinfer_yh.py
+total 14706332
+drwxr-xr-x  27 root root        4096 Nov 20 17:41 .
+drwxr-xr-x  30 root root        4096 Nov  8 08:05 ..
+drwxr-xr-x   2 root root          41 Aug 21 17:57 .claude
+-rw-r--r--   1 root root    11249380 Nov  7 13:33 conditionalEager_MAIN41CPU_CubeBuild_metadata0_yf.tar.xz
+-rw-r--r--   1 root root     7713124 Nov  7 14:12 CWGraph_pairaccepted_Cube588_timing30_actual0_yf.tar.xz
+drwxr-xr-x   2 root root          59 Nov 20 14:49 dataset
+drwxr-xr-x   4 root root        4096 Nov  3 06:53 DeepSeek-V4.1-Flash-1017-original_yf
+-rw-r--r--.  1 root root       40406 Apr 25  2026 deepseek-v4-agentic-support.patch
+drwxr-xr-x   3 root root        8192 Aug 27 08:01 DeepSeek-V4-Flash-0731-w8a8
+drwxr-xr-x.  4 root root        8192 Jun  4 14:14 DeepSeek-V4-Flash-w8a8-mtp
+drwxr-xr-x  15 root root        4096 Aug 20 19:59 DrivingSDK
+drwx------   6 root root         170 Sep 16 16:04 FrySong
+drwxr-xr-x.  6 root root        4096 Apr 30  2026 ganxj
+drwxr-xr-x.  3 root root        8192 Apr 23  2026 GLM-5.1-w4a8
+dr-x------.  3 root root       16384 Mar 29  2026 GLM-5-w8a8
+drwxr-xr-x  13 root root         333 Aug 21 18:33 hand
+drwxr-xr-x   3 root root          17 Aug 21 17:43 hf_cache
+drwxr-xr-x   2 root root           6 Nov 20 14:36 hf_datasets_cache
+drwxr-xr-x   2 root root           6 Nov 20 14:48 hf_home
+drwx------   3 root root         193 Nov  8 08:05 kernel_system_artifacts_volume_yf
+drwxr-xr-x   7 root root          91 Aug 26 22:47 m3t
+-rw-r--r--   1 root root     7337064 Jul  1 17:22 Megatron-LM-core_v0.12.1.zip
+-rw-------   1 root root 14808721408 Jul  1 09:35 mindspeed-llm-26.0.0-a3-openeuler24.03-py3.11-aarch64
+drwxr-xr-x  18 root root        4096 Aug 20 18:12 miniconda3
+-rwxr-xr-x   1 root root   164383330 May 21  2026 Miniconda3-py313_26.3.2-2-Linux-aarch64.sh
+drwxr-xr-x   5 root root         118 Nov  7 12:15 mmlu_evidence_yf
+drwxr-xr-x   3 root root          24 Nov  9 09:19 models
+drwxr-xr-x  15 root root        4096 Nov 20 17:41 moganshan
+-rw-------.  1 root root         476 Mar 20  2026 .msc
+-rw-------.  1 root root    35772518 Apr 20  2026 nohup.out.xx
+drwxr-xr-x   6 root root        4096 Jun  9 16:06 qilu
+drwxr-xr-x   6 root root         107 Aug 26 16:30 qwen3.8
+drwxr-xr-x.  2 root root        4096 Mar 20  2026 ._____temp
+drwxr-xr-x   4 root root          84 Jul 10 11:25 test
+-rw-r--r--   1 root root    23935324 Jun 30 15:54 torch_npu-2.6.0.post6-cp311-cp311-manylinux_2_28_aarch64.whl
+lrwxrwxrwx   1 root root          54 Nov  9 14:18 yuhao_deepinfer_910c_yf -> /root/yuhao/deepinfer_910c_yh/.compat_yh/legacy_layout
+drwxr-xr-x  24 root root        4096 Nov 21 13:48 yuhao_deepinfer_910c_yh
+total 12
+drwxr-xr-x  3 root root 4096 Nov  2 11:43 .
+drwxr-xr-x 26 root root 4096 Nov 20 15:37 ..
+drwxr-xr-x  4 root root 4096 Nov  2 11:44 DeepSeek-V4.1-Flash-1017-original_yf
+
+CANN DIRECTORIES
+drwxr-xr-x  2 root root  4096 Sep  8 09:35 /usr/local/Ascend/add-ons
+drwxr-xr-x  2 root root  4096 Aug 24 14:44 /usr/local/Ascend/ascend-toolkit
+lrwxrwxrwx  1 root root    22 Aug 24 14:44 /usr/local/Ascend/ascend-toolkit/latest -> /usr/local/Ascend/cann
+lrwxrwxrwx  1 root root    50 Aug 24 14:44 /usr/local/Ascend/ascend-toolkit/set_env.sh -> /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
+lrwxrwxrwx  1 root root    28 Aug 24 14:44 /usr/local/Ascend/cann -> /usr/local/Ascend/cann-8.5.0
+drwxr-xr-x 15 root root  4096 Aug 24 14:56 /usr/local/Ascend/cann-8.5.0
+-rw-r--r--  1 root root     0 Aug  6 08:32 /usr/local/Ascend/creatuserHwHiAiUser
+drwxr-xr-x 15 root root  4096 Aug  6 08:34 /usr/local/Ascend/driver
+dr-xr-x---  5 root root  4096 Aug  6 08:34 /usr/local/Ascend/firmware
+-r-xr-x---  1 root root  3794 Feb  6  2026 /usr/local/Ascend/host_servers_remove.sh
+-r-xr-x---  1 root root  6367 Feb  6  2026 /usr/local/Ascend/host_servers_setup.sh
+-r-xr-x---  1 root root    89 Feb  6  2026 /usr/local/Ascend/host_services_exit.sh
+-r-xr-x---  1 root root    89 Feb  6  2026 /usr/local/Ascend/host_services_setup.sh
+-r-xr-x---  1 root root 12334 Feb  6  2026 /usr/local/Ascend/host_sys_init.sh
+-r--r--r--  1 root root    15 Feb  6  2026 /usr/local/Ascend/version.info

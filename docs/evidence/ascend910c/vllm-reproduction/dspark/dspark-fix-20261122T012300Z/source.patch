@@ -1,0 +1,21 @@
+--- ref/deepseek-v4.1-flash-ascend910B/patches/files/draft/dsa_v1.py	2026-11-05 19:36:15
++++ patches/vllm_ascend_repro/dsa_v1_dspark.py	2026-11-22 09:21:43
+@@ -620,7 +620,6 @@
+     # 触发场景：动态 K 的 ql=1 步真进图后，`_propose` 的 `_pad_query_start_loc_for_fia`
+     # 可能**补一个 dummy 请求并把 num_reqs_padded +1**，而 block_table 只按目标侧的
+     # 行数传来 ⇒ 行数不匹配。只在不一致时抛错，正常路径零开销。
+-    _v41_bt_parent = getattr(self, "block_table", block_table)
+     if block_table.shape[0] != safe_nums.shape[0]:
+         raise RuntimeError(
+             "[DYNSPEC-DIAG] build_dspark_swa_indices 行数不一致: "
+@@ -628,9 +627,7 @@
+             f"safe_nums={tuple(safe_nums.shape)} "
+             f"seq_lens={tuple(seq_lens.shape)} "
+             f"query_start_loc={tuple(query_start_loc.shape)} "
+-            f"num_decode_tokens={num_decode_tokens} index_width={index_width} "
+-            f"parent_self_block_table={tuple(_v41_bt_parent.shape)} "
+-            f"parent_num_actual_tokens={getattr(self, 'num_actual_tokens', None)}"
++            f"num_decode_tokens={num_decode_tokens} index_width={index_width}"
+         )
+     block_ids = torch.gather(block_table, 1, safe_nums)
+     slot_ids = (block_ids * block_size + block_offsets).to(torch.int32)

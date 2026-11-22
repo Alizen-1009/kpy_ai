@@ -1,0 +1,1 @@
+[{"path": "engram_int8/layers_1_engram_embed.weight.safetensors", "sha256": "51d28f161232e3bf600b92ef4e3c38ceb9164b801bd456503bb1a29da496ea9f", "bytes": 98305579120, "status": "complete"}, {"path": "engram_int8/layers_14_engram_embed.weight.safetensors", "sha256": "bee6e08838c75d40c4b1f5f8d7e4716aba34f90c03c17e77ad406e36188cccaa", "bytes": 98308270704, "status": "complete"}]

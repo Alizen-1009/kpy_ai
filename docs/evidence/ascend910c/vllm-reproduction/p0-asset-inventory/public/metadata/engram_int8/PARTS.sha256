@@ -1,0 +1,27 @@
+# engram_int8 分片与重组校验清单
+#
+# 重组后文件的正确 sha256（与量化产物原始文件一致）：
+#   layers_1_engram_embed.weight.safetensors   51d28f161232e3bf600b92ef4e3c38ceb9164b801bd456503bb1a29da496ea9f
+#   layers_14_engram_embed.weight.safetensors  bee6e08838c75d40c4b1f5f8d7e4716aba34f90c03c17e77ad406e36188cccaa
+#
+# ---- 分片（按序拼接即为原文件）----
+f505d28c4a50e21ab308576aef7439bf6e12c812baf3747a99cf252bd1b5b2e0  layers_1_engram_embed.weight.safetensors.part-00-of-06
+f28b68255bcf9d26ed8463cd91530d072049b3e26cf4fc7b8e46aa2e6665dec6  layers_1_engram_embed.weight.safetensors.part-01-of-06
+bf91604120d05882b4cf7b525c8158a31752f9a2f790f2f046b8bb20cac6db3d  layers_1_engram_embed.weight.safetensors.part-02-of-06
+4d638d2017c399dcd33c29982cf6357776a1f08185b9a68f1ee9784d20ed9fd3  layers_1_engram_embed.weight.safetensors.part-03-of-06
+674059e7b09a79b7868dfce3a104236478af24e5f4ffdb64b2e8524771168051  layers_1_engram_embed.weight.safetensors.part-04-of-06
+2a27367bdd883ea19bdf4c3c776ce49cba781df3c2842b91c540f1ecb6d2e080  layers_1_engram_embed.weight.safetensors.part-05-of-06
+d4f307c9ab13284e9695ebad3b27aad4cac7c7e5a96edcd1fc20e1121e6b0d9e  layers_14_engram_embed.weight.safetensors.part-00-of-06
+59b5bb3eea3b638817b3dfa13c5398a6bd2ff3b7104a524ff04705c916ed9ee8  layers_14_engram_embed.weight.safetensors.part-01-of-06
+ece40d3372fa95040313021b649e05cefac3ffe301a986b00b9d407883f169ac  layers_14_engram_embed.weight.safetensors.part-02-of-06
+17df19527f431d6a1a4495c7399d01e4eb72b4ed332d43f128feb25deeb2954f  layers_14_engram_embed.weight.safetensors.part-03-of-06
+6cbcabfc9363c6bad94029833ca99f058010e0ed5daf2932cc2ff8fc6f127ca2  layers_14_engram_embed.weight.safetensors.part-04-of-06
+c0ce8f5d5c0cb4570be968d83ab73b502d6584ef3dcd1f4ac6d371cb4e13e00e  layers_14_engram_embed.weight.safetensors.part-05-of-06
+#
+# ---- 未分片、直接存放的文件 ----
+b0b23e66bbd68a6df23e11b7de709ca8cc08562eecabd31134fb775c705eeb20  layers_1_engram_embed.scale.safetensors
+9caaea34100a866989b66d1f0e059447e34ff5ff8e50148e7dc9250e92dbf63c  layers_14_engram_embed.scale.safetensors
+#
+# ---- 重组结果（脚本实时计算，应与上方“正确 sha256”一致）----
+51d28f161232e3bf600b92ef4e3c38ceb9164b801bd456503bb1a29da496ea9f  layers_1_engram_embed.weight.safetensors
+bee6e08838c75d40c4b1f5f8d7e4716aba34f90c03c17e77ad406e36188cccaa  layers_14_engram_embed.weight.safetensors
