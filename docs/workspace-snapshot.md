@@ -1,14 +1,14 @@
 # kpy_ai 工作区快照
 
-本次提交收录主仓库其余未忽略的实验文档、原始证据、评测脚本与数据，并更新嵌套仓库gitlink。未提交缓存、.git内部数据或忽略文件；未push到任何远端。
+本次提交收录主仓库其余未忽略的实验文档、原始证据、评测脚本与数据，并更新嵌套仓库gitlink。未提交缓存、.git内部数据或忽略文件。归档后已获授权发布到GitHub；子仓库先推送，随后推送主仓库。
 
 ## 嵌套仓库
 
-- `ref/DeepInfer`：本地提交 `d4420f9` 保存官方runtime、量化/性能实验及证据。主仓库记录该gitlink，实际源码在嵌套仓库对象库中；跨机器恢复需要先推送此提交或另行传输仓库。
+- `ref/DeepInfer`：本地提交 `d4420f9` 保存官方runtime、量化/性能实验及证据。主仓库记录该gitlink，已推送到 `Alizen-1009/DeepInfer` 的 `feat/ascend910c-official-fp4` 分支。
 - `ref/DeepInfer-ascend910c-pr267`：记录现有commit，无工作区修改。
 - `ref/deepseek-v4.1-flash-ascend910B`：已通过 `4647bd6` 和 `cc77187` 解决macOS大小写文件名冲突。原 `experiments/upstream950/PROGRESS.md` 无损更名为 `PROGRESS-detailed.md`，小写 `progress.md` 保持原样；两个版本内容均逐字节保留。同步README链接，并从已提交HEAD计算对应MANIFEST条目。只改文档路径与校验清单，不改模型/部署代码。
 
-补齐 `.gitmodules` 映射，不改变嵌套仓库结构。需要注意两个子仓库的新提交均尚未push，单独推送父仓库不保证他人能拉取对应gitlink。
+补齐 `.gitmodules` 映射，不改变嵌套仓库结构。两个有新提交的子仓库均已推送。参考仓库现指向私有副本 `Alizen-1009/deepseek-v4.1-flash-ascend910B`（main：cc77187），原 `chiro2001` 仓库保留为本地 `upstream`。这是保留main完整祖先历史的私有副本，不是GitHub公开fork网络成员。拉取该私有子仓库需要相应账号权限；可用 `git submodule update --init --recursive` 获取所固定版本。
 
 ## 大文件
 

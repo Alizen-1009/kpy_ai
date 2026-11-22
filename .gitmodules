@@ -6,4 +6,4 @@
 	url = https://github.com/deepseek-ai/DeepInfer.git
 [submodule "ref/deepseek-v4.1-flash-ascend910B"]
 	path = ref/deepseek-v4.1-flash-ascend910B
-	url = git@github.com:chiro2001/deepseek-v4.1-flash-ascend910B.git
+	url = git@github.com:Alizen-1009/deepseek-v4.1-flash-ascend910B.git
