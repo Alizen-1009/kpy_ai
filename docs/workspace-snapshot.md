@@ -6,9 +6,9 @@
 
 - `ref/DeepInfer`：本地提交 `d4420f9` 保存官方runtime、量化/性能实验及证据。主仓库记录该gitlink，实际源码在嵌套仓库对象库中；跨机器恢复需要先推送此提交或另行传输仓库。
 - `ref/DeepInfer-ascend910c-pr267`：记录现有commit，无工作区修改。
-- `ref/deepseek-v4.1-flash-ascend910B`：保留原HEAD。仓库同时追踪 `experiments/upstream950/PROGRESS.md` 和 `experiments/upstream950/progress.md`，在当前大小写不敏感macOS文件系统中冲突。现存文件字节与小写路径的已提交blob完全相同，不将此检出冲突伪装为用户编辑并覆盖大写文件。两个原始版本仍完整保存在该仓库HEAD；`git status`可能继续显示大写文件修改。建议在大小写敏感文件系统中检出进行比较。
+- `ref/deepseek-v4.1-flash-ascend910B`：已通过 `4647bd6` 和 `cc77187` 解决macOS大小写文件名冲突。原 `experiments/upstream950/PROGRESS.md` 无损更名为 `PROGRESS-detailed.md`，小写 `progress.md` 保持原样；两个版本内容均逐字节保留。同步README链接，并从已提交HEAD计算对应MANIFEST条目。只改文档路径与校验清单，不改模型/部署代码。
 
-补齐 `.gitmodules` 映射，不改变嵌套仓库结构。需要注意新DeepInfer提交尚未push，单独推送父仓库不保证他人能拉取该gitlink。
+补齐 `.gitmodules` 映射，不改变嵌套仓库结构。需要注意两个子仓库的新提交均尚未push，单独推送父仓库不保证他人能拉取对应gitlink。
 
 ## 大文件
 
