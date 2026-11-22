@@ -1,0 +1,14 @@
+diff --git a/ref/DeepInfer-ascend910c-pr267 b/ref/DeepInfer-ascend910c-pr267
+new file mode 160000
+index 0000000..7c67f06
+--- /dev/null
++++ b/ref/DeepInfer-ascend910c-pr267
+@@ -0,0 +1 @@
++Subproject commit 7c67f0617044ff416e63db73fe772e818a552a90
+diff --git a/ref/deepseek-v4.1-flash-ascend910B b/ref/deepseek-v4.1-flash-ascend910B
+new file mode 160000
+index 0000000..ab88ff8
+--- /dev/null
++++ b/ref/deepseek-v4.1-flash-ascend910B
+@@ -0,0 +1 @@
++Subproject commit ab88ff84efa7970875f3f8cc38dfcb06c491b154

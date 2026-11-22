@@ -1,0 +1,10 @@
+{
+  "status": "sandbox_error",
+  "error": "sandbox exited -9",
+  "passed": 0,
+  "total": 16,
+  "case_results": [],
+  "isolation": "docker",
+  "extracted_code": "def longest_unique_substring(text):\n    while True: pass\n",
+  "extracted_code_sha256": "c700285ae7e03270bebe6846c2e968932f44cd88d07c77208695a5d53ac53406"
+}

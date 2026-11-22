@@ -1,0 +1,9 @@
+[submodule "ref/DeepInfer"]
+	path = ref/DeepInfer
+	url = git@github.com:Alizen-1009/DeepInfer.git
+[submodule "ref/DeepInfer-ascend910c-pr267"]
+	path = ref/DeepInfer-ascend910c-pr267
+	url = https://github.com/deepseek-ai/DeepInfer.git
+[submodule "ref/deepseek-v4.1-flash-ascend910B"]
+	path = ref/deepseek-v4.1-flash-ascend910B
+	url = git@github.com:chiro2001/deepseek-v4.1-flash-ascend910B.git

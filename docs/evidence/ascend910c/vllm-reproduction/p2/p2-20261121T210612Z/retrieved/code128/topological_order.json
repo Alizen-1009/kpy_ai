@@ -1,0 +1,21 @@
+{
+  "task": "topological_order",
+  "request": {
+    "model": "p1-vision1-20261121T205625Z-244b8fbf",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-topological_order]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回有向无环图的字典序最小拓扑序。nodes 是互不重复的字符串节点列表，edges 中的 [u, v]表示 u 必须排在 v 前面；重复边只算一次。每一步若有多个入度为零的节点，选择字典序最小者。若图有环，返回空列表。输入列表不得被修改。\n函数签名：def topological_order(nodes, edges):\n示例：例如 nodes=[\"b\",\"a\",\"c\"], edges=[[\"a\",\"c\"]] 返回 [\"a\",\"b\",\"c\"]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 400,
+  "error": "HTTP Error 400: Bad Request",
+  "score": {
+    "passed": 0,
+    "total": 16,
+    "status": "error"
+  }
+}

@@ -1,0 +1,6 @@
+disabled: reproduced "Vision weight 'aligner.w1.bias' has no parameter 'aligner.w1.bias'."
+enabled: PASS all 266 vision tensors strictly matched
+aligner.w1.weight [5120, 9216]
+aligner.w1.bias [5120]
+aligner.w2.weight [5120, 5120]
+aligner.w2.bias [5120]

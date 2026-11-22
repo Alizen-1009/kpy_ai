@@ -1,0 +1,12 @@
+{
+  "run": "stage5_full_8_15_20261120T160224094462081_yh",
+  "container_started": true,
+  "cid": "9820d2e49eb0be0c10ffc23027f2be5b9daaba8f16244bd0d4dcba6f13bf25bf",
+  "execution_sha256": "7ceccc191035927f861c63a0936ccda76d3d67a74f10d87597c496f5d50d6ea0",
+  "checked_at": "2026-11-20T09:58:17.924200+00:00",
+  "engine_version": "27.5.1",
+  "inspect_exit_code": 1,
+  "inspect_stdout": "[]",
+  "inspect_stderr": "Error response from daemon: No such container: 9820d2e49eb0be0c10ffc23027f2be5b9daaba8f16244bd0d4dcba6f13bf25bf",
+  "absent": true
+}

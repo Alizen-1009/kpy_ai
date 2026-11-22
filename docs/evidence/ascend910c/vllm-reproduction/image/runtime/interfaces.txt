@@ -1,0 +1,7 @@
+__vllm-workspace__vllm-ascend__vllm_ascend__attention__dsa_v41.py.source 29 vllm_ascend.attention.dsa_v1 ['dsv4_dsa_overlap_stream'] MISSING []
+__vllm-workspace__vllm-ascend__vllm_ascend__attention__dsa_v41.py.source 36 vllm_ascend.ops.rope_dsv4 ['get_cos_and_sin_dsa', 'get_full_cos_and_sin_dsa_for_layer'] MISSING []
+__vllm-workspace__vllm-ascend__vllm_ascend__utils.py.source 1154 vllm_ascend.ascend_forward_context ['select_moe_comm_method', 'use_cann_megamoe'] MISSING []
+__vllm-workspace__vllm-ascend__vllm_ascend__worker__model_runner_v1.py.source 119 vllm_ascend.attention.dsa_v1 ['AscendDSAMetadataBuilder'] MISSING []
+__vllm-workspace__vllm-ascend__vllm_ascend__worker__model_runner_v1.py.source 217 vllm_ascend.ascend_forward_context ['MoECommType', 'get_mc2_tokens_capacity', 'select_moe_comm_method', 'set_ascend_forward_context', 'set_mc2_mask', 'set_mc2_tokens_capacity'] MISSING []
+__vllm-workspace__vllm-ascend__vllm_ascend__models__deepseek_v41__dspark.py.source 21 vllm_ascend.models.deepseek_v41.model ['DeepseekV41DecoderLayer'] MISSING []
+SIGNATURE vllm_ascend.models.deepseek_v41.engram_hbm _record_offload_use IMAGE self, source_ptr, device PAYLOAD self, source_ptr, device, reuse_event=False

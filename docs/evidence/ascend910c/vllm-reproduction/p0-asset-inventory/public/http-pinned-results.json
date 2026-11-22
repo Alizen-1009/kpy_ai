@@ -1,0 +1,50 @@
+{
+  "ms-git-refs": {
+    "url": "https://modelscope.cn/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend.git/info/refs?service=git-upload-pack",
+    "utc": "2026-11-21T13:09:20.277039+00:00",
+    "status": 421,
+    "final_url": "https://modelscope.cn/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend.git/info/refs?service=git-upload-pack",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:09:20 GMT",
+      "Content-Type": "application/json"
+    },
+    "truncated": false,
+    "body_sha256": "d599cfc597aae91b90660b0a2acb65044442ee0e649ca49ef876de5dd0967e48"
+  },
+  "ms-pinned-files": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=50029772e7757c3d9cec50481661091b369af901&Recursive=true",
+    "utc": "2026-11-21T13:09:20.277389+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=50029772e7757c3d9cec50481661091b369af901&Recursive=true",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:09:21 GMT",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "truncated": false,
+    "body_sha256": "99a528089cc1ccd1dac0358f5df4b7432fceb4e26f10c36a8b744ab2dc2771b0"
+  },
+  "ms-reassemble": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=engram_int8/reassemble_engram_weights.sh",
+    "utc": "2026-11-21T13:09:20.277487+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=engram_int8/reassemble_engram_weights.sh",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:09:21 GMT",
+      "Content-Type": "application/x-shellscript"
+    },
+    "truncated": false,
+    "body_sha256": "41d1d467de45a8c34a36828101ffb026ccc543ff8a01d01afcd468a06408eb1d"
+  },
+  "ms-readme": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=README.md",
+    "utc": "2026-11-21T13:09:20.277561+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=README.md",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:09:21 GMT",
+      "Content-Type": "application/x-genesis-rom"
+    },
+    "truncated": false,
+    "body_sha256": "90a96fa5b04ced014384126448f54b30b83b8f2d2192f7bc39e8d958d013c35f"
+  }
+}

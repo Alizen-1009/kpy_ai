@@ -1,1 +1,5 @@
 .DS_Store
+__pycache__/
+*.py[cod]
+# Lossless .gz copy is tracked; keep the oversized raw profiler trace locally.
+/docs/evidence/ascend910c/performance/stage5_moe_batch_die8_20261121T130159252432753_yh/trace/b06d856cb3a7_1_20261121050220023_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json

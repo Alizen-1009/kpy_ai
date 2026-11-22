@@ -1,0 +1,18 @@
+{
+  "revision": "50029772e7757c3d9cec50481661091b369af901",
+  "api_data_keys": [
+    "Files",
+    "IsVisual",
+    "LatestCommitter"
+  ],
+  "file_count": 120,
+  "directory_count": 10,
+  "total_bytes": 525795307321,
+  "missing_sha256": [],
+  "engram_parts_bytes": 196613849824,
+  "engram_parts_count": 12,
+  "image_layer_bytes": 10357254631,
+  "master_same_files": true,
+  "ms-readme_hash_matches": true,
+  "ms-reassemble_hash_matches": true
+}

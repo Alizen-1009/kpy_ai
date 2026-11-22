@@ -1,0 +1,108 @@
+{
+  "task": "flatten_dict",
+  "request": {
+    "model": "p2-graph-20261121T230225Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-flatten_dict]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：递归展开只含字符串键和字典/JSON 标量叶子的嵌套字典。返回新字典，键由路径段用 sep 连接；根空字典返回空字典；非根空字典作为空字典叶子保留。不得修改输入。\n函数签名：def flatten_dict(data, sep=\".\"):\n示例：例如 {\"a\": {\"b\": 2}, \"c\": 3} 返回 {\"a.b\": 2, \"c\": 3}。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 171,
+    "total_tokens": 333,
+    "completion_tokens": 162,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 15,
+    "total": 15,
+    "case_results": [
+      {
+        "id": "root-empty",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "nested-empty-leaf",
+        "passed": true,
+        "actual": "{\"a.b\":{},\"c\":1}"
+      },
+      {
+        "id": "custom-separator",
+        "passed": true,
+        "actual": "{\"a/b\":2,\"c\":3}"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "{\"k0\":true}"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "{\"k0/k0\":-2,\"k0/k1\":0,\"k0/k2/k0\":null,\"k1\":false}"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "{\"k0\":{},\"k1.k0\":7,\"k1.k1.k0.k0\":7,\"k1.k1.k0.k1\":0,\"k1.k1.k0.k2\":\"v\",\"k1.k2.k0\":{},\"k2\":false}"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "{\"k0\":true,\"k1\":{},\"k2\":\"v\"}"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "{\"k0\":\"v\",\"k1\":\"v\",\"k2::k0\":0,\"k2::k1\":-2}"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "{\"k0\":7,\"k1.k0\":false,\"k1.k1\":true}"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "{}"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def flatten_dict(data, sep=\".\"):\n    if not isinstance(data, dict):\n        raise TypeError(\"data must be a dict\")\n    if not data:\n        return {}\n\n    result = {}\n\n    def walk(node, path):\n        if isinstance(node, dict):\n            if not node:\n                result[sep.join(path)] = {}\n                return\n            for key, value in node.items():\n                if not isinstance(key, str):\n                    raise TypeError(\"all keys must be strings\")\n                walk(value, path + [key])\n        else:\n            result[sep.join(path)] = node\n\n    for key, value in data.items():\n        if not isinstance(key, str):\n            raise TypeError(\"all keys must be strings\")\n        walk(value, [key])\n\n    return result\n",
+    "extracted_code_sha256": "05a58b2cff2b9b860f0bf6c9888fd4a56778cbe8d48d638e14247a5658520df4"
+  }
+}

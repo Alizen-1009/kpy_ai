@@ -1,0 +1,145 @@
+[
+  {
+    "Path": "README.md",
+    "Size": 41653,
+    "Sha256": "90a96fa5b04ced014384126448f54b30b83b8f2d2192f7bc39e8d958d013c35f",
+    "Revision": "50029772e7757c3d9cec50481661091b369af901",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=README.md",
+    "status": 200,
+    "verified_sha256": "90a96fa5b04ced014384126448f54b30b83b8f2d2192f7bc39e8d958d013c35f",
+    "utc": "2026-11-21T13:12:40.506485+00:00"
+  },
+  {
+    "Path": "config.json",
+    "Size": 3008,
+    "Sha256": "f796648afd448324b203d8990d5bcf3132322822a08340ae00be65ec8213f91b",
+    "Revision": "e44ffa893500ac050a4fdf26eba49351f348b835",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=config.json",
+    "status": 200,
+    "verified_sha256": "f796648afd448324b203d8990d5bcf3132322822a08340ae00be65ec8213f91b",
+    "utc": "2026-11-21T13:12:45.258805+00:00"
+  },
+  {
+    "Path": "configuration.json",
+    "Size": 29,
+    "Sha256": "8fa209ef18ac53dea0c47cf8d6f4e92c907565a4971bee413c1772e314a251fa",
+    "Revision": "42b45e75525a1542fdf3fcfcfdff1e78443e5cc9",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=configuration.json",
+    "status": 200,
+    "verified_sha256": "8fa209ef18ac53dea0c47cf8d6f4e92c907565a4971bee413c1772e314a251fa",
+    "utc": "2026-11-21T13:12:49.462175+00:00"
+  },
+  {
+    "Path": "engram_int8/PARTS.sha256",
+    "Size": 2421,
+    "Sha256": "baba958502a4a6dc96f2e2e391eab4bff9baed1ec9ccc796fa4fc1e2b54ced78",
+    "Revision": "b1c4c850753449ce24e06f91fb8f8c4dae0af3cb",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=engram_int8%2FPARTS.sha256",
+    "status": 200,
+    "verified_sha256": "baba958502a4a6dc96f2e2e391eab4bff9baed1ec9ccc796fa4fc1e2b54ced78",
+    "utc": "2026-11-21T13:12:52.657839+00:00"
+  },
+  {
+    "Path": "engram_int8/reassemble_engram_weights.sh",
+    "Size": 4002,
+    "Sha256": "41d1d467de45a8c34a36828101ffb026ccc543ff8a01d01afcd468a06408eb1d",
+    "Revision": "711aa15486ac29a54f760d06aae6b30b71395b1e",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=engram_int8%2Freassemble_engram_weights.sh",
+    "status": 200,
+    "verified_sha256": "41d1d467de45a8c34a36828101ffb026ccc543ff8a01d01afcd468a06408eb1d",
+    "utc": "2026-11-21T13:12:56.115695+00:00"
+  },
+  {
+    "Path": "mtpq_manifest.json",
+    "Size": 3698,
+    "Sha256": "d99cfe02c0c8ce501138a70df07fc075c21ce86fdfa2430a949c1ab94e860232",
+    "Revision": "1a91b937a07f11090c9dd07142e6d4f79bcec04d",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=mtpq_manifest.json",
+    "status": 200,
+    "verified_sha256": "d99cfe02c0c8ce501138a70df07fc075c21ce86fdfa2430a949c1ab94e860232",
+    "utc": "2026-11-21T13:12:56.321741+00:00"
+  },
+  {
+    "Path": "quant_model_description.json",
+    "Size": 11396950,
+    "Sha256": "5677e007c0de3826f97993f2cc6bc5313480b3e690606c2b37f824f23a84d928",
+    "Revision": "e3f07179fc109e6855ac07f6db345df67a4a08be",
+    "IsLFS": true,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=quant_model_description.json",
+    "status": 200,
+    "verified_sha256": "5677e007c0de3826f97993f2cc6bc5313480b3e690606c2b37f824f23a84d928",
+    "utc": "2026-11-21T13:12:59.876959+00:00"
+  },
+  {
+    "Path": "quant_model_weights.safetensors.index.json",
+    "Size": 17954681,
+    "Sha256": "b087a7123ab85eaade441a8dfe2c2e62a55f88f4bf76f6bb4e03e485c163aa3d",
+    "Revision": "c76442f89362ff63116f299aa195e84d3b8175c4",
+    "IsLFS": true,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=quant_model_weights.safetensors.index.json",
+    "status": 200,
+    "verified_sha256": "b087a7123ab85eaade441a8dfe2c2e62a55f88f4bf76f6bb4e03e485c163aa3d",
+    "utc": "2026-11-21T13:13:05.165326+00:00"
+  },
+  {
+    "Path": "release/msmodelslim/recipes/deepseek_v4_1_flash_w4a8.yaml",
+    "Size": 2582,
+    "Sha256": "d3d9bdc6f2f249407dbbdb9faea8414a7d448a153c38f9ea1c36e3451deb7345",
+    "Revision": "676b27ec2d14f69ed7e8149d3479b79051edbdcd",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=release%2Fmsmodelslim%2Frecipes%2Fdeepseek_v4_1_flash_w4a8.yaml",
+    "status": 200,
+    "verified_sha256": "d3d9bdc6f2f249407dbbdb9faea8414a7d448a153c38f9ea1c36e3451deb7345",
+    "utc": "2026-11-21T13:13:06.999721+00:00"
+  },
+  {
+    "Path": "release/reports/quant-repro-accuracy.md",
+    "Size": 19646,
+    "Sha256": "7989b8751802647727ece29412823b1e5e3e8912bfb44d3aa936ae07f09b9b79",
+    "Revision": "c2bf1d2e95fda4d0e6a3bd3d316e24e906024ea4",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=release%2Freports%2Fquant-repro-accuracy.md",
+    "status": 200,
+    "verified_sha256": "7989b8751802647727ece29412823b1e5e3e8912bfb44d3aa936ae07f09b9b79",
+    "utc": "2026-11-21T13:13:08.091699+00:00"
+  },
+  {
+    "Path": "release/reports/quant-repro-validation.md",
+    "Size": 25693,
+    "Sha256": "be478f4544e763ee0494fff1b81b91f31f72f276a9b3d1cf4d2d2cbd3def2096",
+    "Revision": "0ff7492adb6d609662700abda3221a68547f1a05",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=release%2Freports%2Fquant-repro-validation.md",
+    "status": 200,
+    "verified_sha256": "be478f4544e763ee0494fff1b81b91f31f72f276a9b3d1cf4d2d2cbd3def2096",
+    "utc": "2026-11-21T13:13:10.906319+00:00"
+  },
+  {
+    "Path": "tokenizer.json",
+    "Size": 6367257,
+    "Sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+    "Revision": "e5f505dddc99c9ac1eec12465280f50cdfb6fd5d",
+    "IsLFS": true,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=tokenizer.json",
+    "status": 200,
+    "verified_sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+    "utc": "2026-11-21T13:13:12.909767+00:00"
+  },
+  {
+    "Path": "tokenizer_config.json",
+    "Size": 801,
+    "Sha256": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547",
+    "Revision": "977aef65118985cbe52bb9811f3463b9b127e069",
+    "IsLFS": false,
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=tokenizer_config.json",
+    "status": 200,
+    "verified_sha256": "6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547",
+    "utc": "2026-11-21T13:13:15.516984+00:00"
+  }
+]

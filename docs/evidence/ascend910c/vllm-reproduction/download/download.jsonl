@@ -1,0 +1,17 @@
+{"event": "process", "pid": 2206335, "start_ticks": "175838376", "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15", "started_unix": 1795267000.3851058, "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download.py"}
+{"event": "download", "path": ".gitattributes", "size": 3557}
+{"event": "complete", "path": ".gitattributes", "size": 3557}
+{"event": "download", "path": "README.md", "size": 41653}
+{"event": "complete", "path": "README.md", "size": 41653}
+{"event": "download", "path": "config.json", "size": 3008}
+{"event": "complete", "path": "config.json", "size": 3008}
+{"event": "canary_verified", "files": 3, "bytes": 48218}
+{"event": "verified_existing", "path": ".gitattributes"}
+{"event": "verified_existing", "path": "README.md"}
+{"event": "verified_existing", "path": "config.json"}
+{"event": "download", "path": "configuration.json", "size": 29}
+{"event": "complete", "path": "configuration.json", "size": 29}
+{"event": "download", "path": "engram_extra.safetensors", "size": 629310402}
+{"event": "redirect_refused", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
+{"event": "failed", "error_type": "ValueError"}
+{"event": "supervisor_exit", "code": 1}

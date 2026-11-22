@@ -1,0 +1,57 @@
+[
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/engram_hbm.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hbm.py",
+    "sha256": "f8a762a93b932bbf655cc8edea20c637655d0579775f2aeceb5bdd6653401269"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/engram_hash.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hash.py",
+    "sha256": "acf1aa4a9a75eef5ebe6dbf69bbeb8dd9195797c739ecc46751e3a79776ff4a8"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/engram_jit_kernel.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_jit_kernel.py",
+    "sha256": "1394bbe7e9752a0bcf3cc177f3ff3baf10c9c1d6847569855f5d5ed5237f38cf"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/engram_plan_kernel.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_plan_kernel.py",
+    "sha256": "87fd738eeb8c69d363d01105de1bb7067acc714e8d8e98739f146b6c547e8117"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/engram_gate.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_gate.py",
+    "sha256": "955e40b94e933aabddb37035ec295e701bdfe3c12fef586a6b7ba775a05e90a2"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/model.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/model.py",
+    "sha256": "dfbc3c0d3b0f9ce3349509de5dfb3799a47f834eec26a951769bf4a54e6c022b"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/ascend_forward_context.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/ascend_forward_context.py",
+    "sha256": "eb8442f593c11d666743c18b0936e64a302e53b2d0972c691706b179efb3bdee"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/rope_dsv4.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/rope_dsv4.py",
+    "sha256": "25151bcf62e49e1c1db780718eb7c29322c51767bf15693b46fe7b34ed3ba981"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/dsa_v1.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/dsa_v1.py",
+    "sha256": "f2633fd764203b14beff046a8029b48f4585d57df38914895be1cd432f41612c"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/token_dispatcher_moemask.py",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/token_dispatcher_moemask.py",
+    "sha256": "37f96f834b98e257b5b82eaab607c451199b191c9c01078f61213c4e592fc9b8"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/scripts/serve_v2.sh",
+    "destination": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/serve_v2.sh",
+    "sha256": "814ef3abd53d7413653e2e2ac7c0b0bef83becff461996f93414de0a17106114"
+  }
+]

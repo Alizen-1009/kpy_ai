@@ -1,0 +1,113 @@
+{
+  "task": "merge_intervals",
+  "request": {
+    "model": "p2-8192-20261121T224721Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-merge_intervals]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：合并闭区间。输入是 [start, end] 数值区间列表，保证 start <= end。按 start 排序后，重叠或相接的区间都要合并；返回新的、按 start 升序排列的区间列表，不修改输入。空输入返回空列表。\n函数签名：def merge_intervals(intervals):\n示例：例如 [[1,3], [3,5], [8,9]] 返回 [[1,5], [8,9]]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 174,
+    "total_tokens": 282,
+    "completion_tokens": 108,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "single-point",
+        "passed": true,
+        "actual": "[[2,2]]"
+      },
+      {
+        "id": "touching",
+        "passed": true,
+        "actual": "[[1,5],[8,9]]"
+      },
+      {
+        "id": "nested-and-unsorted",
+        "passed": true,
+        "actual": "[[1,7],[8,10],[12,12]]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[[2,4],[12,12]]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[[-9,-9],[-7,12]]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[[2,8]]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[[-11,14]]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[[-9,-6],[-1,19]]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[[-7,9],[12,12]]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[[-9,7]]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[[-9,-2]]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[[-11,-3],[2,14]]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[[12,20]]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[[-12,-3],[-2,17]]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: (x[0], x[1]))\n    merged = []\n    \n    for start, end in sorted_intervals:\n        if not merged or start > merged[-1][1]:\n            merged.append([start, end])\n        else:\n            if end > merged[-1][1]:\n                merged[-1][1] = end\n    \n    return merged\n",
+    "extracted_code_sha256": "b3b287e608558e037687582acf55370798699b212b12c00c87fac232c9d497c1"
+  }
+}

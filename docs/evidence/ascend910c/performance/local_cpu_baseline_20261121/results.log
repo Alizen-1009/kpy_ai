@@ -1,0 +1,383 @@
+Installed 46 packages in 225ms
+[INFO 11-21 13:10:06 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:06 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:06 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:06 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 1, 'engram_rows': 6}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.191s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.001s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 2, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.001s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 2, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.001s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 1, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.001s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:07 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:07 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:07 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 1, 'experts': 3, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:08 deepseek.py:494] Loading weights from /var/folders/mv/17532wmj5x30ps6h13j5r0_m0000gn/T/tmplo0swxot ...
+[INFO 11-21 13:10:08 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:08 weights.py:609] HF weights loaded: {'params': 2, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:08 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:08 weights.py:609] HF weights loaded: {'params': 2, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:08 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:08 weights.py:609] HF weights loaded: {'params': 2, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:08 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:08 weights.py:609] HF weights loaded: {'params': 1, 'aliases': 0, 'fp8': 0, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:08 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase experts: 0.000s
+[INFO 11-21 13:10:08 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:08 weights.py:609] HF weights loaded: {'params': 1, 'aliases': 0, 'fp8': 1, 'expert_params': 0, 'experts': 0, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+[INFO 11-21 13:10:09 weights.py:54] HF load phase ordinary: 0.000s
+[INFO 11-21 13:10:09 weights.py:54] HF load phase experts: 0.001s
+[INFO 11-21 13:10:09 weights.py:54] HF load phase engram: 0.000s
+[INFO 11-21 13:10:09 weights.py:609] HF weights loaded: {'params': 0, 'aliases': 0, 'fp8': 0, 'expert_params': 2, 'experts': 6, 'expert_skipped': 0, 'engram_tables': 0, 'engram_rows': 0}
+test_all_e4m3_codes_and_e8m0_extremes_decode_like_native (test_official_activation.OfficialActivationTests.test_all_e4m3_codes_and_e8m0_extremes_decode_like_native) ... ok
+test_descriptor_validation_meta_and_cross_device (test_official_activation.OfficialActivationTests.test_descriptor_validation_meta_and_cross_device) ... ok
+test_direct_raw_storage_preserves_every_e8m0_byte (test_official_activation.OfficialActivationTests.test_direct_raw_storage_preserves_every_e8m0_byte) ... ok
+test_empty_dimensions (test_official_activation.OfficialActivationTests.test_empty_dimensions) ... ok
+test_every_finite_bf16_bit_pattern_against_native_cpu_cast (test_official_activation.OfficialActivationTests.test_every_finite_bf16_bit_pattern_against_native_cpu_cast) ... ok
+test_fp32_midpoints_and_adjacent_values_without_bf16_interround (test_official_activation.OfficialActivationTests.test_fp32_midpoints_and_adjacent_values_without_bf16_interround) ... ok
+test_fp8_fp4_gemm_quantized_multitile_reference (test_official_activation.OfficialActivationTests.test_fp8_fp4_gemm_quantized_multitile_reference) ... ok
+test_fp8_gemm_empty_dimensions_nan_bytes_and_scale_aliases (test_official_activation.OfficialActivationTests.test_fp8_gemm_empty_dimensions_nan_bytes_and_scale_aliases) ... ok
+test_fresh_import_does_not_initialize_platform_or_native_backends (test_official_activation.OfficialActivationTests.test_fresh_import_does_not_initialize_platform_or_native_backends) ... ok
+test_packed_k_adjacent_bytes_both_word_sizes_and_layouts (test_official_activation.OfficialActivationTests.test_packed_k_adjacent_bytes_both_word_sizes_and_layouts) ... ok
+test_packed_native_column_major_singletons_and_empty_axes (test_official_activation.OfficialActivationTests.test_packed_native_column_major_singletons_and_empty_axes) ... ok
+test_packed_rejects_zero_and_nan_logical_bytes_only (test_official_activation.OfficialActivationTests.test_packed_rejects_zero_and_nan_logical_bytes_only) ... ok
+test_packed_validation_and_physical_byte_budget (test_official_activation.OfficialActivationTests.test_packed_validation_and_physical_byte_budget) ... ok
+test_quantization_strided_multi_tile_tail_groups_and_floor (test_official_activation.OfficialActivationTests.test_quantization_strided_multi_tile_tail_groups_and_floor) ... ok
+test_quantizer_validation_and_element_dimension_budgets (test_official_activation.OfficialActivationTests.test_quantizer_validation_and_element_dimension_budgets) ... ok
+test_rne_ties_signed_zero_subnormals_and_saturation_boundary (test_official_activation.OfficialActivationTests.test_rne_ties_signed_zero_subnormals_and_saturation_boundary) ... ok
+test_single_native_word_nonunit_singleton_stride (test_official_activation.OfficialActivationTests.test_single_native_word_nonunit_singleton_stride) ... ok
+test_swiglu_scalar_reference_clamp_weight_and_no_bf16_interround (test_official_activation.OfficialActivationTests.test_swiglu_scalar_reference_clamp_weight_and_no_bf16_interround) ... ok
+test_tile_offsets_strides_tails_and_bounds (test_official_activation.OfficialActivationTests.test_tile_offsets_strides_tails_and_bounds) ... ok
+test_bad_hash (test_official_allocation.OfficialAllocationTests.test_bad_hash) ... ok
+test_fake_passed_budget (test_official_allocation.OfficialAllocationTests.test_fake_passed_budget) ... ok
+test_mismatched_samples (test_official_allocation.OfficialAllocationTests.test_mismatched_samples) ... ok
+test_missing_receipt (test_official_allocation.OfficialAllocationTests.test_missing_receipt) ... ok
+test_oversize_metadata_before_json (test_official_allocation.OfficialAllocationTests.test_oversize_metadata_before_json) ... ok
+test_path_traversal_and_symlink_escape (test_official_allocation.OfficialAllocationTests.test_path_traversal_and_symlink_escape) ... ok
+test_stale_source (test_official_allocation.OfficialAllocationTests.test_stale_source) ... ok
+test_success_is_frozen_and_no_payload_is_read (test_official_allocation.OfficialAllocationTests.test_success_is_frozen_and_no_payload_is_read) ... ok
+test_topology_and_headroom_refusals (test_official_allocation.OfficialAllocationTests.test_topology_and_headroom_refusals) ... ok
+test_unsafe_execution (test_official_allocation.OfficialAllocationTests.test_unsafe_execution) ... ok
+test_raw_index_to_sparse_attention (test_official_attention.OfficialAttentionTest.test_raw_index_to_sparse_attention) ... ok
+test_reject_invalid_metadata_and_excessive_work (test_official_attention.OfficialAttentionTest.test_reject_invalid_metadata_and_excessive_work) ... ok
+test_stable_softmax_and_empty_width (test_official_attention.OfficialAttentionTest.test_stable_softmax_and_empty_width) ... ok
+test_topk_mask_ties_and_padding (test_official_attention.OfficialAttentionTest.test_topk_mask_ties_and_padding) ... ok
+test_actual_model_materialization_policy_is_role_specific (test_official_backend.OfficialBackendTests.test_actual_model_materialization_policy_is_role_specific) ... ok
+test_direct_ep_shared_bias_before_only_final_store (test_official_backend.OfficialBackendTests.test_direct_ep_shared_bias_before_only_final_store) ... ok
+test_empty_tokens_with_and_without_shared_and_vl_fallback (test_official_backend.OfficialBackendTests.test_empty_tokens_with_and_without_shared_and_vl_fallback) ... ok
+test_factory_full_forward_and_numerical_boundaries (test_official_backend.OfficialBackendTests.test_factory_full_forward_and_numerical_boundaries) ... ok
+test_gate_ties_and_tiny_scores_plus_epsilon_not_clamp (test_official_backend.OfficialBackendTests.test_gate_ties_and_tiny_scores_plus_epsilon_not_clamp) ... ok
+test_initial_replica_bytes_and_first_logical_slot (test_official_backend.OfficialBackendTests.test_initial_replica_bytes_and_first_logical_slot) ... ok
+test_native_per_token_force_random_mask (test_official_backend.OfficialBackendTests.test_native_per_token_force_random_mask) ... ok
+test_rejections (test_official_backend.OfficialBackendTests.test_rejections) ... ok
+test_residual_norm_to_factory_moe_full_forward (test_official_backend.OfficialBackendTests.test_residual_norm_to_factory_moe_full_forward) ... ok
+test_routing_bias_preserves_fp32_on_module_dtype_conversion (test_official_backend.OfficialBackendTests.test_routing_bias_preserves_fp32_on_module_dtype_conversion) ... ok
+test_all_fp4_midpoints_and_signed_zero (test_official_cache.OfficialCacheTests.test_all_fp4_midpoints_and_signed_zero) ... ok
+test_all_main_scale_ties (test_official_cache.OfficialCacheTests.test_all_main_scale_ties) ... ok
+test_atomic_rejections (test_official_cache.OfficialCacheTests.test_atomic_rejections) ... ok
+test_budgets_shapes_and_empty (test_official_cache.OfficialCacheTests.test_budgets_shapes_and_empty) ... ok
+test_index_exponent_boundaries (test_official_cache.OfficialCacheTests.test_index_exponent_boundaries) ... ok
+test_layout_stride_and_padding (test_official_cache.OfficialCacheTests.test_layout_stride_and_padding) ... ok
+test_native_prefill_zero_fill_segments (test_official_cache.OfficialCacheTests.test_native_prefill_zero_fill_segments) ... ok
+test_portable_cases (test_official_cache.OfficialCacheTests.test_portable_cases) ... ok
+test_raw_roles_and_scales (test_official_cache.OfficialCacheTests.test_raw_roles_and_scales) ... ok
+test_shared_state_backing_with_non_token_multiple_page_stride (test_official_cache.OfficialCacheTests.test_shared_state_backing_with_non_token_multiple_page_stride) ... ok
+test_candidate_source_and_consumer_prefill_then_decode (test_official_candidate_runtime.OfficialCandidateRuntimeTests.test_candidate_source_and_consumer_prefill_then_decode) ... ok
+test_empty_and_bounds (test_official_compression.OfficialCompressionTest.test_empty_and_bounds) ... ok
+test_prefill_then_decode (test_official_compression.OfficialCompressionTest.test_prefill_then_decode) ... ok
+test_rejections_do_not_mutate_state (test_official_compression.OfficialCompressionTest.test_rejections_do_not_mutate_state) ... ok
+test_prepared_official_decoder (test_official_decoder_runtime.OfficialDecoderRuntimeTests.test_prepared_official_decoder) ... ok
+test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode (test_official_decoder_runtime.OfficialDecoderRuntimeTests.test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode) ... ok
+test_hash_overflow_xor_mask_matches_scalar_int64 (test_official_engram.OfficialEngramRuntimeTests.test_hash_overflow_xor_mask_matches_scalar_int64) ... ok
+test_projection_and_raw_table (test_official_engram.OfficialEngramRuntimeTests.test_projection_and_raw_table) ... ok
+test_residency_geometry_and_request_rejection (test_official_engram.OfficialEngramRuntimeTests.test_residency_geometry_and_request_rejection) ... ok
+test_retained_storage_budget_and_reload_invalidates_consumer (test_official_engram.OfficialEngramRuntimeTests.test_retained_storage_budget_and_reload_invalidates_consumer) ... ok
+test_two_rank_gloo_including_empty_origin (test_official_engram.OfficialEngramRuntimeTests.test_two_rank_gloo_including_empty_origin) ... ok
+test_zero_gate_uses_positive_sqrt_and_image_mask (test_official_engram.OfficialEngramRuntimeTests.test_zero_gate_uses_positive_sqrt_and_image_mask) ... ok
+test_all_tables_preflight_before_any_payload_or_mutation (test_official_engram_loading.OfficialEngramTests.test_all_tables_preflight_before_any_payload_or_mutation) ... ok
+test_corrupt_scale_dtype_and_group_geometry (test_official_engram_loading.OfficialEngramTests.test_corrupt_scale_dtype_and_group_geometry) ... ok
+test_cpu_only_import_does_not_initialize_platform_or_native_ops (test_official_engram_loading.OfficialEngramTests.test_cpu_only_import_does_not_initialize_platform_or_native_ops) ... ok
+test_destination_storage_alias_and_duplicate_targets (test_official_engram_loading.OfficialEngramTests.test_destination_storage_alias_and_duplicate_targets) ... ok
+test_every_e8m0_bit_pattern_is_copied_not_decoded (test_official_engram_loading.OfficialEngramTests.test_every_e8m0_bit_pattern_is_copied_not_decoded) ... ok
+test_exact_all_bytes_cross_shard_local_rows_and_padding (test_official_engram_loading.OfficialEngramTests.test_exact_all_bytes_cross_shard_local_rows_and_padding) ... ok
+test_failed_reload_invalidates_markers_before_first_mutation (test_official_engram_loading.OfficialEngramTests.test_failed_reload_invalidates_markers_before_first_mutation) ... ok
+test_materialization_rejects_before_allocation (test_official_engram_loading.OfficialEngramTests.test_materialization_rejects_before_allocation) ... ok
+test_meta_materialization_metadata_and_exact_budget (test_official_engram_loading.OfficialEngramTests.test_meta_materialization_metadata_and_exact_budget) ... ok
+test_overlapping_source_ranges_rejected_from_headers (test_official_engram_loading.OfficialEngramTests.test_overlapping_source_ranges_rejected_from_headers) ... ok
+test_policies_role_ownership_and_destination_bounds (test_official_engram_loading.OfficialEngramTests.test_policies_role_ownership_and_destination_bounds) ... ok
+test_public_loading_and_role_specific_allocation (test_official_engram_loading.OfficialEngramTests.test_public_loading_and_role_specific_allocation) ... ok
+test_scale_destination_dtype_geometry_device_and_stride (test_official_engram_loading.OfficialEngramTests.test_scale_destination_dtype_geometry_device_and_stride) ... ok
+test_short_reads_loop_and_unexpected_eof (test_official_engram_loading.OfficialEngramTests.test_short_reads_loop_and_unexpected_eof) ... ok
+test_staging_budget_preflight_and_per_read_bound (test_official_engram_loading.OfficialEngramTests.test_staging_budget_preflight_and_per_read_bound) ... ok
+test_alignment_four_reads_only_real_rows (test_official_ep.OfficialExpertParallelTests.test_alignment_four_reads_only_real_rows) ... ok
+test_group_none_scramble_repeats_mask_and_weight_before_quantization (test_official_ep.OfficialExpertParallelTests.test_group_none_scramble_repeats_mask_and_weight_before_quantization) ... ok
+test_real_two_process_dispatch_and_collective_failure_recovery (test_official_ep.OfficialExpertParallelTests.test_real_two_process_dispatch_and_collective_failure_recovery) ... ok
+test_single_rank_validation_and_budget (test_official_ep.OfficialExpertParallelTests.test_single_rank_validation_and_budget) ... ok
+test_all_codes_and_tail_groups (test_official_fp4_compute.OfficialFP4ComputeTests.test_all_codes_and_tail_groups) ... ok
+test_empty_dimensions (test_official_fp4_compute.OfficialFP4ComputeTests.test_empty_dimensions) ... ok
+test_explicit_bank_and_local_slot_contract (test_official_fp4_compute.OfficialFP4ComputeTests.test_explicit_bank_and_local_slot_contract) ... ok
+test_nan_scale_propagates (test_official_fp4_compute.OfficialFP4ComputeTests.test_nan_scale_propagates) ... ok
+test_rejects_implicit_precision_shape_overlap_and_budget (test_official_fp4_compute.OfficialFP4ComputeTests.test_rejects_implicit_precision_shape_overlap_and_budget) ... ok
+test_default_native_loader_preserves_existing_packed_scale_bytes (test_official_fp4_loading.OfficialFP4LoadingTests.test_default_native_loader_preserves_existing_packed_scale_bytes) ... ok
+test_destination_scale_budget_rejected_before_payload_reads (test_official_fp4_loading.OfficialFP4LoadingTests.test_destination_scale_budget_rejected_before_payload_reads) ... ok
+test_empty_local_ownership_creates_empty_raw_scale_bank_without_reads (test_official_fp4_loading.OfficialFP4LoadingTests.test_empty_local_ownership_creates_empty_raw_scale_bank_without_reads) ... ok
+test_failed_reload_invalidates_bank_before_first_mutation (test_official_fp4_loading.OfficialFP4LoadingTests.test_failed_reload_invalidates_bank_before_first_mutation) ... ok
+test_invalid_global_ids_fail_before_any_read_or_mutation (test_official_fp4_loading.OfficialFP4LoadingTests.test_invalid_global_ids_fail_before_any_read_or_mutation) ... ok
+test_invalid_public_policy_rejected_before_reader_creation (test_official_fp4_loading.OfficialFP4LoadingTests.test_invalid_public_policy_rejected_before_reader_creation) ... ok
+test_later_expert_bad_metadata_preflights_entire_bank_before_reads (test_official_fp4_loading.OfficialFP4LoadingTests.test_later_expert_bad_metadata_preflights_entire_bank_before_reads) ... ok
+test_loaded_replica_slots_compute_against_independent_lut_exponent_oracle (test_official_fp4_loading.OfficialFP4LoadingTests.test_loaded_replica_slots_compute_against_independent_lut_exponent_oracle) ... ok
+test_overlapping_destination_rejected_before_read (test_official_fp4_loading.OfficialFP4LoadingTests.test_overlapping_destination_rejected_before_read) ... ok
+test_per_expert_operand_budget_rejected_before_payload_reads (test_official_fp4_loading.OfficialFP4LoadingTests.test_per_expert_operand_budget_rejected_before_payload_reads) ... ok
+test_raw_pairs_cross_shards_preserve_replica_order_and_all_bytes (test_official_fp4_loading.OfficialFP4LoadingTests.test_raw_pairs_cross_shards_preserve_replica_order_and_all_bytes) ... ok
+test_raw_single_w2 (test_official_fp4_loading.OfficialFP4LoadingTests.test_raw_single_w2) ... ok
+test_corrupt_materialized_scales_rejected_before_read (test_official_fp4_materialization.MaterializedFP4LoadingTests.test_corrupt_materialized_scales_rejected_before_read) ... ok
+test_default_native_loader_refuses_raw_materialized_destination_before_read (test_official_fp4_materialization.MaterializedFP4LoadingTests.test_default_native_loader_refuses_raw_materialized_destination_before_read) ... ok
+test_failed_reload_invalidates_after_copying_into_reused_scales (test_official_fp4_materialization.MaterializedFP4LoadingTests.test_failed_reload_invalidates_after_copying_into_reused_scales) ... ok
+test_materialize_load_operand_compute_with_replica_ownership (test_official_fp4_materialization.MaterializedFP4LoadingTests.test_materialize_load_operand_compute_with_replica_ownership) ... ok
+test_cpu_and_meta_shapes_for_both_expert_projections (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_cpu_and_meta_shapes_for_both_expert_projections) ... ok
+test_cpu_import_and_allocation_do_not_import_runtime_or_vendors (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_cpu_import_and_allocation_do_not_import_runtime_or_vendors) ... ok
+test_even_k_tails_and_non_block_aligned_n_are_supported (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_even_k_tails_and_non_block_aligned_n_are_supported) ... ok
+test_invalid_declarations_fail_before_any_destination_allocation (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_invalid_declarations_fail_before_any_destination_allocation) ... ok
+test_invalid_policy_precedes_allocation (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_invalid_policy_precedes_allocation) ... ok
+test_metadata_preserved_source_untouched_and_destinations_independent (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_metadata_preserved_source_untouched_and_destinations_independent) ... ok
+test_native_is_still_the_default_and_ordinary_materialization_is_unchanged (test_official_fp4_materialization.OfficialFP4MaterializationTests.test_native_is_still_the_default_and_ordinary_materialization_is_unchanged) ... ok
+test_actual_large_merge_still_fails_before_payload (test_official_full_load_plan.OfficialFullLoadPlanTests.test_actual_large_merge_still_fails_before_payload) ... ok
+test_missing_receipt_refuses_before_meta_or_cuda_allocation (test_official_full_load_plan.OfficialFullLoadPlanTests.test_missing_receipt_refuses_before_meta_or_cuda_allocation) ... ok
+test_official_loading_preserves_tensor_version_counters_only_on_opt_in (test_official_full_load_plan.OfficialFullLoadPlanTests.test_official_loading_preserves_tensor_version_counters_only_on_opt_in) ... ok
+test_official_selection_and_receipt_survive_worker_serialization (test_official_full_load_plan.OfficialFullLoadPlanTests.test_official_selection_and_receipt_survive_worker_serialization) ... ok
+test_one_large_original_wkv_is_not_a_merge (test_official_full_load_plan.OfficialFullLoadPlanTests.test_one_large_original_wkv_is_not_a_merge) ... ok
+test_head_tiling_preserves_independent_random_heads (test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_head_tiling_preserves_independent_random_heads) ... ok
+test_incompatible_geometry_fails_closed (test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_incompatible_geometry_fails_closed) ... ok
+test_official_geometry_runtime_and_scratch (test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_official_geometry_runtime_and_scratch) ... ok
+test_official_minimum_vision_norm (test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_official_minimum_vision_norm) ... ok
+test_real_hf_parser_agrees_and_no_real_weights_allocated (test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_real_hf_parser_agrees_and_no_real_weights_allocated) ... ok
+test_parameter_preservation_and_recursive_empty_rejection (test_official_hc_runtime.HCRuntimeTests.test_parameter_preservation_and_recursive_empty_rejection) ... ok
+test_real_orchestration (test_official_hc_runtime.HCRuntimeTests.test_real_orchestration) ... ok
+test_byte_reader_preserves_raw_dtype_and_bytes (test_official_hf_loading.OfficialHFLoadingTests.test_byte_reader_preserves_raw_dtype_and_bytes) ... ok
+test_default_native_policy_still_calls_existing_packer (test_official_hf_loading.OfficialHFLoadingTests.test_default_native_policy_still_calls_existing_packer) ... ok
+test_explicit_fp32_clears_stale_native_packing (test_official_hf_loading.OfficialHFLoadingTests.test_explicit_fp32_clears_stale_native_packing) ... ok
+test_explicit_fp32_loads_cross_shard_weight_and_scale_together (test_official_hf_loading.OfficialHFLoadingTests.test_explicit_fp32_loads_cross_shard_weight_and_scale_together) ... ok
+test_float_parameters_still_load_without_scale (test_official_hf_loading.OfficialHFLoadingTests.test_float_parameters_still_load_without_scale) ... ok
+test_invalid_policy_fails_before_reading_or_mutating (test_official_hf_loading.OfficialHFLoadingTests.test_invalid_policy_fails_before_reading_or_mutating) ... ok
+test_shape_mismatch_rejected_before_target_copy (test_official_hf_loading.OfficialHFLoadingTests.test_shape_mismatch_rejected_before_target_copy) ... ok
+test_staging_budget_rejects_before_payload_transfer (test_official_hf_loading.OfficialHFLoadingTests.test_staging_budget_rejects_before_payload_transfer) ... ok
+test_unaligned_split_is_not_requantized_or_silently_merged (test_official_hf_loading.OfficialHFLoadingTests.test_unaligned_split_is_not_requantized_or_silently_merged) ... ok
+test_downsample_channel_major_and_pool_valid_count (test_official_image.OfficialImageTests.test_downsample_channel_major_and_pool_valid_count) ... ok
+test_downsample_preflight (test_official_image.OfficialImageTests.test_downsample_preflight) ... ok
+test_replace_invalid_is_atomic (test_official_image.OfficialImageTests.test_replace_invalid_is_atomic) ... ok
+test_replace_uses_wire_types_sequence_order_and_preserves_text_bits (test_official_image.OfficialImageTests.test_replace_uses_wire_types_sequence_order_and_preserves_text_bits) ... ok
+test_rgb_invalid_metadata_before_allocation (test_official_image.OfficialImageTests.test_rgb_invalid_metadata_before_allocation) ... ok
+test_rgb_padding_indexing_and_cpu_lut (test_official_image.OfficialImageTests.test_rgb_padding_indexing_and_cpu_lut) ... ok
+test_zero_images_and_zero_crops (test_official_image.OfficialImageTests.test_zero_images_and_zero_crops) ... ok
+test_all_scale_codes_and_invalid_scales (test_official_linear.OfficialLinearTests.test_all_scale_codes_and_invalid_scales) ... ok
+test_bf16_gate_f32_accumulation_and_byte_migration (test_official_linear.OfficialLinearTests.test_bf16_gate_f32_accumulation_and_byte_migration) ... ok
+test_empty_axes (test_official_linear.OfficialLinearTests.test_empty_axes) ... ok
+test_forward_tensor_policy_explicit_tuple_packing_and_lifetime (test_official_linear.OfficialLinearTests.test_forward_tensor_policy_explicit_tuple_packing_and_lifetime) ... ok
+test_real_safetensors_fp32_loading_pipeline (test_official_linear.OfficialLinearTests.test_real_safetensors_fp32_loading_pipeline) ... ok
+test_tails_chunk_boundaries_add_before_store_and_row_padding (test_official_linear.OfficialLinearTests.test_tails_chunk_boundaries_add_before_store_and_row_padding) ... ok
+test_tensor_preflight_before_quantization (test_official_linear.OfficialLinearTests.test_tensor_preflight_before_quantization) ... ok
+test_u8_storage_survives_module_dtype_conversions (test_official_linear.OfficialLinearTests.test_u8_storage_survives_module_dtype_conversions) ... ok
+test_validation_aliases_and_budgets_before_allocation (test_official_linear.OfficialLinearTests.test_validation_aliases_and_budgets_before_allocation) ... ok
+test_actual_hf_numeric_experts_not_gate (test_official_memory_plan.OfficialMemoryPlanTests.test_actual_hf_numeric_experts_not_gate) ... ok
+test_engram_is_streamed_not_whole_table_staged (test_official_memory_plan.OfficialMemoryPlanTests.test_engram_is_streamed_not_whole_table_staged) ... ok
+test_engram_padding_is_host_only (test_official_memory_plan.OfficialMemoryPlanTests.test_engram_padding_is_host_only) ... ok
+test_full_nonconsuming_merge_overlap_excludes_outside_layers (test_official_memory_plan.OfficialMemoryPlanTests.test_full_nonconsuming_merge_overlap_excludes_outside_layers) ... ok
+test_invalid_dtype_and_quant_pairs_fail_closed (test_official_memory_plan.OfficialMemoryPlanTests.test_invalid_dtype_and_quant_pairs_fail_closed) ... ok
+test_loader_staging_includes_fp32_scale_and_rank_max_is_exact (test_official_memory_plan.OfficialMemoryPlanTests.test_loader_staging_includes_fp32_scale_and_rank_max_is_exact) ... ok
+test_no_headroom_fails_closed_hbm_and_host (test_official_memory_plan.OfficialMemoryPlanTests.test_no_headroom_fails_closed_hbm_and_host) ... ok
+test_partition_mtp_and_scale_copy_overhead (test_official_memory_plan.OfficialMemoryPlanTests.test_partition_mtp_and_scale_copy_overhead) ... ok
+test_phase_max_not_disjoint_sum_and_supplied_cache (test_official_memory_plan.OfficialMemoryPlanTests.test_phase_max_not_disjoint_sum_and_supplied_cache) ... ok
+test_asymmetric_post_orientation_and_one_store (test_official_mhc.OfficialMHCTests.test_asymmetric_post_orientation_and_one_store) ... ok
+test_bounds_before_allocation (test_official_mhc.OfficialMHCTests.test_bounds_before_allocation) ... ok
+test_captured_shifted_mix_is_batch_invariant_at_bf16_tie (test_official_mhc.OfficialMHCTests.test_captured_shifted_mix_is_batch_invariant_at_bf16_tie) ... ok
+test_cpu_oracle_cases (test_official_mhc.OfficialMHCTests.test_cpu_oracle_cases) ... ok
+test_fixed_tree_projection_exact_on_cpu (test_official_mhc.OfficialMHCTests.test_fixed_tree_projection_exact_on_cpu) ... ok
+test_flattened_basis_and_no_bf16_prenorm_intermediate (test_official_mhc.OfficialMHCTests.test_flattened_basis_and_no_bf16_prenorm_intermediate) ... ok
+test_official_projection_shape_workspace_and_tiles (test_official_mhc.OfficialMHCTests.test_official_projection_shape_workspace_and_tiles) ... ok
+test_sinkhorn_sum_plus_epsilon_and_repeats (test_official_mhc.OfficialMHCTests.test_sinkhorn_sum_plus_epsilon_and_repeats) ... ok
+test_unsupported_split_k_and_contract_rejection (test_official_mhc.OfficialMHCTests.test_unsupported_split_k_and_contract_rejection) ... ok
+test_shared_sparse_c2_attention_prefill_then_decode (test_official_model_runtime.OfficialModelRuntimeTests.test_shared_sparse_c2_attention_prefill_then_decode) ... FAIL
+test_constructor_rejects_bad_banks_scales_geometry_and_clamps (test_official_moe.OfficialMoETests.test_constructor_rejects_bad_banks_scales_geometry_and_clamps) ... ok
+test_counts_alignment_weights_and_type_errors_precede_output_allocation (test_official_moe.OfficialMoETests.test_counts_alignment_weights_and_type_errors_precede_output_allocation) ... ok
+test_empty_tokens_and_zero_expert_banks (test_official_moe.OfficialMoETests.test_empty_tokens_and_zero_expert_banks) ... ok
+test_fresh_import_and_real_execution_do_not_import_platform_or_vendors (test_official_moe.OfficialMoETests.test_fresh_import_and_real_execution_do_not_import_platform_or_vendors) ... ok
+test_indexed_groups_local_physical_ids_and_restores_receive_order (test_official_moe.OfficialMoETests.test_indexed_groups_local_physical_ids_and_restores_receive_order) ... ok
+test_indexed_invalid_ids_weights_devices_and_alignment_preflight (test_official_moe.OfficialMoETests.test_indexed_invalid_ids_weights_devices_and_alignment_preflight) ... ok
+test_materialize_safetensors_load_replicated_ownership_then_real_runtime (test_official_moe.OfficialMoETests.test_materialize_safetensors_load_replicated_ownership_then_real_runtime) ... ok
+test_module_apply_preserves_byte_scales_and_readiness (test_official_moe.OfficialMoETests.test_module_apply_preserves_byte_scales_and_readiness) ... ok
+test_more_than_64_rows_and_clamped_fp32_swiglu (test_official_moe.OfficialMoETests.test_more_than_64_rows_and_clamped_fp32_swiglu) ... ok
+test_ordinary_and_native_reconstruct_keep_legacy_metadata_policy (test_official_moe.OfficialMoETests.test_ordinary_and_native_reconstruct_keep_legacy_metadata_policy) ... ok
+test_pair_and_output_budgets_reject_without_allocation (test_official_moe.OfficialMoETests.test_pair_and_output_budgets_reject_without_allocation) ... ok
+test_real_reconstruct_preserves_raw_markers_and_shares_storage_only (test_official_moe.OfficialMoETests.test_real_reconstruct_preserves_raw_markers_and_shares_storage_only) ... ok
+test_reconstruct_either_explicit_raw_marker_retains_contract (test_official_moe.OfficialMoETests.test_reconstruct_either_explicit_raw_marker_retains_contract) ... ok
+test_route_weight_is_before_down_quantization_not_after_combine (test_official_moe.OfficialMoETests.test_route_weight_is_before_down_quantization_not_after_combine) ... ok
+test_scrambled_physical_counts_empty_experts_and_nan_padding (test_official_moe.OfficialMoETests.test_scrambled_physical_counts_empty_experts_and_nan_padding) ... ok
+test_workspace_chunks_obey_64_rows_and_one_million_elements (test_official_moe.OfficialMoETests.test_workspace_chunks_obey_64_rows_and_one_million_elements) ... ok
+test_constructor_rejects_bad_contracts (test_official_norm.OfficialNormTests.test_constructor_rejects_bad_contracts) ... ok
+test_fp32_weight_and_dtype_conversion_preserve_values (test_official_norm.OfficialNormTests.test_fp32_weight_and_dtype_conversion_preserve_values) ... ok
+test_norm_before_fp8_rounding_and_nested_returns (test_official_norm.OfficialNormTests.test_norm_before_fp8_rounding_and_nested_returns) ... ok
+test_preflight_no_quantization_or_large_allocation (test_official_norm.OfficialNormTests.test_preflight_no_quantization_or_large_allocation) ... ok
+test_unquantized_shapes_dtypes_no_weight_and_aux (test_official_norm.OfficialNormTests.test_unquantized_shapes_dtypes_no_weight_and_aux) ... ok
+test_all_e8m0_bytes_preserved_in_owned_packed_scales (test_official_operand.OfficialOperandTests.test_all_e8m0_bytes_preserved_in_owned_packed_scales) ... ok
+test_all_e8m0_codes_exact_including_nan_and_subnormal (test_official_operand.OfficialOperandTests.test_all_e8m0_codes_exact_including_nan_and_subnormal) ... ok
+test_concatenate_budget_before_allocation (test_official_operand.OfficialOperandTests.test_concatenate_budget_before_allocation) ... ok
+test_concatenate_fp4_preserves_packed_k_and_group32 (test_official_operand.OfficialOperandTests.test_concatenate_fp4_preserves_packed_k_and_group32) ... ok
+test_concatenate_fp8_k_and_partial_final_block (test_official_operand.OfficialOperandTests.test_concatenate_fp8_k_and_partial_final_block) ... ok
+test_concatenate_fp8_rows_and_scales (test_official_operand.OfficialOperandTests.test_concatenate_fp8_rows_and_scales) ... ok
+test_concatenate_rejects_invalid_or_mixed_operands (test_official_operand.OfficialOperandTests.test_concatenate_rejects_invalid_or_mixed_operands) ... ok
+test_concatenate_rejects_mismatched_shape_and_device (test_official_operand.OfficialOperandTests.test_concatenate_rejects_mismatched_shape_and_device) ... ok
+test_concatenate_rejects_scale_block_splitting (test_official_operand.OfficialOperandTests.test_concatenate_rejects_scale_block_splitting) ... ok
+test_concatenate_single_input_still_checks_budgets (test_official_operand.OfficialOperandTests.test_concatenate_single_input_still_checks_budgets) ... ok
+test_empty_gather_and_zero_k (test_official_operand.OfficialOperandTests.test_empty_gather_and_zero_k) ... ok
+test_engram_gathers_as_bytes_before_scale_decode (test_official_operand.OfficialOperandTests.test_engram_gathers_as_bytes_before_scale_decode) ... ok
+test_expert_scale_block_must_be_per_logical_row (test_official_operand.OfficialOperandTests.test_expert_scale_block_must_be_per_logical_row) ... ok
+test_explicit_layout_and_logical_shape (test_official_operand.OfficialOperandTests.test_explicit_layout_and_logical_shape) ... ok
+test_fp8_scale_row_granularity_not_interchangeable (test_official_operand.OfficialOperandTests.test_fp8_scale_row_granularity_not_interchangeable) ... ok
+test_gather_budget_is_checked_before_index_select (test_official_operand.OfficialOperandTests.test_gather_budget_is_checked_before_index_select) ... ok
+test_gather_byte_budget_independent_of_scale_count (test_official_operand.OfficialOperandTests.test_gather_byte_budget_independent_of_scale_count) ... ok
+test_gather_preserves_packed_bytes_order_and_duplicates (test_official_operand.OfficialOperandTests.test_gather_preserves_packed_bytes_order_and_duplicates) ... ok
+test_gather_rejects_bad_indices (test_official_operand.OfficialOperandTests.test_gather_rejects_bad_indices) ... ok
+test_meta_shape_planning_and_budget_before_allocation (test_official_operand.OfficialOperandTests.test_meta_shape_planning_and_budget_before_allocation) ... ok
+test_raw_scale_not_mutated_by_float_export (test_official_operand.OfficialOperandTests.test_raw_scale_not_mutated_by_float_export) ... ok
+test_real_header_geometries_validate_without_allocation (test_official_operand.OfficialOperandTests.test_real_header_geometries_validate_without_allocation) ... ok
+test_reject_cross_device_metadata_without_device_execution (test_official_operand.OfficialOperandTests.test_reject_cross_device_metadata_without_device_execution) ... ok
+test_reject_unknown_layout_wrong_rank_and_dtype (test_official_operand.OfficialOperandTests.test_reject_unknown_layout_wrong_rank_and_dtype) ... ok
+test_reject_w8a8_per_channel_and_prepacked_scales (test_official_operand.OfficialOperandTests.test_reject_w8a8_per_channel_and_prepacked_scales) ... ok
+test_square_block_fp8_matrix (test_official_operand.OfficialOperandTests.test_square_block_fp8_matrix) ... ok
+test_strided_raw_scales (test_official_operand.OfficialOperandTests.test_strided_raw_scales) ... ok
+test_tail_scale_padding_is_unit_not_zero (test_official_operand.OfficialOperandTests.test_tail_scale_padding_is_unit_not_zero) ... ok
+test_zero_k_still_bounds_index_validation_work (test_official_operand.OfficialOperandTests.test_zero_k_still_bounds_index_validation_work) ... ok
+test_invalid_ranges_rejected_before_payload (test_official_payload_reader.OfficialPayloadReaderTests.test_invalid_ranges_rejected_before_payload) ... ok
+test_modified_file_and_header_rejected (test_official_payload_reader.OfficialPayloadReaderTests.test_modified_file_and_header_rejected) ... ok
+test_path_escape_rejected (test_official_payload_reader.OfficialPayloadReaderTests.test_path_escape_rejected) ... ok
+test_read_rows_budget_and_unchanged_archive (test_official_payload_reader.OfficialPayloadReaderTests.test_read_rows_budget_and_unchanged_archive) ... ok
+test_cache_ownership_and_public_converter (test_official_rope.OfficialRopeTests.test_cache_ownership_and_public_converter) ... ok
+test_conjugate_inverse_only_for_unit_magnitude (test_official_rope.OfficialRopeTests.test_conjugate_inverse_only_for_unit_magnitude) ... ok
+test_container_configs_cache_matches_independent_math (test_official_rope.OfficialRopeTests.test_container_configs_cache_matches_independent_math) ... ok
+test_cpu_math_layouts_dtypes_offsets_tails_strides_and_different_heads (test_official_rope.OfficialRopeTests.test_cpu_math_layouts_dtypes_offsets_tails_strides_and_different_heads) ... ok
+test_flat_and_native_signature (test_official_rope.OfficialRopeTests.test_flat_and_native_signature) ... ok
+test_invalid_inputs_are_atomic (test_official_rope.OfficialRopeTests.test_invalid_inputs_are_atomic) ... ok
+test_optional_yarn_sampling_and_magnitude (test_official_rope.OfficialRopeTests.test_optional_yarn_sampling_and_magnitude) ... ok
+test_resource_bounds_and_constructor_validation (test_official_rope.OfficialRopeTests.test_resource_bounds_and_constructor_validation) ... ok
+test_zero_tokens_zero_heads_and_position_zero (test_official_rope.OfficialRopeTests.test_zero_tokens_zero_heads_and_position_zero) ... ok
+test_actual_attention_projection_methods (test_official_runtime_linear.RuntimeLinearTests.test_actual_attention_projection_methods) ... ok
+test_actual_vision_projection_callers (test_official_runtime_linear.RuntimeLinearTests.test_actual_vision_projection_callers) ... ok
+test_bf16_bias_order_and_zero_axes (test_official_runtime_linear.RuntimeLinearTests.test_bf16_bias_order_and_zero_axes) ... ok
+test_factory_default_is_native_and_boolean_is_strict (test_official_runtime_linear.RuntimeLinearTests.test_factory_default_is_native_and_boolean_is_strict) ... ok
+test_grouped_bounds_and_empty (test_official_runtime_linear.RuntimeLinearTests.test_grouped_bounds_and_empty) ... ok
+test_loaded_ownership_guards_roles_and_overlaps (test_official_runtime_linear.RuntimeLinearTests.test_loaded_ownership_guards_roles_and_overlaps) ... ok
+test_merge_group32_tails_and_ownership (test_official_runtime_linear.RuntimeLinearTests.test_merge_group32_tails_and_ownership) ... ok
+test_merge_rejects_invalid_scales_before_weight_cat (test_official_runtime_linear.RuntimeLinearTests.test_merge_rejects_invalid_scales_before_weight_cat) ... ok
+test_reusable_projection_chain (test_official_runtime_linear.RuntimeLinearTests.test_reusable_projection_chain) ... ok
+test_vision_binding_aliases_and_validation_is_atomic (test_official_runtime_linear.RuntimeLinearTests.test_vision_binding_aliases_and_validation_is_atomic) ... ok
+test_actual_sampler_dispatch_golden_prompt_and_decode (test_official_sampler.OfficialSamplerTests.test_actual_sampler_dispatch_golden_prompt_and_decode) ... ok
+test_explicit_unsupported_modes_fail_closed (test_official_sampler.OfficialSamplerTests.test_explicit_unsupported_modes_fail_closed) ... ok
+test_invalid_distribution_rejected (test_official_sampler.OfficialSamplerTests.test_invalid_distribution_rejected) ... ok
+test_reference_distribution_and_rng (test_official_sampler.OfficialSamplerTests.test_reference_distribution_and_rng) ... ok
+test_selected_input_budget_precedes_gather (test_official_sampler.OfficialSamplerTests.test_selected_input_budget_precedes_gather) ... ok
+test_bad_spans_rejected (test_official_vision_runtime.OfficialVisionRuntimeTests.test_bad_spans_rejected) ... ok
+test_device_aware_parameter_container_and_official_header_geometry (test_official_vision_runtime.OfficialVisionRuntimeTests.test_device_aware_parameter_container_and_official_header_geometry) ... ok
+test_noninterleaved_row_column_rope (test_official_vision_runtime.OfficialVisionRuntimeTests.test_noninterleaved_row_column_rope) ... ok
+test_official_full_load_vision_weights_remain_meta (test_official_vision_runtime.OfficialVisionRuntimeTests.test_official_full_load_vision_weights_remain_meta) ... ok
+test_prepared_vl_prefill_decode (test_official_vision_runtime.OfficialVisionRuntimeTests.test_prepared_vl_prefill_decode) ... ok
+test_projection_rows_split_before_budget_and_rope_bits_preserved (test_official_vision_runtime.OfficialVisionRuntimeTests.test_projection_rows_split_before_budget_and_rope_bits_preserved) ... ok
+test_real_vision_forward (test_official_vision_runtime.OfficialVisionRuntimeTests.test_real_vision_forward) ... ok
+
+======================================================================
+FAIL: test_shared_sparse_c2_attention_prefill_then_decode (test_official_model_runtime.OfficialModelRuntimeTests.test_shared_sparse_c2_attention_prefill_then_decode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alizen/Dev/kpy_ai/ref/DeepInfer/tests/quantization/test_official_model_runtime.py", line 205, in test_shared_sparse_c2_attention_prefill_then_decode
+    run_model_runtime_cases("cpu")
+  File "/Users/alizen/.cache/uv/archive-v0/I7fYLD5sn1cj0CaN2sP9y/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alizen/Dev/kpy_ai/ref/DeepInfer/tests/quantization/test_official_model_runtime.py", line 197, in run_model_runtime_cases
+    torch.testing.assert_close(getattr(live[0], name), getattr(replay[0], name), rtol=0, atol=0)
+  File "/Users/alizen/.cache/uv/archive-v0/I7fYLD5sn1cj0CaN2sP9y/lib/python3.12/site-packages/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not equal!
+
+Mismatched elements: 1 / 4096 (0.0%)
+Greatest absolute difference: 1.1920928955078125e-07 at index (1, 1, 1, 261)
+Greatest relative difference: 6.317088718788e-08 at index (1, 1, 1, 261)
+
+----------------------------------------------------------------------
+Ran 253 tests in 10.120s
+
+FAILED (failures=1)
+
+REPORT=/tmp/deepinfer-perf-baseline-cpu-20261121-v6.json PASSED=False

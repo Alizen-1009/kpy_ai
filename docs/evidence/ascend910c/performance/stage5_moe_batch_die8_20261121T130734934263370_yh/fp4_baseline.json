@@ -1,0 +1,416 @@
+{
+  "scope": "one real selected layer30 expert; M8 repeats one activation, not eight requests",
+  "results": [
+    {
+      "M": 1,
+      "expert_id": 124,
+      "activation_data_sha256": "4a4e4a8dfb1caa1669b1ff06e70d3de864705d99cc907fcb336c6a8bedc444bf",
+      "activation_scales_sha256": "7301702c9c35220e2ed2b0c28b7490f38d291b9ae477a0e8821fdb461bd6e90b",
+      "down_input_data_sha256": "fde47aabb76d2c5bcdab05f7cad8029d9af9067e6b0d3a311d7558d30d00ceb6",
+      "down_input_scales_sha256": "50ff030687158564ae357b5c7b66090d6a002384e2fd619985820a16e701a1ed",
+      "route_weight": 0.6009923219680786,
+      "gate_up": {
+        "samples": [
+          {
+            "wall_seconds": 0.8853986309841275,
+            "device_ms": 880.1151733398438
+          },
+          {
+            "wall_seconds": 0.8802785151638091,
+            "device_ms": 880.1568603515625
+          },
+          {
+            "wall_seconds": 0.8817373719066381,
+            "device_ms": 881.5830688476562
+          }
+        ],
+        "peak_allocated_bytes": 44498432,
+        "peak_reserved_bytes": 117440512
+      },
+      "swiglu": {
+        "samples": [
+          {
+            "wall_seconds": 0.008689992129802704,
+            "device_ms": 8.54740047454834
+          },
+          {
+            "wall_seconds": 0.008755765855312347,
+            "device_ms": 8.628640174865723
+          },
+          {
+            "wall_seconds": 0.008640719810500741,
+            "device_ms": 8.528619766235352
+          }
+        ],
+        "peak_allocated_bytes": 60313088,
+        "peak_reserved_bytes": 117440512
+      },
+      "down": {
+        "samples": [
+          {
+            "wall_seconds": 0.4399631009437144,
+            "device_ms": 439.80230712890625
+          },
+          {
+            "wall_seconds": 0.4396366188302636,
+            "device_ms": 439.50518798828125
+          },
+          {
+            "wall_seconds": 0.43951004394330084,
+            "device_ms": 439.3909912109375
+          }
+        ],
+        "peak_allocated_bytes": 44498432,
+        "peak_reserved_bytes": 117440512
+      },
+      "full_expert": {
+        "samples": [
+          {
+            "wall_seconds": 1.333654599962756,
+            "device_ms": 1333.5020751953125
+          },
+          {
+            "wall_seconds": 1.3277313329745084,
+            "device_ms": 1327.6011962890625
+          },
+          {
+            "wall_seconds": 1.3287899631541222,
+            "device_ms": 1328.641357421875
+          }
+        ],
+        "peak_allocated_bytes": 60313088,
+        "peak_reserved_bytes": 117440512
+      },
+      "profile_compute_wall_seconds": 2.2343210459221154,
+      "profile_including_export_seconds": 36.28366833901964
+    },
+    {
+      "M": 8,
+      "expert_id": 124,
+      "activation_data_sha256": "764f81902448eddbcdff2b1810340bd058d3cfd1991a0de1a7a15024f0a1a2aa",
+      "activation_scales_sha256": "7a723d0386654680adb37ca82d182a5c01c34298df3d353b6b3e8361cf3d33a3",
+      "down_input_data_sha256": "8fb61f49121176343d7de7d6f3fd467281eaeb6e817ae6ccb31f1e46a3c2094b",
+      "down_input_scales_sha256": "d099374d2302ac892e4c51bdc3f2a9e18006e0b1da2961df5289b3ea8717c216",
+      "route_weight": 0.6009923219680786,
+      "gate_up": {
+        "samples": [
+          {
+            "wall_seconds": 0.8945457220543176,
+            "device_ms": 894.3343505859375
+          },
+          {
+            "wall_seconds": 0.8959914171136916,
+            "device_ms": 895.81591796875
+          },
+          {
+            "wall_seconds": 0.8944272769149393,
+            "device_ms": 894.2384033203125
+          }
+        ],
+        "peak_allocated_bytes": 44662272,
+        "peak_reserved_bytes": 117440512
+      },
+      "swiglu": {
+        "samples": [
+          {
+            "wall_seconds": 0.00830260687507689,
+            "device_ms": 8.157520294189453
+          },
+          {
+            "wall_seconds": 0.008297238033264875,
+            "device_ms": 8.166740417480469
+          },
+          {
+            "wall_seconds": 0.008359899977222085,
+            "device_ms": 8.23550033569336
+          }
+        ],
+        "peak_allocated_bytes": 60676096,
+        "peak_reserved_bytes": 117440512
+      },
+      "down": {
+        "samples": [
+          {
+            "wall_seconds": 0.4464874209370464,
+            "device_ms": 446.34259033203125
+          },
+          {
+            "wall_seconds": 0.44668044801801443,
+            "device_ms": 446.55950927734375
+          },
+          {
+            "wall_seconds": 0.446986649883911,
+            "device_ms": 446.8463134765625
+          }
+        ],
+        "peak_allocated_bytes": 44662272,
+        "peak_reserved_bytes": 117440512
+      },
+      "full_expert": {
+        "samples": [
+          {
+            "wall_seconds": 1.3439731651451439,
+            "device_ms": 1343.8323974609375
+          },
+          {
+            "wall_seconds": 1.347227968974039,
+            "device_ms": 1347.0584716796875
+          },
+          {
+            "wall_seconds": 1.3467245299834758,
+            "device_ms": 1346.600830078125
+          }
+        ],
+        "peak_allocated_bytes": 60676096,
+        "peak_reserved_bytes": 117440512
+      }
+    }
+  ],
+  "source_manifest": {
+    "deepinfer/__init__.py": "aa9d9199842801bba829b28c745e1fe5e692cb104cff427a0c3ab7c42a5ca968",
+    "deepinfer/attrdict.py": "3fa75e9374e76468539e42927a1157f75faa6afb458c2e280ab2f8aaa183694a",
+    "deepinfer/config.py": "d93abb280c5ed2918ea4bdfc6d82f1e834c73941b8bf62d1877ab35c86d54727",
+    "deepinfer/distributed/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/distributed/shm_broadcast.py": "aa461587184bf979acb813ed6ee646665715e3eaaca286a9270a5e4ceb559006",
+    "deepinfer/engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/engine/arg_utils.py": "c28c478bd376165c073c6e0722bed8468599a2fd766ffc7aafcd4ef270af52c5",
+    "deepinfer/engine/engine_type.py": "9933d83f500e3cc14c5fef0dd2fbe5c5170dbbf24df217376b0a55c4fb4ab48c",
+    "deepinfer/engine/llm_engine.py": "574842e0149ce1e4130b753abba5819e7fa365a202ee347e180bda8cadd389de",
+    "deepinfer/engine/profile_server.py": "3225a073cbde24d598df2a9bff195574ba6d98bc9fe4a1b0c0a338fcecc54afa",
+    "deepinfer/engine/stats_logger.py": "9ef93c3930d6dd8d889d4ba69558a85459c2210ae0714d5073c3b4328c8e7cb9",
+    "deepinfer/entrypoints/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/entrypoints/llm.py": "069a5333d9f47047ccc87584792627dfa6eee9cf93bdc046107cbd0218a6bada",
+    "deepinfer/environ.py": "c63414c101ce21e199f2d7df27ec01ca53e3b0dc7a688f6047469551f6449f47",
+    "deepinfer/hugging_face/__init__.py": "d0cc5142519903e8f3386078ea7792da400f3ded33f0b2afc0578a2b50fc00cb",
+    "deepinfer/hugging_face/config.py": "978c863928ece0e7f81c3e619c02d1287ade442f9282d7eb67bc739411595e49",
+    "deepinfer/hugging_face/loading.py": "d65964296fcf69e6b80e958e45bf5d99ac6b8e6f0c667ffef1ed5788757cf414",
+    "deepinfer/hugging_face/names.py": "6ad1d7e150f7b0c3e37883bc4c1e827e1db84ecb00638887c5f2f5b88390632a",
+    "deepinfer/hugging_face/official_engram_loading.py": "0e089438b12b3462c5b3585d9cacd392ff2103fa039890d3b2e75645bcd123c7",
+    "deepinfer/hugging_face/official_payload.py": "a275c5c8ab4e32c3e09b7baec6f0cf7fbb1316a9737c7a0c82b3c0afb0afb9fc",
+    "deepinfer/hugging_face/parameters.py": "a14f8c76956f6bbeddd25f2157e3ac01f72a79a0a78c4b4b6e1cf2e4743281aa",
+    "deepinfer/hugging_face/processor.py": "4dca0c066379d2e7a18205b7a0c8e1ebd9e7bd350dad5413ac33961f9804dc46",
+    "deepinfer/hugging_face/tokenizer.py": "a2a205fa71bd6e7f1ad7656ab1a7e15817eaef042f91a50218e69fe0f1e5dc23",
+    "deepinfer/hugging_face/weights.py": "910631c055b10502843c9b8d25209ed2e2dea60332ba89abdb5e44b06527eaea",
+    "deepinfer/load_class.py": "3136e51faf0445e5c0d865ac0a142102c0d39be7a5a4dd6f11033f9942538c56",
+    "deepinfer/logger.py": "5b8f8d9947de692353609c1fc2851097d24f9b6ba6004dce1dbfa394dc6d3ec8",
+    "deepinfer/model_config_loader.py": "f85c1b7ed33937d0ca7bd1e0737830ecb5ae906489baef0f39fd506a16e487a7",
+    "deepinfer/model_executor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/eplb/__init__.py": "1b30c01b36cfc711281bd729ab5cbf09826b4ba22359573f46d96c10ea6e7260",
+    "deepinfer/model_executor/eplb/policy.py": "52241603827a1a1d19a395d48f5d618a7336fd1ceee631127e6782c644f736dc",
+    "deepinfer/model_executor/eplb/shuffle.py": "e86dcd3a1b54678cb28d7910461c670e42c10c1d8cafe3e766afce0a640ee71f",
+    "deepinfer/model_executor/input_metadata/__init__.py": "545e7d49003c413aeaf80703b4bba35e4ae3200000c0b08365f2ee665c396ac6",
+    "deepinfer/model_executor/input_metadata/dflash.py": "7a55b0cef0b72031e8380e927497a5260bcefc2cbbb78d17b48ebb0da64c4e11",
+    "deepinfer/model_executor/input_metadata/input_metadata.py": "73499f47ba5d7a0d5c6e6ad1059403ba34fd89d1d62f5fca52c3841df4667714",
+    "deepinfer/model_executor/input_metadata/prepare_tensor_input_zos.py": "da306b02a40cfa2cf3ea70f78e49e22984bfcf2348cbf7897fee0238811ce9e7",
+    "deepinfer/model_executor/input_metadata/yoco.py": "882a33de3da0fba81644adde9e9e1a90ec3d3ff34a8f3ad4dda18faafebd6460",
+    "deepinfer/model_executor/layer_utils.py": "0aa862777dd5932bc367f19deb89c070d9598a80e383df955e2f5982c8c96c2b",
+    "deepinfer/model_executor/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/layers/attention_backend.py": "60d85f71e8fc7fd4c6ef49a57b4fe08b9d51f3f163e6eccc94643a8b008ab395",
+    "deepinfer/model_executor/layers/layernorm.py": "9d641bc03f21571c017e3e8873cd66d443a2bbd66efb8d31e554d9391e63b554",
+    "deepinfer/model_executor/layers/linear.py": "eb2bcfb4eecb2e857136c7b0340286e9ea53c66fe5e2b2d08dd8c65850f93fc3",
+    "deepinfer/model_executor/layers/mtp_info_pool.py": "f0ae9ad98d03e2bc6d3f4406cd757e7ce82010ec6fdc0f545d9d86776e31ee72",
+    "deepinfer/model_executor/layers/official_sampler.py": "7373f00b21c36f239f6da18b3066994185e1c49f8deb3be483a146aa757f8a69",
+    "deepinfer/model_executor/layers/rotary_embedding.py": "99d9621694a9031afc1b0644fb9d14f889df2b00e2b104f817df3af54e5c880f",
+    "deepinfer/model_executor/layers/sampler.py": "cca35c267e5b5c45494211cad56acdf89b0e9ea79c62f86265dba4d9184cc036",
+    "deepinfer/model_executor/layers/sampler_utils.py": "115fa7e49cc65d64bdb80461750103e45016194fa119c33713b99eab4172f5a2",
+    "deepinfer/model_executor/layers/tilelang_ops/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/candidate_blocks.py": "3dcc9fb61226967b1fc847fa07d304a17ff29bb8f715591b685f4f72d4a00612",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/compress.py": "ffcefa03bbb0bceedeb0abfc17656264f1788c81594565414aedc3c35362f7c5",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/compute_seqlens_k_zos.py": "3b70f210e5e9a952f69fb4451e90678491cd9c9392ec26053a54b1bd735ed339",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/dflash.py": "602d02f4528ac5df199dca65c89c4216841f1a2361ae16aeab568b284e0903a3",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/dflash_copy.py": "21a8c5b8e67cc3f434ed9ab8e133cb633f291442a412fc8fb73195cd08adcccb",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/flash_mla_utils.py": "2c6f6b2151790f68f60eb1937020e6aac495ed555c714feee4a0cb4668836e41",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/fused_sample.py": "5de46ef65a060dd412bc4fe7c24458f56e86c7993cd49443d99b54f010b2c52b",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/fused_transform.py": "cf8517f24b91a700edd200760ae5addcfa3a934d87b7041fce17db5a87a13768",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/gather.py": "ec4f9ab4fd78ea6d61532d2bb005bf692b6b1e07e89bbfcbf2307ab8b04eae23",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/gather_engram_tokens_zos.py": "a8d19c8323c6ddce2f52c9fb31b51b9ec256d139100e4213a360bbe8e08be847",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/gather_input_ids_zos.py": "834229979c126855a3e00be36b11751f41a7a0d9a578528d86f65c979e305b3e",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/get_kv_index.py": "fb232ca8f928a7a590d1cf4f475027a22c9abb4f0f3dd1f8aaa5c1c23768bcd9",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/image_embed_ops.py": "190d27247cd0f65c4219b820574a365bf7dd8ab5449e8e7c2128c6fe03e12c01",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/kv_index_cat.py": "58528d157972575155cc1b6542d35b44374d9e6118bfa8cc5ff6f541412724e7",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/kv_quant.py": "83c0f165834edb1c24d9fd0fe28cf3dca91f8d53d3d2e6b55e6ac6c70169c053",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/load_paged_kv_cache.py": "67f37aff91c824e51880dcc449b3f21f4c7718647bc81fc9305cf4ffd34bf9b4",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/norm.py": "15ff678f75943d4da3287c5a19ff6e10a12e69d51f5366ef8dae58a5f6afce72",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/prepare_cp_mirror.py": "5d718a3f745611cb87417920d18b1bcd7d6ddc35a183da4c375e46600b259e25",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/prepare_v4_decode_metadata.py": "842747b9184fe88e7f0703d15a906814da9a13480d2296721c044eed3022426d",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/random_sampling.py": "86a06d226a855eaa1445f2ffa8401ff09afab1cd47a92bd3681ccd624c38394d",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/rstd_1ulp.py": "ffc954fe296c3de0757030084095a38173e75ee5e02047f6deb924ec40ea7df2",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/sampler.py": "c78c8d0223d56462ae737ea7529cfaddea46eb1cefe2d67928a3532f73696500",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/schedule_mtp_varlen.py": "dceafeed2b598b84db654b8d70c520bc4a368a03e2dacf2acf97b72623097809",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/state_cache.py": "67060817908b6441d5c259ce2bf59d8e46fcf9e66a8a57ad935125bd78facbce",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/store_kv_cache.py": "6c862a60fdf432492f89e3cae49b686fd88289f518b7c295da0a45d03b7dca82",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/store_mtp_info.py": "f0eadf2ce66fad1ec53b9750c019f41d8bf207f1acee4133875a8ebb40bd562b",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/structure_output.py": "e53b26bb82fc4793c5b25414490564b93859b07965ebd33bc6efdd9665e53a54",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/sum_smaller_probs.py": "9e8cdeb8b2e51c9b39ce2ec0e85b29b442bfcb211b6eb6963f18091cbc1d4805",
+    "deepinfer/model_executor/layers/tilelang_ops/asc/swa_index.py": "90381234e61899de0144833e73379167249915f341cde99aa4dea389b8dc1e34",
+    "deepinfer/model_executor/layers/tilelang_ops/cache_common.py": "987e60177a663f97819c93cbe7286319764b4fcc9c67f8a309e6eb71f8dc09ad",
+    "deepinfer/model_executor/layers/tilelang_ops/candidate_blocks.py": "4d04add6918385e9137e835eccdbd765ad1ef4d6c6aec1d7627c01d1c7e2a860",
+    "deepinfer/model_executor/layers/tilelang_ops/common.py": "d5cbc52dda0bd611d5ea417d2e8bb1ec70c70f5932edaeb809eb7cfa6a669a1b",
+    "deepinfer/model_executor/layers/tilelang_ops/compress.py": "c641095e704a29fa2504455908496ebfed40fcaf43ab4bb2d44a9f922297214e",
+    "deepinfer/model_executor/layers/tilelang_ops/compute_seqlens_k_zos.py": "83d5decd78b992d697074f38f1005db007c0e75332a7ab2a90620922844406f4",
+    "deepinfer/model_executor/layers/tilelang_ops/conftest.py": "438bfeb531d9c500a64a7c81d71468625152cc6e33238591e04af4f426e1bafa",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/candidate_blocks.py": "41fb2aab99ec0f8f4b2f1d7b49144ce7e1709a7e2e96b6f00797fe7b1d0e3fa2",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/compress.py": "f29ab1fc97c73537bfd9b0e5be6a9f4014e9b17a1a1952c876f2dea4cf4c8b9c",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/compute_seqlens_k_zos.py": "6a95493e4759dd51193a50f4fd3533050f901433bdb3dd9534f9add65f2fce5c",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/dflash.py": "789d90758ac2c20fe36dcb97156a9e6448a76220562ebfcf3f8c53cea9366504",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/dflash_copy.py": "2ed3a19d94afe5b5c2533049ad62815fb2684e718957e491520c18fbb5aeb686",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/flash_mla_utils.py": "5a365195b848668126ebd73dfed00e3645648b1e509c39549c4da4fbe7c5f9b5",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/fused_sample.py": "2b289145a9c28bb869dcc4cb63d80eff845d923a3fc34885366a2caa0411223f",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/fused_transform.py": "0256201181ebe3dc08c4ab1d08fddef6b46d91f46ecbeb9406268474b3f64ca3",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/gather.py": "cf62656b215e07ac791ffa096da66c64ed0c81231172a46a2e01abf5171c4983",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/gather_engram_tokens_zos.py": "8a117c3d7721ba1ded8ba39f8fcea8e5a49bc4d8c4546bc158670f44d816f92a",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/gather_input_ids_zos.py": "f6504fe35b05b2b53af0e9215a1c3da72c3fe7cdc5fda0643b527e8b14610448",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/get_kv_index.py": "3671731746eda09711e3e93c5328454b7033eb272e8a0573545d40095bcc532a",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/image_embed_ops.py": "927dbce53734e1945da84ea1b987d1a2c2ea4280ddd1c98c6ded50acacba5d95",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/kv_index_cat.py": "5e94bddf70d06c7b5954abda2f15a67aa75d6f33db83b50ff82b01faf93a979d",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/load_paged_kv_cache.py": "916ab93b34920141b30ccf24672a1f73f1af3bb9e593fe7ac01ef2e0990df6e8",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/norm.py": "568abbc63ec7d72aed3edaa8ffde9033095eb1421077141c787cabe6628dcb91",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/outlier_detection.py": "3d7047e6e8bb40260f6dad46ca9b49e1f0d10b01312d34716e5f1d2ceb657c7c",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/prepare_cp_mirror.py": "92e7477a0a07ba441e877c277d93144448f35ced5da68321f65dfcd49d49d7a1",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/prepare_decode_metadata.py": "33ee5730fab7ed13957f8bf8c3cf27c20b01bede9ad2b53fe98a8c68c6a2362e",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/quant.py": "c395de8faadfed2689d86841ec284533a2c1e136037bc8527a091fdb0328d1f9",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/random_sampling.py": "18ff9677ca6886e6329e62ef5cd6dac92d6a2658be3fe97ee60d7985494b1b6c",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/sampler.py": "4a37c7e4bc44d7c4ef50b8590590c9a8d646eb7a8627f2de9e9c1a4f0f5927e3",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/schedule_mtp_varlen.py": "c4814812966ae3bd69ed4b4078f6a9c3a183c0a9625144b72bf092dbc7b357bb",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/state_cache.py": "224915e1e55b25caf6537a6d7e19c80a85f1b1641f788d09679245dd5a25c0c4",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/store_kv_cache.py": "5e2bd6dd81bc912e7649bda5df1d099cd9cca9112ca542d3d0b73ae30c4c92d6",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/store_mtp_info.py": "83bf4e33be7a9a17e53fc824630a12188afb4b66d166286e9b98397e7e6841d8",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/structure_output.py": "70465a3897c999bb54b9fa569ec99cf09e60213560480dd2f459ee45cda7c2b3",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/sum_smaller_probs.py": "37f612c2df98cd84b7815f384ee459187e814d5aae31d5d8842dc0703d10de9c",
+    "deepinfer/model_executor/layers/tilelang_ops/cuda/swa_index.py": "5af74a5e4c9481b076f9a6e9015969779f6fd27b79e9bb273d206fa2d8290465",
+    "deepinfer/model_executor/layers/tilelang_ops/dflash.py": "79d0e86dc57cc0f58bdb9bcba4559888a7d2611a1d914474c6d616d0a78a6ec0",
+    "deepinfer/model_executor/layers/tilelang_ops/dflash_copy.py": "c38e7a7930da4bfb2e847c2da02b5785b3a81fc70a0f425b633ce103a61ca90e",
+    "deepinfer/model_executor/layers/tilelang_ops/flash_mla_utils.py": "83b2d1c4eba06271e02f9002a4d90f5d183c7cb3e55792624f629c36e75067a7",
+    "deepinfer/model_executor/layers/tilelang_ops/fused_sample.py": "f43ac934284d15f708a0aa07aaa8fff7daa257984e311ca554bd9dbea89e5e1d",
+    "deepinfer/model_executor/layers/tilelang_ops/fused_transform.py": "afe632ed850f77c355ad7a580cbcb82c2342492d8d98d758918610b4958080e8",
+    "deepinfer/model_executor/layers/tilelang_ops/gather.py": "1d131a8609412373eaaa7e3b2698ee0237ef6e2d521e2de38653c1d9e2b30d04",
+    "deepinfer/model_executor/layers/tilelang_ops/gather_engram_tokens_zos.py": "1cd430d3d5c75fd1bfe1e822c903fb0220f2c15a6e5b93b954e915b068cf6e5e",
+    "deepinfer/model_executor/layers/tilelang_ops/gather_input_ids_zos.py": "13fe137be5994eee96bd193d6cc7bdbed16efe913ff21b57e044e9b6340c855f",
+    "deepinfer/model_executor/layers/tilelang_ops/get_kv_index.py": "7a9e2ebc82bcb5df9f879b222a17152e9d17e0ec85cd06a4d55c96eb226e6cf9",
+    "deepinfer/model_executor/layers/tilelang_ops/image_embed_ops.py": "b745cdaa3b2862f2d9ae8a103dd90b62a37383e4ff6145b365de5a3ecf786508",
+    "deepinfer/model_executor/layers/tilelang_ops/kv_index_cat.py": "6bd5a69287a41282bb43a4abc05d26a4e2765bc5de383ea5b8c810b114948a16",
+    "deepinfer/model_executor/layers/tilelang_ops/load_paged_kv_cache.py": "13aa0f43776744a7283183b435f2755c45b7a769e8c200edb7a4b800071897bc",
+    "deepinfer/model_executor/layers/tilelang_ops/norm.py": "14d6f0704e2fa172052cc9dfdc455cae49004c0107f0b7ea7cb72ba0e8b6dce0",
+    "deepinfer/model_executor/layers/tilelang_ops/ops.py": "9233b5516797636304774cda6baae2f01eac47dc1c3c8c8c2e7dc2f33adc46c5",
+    "deepinfer/model_executor/layers/tilelang_ops/outlier_detection.py": "e93e2509b2a57c08659ba27e7286b79745bf9da50f7a87f0abbd9e24393602e9",
+    "deepinfer/model_executor/layers/tilelang_ops/prepare_cp_mirror.py": "4b58b8b353be45ea0ebb917a8ddb2a2e4b1c2e2350e57d2ff0036ae4bf25b7d7",
+    "deepinfer/model_executor/layers/tilelang_ops/prepare_v4_decode_metadata.py": "4117a3203a8e444549969647ba57c1d56d10116a93b50c9d9b8e96c74f36d06e",
+    "deepinfer/model_executor/layers/tilelang_ops/random_sampling.py": "59d8d5befc1a98ec28ca824117ff1ffa7829740fb327240c1ec9a0c77731f9c2",
+    "deepinfer/model_executor/layers/tilelang_ops/sampler.py": "2a36a41bcea69632d187d312db394ded0e9e55347a42e468e608142715ca7885",
+    "deepinfer/model_executor/layers/tilelang_ops/schedule_mtp_varlen.py": "0c6e5eb4faa087b96e0558ea4791e1b4ead1939a6cc8b086de86ca2f68bd4e88",
+    "deepinfer/model_executor/layers/tilelang_ops/state_cache.py": "76c7451da15631b75055961976c048f04317fdfe6970f1140f8d93c0148a79f0",
+    "deepinfer/model_executor/layers/tilelang_ops/store_kv_cache.py": "1be0ce334f8ff0a20f3f3818594ee876805cfdff2bd6d4f4af738f9373134fe6",
+    "deepinfer/model_executor/layers/tilelang_ops/store_mtp_info.py": "c651b2184756d24f460f51b47a6080345890dd62f3becb55e73f5575e0c9ab2c",
+    "deepinfer/model_executor/layers/tilelang_ops/structure_output.py": "d62fb6e93e68ae2f2e4e3225cd4065cdfd19ac9acc31e972e46b8eb0106ab982",
+    "deepinfer/model_executor/layers/tilelang_ops/sum_smaller_probs.py": "3f85da6fc031e0bc4bed345d86470166e1383f63e3a5de1ddef047edab7b7447",
+    "deepinfer/model_executor/layers/tilelang_ops/swa_index.py": "67f28f7991fc27cc3905177dbe1fcd68019877289ebe959e66e4fbfffcc7ffee",
+    "deepinfer/model_executor/layers/vocab_parallel_embedding.py": "3d75b92c2ba5cb934b57b8ad02e7b5dcc1fcc1c433e52e1c5a46ff7eecdb3a3b",
+    "deepinfer/model_executor/model_loader.py": "5f0e56aa342e7632021017eb1cb46b9fe81aed8d6b7d23dc2db3534d09a5945f",
+    "deepinfer/model_executor/model_metadata_utils.py": "2db5926a9032755edab5ff13e71b6be39c46c5ea89fb9bff9e81fadecb392f25",
+    "deepinfer/model_executor/model_output.py": "97320901eb107198e5c38e8d044320c98ef431ae515c3c4a3c485bf7ccfba6db",
+    "deepinfer/model_executor/models/__init__.py": "3674f961c620c18a937da9127bfb87f7084c21d3a2a6ceb0b297d21b572dbfc4",
+    "deepinfer/model_executor/models/decoder_layer.py": "d000cec7ed89700786525853732f290435504a034778a5581337898f37d78d1a",
+    "deepinfer/model_executor/models/deepseek.py": "71fcda516a557a9b5935222e07f888bfcd21a165ce93738122bced58d05815c5",
+    "deepinfer/model_executor/models/deepseek_vl.py": "6eda92aa4a0b51b92ab95feb3e3c0714b15499a8a5783280ce6e1c86251b3e51",
+    "deepinfer/model_executor/models/mtp/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/models/mtp/dflash.py": "f12a4e40cd39ce758e2ba88c3c46380c91c83a87745594e25e1db4d0d8c6a23d",
+    "deepinfer/model_executor/models/v4_modules/__init__.py": "b4598007774b87200a0a4bfc4f27bb7f7f70627636f8661a9c2c553e277459a8",
+    "deepinfer/model_executor/models/v4_modules/attn.py": "471873bd4ef5e309e225cb45ce8ca4712494349e91d780143f5f0a5fe7125ca5",
+    "deepinfer/model_executor/models/v4_modules/builder.py": "2aa85c2d03b1caebf1def294f1a066ab57e5190a9954983e1f79edee22450ce0",
+    "deepinfer/model_executor/models/v4_modules/compress.py": "e8e17922c5351f682cb0067348b5caabbd57970761a704e2c94234c2362cdbf7",
+    "deepinfer/model_executor/models/v4_modules/containers.py": "08a1e40764dbd28e2ca6a996364dab6e3e620bf949586bfec2235648b51a7fe7",
+    "deepinfer/model_executor/models/v4_modules/cross_layer.py": "b7d0ca65aa96f715e6189f511c592c4341a4eff7898b8c4366a6912252bce7c5",
+    "deepinfer/model_executor/models/v4_modules/engram.py": "94e83ac03a4e993372d0be21a8316e30d61cf4d2009f0f1a683967d9fffffd0c",
+    "deepinfer/model_executor/models/v4_modules/engram_metadata.py": "3fc548d9ce782796f0810f6d753edd20cbcf40fbb86980c890254137a194acea",
+    "deepinfer/model_executor/models/v4_modules/engram_parameters.py": "2b8bfb1d4b595dc337ceeac0fd574fff7549c9f2f6014cc672ad1bc9755ade53",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/model_executor/models/v4_modules/hc_blocks.py": "d37962bb3c47ec541f62302054f16e1f21899c7fabc1fefce55caea405522cca",
+    "deepinfer/model_executor/models/v4_modules/hc_lazy.py": "553c9fae0179443d38dd4d3b02f827492f0b2a613238efcdda1f8304b8027a51",
+    "deepinfer/model_executor/models/v4_modules/heads.py": "697439602617d53409fea41c8cc1d95b1002842823d7ccd824fb720b5111ae2e",
+    "deepinfer/model_executor/models/v4_modules/index_attn.py": "38c0c2c76c3c1a94edf6ff63b9776e99718635a8495ac53b0891614853a3bc96",
+    "deepinfer/model_executor/models/v4_modules/linear.py": "8ba53ee0cb9ce7bcf0f1c93e7da24abb10c8ad8bada730366147c8b869cf334a",
+    "deepinfer/model_executor/models/v4_modules/mhc_modeling.py": "97d52d87b262bffe3970a0b46c329cdcc1c514c09ec48b32008269b225d5de4d",
+    "deepinfer/model_executor/models/v4_modules/mhc_ops.py": "43c676593e8d1b865eddb4732aa185375be650b46cf17fa71074a0a942139f8d",
+    "deepinfer/model_executor/models/v4_modules/mla_attn.py": "7cf38a5bfa3800577c177a83e4cfecc1d0cf2b48b5bbadcfa1039b71ae882789",
+    "deepinfer/model_executor/models/v4_modules/mlp.py": "71fb72689b67b25128295ffc751a7012e923849083ede40e20728a031288328c",
+    "deepinfer/model_executor/models/v4_modules/moe.py": "4e154e1536e5926bf4e4b7b58d5ccc71a692b46c8d26d7edcc56827bfe540de3",
+    "deepinfer/model_executor/models/v4_modules/norm.py": "8b8e9defe8b587a5574ded543512690b881420fa7488f8b552422a1976807562",
+    "deepinfer/model_executor/models/v4_modules/official_attention.py": "5cfc55d0052ed42125b134d62bfdca4286b48cbaf645ac712b110889da14db50",
+    "deepinfer/model_executor/models/v4_modules/official_backend.py": "c42d7340d7623eaca46746932775a2ca0113275edc81a445ab811366194ee03e",
+    "deepinfer/model_executor/models/v4_modules/official_cache.py": "8e755507dc6612d9cd084a158dcf7b1e3929b6a815cb05f9a723fb900a4ab188",
+    "deepinfer/model_executor/models/v4_modules/official_compression.py": "80cf1c789a311d35baf81129aadc89a559ba4b2e1662a873d18227fbbe3e6ace",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "006adbcb87b3755839095560ad04a74899afd15bea5f26e18d697bf158ba8368",
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "a9acfc4f2e048ba652fb9569d3ec55cdffec8007b49f80d51dd036789d330227",
+    "deepinfer/model_executor/models/v4_modules/official_norm.py": "eba96de3ca1001ba230e69508398d1d52bbffefe76309b35c7c99b907c2acfee",
+    "deepinfer/model_executor/models/v4_modules/official_rope.py": "c9987e04dd3cf65b45052a8445ae42e2733aa2ab24949a97fc25a11cab2cb747",
+    "deepinfer/model_executor/models/v4_modules/rope.py": "df59daa787408247204f543bd3c8f02ce8a15b38c970f30da7883a949d5ab686",
+    "deepinfer/model_executor/models/v4_modules/utils.py": "f7ba78bca8f92c74f8895fc255043764bef3f5b2ee83a5efecc65236033e50bd",
+    "deepinfer/model_executor/models/v4_modules/yoco.py": "7dc8ad7b6ca4902bcef67b1cbc4804592995c5b6af9ebaa00b59cc338c1aa6ec",
+    "deepinfer/model_executor/models/vision_encoder/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/models/vision_encoder/mlp_projector.py": "5691a4861bdc55f0c692bd0807ec70c1b794a243f1ed824bdb5cd93440e69ac7",
+    "deepinfer/model_executor/models/vision_encoder/official_image.py": "65daeeebb5ef79271cf94d4f7ebc410ec6859df78dd5b7da40ddb9f4c27b5147",
+    "deepinfer/model_executor/models/vision_encoder/official_vision.py": "82f50e6fbfe25e37dd2e2faaf0b5c0ed9a875d53c889e9556a6cd12ec06f8f7d",
+    "deepinfer/model_executor/models/vision_encoder/vit.py": "a6c7a946c587e44ffb11e7bd621188fe91cc45ffeb163706c6be6b34a14bef1b",
+    "deepinfer/model_executor/models/vision_encoder/vl_aligner.py": "59b7f6ad4b5c40e4b064365e9b0fbd87609408915658d2eaff0273e9cb3c7fe8",
+    "deepinfer/model_executor/parallel_utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/model_executor/parallel_utils/communication_op.py": "4d7ca2d66717a4da7f280bb2d48159aff5cc7ba0ced2f1fd6f00a11b7e8a188a",
+    "deepinfer/model_executor/parallel_utils/cp.py": "7cf54bf07f84d6a0316bdb979af16df12efd6c08d340cf8fbf3ab547162e046e",
+    "deepinfer/model_executor/parallel_utils/nccl_memory.py": "9948fd7a1d2937848ed4d9ed4f2df250172353fe8088defdbec53e1182e7a1c0",
+    "deepinfer/model_executor/parallel_utils/parallel_state.py": "23c4a9c04197c5d18d770d99d02e18dec3a40a4cde61d31d7ea5d6aea161c591",
+    "deepinfer/model_executor/parallel_utils/userbuffer.py": "c8943eca6caad3fa1ee7200a37ef1d7c7e3b238854f46fc1f20b470998daa29b",
+    "deepinfer/model_executor/sampling_inputs.py": "1cd9c0c87899ab917e94a2440e6855976fa28509f10c2c4f84222a81600e6d1d",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/multimodal_tokens.py": "6f13772f6b58aac5f64288ba2a76593ab37d91665755e15cfacc65a59b241e01",
+    "deepinfer/npu_ops/__init__.py": "543745c9c200ec70261a70adef4f2ee51244f661bd82138e1b3347b628272099",
+    "deepinfer/npu_ops/deep_select.py": "cf75fa43e445858813890698813ea5dc90f334d044e22f25efdba48c4c24fd05",
+    "deepinfer/npu_ops/patch_imports.py": "e7cf0fb2a0f16ec2544d3c38cd8b831293d260d79babd4fb5a1a6484cc9704bc",
+    "deepinfer/npu_ops/vit_attn.py": "d574dbea63ca39ddaa142d7cf3054148839c0243afa196ee3de6e618f5179fa6",
+    "deepinfer/platform.py": "04e8e40fe0dff0f0554bf729a41c141326f979a2a4d873b7cf92030ffb286902",
+    "deepinfer/quantization/__init__.py": "3191cd72afabdaba1ae098cf92b4de33cad0620cab8662a14eb6312c0636bb5b",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/allocation.py": "8a404b1d40609f2e58c59459c9162d9bc49db51b0c812d98f8e95ae41c84d516",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/linear.py": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+    "deepinfer/quantization/memory_plan.py": "ecc0bd3da751bace7142b8c96ceadd11005a0408830eca3a2a6394cc1c5bdfe5",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "deepinfer/quantization/preflight.py": "d48dfc276e981a265008bc968683729082e8338bed4574a26ce01090294c120d",
+    "deepinfer/quantization/runtime_linear.py": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+    "deepinfer/sampling_params.py": "f800034efdebe1b21620660a51fa9122d3d7f138d8e60cd738f33d643c3116f8",
+    "deepinfer/sequence.py": "a21e54006f5291e8d3fbfc062982212ae29d6c63d6cc07e05561441ca204ebef",
+    "deepinfer/shared_memory.py": "1aff9ee8f589c59e9b982707fe518bc4a8722814f971f741631d07d8a1319ce0",
+    "deepinfer/structure_output/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/structure_output/compiler.py": "05ae22caf6faddff075102f33e6e77aff32391c9f60f2f99047dfc68f104bbe8",
+    "deepinfer/structure_output/mask.py": "000ea48e5a0d6fd19474b443137cbd034a347c0ed31a36907fe93c45933bea92",
+    "deepinfer/structure_output/matcher.py": "83b69010567a4306d6d435c88d019a302e7ee2d89af01eb037a59e40c0e67ce1",
+    "deepinfer/structure_output/so_matcher_builder.py": "1f26aea5205c2f6953ba7ca21079c84b888115ed44c158a120536a17517f1ee0",
+    "deepinfer/testing.py": "1c6cc1fa7bb1e1be7aa89f8b03f6bb1c59d4bcf20152de1d42c4f9782872c5e7",
+    "deepinfer/timer.py": "ed40611395c78df0d1e3240615212f9a83688b5c145ce5c1a037a1aae1fe84df",
+    "deepinfer/utils.py": "8a0049b98ea6f7ef98555ad8b38b9e8dac2292c0d2a89c2090bbdb5e5ee7295a",
+    "deepinfer/ve/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/ve/multimodal_processor.py": "f6b0e03a9138eddead7adfe424d4818a937c5ffbac2bff07d27dc96dd20d75cb",
+    "deepinfer/ve/prepare_tensor_input_vl.py": "37ac02d70519622eddcf6209530519546a92571be0e6276019ebe7e2cf4ea84a",
+    "deepinfer/ve/processor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/ve/processor/common.py": "2a9de67c82c624ebe8f87247d4d49cd1a86196cc878ea212d023048906c19da1",
+    "deepinfer/ve/processor/image_processor.py": "8b8a0a021795b6648ac372ccc7e6ca935ffb71d5d92313c9b6fcd4833761ba21",
+    "deepinfer/ve/processor/mm_processor.py": "f4cf3c1136fad6c49398b8a108f70aca2321f5777c03646be1261d2aac4a790d",
+    "deepinfer/ve/processor/text_processor.py": "b7eb5b27f6bf5d5c438bdc7a55d3f9fbd6374579888324ef5065c6ba26cb8930",
+    "deepinfer/ve/schema.py": "038232b9e484fcb61ab63616ec4a79bcfa2ab6c6293e0e83fb115fb85eb03b55",
+    "deepinfer/worker/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deepinfer/worker/base.py": "e48dc229c3bdf7984a2787a85abcb6e92e982dedd671f69831b9e6db7163092d",
+    "deepinfer/worker/cache_engine.py": "558b90e8d5e5282e884e6e322b952c0a85a0426ddb98c0d5877018f71b723b39",
+    "deepinfer/worker/cuda_graph_runner.py": "7adb2c7dc7b704223698654c7a40ca59d447044a4085146e41153fc2a75b1643",
+    "deepinfer/worker/decode_perf_cache.py": "472ff10a43df0e4b5b91becb51b13e651df62ca928032c2752c39df99f40e55e",
+    "deepinfer/worker/dflash_cuda_graph_runner.py": "e98d48d305de788a68eb899e8ae9d621ccefe8cda107dfeefe0c4ded732dbfc3",
+    "deepinfer/worker/model_runner.py": "1cc261292e3b02a00148dbac890df59c66681de0b2048de5dd5e12016a8925b8",
+    "deepinfer/worker/runtime_config.py": "1b24e906ad44ee0906683f0c0567a0802346e657180d7d9e1e2fe9f7a7dcca59",
+    "deepinfer/worker/worker.py": "206bd3d01f64bfce69d3f6ba423b5780156ad6bb4c694d5b16368f92e6508178",
+    "deepinfer/worker/zos_status.py": "00cb82cb9ab1f3d0d383dd6fb808a66895cc06c1d36e5f896043f1632a1a9ee4"
+  },
+  "torch": "2.13.0+cpu",
+  "torch_npu": "2.13.0.rc1",
+  "snapshot": "/root/yuhao/deepinfer_910c_yh/reports_yh/stage5_full_8_15_20261119T202949060872566_yh/rank0_replay_tensors_yh.pt",
+  "snapshot_sha256": "6fbf0e24ee16956672993f03975ddb7932ab494c0819fedc94460c517991e0cd"
+}

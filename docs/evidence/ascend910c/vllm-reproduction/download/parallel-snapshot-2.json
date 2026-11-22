@@ -1,0 +1,42 @@
+{
+  "unix": 1795267994.976619,
+  "identity": {
+    "pid": 2210671,
+    "start_ticks": "175934799",
+    "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15",
+    "started_unix": 1795267964.6156163,
+    "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_parallel.py",
+    "tool_sha256": "32a59ee9f1a77d6680fd8d02c5c3df27de472c51984661692859729cc40e9d68",
+    "args": [
+      "--workers",
+      "4",
+      "--resume",
+      "--direct",
+      "--execute"
+    ]
+  },
+  "running": true,
+  "parts": {
+    "engram_int8/layers_14_engram_embed.scale.safetensors.part": 8708423680,
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06.part": 97517568,
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06.part": 143654912,
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06.part": 142606336
+  },
+  "locks": {
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06.part.lock": "2210671",
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06.part.lock": "2210671",
+    "engram_int8/layers_14_engram_embed.scale.safetensors.part.lock": "2210671",
+    "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06.part.lock": "2210671"
+  },
+  "start_ticks": "175934799",
+  "cmdline": "python3 -u /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_parallel.py ",
+  "verified_complete": [
+    ".gitattributes",
+    "README.md",
+    "config.json",
+    "configuration.json",
+    "engram_extra.safetensors",
+    "engram_int8/PARTS.sha256"
+  ],
+  "exit": null
+}

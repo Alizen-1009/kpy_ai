@@ -1,0 +1,113 @@
+{
+  "task": "topological_order",
+  "request": {
+    "model": "p2-8192-20261121T224721Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-topological_order]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回有向无环图的字典序最小拓扑序。nodes 是互不重复的字符串节点列表，edges 中的 [u, v]表示 u 必须排在 v 前面；重复边只算一次。每一步若有多个入度为零的节点，选择字典序最小者。若图有环，返回空列表。输入列表不得被修改。\n函数签名：def topological_order(nodes, edges):\n示例：例如 nodes=[\"b\",\"a\",\"c\"], edges=[[\"a\",\"c\"]] 返回 [\"a\",\"b\",\"c\"]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 189,
+    "total_tokens": 387,
+    "completion_tokens": 198,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "tie-break",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\"]"
+      },
+      {
+        "id": "duplicate-edge",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\"]"
+      },
+      {
+        "id": "cycle",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[\"a\",\"b\"]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[\"c\",\"b\",\"a\",\"d\"]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[\"c\",\"e\",\"b\",\"d\",\"a\"]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\",\"d\",\"e\"]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[\"b\",\"a\"]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\",\"d\",\"e\"]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[\"a\",\"b\"]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "import heapq\n\ndef topological_order(nodes, edges):\n    node_set = set(nodes)\n    indegree = {node: 0 for node in nodes}\n    adj = {node: set() for node in nodes}\n    \n    for u, v in edges:\n        if u in node_set and v in node_set and v not in adj[u]:\n            adj[u].add(v)\n            indegree[v] += 1\n    \n    heap = [node for node in nodes if indegree[node] == 0]\n    heapq.heapify(heap)\n    \n    result = []\n    while heap:\n        u = heapq.heappop(heap)\n        result.append(u)\n        for v in adj[u]:\n            indegree[v] -= 1\n            if indegree[v] == 0:\n                heapq.heappush(heap, v)\n    \n    if len(result) != len(nodes):\n        return []\n    return result\n",
+    "extracted_code_sha256": "06b9bb737bd7cde219f263cdfd60ee59da46236eebafeac986de336ffbd77165"
+  }
+}

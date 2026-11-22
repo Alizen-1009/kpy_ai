@@ -1,0 +1,89 @@
+{
+  "task": "flatten_dict",
+  "score": {
+    "status": "pass",
+    "passed": 15,
+    "total": 15,
+    "case_results": [
+      {
+        "id": "root-empty",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "nested-empty-leaf",
+        "passed": true,
+        "actual": "{\"a.b\":{},\"c\":1}"
+      },
+      {
+        "id": "custom-separator",
+        "passed": true,
+        "actual": "{\"a/b\":2,\"c\":3}"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "{\"k0\":true}"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "{\"k0/k0\":-2,\"k0/k1\":0,\"k0/k2/k0\":null,\"k1\":false}"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "{\"k0\":{},\"k1.k0\":7,\"k1.k1.k0.k0\":7,\"k1.k1.k0.k1\":0,\"k1.k1.k0.k2\":\"v\",\"k1.k2.k0\":{},\"k2\":false}"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "{\"k0\":true,\"k1\":{},\"k2\":\"v\"}"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "{\"k0\":\"v\",\"k1\":\"v\",\"k2::k0\":0,\"k2::k1\":-2}"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "{}"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "{\"k0\":7,\"k1.k0\":false,\"k1.k1\":true}"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "{}"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def flatten_dict(data, sep='.'):\n    out = {}\n    def visit(d,path):\n        for k,v in d.items():\n            p = path+[k]\n            if isinstance(v,dict) and v: visit(v,p)\n            else: out[sep.join(p)] = v\n    visit(data,[])\n    return out\n",
+    "extracted_code_sha256": "927bb1fc4dcf5631a18106b08a06eab1e19949164c4c36d6d990469f520a8a0f"
+  }
+}

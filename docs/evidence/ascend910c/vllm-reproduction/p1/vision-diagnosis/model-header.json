@@ -1,0 +1,3233 @@
+{
+  "config": {
+    "architectures": [
+      "DeepseekV41ForCausalLM"
+    ],
+    "model_type": "deepseek_v41",
+    "dtype": "bfloat16",
+    "transformers_version": "5.6.0",
+    "bos_token_id": 0,
+    "eos_token_id": 1,
+    "pad_token_id": 2,
+    "image_token_id": 129264,
+    "text_config": {
+      "model_type": "deepseek_v41_text",
+      "vocab_size": 129280,
+      "hidden_size": 5120,
+      "moe_intermediate_size": 2304,
+      "num_hidden_layers": 40,
+      "num_attention_heads": 64,
+      "num_key_value_heads": 1,
+      "head_dim": 512,
+      "qk_rope_head_dim": 64,
+      "q_lora_rank": 1280,
+      "o_lora_rank": 1024,
+      "o_groups": 8,
+      "hidden_act": "silu",
+      "swiglu_limit": 10.0,
+      "rms_norm_eps": 1e-20,
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "initializer_range": 0.02,
+      "use_cache": true,
+      "tie_word_embeddings": false,
+      "max_position_embeddings": 1048576,
+      "rope_theta": 10000,
+      "rope_scaling": {
+        "rope_type": "yarn",
+        "factor": 16,
+        "beta_fast": 32,
+        "beta_slow": 1,
+        "original_max_position_embeddings": 65536
+      },
+      "n_routed_experts": 384,
+      "n_shared_experts": 1,
+      "num_experts_per_tok": 6,
+      "scoring_func": "sqrtsoftplus",
+      "topk_method": "noaux_tc",
+      "norm_topk_prob": true,
+      "routed_scaling_factor": 1.5,
+      "sliding_window": 128,
+      "compress_ratios": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "compress_rope_theta": 160000,
+      "kv_source_layer_ids": [
+        2,
+        8,
+        14,
+        20
+      ],
+      "index_source_layer_ids": [
+        2,
+        8,
+        14,
+        20,
+        24,
+        28,
+        32,
+        36
+      ],
+      "index_n_heads": 32,
+      "index_head_dim": 128,
+      "index_topk": 512,
+      "candidate_source_layer_id": 20,
+      "candidate_topk_blocks": 2048,
+      "candidate_block_size": 8,
+      "hc_mult": 4,
+      "hc_sinkhorn_iters": 20,
+      "hc_eps": 1e-06,
+      "engram_layer_ids": [
+        1,
+        14
+      ],
+      "engram_num_embeddings": [
+        384006168,
+        384016682
+      ],
+      "engram_max_ngram_size": 4,
+      "engram_vocab_size": 16000000,
+      "engram_n_heads": 8,
+      "engram_head_dim": 256,
+      "engram_pad_token_id": 2,
+      "engram_compressed_vocab_size": 99092,
+      "num_nextn_predict_layers": 3,
+      "dspark_block_size": 5,
+      "dspark_noise_token_id": 128799,
+      "dspark_target_layer_ids": [
+        37,
+        38,
+        39
+      ],
+      "dspark_markov_rank": 256,
+      "dspark_n_routed_experts": 128,
+      "dspark_num_experts_per_tok": 3
+    },
+    "vision_config": {
+      "model_type": "deepseek_v41_vision",
+      "num_hidden_layers": 32,
+      "hidden_size": 1024,
+      "num_attention_heads": 16,
+      "intermediate_size": 2816,
+      "patch_size": 14,
+      "rope_theta": 10000,
+      "downsample_ratio": 3,
+      "max_image_tokens": 1024,
+      "min_pixels": 295936,
+      "max_wh_ratio": null
+    },
+    "engram_rotation_config": {
+      "value_projection_rotated": true,
+      "value_basis": "quarot_global",
+      "key_and_gate_basis": "original",
+      "runtime_delta_rotation": false
+    },
+    "quantization_config": {
+      "quant_method": "ascend",
+      "model_quant_type": "W4A8_DYNAMIC"
+    }
+  },
+  "vision_index": {
+    "aligner.w1.bias": "vision-00001-of-00001.safetensors",
+    "aligner.w1.weight": "vision-00001-of-00001.safetensors",
+    "aligner.w2.bias": "vision-00001-of-00001.safetensors",
+    "aligner.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.0.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.1.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.10.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.11.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.12.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.13.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.14.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.15.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.16.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.17.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.18.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.19.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.2.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.20.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.21.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.22.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.23.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.24.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.25.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.26.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.27.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.28.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.29.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.3.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.30.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.31.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.4.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.5.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.6.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.7.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.8.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.attn.wo.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.attn.wo.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.attn.wqkv.bias": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.attn.wqkv.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.mlp.w1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.mlp.w2.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.norm1.weight": "vision-00001-of-00001.safetensors",
+    "vision.blocks.9.norm2.weight": "vision-00001-of-00001.safetensors",
+    "vision.norm.weight": "vision-00001-of-00001.safetensors",
+    "vision.patch_embed.proj.bias": "vision-00001-of-00001.safetensors",
+    "vision.patch_embed.proj.weight": "vision-00001-of-00001.safetensors",
+    "image_end": "vision-00001-of-00001.safetensors",
+    "image_newline": "vision-00001-of-00001.safetensors",
+    "image_start": "vision-00001-of-00001.safetensors"
+  },
+  "headers": {
+    "aligner.w1.bias": {
+      "dtype": "BF16",
+      "shape": [
+        5120
+      ],
+      "data_offsets": [
+        0,
+        10240
+      ]
+    },
+    "aligner.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5120,
+        9216
+      ],
+      "data_offsets": [
+        10240,
+        94382080
+      ]
+    },
+    "aligner.w2.bias": {
+      "dtype": "BF16",
+      "shape": [
+        5120
+      ],
+      "data_offsets": [
+        94382080,
+        94392320
+      ]
+    },
+    "aligner.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5120,
+        5120
+      ],
+      "data_offsets": [
+        94392320,
+        146821120
+      ]
+    },
+    "vision.blocks.0.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        146851840,
+        146853888
+      ]
+    },
+    "vision.blocks.0.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        146853888,
+        148951040
+      ]
+    },
+    "vision.blocks.0.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        148951040,
+        148957184
+      ]
+    },
+    "vision.blocks.0.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        148957184,
+        155248640
+      ]
+    },
+    "vision.blocks.0.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        155248640,
+        166782976
+      ]
+    },
+    "vision.blocks.0.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        166782976,
+        172550144
+      ]
+    },
+    "vision.blocks.0.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        172550144,
+        172552192
+      ]
+    },
+    "vision.blocks.0.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        172552192,
+        172554240
+      ]
+    },
+    "vision.blocks.1.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        172554240,
+        172556288
+      ]
+    },
+    "vision.blocks.1.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        172556288,
+        174653440
+      ]
+    },
+    "vision.blocks.1.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        174653440,
+        174659584
+      ]
+    },
+    "vision.blocks.1.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        174659584,
+        180951040
+      ]
+    },
+    "vision.blocks.1.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        180951040,
+        192485376
+      ]
+    },
+    "vision.blocks.1.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        192485376,
+        198252544
+      ]
+    },
+    "vision.blocks.1.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        198252544,
+        198254592
+      ]
+    },
+    "vision.blocks.1.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        198254592,
+        198256640
+      ]
+    },
+    "vision.blocks.10.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        198256640,
+        198258688
+      ]
+    },
+    "vision.blocks.10.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        198258688,
+        200355840
+      ]
+    },
+    "vision.blocks.10.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        200355840,
+        200361984
+      ]
+    },
+    "vision.blocks.10.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        200361984,
+        206653440
+      ]
+    },
+    "vision.blocks.10.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        206653440,
+        218187776
+      ]
+    },
+    "vision.blocks.10.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        218187776,
+        223954944
+      ]
+    },
+    "vision.blocks.10.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        223954944,
+        223956992
+      ]
+    },
+    "vision.blocks.10.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        223956992,
+        223959040
+      ]
+    },
+    "vision.blocks.11.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        223959040,
+        223961088
+      ]
+    },
+    "vision.blocks.11.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        223961088,
+        226058240
+      ]
+    },
+    "vision.blocks.11.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        226058240,
+        226064384
+      ]
+    },
+    "vision.blocks.11.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        226064384,
+        232355840
+      ]
+    },
+    "vision.blocks.11.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        232355840,
+        243890176
+      ]
+    },
+    "vision.blocks.11.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        243890176,
+        249657344
+      ]
+    },
+    "vision.blocks.11.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        249657344,
+        249659392
+      ]
+    },
+    "vision.blocks.11.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        249659392,
+        249661440
+      ]
+    },
+    "vision.blocks.12.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        249661440,
+        249663488
+      ]
+    },
+    "vision.blocks.12.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        249663488,
+        251760640
+      ]
+    },
+    "vision.blocks.12.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        251760640,
+        251766784
+      ]
+    },
+    "vision.blocks.12.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        251766784,
+        258058240
+      ]
+    },
+    "vision.blocks.12.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        258058240,
+        269592576
+      ]
+    },
+    "vision.blocks.12.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        269592576,
+        275359744
+      ]
+    },
+    "vision.blocks.12.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        275359744,
+        275361792
+      ]
+    },
+    "vision.blocks.12.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        275361792,
+        275363840
+      ]
+    },
+    "vision.blocks.13.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        275363840,
+        275365888
+      ]
+    },
+    "vision.blocks.13.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        275365888,
+        277463040
+      ]
+    },
+    "vision.blocks.13.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        277463040,
+        277469184
+      ]
+    },
+    "vision.blocks.13.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        277469184,
+        283760640
+      ]
+    },
+    "vision.blocks.13.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        283760640,
+        295294976
+      ]
+    },
+    "vision.blocks.13.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        295294976,
+        301062144
+      ]
+    },
+    "vision.blocks.13.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        301062144,
+        301064192
+      ]
+    },
+    "vision.blocks.13.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        301064192,
+        301066240
+      ]
+    },
+    "vision.blocks.14.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        301066240,
+        301068288
+      ]
+    },
+    "vision.blocks.14.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        301068288,
+        303165440
+      ]
+    },
+    "vision.blocks.14.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        303165440,
+        303171584
+      ]
+    },
+    "vision.blocks.14.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        303171584,
+        309463040
+      ]
+    },
+    "vision.blocks.14.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        309463040,
+        320997376
+      ]
+    },
+    "vision.blocks.14.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        320997376,
+        326764544
+      ]
+    },
+    "vision.blocks.14.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        326764544,
+        326766592
+      ]
+    },
+    "vision.blocks.14.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        326766592,
+        326768640
+      ]
+    },
+    "vision.blocks.15.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        326768640,
+        326770688
+      ]
+    },
+    "vision.blocks.15.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        326770688,
+        328867840
+      ]
+    },
+    "vision.blocks.15.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        328867840,
+        328873984
+      ]
+    },
+    "vision.blocks.15.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        328873984,
+        335165440
+      ]
+    },
+    "vision.blocks.15.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        335165440,
+        346699776
+      ]
+    },
+    "vision.blocks.15.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        346699776,
+        352466944
+      ]
+    },
+    "vision.blocks.15.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        352466944,
+        352468992
+      ]
+    },
+    "vision.blocks.15.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        352468992,
+        352471040
+      ]
+    },
+    "vision.blocks.16.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        352471040,
+        352473088
+      ]
+    },
+    "vision.blocks.16.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        352473088,
+        354570240
+      ]
+    },
+    "vision.blocks.16.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        354570240,
+        354576384
+      ]
+    },
+    "vision.blocks.16.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        354576384,
+        360867840
+      ]
+    },
+    "vision.blocks.16.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        360867840,
+        372402176
+      ]
+    },
+    "vision.blocks.16.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        372402176,
+        378169344
+      ]
+    },
+    "vision.blocks.16.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        378169344,
+        378171392
+      ]
+    },
+    "vision.blocks.16.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        378171392,
+        378173440
+      ]
+    },
+    "vision.blocks.17.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        378173440,
+        378175488
+      ]
+    },
+    "vision.blocks.17.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        378175488,
+        380272640
+      ]
+    },
+    "vision.blocks.17.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        380272640,
+        380278784
+      ]
+    },
+    "vision.blocks.17.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        380278784,
+        386570240
+      ]
+    },
+    "vision.blocks.17.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        386570240,
+        398104576
+      ]
+    },
+    "vision.blocks.17.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        398104576,
+        403871744
+      ]
+    },
+    "vision.blocks.17.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        403871744,
+        403873792
+      ]
+    },
+    "vision.blocks.17.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        403873792,
+        403875840
+      ]
+    },
+    "vision.blocks.18.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        403875840,
+        403877888
+      ]
+    },
+    "vision.blocks.18.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        403877888,
+        405975040
+      ]
+    },
+    "vision.blocks.18.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        405975040,
+        405981184
+      ]
+    },
+    "vision.blocks.18.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        405981184,
+        412272640
+      ]
+    },
+    "vision.blocks.18.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        412272640,
+        423806976
+      ]
+    },
+    "vision.blocks.18.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        423806976,
+        429574144
+      ]
+    },
+    "vision.blocks.18.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        429574144,
+        429576192
+      ]
+    },
+    "vision.blocks.18.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        429576192,
+        429578240
+      ]
+    },
+    "vision.blocks.19.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        429578240,
+        429580288
+      ]
+    },
+    "vision.blocks.19.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        429580288,
+        431677440
+      ]
+    },
+    "vision.blocks.19.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        431677440,
+        431683584
+      ]
+    },
+    "vision.blocks.19.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        431683584,
+        437975040
+      ]
+    },
+    "vision.blocks.19.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        437975040,
+        449509376
+      ]
+    },
+    "vision.blocks.19.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        449509376,
+        455276544
+      ]
+    },
+    "vision.blocks.19.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        455276544,
+        455278592
+      ]
+    },
+    "vision.blocks.19.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        455278592,
+        455280640
+      ]
+    },
+    "vision.blocks.2.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        455280640,
+        455282688
+      ]
+    },
+    "vision.blocks.2.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        455282688,
+        457379840
+      ]
+    },
+    "vision.blocks.2.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        457379840,
+        457385984
+      ]
+    },
+    "vision.blocks.2.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        457385984,
+        463677440
+      ]
+    },
+    "vision.blocks.2.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        463677440,
+        475211776
+      ]
+    },
+    "vision.blocks.2.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        475211776,
+        480978944
+      ]
+    },
+    "vision.blocks.2.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        480978944,
+        480980992
+      ]
+    },
+    "vision.blocks.2.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        480980992,
+        480983040
+      ]
+    },
+    "vision.blocks.20.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        480983040,
+        480985088
+      ]
+    },
+    "vision.blocks.20.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        480985088,
+        483082240
+      ]
+    },
+    "vision.blocks.20.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        483082240,
+        483088384
+      ]
+    },
+    "vision.blocks.20.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        483088384,
+        489379840
+      ]
+    },
+    "vision.blocks.20.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        489379840,
+        500914176
+      ]
+    },
+    "vision.blocks.20.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        500914176,
+        506681344
+      ]
+    },
+    "vision.blocks.20.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        506681344,
+        506683392
+      ]
+    },
+    "vision.blocks.20.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        506683392,
+        506685440
+      ]
+    },
+    "vision.blocks.21.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        506685440,
+        506687488
+      ]
+    },
+    "vision.blocks.21.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        506687488,
+        508784640
+      ]
+    },
+    "vision.blocks.21.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        508784640,
+        508790784
+      ]
+    },
+    "vision.blocks.21.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        508790784,
+        515082240
+      ]
+    },
+    "vision.blocks.21.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        515082240,
+        526616576
+      ]
+    },
+    "vision.blocks.21.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        526616576,
+        532383744
+      ]
+    },
+    "vision.blocks.21.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        532383744,
+        532385792
+      ]
+    },
+    "vision.blocks.21.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        532385792,
+        532387840
+      ]
+    },
+    "vision.blocks.22.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        532387840,
+        532389888
+      ]
+    },
+    "vision.blocks.22.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        532389888,
+        534487040
+      ]
+    },
+    "vision.blocks.22.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        534487040,
+        534493184
+      ]
+    },
+    "vision.blocks.22.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        534493184,
+        540784640
+      ]
+    },
+    "vision.blocks.22.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        540784640,
+        552318976
+      ]
+    },
+    "vision.blocks.22.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        552318976,
+        558086144
+      ]
+    },
+    "vision.blocks.22.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        558086144,
+        558088192
+      ]
+    },
+    "vision.blocks.22.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        558088192,
+        558090240
+      ]
+    },
+    "vision.blocks.23.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        558090240,
+        558092288
+      ]
+    },
+    "vision.blocks.23.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        558092288,
+        560189440
+      ]
+    },
+    "vision.blocks.23.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        560189440,
+        560195584
+      ]
+    },
+    "vision.blocks.23.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        560195584,
+        566487040
+      ]
+    },
+    "vision.blocks.23.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        566487040,
+        578021376
+      ]
+    },
+    "vision.blocks.23.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        578021376,
+        583788544
+      ]
+    },
+    "vision.blocks.23.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        583788544,
+        583790592
+      ]
+    },
+    "vision.blocks.23.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        583790592,
+        583792640
+      ]
+    },
+    "vision.blocks.24.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        583792640,
+        583794688
+      ]
+    },
+    "vision.blocks.24.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        583794688,
+        585891840
+      ]
+    },
+    "vision.blocks.24.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        585891840,
+        585897984
+      ]
+    },
+    "vision.blocks.24.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        585897984,
+        592189440
+      ]
+    },
+    "vision.blocks.24.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        592189440,
+        603723776
+      ]
+    },
+    "vision.blocks.24.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        603723776,
+        609490944
+      ]
+    },
+    "vision.blocks.24.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        609490944,
+        609492992
+      ]
+    },
+    "vision.blocks.24.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        609492992,
+        609495040
+      ]
+    },
+    "vision.blocks.25.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        609495040,
+        609497088
+      ]
+    },
+    "vision.blocks.25.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        609497088,
+        611594240
+      ]
+    },
+    "vision.blocks.25.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        611594240,
+        611600384
+      ]
+    },
+    "vision.blocks.25.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        611600384,
+        617891840
+      ]
+    },
+    "vision.blocks.25.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        617891840,
+        629426176
+      ]
+    },
+    "vision.blocks.25.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        629426176,
+        635193344
+      ]
+    },
+    "vision.blocks.25.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        635193344,
+        635195392
+      ]
+    },
+    "vision.blocks.25.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        635195392,
+        635197440
+      ]
+    },
+    "vision.blocks.26.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        635197440,
+        635199488
+      ]
+    },
+    "vision.blocks.26.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        635199488,
+        637296640
+      ]
+    },
+    "vision.blocks.26.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        637296640,
+        637302784
+      ]
+    },
+    "vision.blocks.26.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        637302784,
+        643594240
+      ]
+    },
+    "vision.blocks.26.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        643594240,
+        655128576
+      ]
+    },
+    "vision.blocks.26.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        655128576,
+        660895744
+      ]
+    },
+    "vision.blocks.26.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        660895744,
+        660897792
+      ]
+    },
+    "vision.blocks.26.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        660897792,
+        660899840
+      ]
+    },
+    "vision.blocks.27.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        660899840,
+        660901888
+      ]
+    },
+    "vision.blocks.27.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        660901888,
+        662999040
+      ]
+    },
+    "vision.blocks.27.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        662999040,
+        663005184
+      ]
+    },
+    "vision.blocks.27.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        663005184,
+        669296640
+      ]
+    },
+    "vision.blocks.27.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        669296640,
+        680830976
+      ]
+    },
+    "vision.blocks.27.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        680830976,
+        686598144
+      ]
+    },
+    "vision.blocks.27.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        686598144,
+        686600192
+      ]
+    },
+    "vision.blocks.27.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        686600192,
+        686602240
+      ]
+    },
+    "vision.blocks.28.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        686602240,
+        686604288
+      ]
+    },
+    "vision.blocks.28.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        686604288,
+        688701440
+      ]
+    },
+    "vision.blocks.28.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        688701440,
+        688707584
+      ]
+    },
+    "vision.blocks.28.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        688707584,
+        694999040
+      ]
+    },
+    "vision.blocks.28.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        694999040,
+        706533376
+      ]
+    },
+    "vision.blocks.28.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        706533376,
+        712300544
+      ]
+    },
+    "vision.blocks.28.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        712300544,
+        712302592
+      ]
+    },
+    "vision.blocks.28.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        712302592,
+        712304640
+      ]
+    },
+    "vision.blocks.29.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        712304640,
+        712306688
+      ]
+    },
+    "vision.blocks.29.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        712306688,
+        714403840
+      ]
+    },
+    "vision.blocks.29.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        714403840,
+        714409984
+      ]
+    },
+    "vision.blocks.29.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        714409984,
+        720701440
+      ]
+    },
+    "vision.blocks.29.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        720701440,
+        732235776
+      ]
+    },
+    "vision.blocks.29.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        732235776,
+        738002944
+      ]
+    },
+    "vision.blocks.29.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        738002944,
+        738004992
+      ]
+    },
+    "vision.blocks.29.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        738004992,
+        738007040
+      ]
+    },
+    "vision.blocks.3.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        738007040,
+        738009088
+      ]
+    },
+    "vision.blocks.3.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        738009088,
+        740106240
+      ]
+    },
+    "vision.blocks.3.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        740106240,
+        740112384
+      ]
+    },
+    "vision.blocks.3.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        740112384,
+        746403840
+      ]
+    },
+    "vision.blocks.3.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        746403840,
+        757938176
+      ]
+    },
+    "vision.blocks.3.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        757938176,
+        763705344
+      ]
+    },
+    "vision.blocks.3.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        763705344,
+        763707392
+      ]
+    },
+    "vision.blocks.3.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        763707392,
+        763709440
+      ]
+    },
+    "vision.blocks.30.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        763709440,
+        763711488
+      ]
+    },
+    "vision.blocks.30.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        763711488,
+        765808640
+      ]
+    },
+    "vision.blocks.30.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        765808640,
+        765814784
+      ]
+    },
+    "vision.blocks.30.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        765814784,
+        772106240
+      ]
+    },
+    "vision.blocks.30.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        772106240,
+        783640576
+      ]
+    },
+    "vision.blocks.30.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        783640576,
+        789407744
+      ]
+    },
+    "vision.blocks.30.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        789407744,
+        789409792
+      ]
+    },
+    "vision.blocks.30.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        789409792,
+        789411840
+      ]
+    },
+    "vision.blocks.31.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        789411840,
+        789413888
+      ]
+    },
+    "vision.blocks.31.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        789413888,
+        791511040
+      ]
+    },
+    "vision.blocks.31.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        791511040,
+        791517184
+      ]
+    },
+    "vision.blocks.31.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        791517184,
+        797808640
+      ]
+    },
+    "vision.blocks.31.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        797808640,
+        809342976
+      ]
+    },
+    "vision.blocks.31.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        809342976,
+        815110144
+      ]
+    },
+    "vision.blocks.31.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        815110144,
+        815112192
+      ]
+    },
+    "vision.blocks.31.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        815112192,
+        815114240
+      ]
+    },
+    "vision.blocks.4.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        815114240,
+        815116288
+      ]
+    },
+    "vision.blocks.4.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        815116288,
+        817213440
+      ]
+    },
+    "vision.blocks.4.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        817213440,
+        817219584
+      ]
+    },
+    "vision.blocks.4.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        817219584,
+        823511040
+      ]
+    },
+    "vision.blocks.4.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        823511040,
+        835045376
+      ]
+    },
+    "vision.blocks.4.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        835045376,
+        840812544
+      ]
+    },
+    "vision.blocks.4.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        840812544,
+        840814592
+      ]
+    },
+    "vision.blocks.4.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        840814592,
+        840816640
+      ]
+    },
+    "vision.blocks.5.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        840816640,
+        840818688
+      ]
+    },
+    "vision.blocks.5.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        840818688,
+        842915840
+      ]
+    },
+    "vision.blocks.5.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        842915840,
+        842921984
+      ]
+    },
+    "vision.blocks.5.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        842921984,
+        849213440
+      ]
+    },
+    "vision.blocks.5.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        849213440,
+        860747776
+      ]
+    },
+    "vision.blocks.5.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        860747776,
+        866514944
+      ]
+    },
+    "vision.blocks.5.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        866514944,
+        866516992
+      ]
+    },
+    "vision.blocks.5.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        866516992,
+        866519040
+      ]
+    },
+    "vision.blocks.6.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        866519040,
+        866521088
+      ]
+    },
+    "vision.blocks.6.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        866521088,
+        868618240
+      ]
+    },
+    "vision.blocks.6.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        868618240,
+        868624384
+      ]
+    },
+    "vision.blocks.6.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        868624384,
+        874915840
+      ]
+    },
+    "vision.blocks.6.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        874915840,
+        886450176
+      ]
+    },
+    "vision.blocks.6.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        886450176,
+        892217344
+      ]
+    },
+    "vision.blocks.6.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        892217344,
+        892219392
+      ]
+    },
+    "vision.blocks.6.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        892219392,
+        892221440
+      ]
+    },
+    "vision.blocks.7.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        892221440,
+        892223488
+      ]
+    },
+    "vision.blocks.7.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        892223488,
+        894320640
+      ]
+    },
+    "vision.blocks.7.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        894320640,
+        894326784
+      ]
+    },
+    "vision.blocks.7.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        894326784,
+        900618240
+      ]
+    },
+    "vision.blocks.7.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        900618240,
+        912152576
+      ]
+    },
+    "vision.blocks.7.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        912152576,
+        917919744
+      ]
+    },
+    "vision.blocks.7.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        917919744,
+        917921792
+      ]
+    },
+    "vision.blocks.7.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        917921792,
+        917923840
+      ]
+    },
+    "vision.blocks.8.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        917923840,
+        917925888
+      ]
+    },
+    "vision.blocks.8.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        917925888,
+        920023040
+      ]
+    },
+    "vision.blocks.8.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        920023040,
+        920029184
+      ]
+    },
+    "vision.blocks.8.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        920029184,
+        926320640
+      ]
+    },
+    "vision.blocks.8.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        926320640,
+        937854976
+      ]
+    },
+    "vision.blocks.8.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        937854976,
+        943622144
+      ]
+    },
+    "vision.blocks.8.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        943622144,
+        943624192
+      ]
+    },
+    "vision.blocks.8.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        943624192,
+        943626240
+      ]
+    },
+    "vision.blocks.9.attn.wo.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        943626240,
+        943628288
+      ]
+    },
+    "vision.blocks.9.attn.wo.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        1024
+      ],
+      "data_offsets": [
+        943628288,
+        945725440
+      ]
+    },
+    "vision.blocks.9.attn.wqkv.bias": {
+      "dtype": "BF16",
+      "shape": [
+        3072
+      ],
+      "data_offsets": [
+        945725440,
+        945731584
+      ]
+    },
+    "vision.blocks.9.attn.wqkv.weight": {
+      "dtype": "BF16",
+      "shape": [
+        3072,
+        1024
+      ],
+      "data_offsets": [
+        945731584,
+        952023040
+      ]
+    },
+    "vision.blocks.9.mlp.w1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        5632,
+        1024
+      ],
+      "data_offsets": [
+        952023040,
+        963557376
+      ]
+    },
+    "vision.blocks.9.mlp.w2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        2816
+      ],
+      "data_offsets": [
+        963557376,
+        969324544
+      ]
+    },
+    "vision.blocks.9.norm1.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        969324544,
+        969326592
+      ]
+    },
+    "vision.blocks.9.norm2.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        969326592,
+        969328640
+      ]
+    },
+    "vision.norm.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        969328640,
+        969330688
+      ]
+    },
+    "vision.patch_embed.proj.bias": {
+      "dtype": "BF16",
+      "shape": [
+        1024
+      ],
+      "data_offsets": [
+        969330688,
+        969332736
+      ]
+    },
+    "vision.patch_embed.proj.weight": {
+      "dtype": "BF16",
+      "shape": [
+        1024,
+        588
+      ],
+      "data_offsets": [
+        969332736,
+        970536960
+      ]
+    },
+    "image_end": {
+      "dtype": "BF16",
+      "shape": [
+        5120
+      ],
+      "data_offsets": [
+        146821120,
+        146831360
+      ]
+    },
+    "image_newline": {
+      "dtype": "BF16",
+      "shape": [
+        5120
+      ],
+      "data_offsets": [
+        146831360,
+        146841600
+      ]
+    },
+    "image_start": {
+      "dtype": "BF16",
+      "shape": [
+        5120
+      ],
+      "data_offsets": [
+        146841600,
+        146851840
+      ]
+    }
+  }
+}

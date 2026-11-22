@@ -1,0 +1,15 @@
+{
+  "model": "p1-vision1-20261121T205625Z-244b8fbf",
+  "messages": [
+    {
+      "role": "user",
+      "content": "小林有17颗珠子，送出5颗又收到9颗，现在有多少颗？简短回答。"
+    }
+  ],
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "temperature": 0,
+  "max_tokens": 128
+}

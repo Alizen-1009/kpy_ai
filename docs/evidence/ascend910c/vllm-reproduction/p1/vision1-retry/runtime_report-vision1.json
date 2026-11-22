@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "image_id": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+  "runtime_map_sha256": "f63be58137f6615c843dbe6cc38bbc2f94354da6c3f8f9fbe02f6aa577aaab3e",
+  "cann_login_verified": true,
+  "payload_api_verified": true,
+  "image_environment_verified": true,
+  "reviewed_image_env": {
+    "PATH": "/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/bin:/usr/local/Ascend/ascend-toolkit/latest/bin:/usr/local/Ascend/ascend-toolkit/latest/compiler/ccec_compiler/bin:/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/show_kernel_debug_data:/usr/local/Ascend/cann-9.1.0/tools/msobjdump:/usr/local/Ascend/cann-9.1.0/bin:/usr/local/Ascend/cann-9.1.0/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/profiler/bin:/usr/local/Ascend/cann-9.1.0/tools/ascend_system_advisor/asys:/usr/local/python3.12.13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "LD_LIBRARY_PATH": "/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.13/lib:",
+    "ASCEND_TOOLKIT_HOME": "/usr/local/Ascend/cann-9.1.0",
+    "ASCEND_TOOLKIT_LATEST_HOME": "/usr/local/Ascend/ascend-toolkit/latest",
+    "PYTHONPATH": "/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:",
+    "ASCEND_AICPU_PATH": "/usr/local/Ascend/cann-9.1.0",
+    "ASCEND_OPP_PATH": "/usr/local/Ascend/cann-9.1.0/opp",
+    "TOOLCHAIN_HOME": "/usr/local/Ascend/cann-9.1.0/toolkit",
+    "ASCEND_HOME_PATH": "/usr/local/Ascend/cann-9.1.0",
+    "CMAKE_PREFIX_PATH": "/usr/local/Ascend/cann-9.1.0/toolkit/tools/tikicpulib/lib/cmake:/usr/local/Ascend/cann-9.1.0/lib64/cmake",
+    "ATB_HOME_PATH": "/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1",
+    "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE": "0",
+    "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE": "0",
+    "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE": "0",
+    "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT": "1",
+    "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT": "5",
+    "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE": "1",
+    "ATB_COMPARE_TILING_EVERY_KERNEL": "0",
+    "ATB_SHARE_MEMORY_NAME_SUFFIX": "",
+    "ATB_MATMUL_SHUFFLE_K_ENABLE": "1",
+    "LCCL_DETERMINISTIC": "0",
+    "LCCL_PARALLEL": "0",
+    "ATB_CXX_ABI": "1",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "SOC_VERSION": "ascend910_9391",
+    "TASK_QUEUE_ENABLE": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "mapping": {
+    "4": [
+      8,
+      9
+    ],
+    "5": [
+      10,
+      11
+    ],
+    "6": [
+      12,
+      13
+    ],
+    "7": [
+      14,
+      15
+    ]
+  },
+  "evidence_scope": "Bounded pre-model runtime prerequisites only: login initialization, selected frozen payload imports and seven structural operator schemas, CLI option availability and JSON syntax, reviewed image environment. Not model/kernel correctness, full launch argv parsing, capacity, or deployment readiness.",
+  "evidence_paths": [
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/DEVICE-RETRY.md",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/RESULT.md",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/audit.log",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/supplement.log",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/interfaces.txt",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/p1-device-preflight-9fb7c6664deb4e47a9428d10bb43118a.log",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/cli-help-preflight-f3d1f0a4f91543b896ca326e33b40b1e.log",
+    "docs/evidence/ascend910c/vllm-reproduction/image/runtime/cli_help_preflight.py"
+  ],
+  "evidence_sha256": {
+    "DEVICE-RETRY.md": "8b66f4b6d3df98c1a8a4a024f7081f8c17081b96fc2b04e2ed792cedc46b2be7",
+    "RESULT.md": "0675644613da09ed4590b35edbf37382751765598ee3752a1245abcb60cb7530",
+    "audit.log": "4dc665bcc223285cef66e5dadaa2ea9a340101d60b4b46206226d39d6497a407",
+    "supplement.log": "2bf1aa3b6240c3b45a7739073bb0ae33c50446bedb5a5f63f13a1af1c2a84fe3",
+    "interfaces.txt": "2456804f4f23c23ad31b4c7bc1cabdbc8c13c61cb92d8313fa39fa2a2b8c8357",
+    "p1-device-preflight-9fb7c6664deb4e47a9428d10bb43118a.log": "abc7c7ddc84db80f21573ed70941a8fd470e9702949a3954c63898e4e9adfd0f",
+    "cli-help-preflight-f3d1f0a4f91543b896ca326e33b40b1e.log": "5af2f6449fbf9d7286a351fba0e02e73c7bb0f132a7dd88ee4ef8e7b612b369f",
+    "cli_help_preflight.py": "b7048946187f785716408de08de680c80f3ff512a9bbd27fc691727574c9cf66"
+  },
+  "environment_review": {
+    "PATH": "Absolute vendor/system search directories; empty components tracked separately.",
+    "LD_LIBRARY_PATH": "Absolute vendor/system search directories; empty components tracked separately.",
+    "ASCEND_TOOLKIT_HOME": "Vendor SDK location; no credential or executable injection.",
+    "ASCEND_TOOLKIT_LATEST_HOME": "Vendor SDK location; no credential or executable injection.",
+    "PYTHONPATH": "Absolute vendor/system search directories; empty components tracked separately.",
+    "ASCEND_AICPU_PATH": "Vendor SDK location; no credential or executable injection.",
+    "ASCEND_OPP_PATH": "Vendor SDK location; no credential or executable injection.",
+    "TOOLCHAIN_HOME": "Vendor SDK location; no credential or executable injection.",
+    "ASCEND_HOME_PATH": "Vendor SDK location; no credential or executable injection.",
+    "CMAKE_PREFIX_PATH": "Absolute vendor/system search directories; empty components tracked separately.",
+    "ATB_HOME_PATH": "Vendor SDK location; no credential or executable injection.",
+    "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_COMPARE_TILING_EVERY_KERNEL": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_SHARE_MEMORY_NAME_SUFFIX": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_MATMUL_SHUFFLE_K_ENABLE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "LCCL_DETERMINISTIC": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "LCCL_PARALLEL": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "ATB_CXX_ABI": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "DEBIAN_FRONTEND": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "SOC_VERSION": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "TASK_QUEUE_ENABLE": "Non-secret build/runtime tuning scalar; reviewed exact retained value.",
+    "OMP_NUM_THREADS": "Non-secret build/runtime tuning scalar; reviewed exact retained value."
+  },
+  "search_path_risks": {
+    "raw_empty_components": [
+      "LD_LIBRARY_PATH",
+      "PYTHONPATH"
+    ],
+    "mitigation": "launch.py fixed post-login Python bootstrap now removes LD_LIBRARY_PATH/PYTHONPATH empty components before exec frozen serve_v2.sh (source reviewed). Raw image values are unchanged. PATH in image has no empty component; general post-profile PATH risk is not claimed eliminated. Bootstrap is not real-model validation."
+  },
+  "cli_review": {
+    "method": "One fresh-idle same device_preflight lifecycle with --help=all only, no repeated schema/registry probes, no model mounts or service. Full CID stop/rm exit0; container exit0, OOMKilled false. Static flag/value review against full help; not complete argv parse. JSON enable_thinking=false is valid JSON object.",
+    "selected_flag_help_lines": {
+      "--host": [
+        [
+          900,
+          "--host HOST           Host name. (default: None)"
+        ]
+      ],
+      "--port": [
+        [
+          913,
+          "--port PORT           Port number. (default: 8000)"
+        ]
+      ],
+      "--served-model-name": [
+        [
+          1174,
+          "--served-model-name SERVED_MODEL_NAME [SERVED_MODEL_NAME ...]"
+        ]
+      ],
+      "--tensor-parallel-size": [
+        [
+          1642,
+          "--tensor-parallel-size TENSOR_PARALLEL_SIZE, -tp TENSOR_PARALLEL_SIZE"
+        ]
+      ],
+      "--enable-expert-parallel": [
+        [
+          1550,
+          "--enable-expert-parallel, --no-enable-expert-parallel, -ep"
+        ]
+      ],
+      "--trust-remote-code": [
+        [
+          1226,
+          "--trust-remote-code, --no-trust-remote-code"
+        ]
+      ],
+      "--dtype": [
+        [
+          988,
+          "--dtype {auto,bfloat16,float,float16,float32,half}"
+        ]
+      ],
+      "--kv-cache-dtype": [
+        [
+          1684,
+          "--kv-cache-dtype {auto,bfloat16,float16,fp8,fp8_ds_mla,fp8_e4m3,fp8_e5m2,fp8_inc,fp8_per_token_head,int4_per_token_head,int8_per_token_head,nvfp4,turboquant_3bit_nc,turboquant_4bit_nc,turboquant_k3v4_nc,turboquant_k8v4}"
+        ]
+      ],
+      "--max-model-len": [
+        [
+          1068,
+          "--max-model-len MAX_MODEL_LEN"
+        ]
+      ],
+      "--max-num-seqs": [
+        [
+          2244,
+          "--max-num-seqs MAX_NUM_SEQS"
+        ]
+      ],
+      "--max-num-batched-tokens": [
+        [
+          2219,
+          "--max-num-batched-tokens MAX_NUM_BATCHED_TOKENS"
+        ]
+      ],
+      "--block-size": [
+        [
+          1660,
+          "--block-size BLOCK_SIZE"
+        ]
+      ],
+      "--gpu-memory-utilization": [
+        [
+          1673,
+          "--gpu-memory-utilization GPU_MEMORY_UTILIZATION"
+        ]
+      ],
+      "--additional-config": [
+        [
+          2443,
+          "--additional-config ADDITIONAL_CONFIG"
+        ]
+      ],
+      "--quantization": [
+        [
+          1135,
+          "--quantization QUANTIZATION, -q QUANTIZATION"
+        ]
+      ],
+      "--enforce-eager": [
+        [
+          1015,
+          "--enforce-eager, --no-enforce-eager"
+        ]
+      ],
+      "--no-enable-prefix-caching": [
+        [
+          1671,
+          "--enable-prefix-caching, --no-enable-prefix-caching"
+        ]
+      ],
+      "--safetensors-load-strategy": [
+        [
+          1297,
+          "--safetensors-load-strategy {eager,lazy,prefetch,torchao,None}"
+        ]
+      ],
+      "--limit-mm-per-prompt": [
+        [
+          1905,
+          "--limit-mm-per-prompt LIMIT_MM_PER_PROMPT"
+        ]
+      ],
+      "--tokenizer-mode": [
+        [
+          1193,
+          "--tokenizer-mode ['auto', 'cohere', 'deepseek_v32', 'deepseek_v4', 'hf', 'inkling', 'kimi_k3', 'mistral', 'slow']"
+        ]
+      ],
+      "--default-chat-template-kwargs": [
+        [
+          840,
+          "--default-chat-template-kwargs DEFAULT_CHAT_TEMPLATE_KWARGS"
+        ]
+      ]
+    },
+    "parameters": {
+      "MAX_LEN": "4096",
+      "GPU_UTIL": "0.85",
+      "TP": "8",
+      "DP": "1",
+      "tokenizer-mode": "deepseek_v4",
+      "quantization": "ascend"
+    }
+  },
+  "provenance": {
+    "vllm_commit": "6e448d0ea9bf3d88d898b65449ca6dc2aec170ac",
+    "vllm_ascend_commit": "e43cf1e9f5d9bead076853aa6bcacb671465de94",
+    "OPP": "Component versions and shared-library hashes retained in audit.log; BUILD_INFO absent in bounded search, not a permanent blocker."
+  },
+  "remaining_p1": [
+    "Actual model/Engram manifest, resolved symlink targets and complete weight hashes",
+    "Tokenizer semantic match to actual metadata (registration already proven)",
+    "Model configuration-dependent validation, loading, tensor shapes/dtypes and real kernel execution",
+    "HCCL/TP8 communication, memory capacity, first generation correctness and output quality"
+  ],
+  "vision1_amendment": {
+    "changes": {
+      "VISION": [
+        "0",
+        "1"
+      ],
+      "MM_LIMIT_IMAGES": [
+        "0",
+        "1"
+      ]
+    },
+    "meta_evidence_sha256": "21da3fc297bb171ec866b0d1e138772bcf8dd8b08a7be769bb4407f228cfadd6",
+    "meta_scope": "Actual image ViT/aligner constructors on torch meta; 266 parameter names/shapes exactly equal checkpoint headers including biases. Wrapper not instantiated. No generation evidence. All prior prerequisites unchanged."
+  }
+}

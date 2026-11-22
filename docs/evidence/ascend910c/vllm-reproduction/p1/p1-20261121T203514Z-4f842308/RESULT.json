@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "error": "AssertionError('container exited')",
+  "cid": "67993945c3595dc9bc76bbddc429c2c4d7d49be7cadd5b3d4b1bdbd7795e3525",
+  "runid": "p1-20261121T203514Z-4f842308"
+}

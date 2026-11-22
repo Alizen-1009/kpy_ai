@@ -1,0 +1,26 @@
+{
+  "process_alive": {
+    "2217726": false,
+    "2217727": false
+  },
+  "files": [
+    {
+      "path": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model/quant_model_weights-00053-of-00072.safetensors.part",
+      "size": 3114203898
+    },
+    {
+      "path": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model/quant_model_weights-00052-of-00072.safetensors.part",
+      "size": 3494903808
+    },
+    {
+      "path": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model/quant_model_weights-00054-of-00072.safetensors.part",
+      "size": 1031798784
+    },
+    {
+      "path": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model/quant_model_weights-00055-of-00072.safetensors.part",
+      "size": 678428672
+    }
+  ],
+  "locks": [],
+  "available": 425602162688
+}

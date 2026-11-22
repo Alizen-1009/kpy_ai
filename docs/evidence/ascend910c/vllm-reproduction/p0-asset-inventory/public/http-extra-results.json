@@ -1,0 +1,49 @@
+{
+  "ms-com-model": {
+    "url": "https://modelscope.com/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend",
+    "utc": "2026-11-21T13:08:23.064599+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "ms-com-files": {
+    "url": "https://modelscope.com/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=master&Recursive=true",
+    "utc": "2026-11-21T13:08:23.065409+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "github-fixed-readme": {
+    "url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/ab88ff84efa7970875f3f8cc38dfcb06c491b154/README.md",
+    "utc": "2026-11-21T13:08:23.065640+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/ab88ff84efa7970875f3f8cc38dfcb06c491b154/README.md",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Sat, 21 Nov 2026 13:08:23 GMT"
+    },
+    "truncated": false,
+    "body_sha256": "b25b91e6fd498e02ab14022ea748f34d5f61bd60363ebb2ec45a44023cbd0c94"
+  },
+  "github-fixed-repro": {
+    "url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/ab88ff84efa7970875f3f8cc38dfcb06c491b154/REPRO.md",
+    "utc": "2026-11-21T13:08:23.065795+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/ab88ff84efa7970875f3f8cc38dfcb06c491b154/REPRO.md",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Sat, 21 Nov 2026 13:08:23 GMT"
+    },
+    "truncated": false,
+    "body_sha256": "d6fb83a82e0c4442364f58c95d445b09bfb0eaa684ffd4c3adc17e999c2f4e7b"
+  },
+  "quay-arm64": {
+    "url": "https://quay.io/v2/ascend/vllm-ascend/manifests/sha256:16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3",
+    "utc": "2026-11-21T13:08:23.065952+00:00",
+    "status": 200,
+    "final_url": "https://quay.io/v2/ascend/vllm-ascend/manifests/sha256:16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:08:24 GMT",
+      "Content-Type": "application/vnd.oci.image.manifest.v1+json",
+      "Docker-Content-Digest": "sha256:16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3"
+    },
+    "truncated": false,
+    "body_sha256": "16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3"
+  }
+}

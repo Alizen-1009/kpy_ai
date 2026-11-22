@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/quality-run/context8192/quality.py", line 26, in <module>
+    stage([str(old/'venv/bin/python'),'vision_wire.py','--server','http://127.0.0.1:18550','--model',rid,'--official-dir',str(old/'official1017'),'--out','vision23.json'],'vision23')
+  File "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/quality-run/context8192/quality.py", line 7, in stage
+    (E/(name+'-argv.json')).write_text(json.dumps(a)); p=subprocess.run(a,capture_output=True,text=True); (E/(name+'.log')).write_text(p.stdout+p.stderr); assert p.returncode==0,(name,p.returncode)
+                                                                                                                                                                  ^^^^^^^^^^^^^^^
+AssertionError: ('vision23', 2)

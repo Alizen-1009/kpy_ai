@@ -1,0 +1,46 @@
+
+Authorized users only. All activities may be monitored and reported.
+test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode (tests.quantization.test_official_decoder_runtime.OfficialDecoderRuntimeTests.test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode) ... ERROR
+
+======================================================================
+ERROR: test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode (tests.quantization.test_official_decoder_runtime.OfficialDecoderRuntimeTests.test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/tests/quantization/test_official_decoder_runtime.py", line 216, in test_shifted_decoder_final_lazy_mix_prefill_and_continuous_decode
+    run_decoder_runtime_cases("cpu", with_engram=False, hc_shifted=True)
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/tests/quantization/test_official_decoder_runtime.py", line 200, in run_decoder_runtime_cases
+    step(_prefill_metadata(3), live)
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/tests/quantization/test_official_decoder_runtime.py", line 191, in step
+    result = runner.execute_prepared_official(metadata, (cache,))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py", line 336, in execute_prepared_official
+    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py", line 252, in forward
+    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py", line 157, in mhc_pre_apply_mix
+    _shape(mix, (*outer, m, 1), "mix")
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py", line 55, in _shape
+    raise ValueError(f"{name} must have shape {shape}")
+ValueError: mix must have shape (3, 2, 1)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.324s
+
+FAILED (errors=1)

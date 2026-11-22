@@ -1,0 +1,345 @@
+{
+  "passed": true,
+  "benchmark_only": true,
+  "activation_checks": {
+    "first_codes": true,
+    "first_scales": true,
+    "mid_codes": true,
+    "mid_scales": true,
+    "input_unchanged": true
+  },
+  "kernel_checks": [
+    {
+      "side": 0,
+      "expert": 124,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 0,
+      "expert": 35,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 0.9999999999999999,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 0,
+      "expert": 364,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 0,
+      "expert": 75,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 0.9999999999999999,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 0,
+      "expert": 140,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 0,
+      "expert": 80,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          4608
+        ],
+        "elements": 4608,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 124,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 0.9999999999999999,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 35,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0000000000000002,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 364,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 0.9999999999999999,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 75,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 140,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 1.0,
+        "exactly_equal": true
+      }
+    },
+    {
+      "side": 1,
+      "expert": 80,
+      "exact": true,
+      "metrics": {
+        "shape": [
+          1,
+          5120
+        ],
+        "elements": 5120,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "cosine": 0.9999999999999998,
+        "exactly_equal": true
+      }
+    }
+  ],
+  "artifact": "/root/yuhao/deepinfer_910c_yh/reports_yh/stage5_moe_batch_die8_20261121T141559988943176_yh/derived_w4a8.pt",
+  "artifact_sha256": "146dfaaf3641e1d2e4698181be376caa99a95b9017e854934e26088019a5b41f",
+  "input_hash": "de71e5c097996f61d6af5b53aa6e45367c6f7dfebf312ed3fff6b5014d20b538",
+  "metadata": {
+    "scheme": "uncalibrated_per_channel_RTN_W4A8",
+    "msmodelslim_equivalent": false,
+    "calibrated": false,
+    "rotation_awq_ssz": false,
+    "layout": "ND_K_N_packed_low_even_high_odd",
+    "nz": false,
+    "rounding": "torch.round_ties_even",
+    "input_contract": "real_BF16_norm_output",
+    "route_contract": "after_swiglu_clipping_before_mid_A8_quantization"
+  },
+  "quality_pass": null,
+  "samples": [
+    {
+      "pair": 0,
+      "lane": "fp4",
+      "wall_seconds": 8.503228912129998,
+      "event_ms": 8502.822265625,
+      "peak_allocated": 297902592
+    },
+    {
+      "pair": 0,
+      "lane": "w4",
+      "wall_seconds": 2.1957270591519773,
+      "event_ms": 2195.579345703125,
+      "peak_allocated": 424096768
+    },
+    {
+      "pair": 1,
+      "lane": "w4",
+      "wall_seconds": 2.1928904401138425,
+      "event_ms": 2192.763427734375,
+      "peak_allocated": 424096768
+    },
+    {
+      "pair": 1,
+      "lane": "fp4",
+      "wall_seconds": 8.52056229696609,
+      "event_ms": 8520.3994140625,
+      "peak_allocated": 297913344
+    },
+    {
+      "pair": 2,
+      "lane": "fp4",
+      "wall_seconds": 8.499554861802608,
+      "event_ms": 8499.392578125,
+      "peak_allocated": 297913344
+    },
+    {
+      "pair": 2,
+      "lane": "w4",
+      "wall_seconds": 2.1893023818265647,
+      "event_ms": 2189.199462890625,
+      "peak_allocated": 424096768
+    }
+  ],
+  "fp4_vs_w4": {
+    "shape": [
+      1,
+      5120
+    ],
+    "elements": 5120,
+    "finite": true,
+    "reference_nonfinite": 0,
+    "candidate_nonfinite": 0,
+    "max_abs": 0.33203125,
+    "mean_abs": 0.06342772468924522,
+    "rmse": 0.07963758601385762,
+    "relative_l2": 0.3038658434865792,
+    "cosine": 0.963653823366184,
+    "exactly_equal": false
+  },
+  "source_sha256": "48de4241a089f2c5f81893aa664c3edb3d18ff43ea05ea4c94c8132533590659",
+  "saturation": {
+    "x": 0.00019531250291038305,
+    "z": 0.0004340277810115367
+  }
+}

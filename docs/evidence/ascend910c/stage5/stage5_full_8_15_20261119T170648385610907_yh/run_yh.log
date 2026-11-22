@@ -1,0 +1,1626 @@
+[W1119 09:06:51.958378100 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:391: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:312: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+[W1119 09:07:02.793655604 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.805878991 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.809998258 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.816256337 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.821698815 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.822670992 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.892335583 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1119 09:07:02.001002312 socket.cpp:207] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[INFO 11-19 09:07:02 parallel_state.py:206] init_parallel_groups start
+[rank0]:[W1119 09:07:02.263466804 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 3, DP 3/8, EP 3/8 (ep_in_dp:3), ENP 3/8, WORLD 3/8, GPU 3
+{"event": "groups_ready", "rank": 3, "wall_time": 1795079225.197971, "ep": 8, "cp": 1, "engram": 8}
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 7, DP 7/8, EP 7/8 (ep_in_dp:7), ENP 7/8, WORLD 7/8, GPU 7
+{"event": "groups_ready", "rank": 7, "wall_time": 1795079225.2113132, "ep": 8, "cp": 1, "engram": 8}
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 0, DP 0/8, EP 0/8 (ep_in_dp:0), ENP 0/8, WORLD 0/8, GPU 0
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 2, DP 2/8, EP 2/8 (ep_in_dp:2), ENP 2/8, WORLD 2/8, GPU 2
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 1, DP 1/8, EP 1/8 (ep_in_dp:1), ENP 1/8, WORLD 1/8, GPU 1
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 4, DP 4/8, EP 4/8 (ep_in_dp:4), ENP 4/8, WORLD 4/8, GPU 4
+{"event": "groups_ready", "rank": 0, "wall_time": 1795079225.2145214, "ep": 8, "cp": 1, "engram": 8}
+{"event": "groups_ready", "rank": 2, "wall_time": 1795079225.2145395, "ep": 8, "cp": 1, "engram": 8}
+{"event": "groups_ready", "rank": 4, "wall_time": 1795079225.2146573, "ep": 8, "cp": 1, "engram": 8}
+{"event": "groups_ready", "rank": 1, "wall_time": 1795079225.2146587, "ep": 8, "cp": 1, "engram": 8}
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 6, DP 6/8, EP 6/8 (ep_in_dp:6), ENP 6/8, WORLD 6/8, GPU 6
+{"event": "groups_ready", "rank": 6, "wall_time": 1795079225.2151678, "ep": 8, "cp": 1, "engram": 8}
+[INFO 11-19 09:07:05 parallel_state.py:232] init_parallel_groups done: RANK 5, DP 5/8, EP 5/8 (ep_in_dp:5), ENP 5/8, WORLD 5/8, GPU 5
+{"event": "groups_ready", "rank": 5, "wall_time": 1795079225.226187, "ep": 8, "cp": 1, "engram": 8}
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+{"event": "load_begin", "rank": 6, "wall_time": 1795079227.2923512}
+{"event": "load_begin", "rank": 4, "wall_time": 1795079227.2926607}
+{"event": "load_begin", "rank": 0, "wall_time": 1795079227.2959592}
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+{"event": "load_begin", "rank": 1, "wall_time": 1795079227.3120627}
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+[INFO 11-19 09:07:07 tokenizer.py:73] Configured HF tokenizer BOS/PAD and multimodal token policy: add_bos_token=False -> True (BOS id 0); PAD EOS alias -> <｜▁pad▁｜> (id 2); register 21 multimodal placeholders (ids 129280-129300)
+{"event": "load_begin", "rank": 3, "wall_time": 1795079227.3368375}
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+{"event": "load_begin", "rank": 2, "wall_time": 1795079227.357318}
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+{"event": "load_begin", "rank": 7, "wall_time": 1795079227.3731678}
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+{"event": "load_begin", "rank": 5, "wall_time": 1795079227.384085}
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+[INFO 11-19 09:07:07 deepseek.py:490] Loading weights from /root/yuhao/DeepSeek-V4.1-Flash-1017-HF ...
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:08 deepseek.py:530] FP8 block size: 32; Routed experts fp4: True; Main KV: FP4; Indexer QK: FP4
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 loading.py:62] HF weight coverage: 96085 tensors / 48 shards; plain params 1219, expert params 86, Engram tables 2
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.062s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.094s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.106s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.072s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.132s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.110s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.184s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 builder.py:129] V41Builder: built 42 modules (n_layer=40, nextn_predict=0)
+[INFO 11-19 09:07:09 weights.py:54] HF load phase plan_build: 2.167s, allocated=0.00 GiB, peak=0.00 GiB, reserved=0.00 GiB
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=4: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=0: swa=True, sparse=False, kv_compress_ratio=0
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=1: swa=True, sparse=False, kv_compress_ratio=0
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=2: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=3: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=4: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=5: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=6: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=7: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=8: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=9: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=10: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=11: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=12: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=13: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=14: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=15: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=16: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=17: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=18: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=19: swa=True, sparse=True, kv_compress_ratio=2
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=20: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=21: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=22: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=23: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=24: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=25: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=26: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=27: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=28: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=29: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=30: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=31: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=32: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=33: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=34: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=35: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=36: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=37: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=38: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 cache_engine.py:632] layer_id=39: swa=True, sparse=True, kv_compress_ratio=1
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=0: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=7: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=1: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=3: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=2: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=6: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:09 model_loader.py:197] Official allocation admitted rank=5: NPU source=46934543808, CPU Engram=25344768768, peak cap=63007030144
+[INFO 11-19 09:07:13 weights.py:54] HF load phase materialize: 4.424s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:13 weights.py:54] HF load phase engram_preallocate: 0.001s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:13 weights.py:54] HF load phase materialize: 4.277s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:13 weights.py:54] HF load phase engram_preallocate: 0.000s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:13 weights.py:54] HF load phase materialize: 4.453s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:13 weights.py:54] HF load phase engram_preallocate: 0.001s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase materialize: 4.546s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase engram_preallocate: 0.000s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase materialize: 4.590s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase engram_preallocate: 0.000s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase materialize: 4.692s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase engram_preallocate: 0.000s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase materialize: 4.670s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase engram_preallocate: 0.001s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase materialize: 4.686s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:14 weights.py:54] HF load phase engram_preallocate: 0.000s, allocated=43.76 GiB, peak=43.76 GiB, reserved=44.22 GiB
+[INFO 11-19 09:07:17 weights.py:54] HF load phase ordinary: 3.729s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 3.993s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 3.674s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 4.122s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 3.951s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 3.957s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 4.022s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:18 weights.py:54] HF load phase ordinary: 3.970s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:38 weights.py:54] HF load phase experts: 20.105s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:38 weights.py:54] HF load phase experts: 20.509s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:39 weights.py:54] HF load phase experts: 21.548s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:40 weights.py:54] HF load phase experts: 21.885s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:41 weights.py:54] HF load phase experts: 23.286s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:41 weights.py:54] HF load phase experts: 23.392s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:42 weights.py:54] HF load phase experts: 24.035s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:43 weights.py:54] HF load phase experts: 24.886s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:53 weights.py:54] HF load phase engram: 15.430s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:53 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:53 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:53 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:07:53 weights.py:54] HF load phase checkpoint: 39.761s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:54 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:07:55 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:07:55 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:55 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:55 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:07:55 weights.py:54] HF load phase runtime_adapt: 1.565s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:55 weights.py:54] HF load phase total: 47.770s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:55 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:07:55 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:55 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:56 weights.py:54] HF load phase engram: 16.598s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:56 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:56 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:56 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:07:56 weights.py:54] HF load phase checkpoint: 42.738s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:56 weights.py:54] HF load phase engram: 18.397s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:56 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:57 weights.py:54] HF load phase engram: 17.518s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:57 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:57 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:57 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:07:57 weights.py:54] HF load phase checkpoint: 42.852s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:57 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:07:57 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:07:57 weights.py:54] HF load phase checkpoint: 43.050s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:07:57 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:07:58 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:07:58 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:07:58 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:58 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:07:58 weights.py:54] HF load phase runtime_adapt: 1.641s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 weights.py:54] HF load phase total: 51.156s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:07:58 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:58 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:58 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:58 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:07:58 weights.py:54] HF load phase runtime_adapt: 1.546s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 weights.py:54] HF load phase total: 51.234s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:07:58 weights.py:54] HF load phase runtime_adapt: 1.559s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 weights.py:54] HF load phase total: 51.230s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:07:58 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:07:58 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:07:58 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:00 weights.py:54] HF load phase engram: 18.512s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:00 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:00 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:00 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:08:00 weights.py:54] HF load phase checkpoint: 46.189s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:00 weights.py:54] HF load phase engram: 19.366s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:00 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:00 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:00 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:08:00 weights.py:54] HF load phase checkpoint: 46.891s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:01 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:08:01 weights.py:54] HF load phase engram: 19.245s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:01 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:01 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002912}
+[INFO 11-19 09:08:01 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:08:01 weights.py:54] HF load phase checkpoint: 47.651s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:01 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:08:01 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:01 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:01 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:08:01 weights.py:54] HF load phase runtime_adapt: 1.551s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:01 weights.py:54] HF load phase total: 54.440s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:01 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:08:01 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:01 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:02 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:08:02 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:08:02 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:08:02 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:02 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:02 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:08:02 weights.py:54] HF load phase runtime_adapt: 1.675s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:02 weights.py:54] HF load phase total: 55.353s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:02 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:08:02 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:02 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:02 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:08:02 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:02 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:02 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:08:02 weights.py:54] HF load phase runtime_adapt: 1.530s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:02 weights.py:54] HF load phase total: 55.668s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:02 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:08:02 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:02 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:03 weights.py:54] HF load phase engram: 20.019s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:03 weights.py:609] HF weights loaded: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002466}
+[INFO 11-19 09:08:03 model_loader.py:224] Official checkpoint load counts: {'params': 1150, 'aliases': 0, 'fp8': 290, 'expert_params': 80, 'experts': 3840, 'expert_skipped': 6, 'engram_tables': 2, 'engram_rows': 96002466}
+[INFO 11-19 09:08:03 model_loader.py:227] HF 加载完成：全部 1232 个模型参数来自 /root/yuhao/DeepSeek-V4.1-Flash-1017-HF
+[INFO 11-19 09:08:03 weights.py:54] HF load phase checkpoint: 49.107s, allocated=43.78 GiB, peak=45.01 GiB, reserved=45.48 GiB
+[INFO 11-19 09:08:04 decoder_layer.py:85] YOCO config: n_prefill_layer=20, n_layer=40
+[INFO 11-19 09:08:04 deepseek.py:354] Official 910C: explicit static initial expert layout; online EPLB disabled
+[INFO 11-19 09:08:04 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:04 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+[INFO 11-19 09:08:04 deepseek_vl.py:34] Load vision encoder and vision-language aligner in DeepseekVLForCausalLM.
+[INFO 11-19 09:08:04 weights.py:54] HF load phase runtime_adapt: 1.526s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:04 weights.py:54] HF load phase total: 57.252s, allocated=43.77 GiB, peak=45.01 GiB, reserved=45.49 GiB
+[INFO 11-19 09:08:04 deepseek.py:605] Memory allocated: builder=43.783 GiB, deepinfer=43.766 GiB.
+[INFO 11-19 09:08:04 deepseek.py:447] DeepseekForCausalLM::allocate_userbuffer start
+[INFO 11-19 09:08:04 deepseek.py:480] DeepseekForCausalLM::allocate_userbuffer done
+{"event": "load_complete", "rank": 7, "wall_time": 1795079284.673034, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16643751936, 65796046848]}
+{"event": "load_complete", "rank": 6, "wall_time": 1795079284.673718, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16359792640, 65787658240]}
+{"event": "load_complete", "rank": 1, "wall_time": 1795079284.6741972, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16645324800, 65796046848]}
+{"event": "load_complete", "rank": 5, "wall_time": 1795079284.6743305, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16639340544, 65796046848]}
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+{"event": "load_complete", "rank": 2, "wall_time": 1795079284.675401, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16348401664, 65787658240]}
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+{"event": "load_complete", "rank": 3, "wall_time": 1795079284.6752868, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16656666624, 65796046848]}
+{"event": "load_complete", "rank": 4, "wall_time": 1795079284.6755998, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16362299392, 65787658240]}
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+{"event": "load_complete", "rank": 0, "wall_time": 1795079284.676442, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16353615872, 65787658240]}
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+[INFO 11-19 09:08:04 cache_engine.py:923] layout=[(2, 0, 22784), (8, 22784, 22784), (14, 45568, 22784), (20, 68352, 45568)], state_size_to_disk=1362560
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 7 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.572/61.277 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.91 GiB
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:04.850843 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:04.851801 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 4 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.826/61.270 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.91 GiB
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:04.853819 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:04.854833 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 5 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.576/61.277 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.92 GiB
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 6 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.828/61.270 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.93 GiB
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 1 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.570/61.277 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.93 GiB
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:04.857806 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:04 cache_engine.py:930] RANK 2 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.839/61.270 GiB, CPU Memory 225.19/1005.32 GiB, RSS 224.93 GiB
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:04.858235 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[info 11-19 09:08:04.858279 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:04.858846 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[info 11-19 09:08:04.859044 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:04.859208 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[INFO 11-19 09:08:04 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[info 11-19 09:08:04.859246 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[INFO 11-19 09:08:04 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:04 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:04.860825 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+[INFO 11-19 09:08:05 cache_engine.py:930] RANK 0 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.834/61.270 GiB, CPU Memory 232.23/1005.32 GiB, RSS 231.85 GiB
+[INFO 11-19 09:08:05 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:05.151766 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:05 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:05 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:05 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:05.152904 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+{"event": "forward_begin", "rank": 1, "wall_time": 1795079285.156308, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 6, "wall_time": 1795079285.1563816, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 5, "wall_time": 1795079285.1616335, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+[INFO 11-19 09:08:05 cache_engine.py:930] RANK 3 Before allocating KVCache; GPU Allocated 43.766/45.013 GiB, GPU Reserved 45.262/45.486 GiB, GPU Occupied 45.560/61.277 GiB, CPU Memory 232.23/1005.32 GiB, RSS 232.24 GiB
+[INFO 11-19 09:08:05 cache_engine.py:936] self.num_gpu_blocks=4, block_shape=(114048,), padding_bytes=128(0.11%)
+[info 11-19 09:08:05.175294 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 456192 at 0x12c0c1200000
+[INFO 11-19 09:08:05 cache_engine.py:942] kvcache block shape: torch.Size([114048]), type: torch.uint8, size: 111 KiB
+[INFO 11-19 09:08:05 cache_engine.py:945] kvcache size: 0.000 GiB, num_gpu_blocks: 4, tokens_per_block: 128
+[INFO 11-19 09:08:05 cache_engine.py:955] State size: 0.005121946334838867 GiB, shape: (2, 2749824)
+[info 11-19 09:08:05.176429 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:92] aclrtMalloc: allocated NPU memory of size 5499648 at 0x12c518200000
+{"event": "forward_begin", "rank": 7, "wall_time": 1795079285.1780882, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 4, "wall_time": 1795079285.1942806, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 2, "wall_time": 1795079285.213375, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 0, "wall_time": 1795079285.4417155, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "forward_begin", "rank": 3, "wall_time": 1795079285.459406, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/npu/__init__.py:598: UserWarning: The return value of get_device_capability is only for compatibility with PyTorch and does not represent the actual capability of the NPU device.
+  warnings.warn(warning_str)
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079285.9536145, "layer": 0}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079285.9536138, "layer": 0}{"event": "layer_begin", "rank": 5, "wall_time": 1795079285.9536383, "layer": 0}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079285.9536333, "layer": 0}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079285.9536605, "layer": 0}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079285.9536645, "layer": 0}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079285.953696, "layer": 0}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079285.9539542, "layer": 0}
+[rank0]:[W1119 09:08:24.553475730 ArgSortKernelNpuOpApi.cpp:45] Warning: Warning: kernel [ArgSort] can not support dtype int32 or int64 on AiCore, Now this kernel is running on AiCpu.If you are more concerned about high-performance execution,please cast dtype to float32. (function operator())
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079324.787502, "layer": 1}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079324.7878487, "layer": 1}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079324.7879114, "layer": 1}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079324.7879107, "layer": 1}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079324.788007, "layer": 1}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079324.7881217, "layer": 1}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079324.7880895, "layer": 1}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079324.7882128, "layer": 1}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079375.2545996, "layer": 2}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079375.2546396, "layer": 2}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079375.254714, "layer": 2}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079375.2547479, "layer": 2}{"event": "layer_begin", "rank": 4, "wall_time": 1795079375.254766, "layer": 2}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079375.2547643, "layer": 2}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079375.2547605, "layer": 2}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079375.2547913, "layer": 2}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079412.7559483, "layer": 3}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079412.7561092, "layer": 3}{"event": "layer_begin", "rank": 6, "wall_time": 1795079412.7561107, "layer": 3}
+
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079412.7561305, "layer": 3}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079412.7561584, "layer": 3}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079412.7561963, "layer": 3}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079412.7561982, "layer": 3}{"event": "layer_begin", "rank": 0, "wall_time": 1795079412.756173, "layer": 3}
+
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079452.1254056, "layer": 4}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079452.125464, "layer": 4}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079452.125502, "layer": 4}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079452.1255074, "layer": 4}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079452.125533, "layer": 4}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079452.1255713, "layer": 4}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079452.1255703, "layer": 4}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079452.1255696, "layer": 4}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079486.7215803, "layer": 5}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079486.721608, "layer": 5}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079486.7216315, "layer": 5}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079486.7217371, "layer": 5}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079486.721815, "layer": 5}{"event": "layer_begin", "rank": 2, "wall_time": 1795079486.721821, "layer": 5}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079486.7218122, "layer": 5}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079486.722402, "layer": 5}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079526.944838, "layer": 6}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079526.945022, "layer": 6}{"event": "layer_begin", "rank": 1, "wall_time": 1795079526.9450488, "layer": 6}{"event": "layer_begin", "rank": 6, "wall_time": 1795079526.9450517, "layer": 6}
+
+
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079526.9450407, "layer": 6}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079526.9451003, "layer": 6}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079526.9451473, "layer": 6}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079526.9452026, "layer": 6}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079562.1808443, "layer": 7}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079562.180955, "layer": 7}{"event": "layer_begin", "rank": 3, "wall_time": 1795079562.1809719, "layer": 7}
+
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079562.1809695, "layer": 7}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079562.1809933, "layer": 7}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079562.1809988, "layer": 7}{"event": "layer_begin", "rank": 1, "wall_time": 1795079562.1809912, "layer": 7}
+
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079562.1811614, "layer": 7}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079596.0570855, "layer": 8}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079596.0572274, "layer": 8}{"event": "layer_begin", "rank": 6, "wall_time": 1795079596.0572383, "layer": 8}
+
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079596.0572455, "layer": 8}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079596.0572493, "layer": 8}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079596.0572426, "layer": 8}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079596.0572457, "layer": 8}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079596.0572765, "layer": 8}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079637.5057058, "layer": 9}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079637.5058608, "layer": 9}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079637.505879, "layer": 9}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079637.505875, "layer": 9}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079637.505882, "layer": 9}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079637.5059357, "layer": 9}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079637.5058584, "layer": 9}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079637.5060563, "layer": 9}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079671.1188965, "layer": 10}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079671.1190715, "layer": 10}{"event": "layer_begin", "rank": 4, "wall_time": 1795079671.1190498, "layer": 10}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079671.1190743, "layer": 10}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079671.119098, "layer": 10}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079671.1192038, "layer": 10}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079671.1192777, "layer": 10}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079671.1193688, "layer": 10}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079701.571277, "layer": 11}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079701.5712903, "layer": 11}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079701.571372, "layer": 11}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079701.571397, "layer": 11}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079701.5714126, "layer": 11}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079701.571408, "layer": 11}{"event": "layer_begin", "rank": 7, "wall_time": 1795079701.571437, "layer": 11}
+
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079701.5715106, "layer": 11}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079738.7238102, "layer": 12}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079738.7239192, "layer": 12}{"event": "layer_begin", "rank": 5, "wall_time": 1795079738.7239263, "layer": 12}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079738.723946, "layer": 12}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079738.7239532, "layer": 12}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079738.7239506, "layer": 12}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079738.7239878, "layer": 12}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079738.7240016, "layer": 12}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079768.3929806, "layer": 13}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079768.3930235, "layer": 13}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079768.3930755, "layer": 13}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079768.393089, "layer": 13}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079768.39312, "layer": 13}{"event": "layer_begin", "rank": 3, "wall_time": 1795079768.3931153, "layer": 13}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079768.3931084, "layer": 13}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079768.393109, "layer": 13}
+
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079801.7900252, "layer": 14}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079801.7900975, "layer": 14}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079801.7901375, "layer": 14}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079801.7901552, "layer": 14}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079801.790155, "layer": 14}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079801.7901618, "layer": 14}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079801.7902362, "layer": 14}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079801.7902174, "layer": 14}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079850.9640663, "layer": 15}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079850.9641683, "layer": 15}{"event": "layer_begin", "rank": 0, "wall_time": 1795079850.964199, "layer": 15}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079850.9641967, "layer": 15}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079850.9642012, "layer": 15}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079850.964223, "layer": 15}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079850.9642317, "layer": 15}{"event": "layer_begin", "rank": 7, "wall_time": 1795079850.9642494, "layer": 15}
+
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079888.516191, "layer": 16}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079888.5163252, "layer": 16}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079888.5163233, "layer": 16}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079888.5163138, "layer": 16}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079888.5163252, "layer": 16}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079888.5163434, "layer": 16}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079888.5163808, "layer": 16}{"event": "layer_begin", "rank": 4, "wall_time": 1795079888.5163484, "layer": 16}
+
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079918.4117937, "layer": 17}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079918.4118884, "layer": 17}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079918.4119391, "layer": 17}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079918.4119425, "layer": 17}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079918.411975, "layer": 17}{"event": "layer_begin", "rank": 6, "wall_time": 1795079918.4119816, "layer": 17}
+
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079918.4120483, "layer": 17}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079918.412044, "layer": 17}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079952.4261642, "layer": 18}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795079952.4262123, "layer": 18}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079952.4263017, "layer": 18}{"event": "layer_begin", "rank": 5, "wall_time": 1795079952.426297, "layer": 18}{"event": "layer_begin", "rank": 3, "wall_time": 1795079952.4263155, "layer": 18}
+
+
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079952.426325, "layer": 18}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079952.4263875, "layer": 18}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079952.4263952, "layer": 18}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795079994.0321233, "layer": 19}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795079994.0322714, "layer": 19}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795079994.0322764, "layer": 19}{"event": "layer_begin", "rank": 7, "wall_time": 1795079994.0323305, "layer": 19}
+
+{"event": "layer_begin", "rank": 5, "wall_time": 1795079994.0322733, "layer": 19}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795079994.0323853, "layer": 19}{"event": "layer_begin", "rank": 4, "wall_time": 1795079994.0323572, "layer": 19}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795079994.0324492, "layer": 19}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080024.657954, "layer": 20}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080024.6579375, "layer": 20}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080024.6580284, "layer": 20}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080024.658091, "layer": 20}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080024.6581142, "layer": 20}{"event": "layer_begin", "rank": 6, "wall_time": 1795080024.658115, "layer": 20}
+
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080024.6581254, "layer": 20}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080024.65828, "layer": 20}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080060.1717062, "layer": 21}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080060.1717887, "layer": 21}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080060.171835, "layer": 21}{"event": "layer_begin", "rank": 1, "wall_time": 1795080060.1718297, "layer": 21}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080060.1718419, "layer": 21}{"event": "layer_begin", "rank": 5, "wall_time": 1795080060.1718233, "layer": 21}
+
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080060.1718543, "layer": 21}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080060.1718636, "layer": 21}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080090.2304163, "layer": 22}{"event": "layer_begin", "rank": 3, "wall_time": 1795080090.2304502, "layer": 22}
+
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080090.230446, "layer": 22}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080090.230554, "layer": 22}{"event": "layer_begin", "rank": 5, "wall_time": 1795080090.2305446, "layer": 22}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080090.2305741, "layer": 22}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080090.2306037, "layer": 22}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080090.2305708, "layer": 22}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080131.505906, "layer": 23}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080131.506093, "layer": 23}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080131.5061274, "layer": 23}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080131.5061228, "layer": 23}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080131.50613, "layer": 23}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080131.506161, "layer": 23}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080131.5061734, "layer": 23}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080131.5063224, "layer": 23}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080169.445747, "layer": 24}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080169.445928, "layer": 24}{"event": "layer_begin", "rank": 3, "wall_time": 1795080169.4458864, "layer": 24}
+
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080169.4459245, "layer": 24}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080169.4459257, "layer": 24}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080169.4459574, "layer": 24}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080169.445988, "layer": 24}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080169.445974, "layer": 24}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080204.8117008, "layer": 25}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080204.81171, "layer": 25}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080204.8118453, "layer": 25}{"event": "layer_begin", "rank": 0, "wall_time": 1795080204.8118415, "layer": 25}
+
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080204.8118699, "layer": 25}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080204.8118756, "layer": 25}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080204.8118484, "layer": 25}{"event": "layer_begin", "rank": 5, "wall_time": 1795080204.8118644, "layer": 25}
+
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080236.2621315, "layer": 26}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080236.2621608, "layer": 26}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080236.2621942, "layer": 26}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080236.2622619, "layer": 26}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080236.2622876, "layer": 26}{"event": "layer_begin", "rank": 5, "wall_time": 1795080236.2622595, "layer": 26}{"event": "layer_begin", "rank": 1, "wall_time": 1795080236.262269, "layer": 26}
+
+
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080236.262333, "layer": 26}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080270.4596245, "layer": 27}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080270.4598622, "layer": 27}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080270.4598908, "layer": 27}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080270.4599419, "layer": 27}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080270.4599667, "layer": 27}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080270.4600205, "layer": 27}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080270.4600687, "layer": 27}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080270.4601455, "layer": 27}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080310.4105926, "layer": 28}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080310.410723, "layer": 28}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080310.4107537, "layer": 28}{"event": "layer_begin", "rank": 6, "wall_time": 1795080310.410767, "layer": 28}
+
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080310.4107625, "layer": 28}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080310.410754, "layer": 28}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080310.4108331, "layer": 28}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080310.4109085, "layer": 28}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080340.9256003, "layer": 29}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080340.925619, "layer": 29}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080340.9256992, "layer": 29}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080340.9257011, "layer": 29}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080340.9257174, "layer": 29}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080340.9257443, "layer": 29}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080340.9256968, "layer": 29}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080340.9258556, "layer": 29}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080374.3481138, "layer": 30}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080374.348141, "layer": 30}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080374.348278, "layer": 30}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080374.3482735, "layer": 30}{"event": "layer_begin", "rank": 6, "wall_time": 1795080374.3482962, "layer": 30}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080374.3482866, "layer": 30}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080374.348388, "layer": 30}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080374.3483732, "layer": 30}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080409.7898636, "layer": 31}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080409.7899983, "layer": 31}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080409.7900767, "layer": 31}{"event": "layer_begin", "rank": 5, "wall_time": 1795080409.7900386, "layer": 31}
+
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080409.7900603, "layer": 31}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080409.7900867, "layer": 31}{"event": "layer_begin", "rank": 4, "wall_time": 1795080409.7900844, "layer": 31}
+
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080409.7900648, "layer": 31}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080447.5550606, "layer": 32}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080447.5551918, "layer": 32}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080447.5551975, "layer": 32}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080447.5552065, "layer": 32}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080447.555207, "layer": 32}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080447.5552278, "layer": 32}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080447.5552382, "layer": 32}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080447.555323, "layer": 32}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080482.3253362, "layer": 33}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080482.3254752, "layer": 33}{"event": "layer_begin", "rank": 4, "wall_time": 1795080482.3254776, "layer": 33}{"event": "layer_begin", "rank": 2, "wall_time": 1795080482.325487, "layer": 33}{"event": "layer_begin", "rank": 6, "wall_time": 1795080482.3254976, "layer": 33}
+
+
+
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080482.3255038, "layer": 33}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080482.3254821, "layer": 33}{"event": "layer_begin", "rank": 3, "wall_time": 1795080482.3254955, "layer": 33}
+
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080519.200747, "layer": 34}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080519.2008958, "layer": 34}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080519.2008936, "layer": 34}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080519.2009034, "layer": 34}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080519.2008984, "layer": 34}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080519.2009068, "layer": 34}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080519.2010148, "layer": 34}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080519.2016191, "layer": 34}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080556.6617813, "layer": 35}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080556.6617923, "layer": 35}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080556.6618094, "layer": 35}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080556.6618147, "layer": 35}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080556.6617987, "layer": 35}{"event": "layer_begin", "rank": 1, "wall_time": 1795080556.6618354, "layer": 35}
+
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080556.6618354, "layer": 35}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080556.6618893, "layer": 35}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080590.3034356, "layer": 36}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080590.303424, "layer": 36}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080590.3035424, "layer": 36}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080590.30358, "layer": 36}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080590.3036036, "layer": 36}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080590.303585, "layer": 36}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080590.303604, "layer": 36}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080590.3036084, "layer": 36}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080624.3246543, "layer": 37}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080624.3247895, "layer": 37}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080624.3247519, "layer": 37}{"event": "layer_begin", "rank": 3, "wall_time": 1795080624.3247972, "layer": 37}
+
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080624.324803, "layer": 37}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080624.3247943, "layer": 37}{"event": "layer_begin", "rank": 1, "wall_time": 1795080624.3248255, "layer": 37}
+
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080624.3248599, "layer": 37}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080657.377978, "layer": 38}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080657.3780339, "layer": 38}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080657.3781075, "layer": 38}{"event": "layer_begin", "rank": 7, "wall_time": 1795080657.378128, "layer": 38}
+
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080657.3781474, "layer": 38}{"event": "layer_begin", "rank": 0, "wall_time": 1795080657.3781164, "layer": 38}
+
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080657.378199, "layer": 38}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080657.378207, "layer": 38}
+{"event": "layer_begin", "rank": 6, "wall_time": 1795080694.264891, "layer": 39}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080694.2650185, "layer": 39}
+{"event": "layer_begin", "rank": 1, "wall_time": 1795080694.2650466, "layer": 39}
+{"event": "layer_begin", "rank": 5, "wall_time": 1795080694.2650106, "layer": 39}
+{"event": "layer_begin", "rank": 3, "wall_time": 1795080694.265045, "layer": 39}
+{"event": "layer_begin", "rank": 2, "wall_time": 1795080694.265061, "layer": 39}
+{"event": "layer_begin", "rank": 7, "wall_time": 1795080694.2650537, "layer": 39}
+{"event": "layer_begin", "rank": 0, "wall_time": 1795080694.265085, "layer": 39}
+[info 11-19 09:32:14.955238 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955313 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.955438 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955491 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955518 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.955527 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955536 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955558 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.955569 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.955600 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.955613 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.955638 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.956951 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.957032 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+[info 11-19 09:32:14.957539 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c0c1200000
+[info 11-19 09:32:14.957618 /root/syf/data_yf/yuhao_deepinfer_910c_yf/src_yf/DeepInfer_yf/csrc/asc_utils.cpp:77] aclrtFree: freed NPU memory at 0x12c518200000
+{
+  "passed": false,
+  "rank": 1,
+  "authorized_host_die": 9,
+  "local_device": 1,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.352154528955,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65499492352,
+    "live_host_available_bytes": 1037784838144,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 48000800,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 48002112,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16645324800,
+      65796046848
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 7,
+  "authorized_host_die": 15,
+  "local_device": 7,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.290989394066855,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65496461312,
+    "live_host_available_bytes": 1037784838144,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002466
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 336005600,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 336014784,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16643751936,
+      65796046848
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 6,
+  "authorized_host_die": 14,
+  "local_device": 6,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.37183371093124,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65213894656,
+    "live_host_available_bytes": 1037784846336,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 288004800,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 288012672,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16359792640,
+      65787658240
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 2,
+  "authorized_host_die": 10,
+  "local_device": 2,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.30690458207391,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65201803264,
+    "live_host_available_bytes": 1037784838144,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 96001600,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 96004224,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16348401664,
+      65787658240
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 5,
+  "authorized_host_die": 13,
+  "local_device": 5,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.28021236206405,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65491361792,
+    "live_host_available_bytes": 1037780643840,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 240004000,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 240010560,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16639340544,
+      65796046848
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 4,
+  "authorized_host_die": 12,
+  "local_device": 4,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.37165819504298,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65213526016,
+    "live_host_available_bytes": 1037784322048,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 192003200,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 192008448,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16362299392,
+      65787658240
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 3,
+  "authorized_host_die": 11,
+  "local_device": 3,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.327483526896685,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65509249024,
+    "live_host_available_bytes": 1037784838144,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 144002400,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 144006336,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16656666624,
+      65796046848
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+{
+  "passed": false,
+  "rank": 0,
+  "authorized_host_die": 8,
+  "local_device": 0,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 57.368458441924304,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65208201216,
+    "live_host_available_bytes": 1037784322048,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 0,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 0,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16353615872,
+      65787658240
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "ValueError: mix must have shape (5, 4, 1)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 247, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 167, in run\n    result=runner.execute_main_model(metadata,cache.gpu_cache)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 354, in execute_main_model\n    return self.execute_prepared_official(input_metadata, kv_caches)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/worker/model_runner.py\", line 336, in execute_prepared_official\n    model_output=self.model(kv_caches=kv_caches, input_metadata=input_metadata),\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek_vl.py\", line 234, in forward\n    return super().forward(kv_caches, input_metadata, hidden_states)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 415, in forward\n    return self.model(kv_caches, input_metadata, hidden_states, dflash)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/deepseek.py\", line 252, in forward\n    hidden_states = mhc_pre_apply_mix(hidden_states, residual.pre_layer_mix)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 157, in mhc_pre_apply_mix\n    _shape(mix, (*outer, m, 1), \"mix\")\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/model_executor/models/v4_modules/official_mhc.py\", line 55, in _shape\n    raise ValueError(f\"{name} must have shape {shape}\")\nValueError: mix must have shape (5, 4, 1)\n"
+}
+W1119 09:32:20.588000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 80 closing signal SIGTERM
+W1119 09:32:20.588000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 81 closing signal SIGTERM
+W1119 09:32:20.589000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 82 closing signal SIGTERM
+W1119 09:32:20.589000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 83 closing signal SIGTERM
+W1119 09:32:20.589000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 84 closing signal SIGTERM
+W1119 09:32:20.589000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 85 closing signal SIGTERM
+W1119 09:32:20.589000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 86 closing signal SIGTERM
+E1119 09:32:21.344000 1 envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 7 (pid: 87) of binary: /root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/bin/python
+Traceback (most recent call last):
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/run.py", line 1028, in main
+    run(args)
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/run.py", line 1019, in run
+    elastic_launch(
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 194, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 383, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 80)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 80
+[2]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 81)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 81
+[3]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 82)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 82
+[4]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 83)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 83
+[5]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 4 (local_rank: 4)
+  exitcode  : -15 (pid: 84)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 84
+[6]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 5 (local_rank: 5)
+  exitcode  : -15 (pid: 85)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 85
+[7]:
+  time      : 2026-11-19_09:32:21
+  host      : 7481182250ec
+  rank      : 6 (local_rank: 6)
+  exitcode  : -15 (pid: 86)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 86
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-19_09:32:20
+  host      : 7481182250ec
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 87) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

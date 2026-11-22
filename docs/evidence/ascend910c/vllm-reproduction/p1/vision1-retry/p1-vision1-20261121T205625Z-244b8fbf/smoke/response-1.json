@@ -1,0 +1,27 @@
+{
+  "index": 1,
+  "http_status": 200,
+  "text": "你的纸船叫**青栗**。",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 29,
+    "total_tokens": 39,
+    "completion_tokens": 10
+  },
+  "ttft_seconds": 0.39119156799279153,
+  "end_to_end_seconds": 1.989067360991612,
+  "content_chunk_intervals_seconds": [
+    0.17900217813439667,
+    0.17889603483490646,
+    0.1769684401806444,
+    0.17586659896187484,
+    0.1752440540585667,
+    0.17794413794763386,
+    0.18141249101608992,
+    0.17673156084492803
+  ],
+  "interval_definition": "content chunk arrival intervals, NOT token ITL",
+  "end_to_end_output_tps": 5.027481821940253,
+  "decode_tps": null,
+  "decode_tps_definition": "not computed: exact token timing unavailable"
+}

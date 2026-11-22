@@ -1,0 +1,99 @@
+{
+  "task": "lru_cache",
+  "score": {
+    "status": "pass",
+    "passed": 17,
+    "total": 17,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "miss",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "evicts-least-recent",
+        "passed": true,
+        "actual": "[1,null,3]"
+      },
+      {
+        "id": "zero-capacity",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "update-existing",
+        "passed": true,
+        "actual": "[9]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[null,null,-16,-14]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[null,-5]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[-16,-5,-16]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[null,null,null,null,null,null,13]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[null,null,null,null,null]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[null,null,15,null]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[null,null,null,null,null]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[null,null]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[null,null,4,null]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def lru_cache(operations, capacity):\n    from collections import OrderedDict\n    d, out = OrderedDict(), []\n    for op in operations:\n        key = op[1]\n        if op[0] == 'get':\n            out.append(d.get(key))\n            if key in d: d.move_to_end(key)\n        else:\n            d[key] = op[2]\n            d.move_to_end(key)\n            if len(d) > capacity: d.popitem(last=False)\n    return out\n",
+    "extracted_code_sha256": "d1ca50070380f1747bf981612bff000aff10c5e5c04d896b0fa4bcad96370a6b"
+  }
+}

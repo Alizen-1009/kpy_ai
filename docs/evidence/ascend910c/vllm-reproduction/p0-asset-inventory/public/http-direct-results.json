@@ -1,0 +1,51 @@
+{
+  "ms-model-direct": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend",
+    "utc": "2026-11-21T13:08:45.174207+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:08:46 GMT",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "truncated": false,
+    "body_sha256": "e0489d56e8f3d07d0d690b0bbae27bfb4cb491146fb3ae3bba47061fb3a1ffa1"
+  },
+  "ms-revisions-direct": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/revisions",
+    "utc": "2026-11-21T13:08:45.174590+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/revisions",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:08:46 GMT",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "truncated": false,
+    "body_sha256": "751793e865005708529885f6890733df82d90e3b72de160f806a74e9594a6a6d"
+  },
+  "ms-files-direct": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=master&Recursive=true",
+    "utc": "2026-11-21T13:08:45.174693+00:00",
+    "status": 200,
+    "final_url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=master&Recursive=true",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:08:46 GMT",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "truncated": false,
+    "body_sha256": "0b448c6e0ce0551f9113b386a2bffaafc561403be2fa01dfe3515a73f836304b"
+  },
+  "nju-manifest-direct": {
+    "url": "https://quay.nju.edu.cn/v2/ascend/vllm-ascend/manifests/deepseek-v4.1-flash-a3",
+    "utc": "2026-11-21T13:08:45.174796+00:00",
+    "status": 200,
+    "final_url": "https://quay.nju.edu.cn/v2/ascend/vllm-ascend/manifests/deepseek-v4.1-flash-a3",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:08:46 GMT",
+      "Content-Type": "application/vnd.oci.image.index.v1+json",
+      "Docker-Content-Digest": "sha256:2c906b38ad3cc9ed9badfe3d09451d194fa09a07e5c6d62a66b111731e626060"
+    },
+    "truncated": false,
+    "body_sha256": "2c906b38ad3cc9ed9badfe3d09451d194fa09a07e5c6d62a66b111731e626060"
+  }
+}

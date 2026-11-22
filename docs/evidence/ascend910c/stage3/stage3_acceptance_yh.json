@@ -1,0 +1,84 @@
+{
+  "goal": "Complete stage 3 only, in the ordered five-stage DeepInfer / Ascend 910C program",
+  "stage3_complete": true,
+  "scope": "Bounded synthetic official-format eager execution, including real native scheduling and two-rank model execution; not official-checkpoint full inference",
+  "gates": {
+    "cpu": {
+      "report": "official_stage3_geometry_cpu_20261119T134250538161306_yh.json",
+      "sha256": "db4b54752a3eedb21c38b028c8d202f89f4a19151b63c6740227e46fa5418518",
+      "tests": 222,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "npu_all": {
+      "report": "operand_die8_20261119T134250531652498_yh/npu_yh.json",
+      "sha256": "d92a6d02cba01f7e7ec24eaf1a2d3be36b04572490b11231ca3f0f2d0ab8eebe",
+      "host_die": 8,
+      "cases": 26,
+      "peak_allocated_bytes": 45449216
+    },
+    "cross_card_model": {
+      "report": "ep_die8_10_20261119T134349541129205_yh/ep_yh.json",
+      "sha256": "c7eb0162a8044bf72f47300874df49999d0f592e97682402f79b76650431e7df",
+      "host_dies": [8, 10],
+      "physical_cards": [4, 5],
+      "backend": "hccl",
+      "cases_per_rank": [16, 16],
+      "context_parallel_size": 1,
+      "expert_parallel_size": 2,
+      "engram_owner_partitions": 2,
+      "decoder_layers": 1,
+      "generated_tokens_per_rank": 14,
+      "prefill_forwards_per_rank": 4,
+      "decode_forwards_per_rank": 10,
+      "independent_singleton_cpu_model_oracle": true,
+      "native_sampling_math_reference_tokens_and_logprobs_exact": true,
+      "prompt_logprobs_reference_exact": true,
+      "seeded_repeatability": true,
+      "length_and_eos_termination": true,
+      "raw_and_compressed_history_verified": true,
+      "all_blocks_and_states_reclaimed": true,
+      "peak_allocated_bytes_per_rank": [34498048, 34498048]
+    },
+    "gloo_components": {
+      "report": "stage3_geometry_gloo_20261119T134349550129968_yh/gloo_yh.json",
+      "sha256": "9ffc13e1d4933b304ac43da32d6a02a6fc0b1dc352b16f2eecd44932103ad859",
+      "cases_per_rank": [15, 15],
+      "torch_npu_imported": false
+    }
+  },
+  "original_criteria_baseline": "4e8adcf006017cea76fa52487b57e3a4b90e1a24",
+  "original_criteria_audit_report": "stage123_criteria_audit_yh.json",
+  "audit_counterexample_report": "stage123_audit_counterexamples_yh.json",
+  "official_geometry_preflight": {
+    "source": "official_checkpoint_headers_yh.json config, independently parsed by the real HF config parser",
+    "matrix_roles": 21,
+    "all_real_weight_and_scale_declarations_meta_only": true,
+    "minimum_square_image_patches_executed": 1521,
+    "vision_hidden_heads_ffn": [1024, 16, 2816],
+    "maximum_observed_explicit_fp32_scratch_elements": 973440,
+    "max_image_9216_patch_plan_checked_without_full_execution": true,
+    "one_query_microcall_compatibility_only_not_unrestricted_request_support": true
+  },
+  "runtime_source_hashes_checked_against_current_files": true,
+  "hash_path_aliases": {
+    "official.py": "deepinfer/quantization/official.py",
+    "check_official_ep.py": "scripts/ascend910c/check_official_ep.py"
+  },
+  "test_containers_removed": true,
+  "native_defaults_preserved": true,
+  "full_checkpoint_allocation_guard_preserved": true,
+  "official_checkpoint_payload_read": false,
+  "persistent_cache_precision_changed": false,
+  "stage4_started": false,
+  "stage5_started": false,
+  "limitations": [
+    "Reduced synthetic model/vision fixtures, not 40-layer official weights or production memory feasibility",
+    "Scheduler acceptance runs on NPU; native CPU pinned/default-device preparation is not certified",
+    "CP greater than one, speculative decoding, ZOS and structured output are rejected by the official execution lane",
+    "No Graph, production batching/preemption/prefix reuse, dynamic EPLB, long-context or GPU/950 hardware acceptance",
+    "CPU mathematical sampling reference parity is not native fused-sampler kernel bit parity",
+    "Two-layer shared attention and candidate-block paths are separately covered by CPU and single-die all-lane tests, not a multi-rank candidate-block decoder"
+  ]
+}

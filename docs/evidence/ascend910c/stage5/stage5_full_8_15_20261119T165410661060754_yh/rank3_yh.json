@@ -1,0 +1,89 @@
+{
+  "passed": false,
+  "rank": 3,
+  "authorized_host_die": 11,
+  "local_device": 3,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 56.23455435712822,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65508921344,
+    "live_host_available_bytes": 1039165706240,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002912
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 144002400,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 144006336,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16655765504,
+      65796046848
+    ]
+  },
+  "cache": {
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "error": "RuntimeError: [rank3]:[F1119 08:55:29.651143313 scheduler.hpp:116] Check failed: max_num_batched_tokens >= block_size (16 vs. 128). \n",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 242, in main\n    try:r=run(a,state)\n          ^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 151, in run\n    scheduler,pool,seq,blocks,states=schedule(prompt_ids,1,args.tokens)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/scripts/ascend910c/check_official_full_model.py\", line 113, in schedule\n    scheduler=Scheduler(128,blocks,states,tokenizer.eos_token_id,PG.context_parallel_group(),sc,0,0,16,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: [rank3]:[F1119 08:55:29.651143313 scheduler.hpp:116] Check failed: max_num_batched_tokens >= block_size (16 vs. 128). \n\n"
+}

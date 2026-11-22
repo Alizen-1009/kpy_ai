@@ -1,0 +1,59 @@
+{
+  "time_unix": 1795267148.1515303,
+  "identity": {
+    "pid": 2207298,
+    "start_ticks": "175851895",
+    "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15",
+    "started_unix": 1795267135.5728822,
+    "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_restart.py",
+    "tool_sha256": "6c3d7e49a2366b9b6d62593ae64e877d97d30b7c3b44364f06eb59e349127ad9"
+  },
+  "proc_stat": "2207298 (python3) S 1 2207298 2207298 0 -1 4194304 3547 0 0 0 25 3 0 0 20 0 1 0 175851895 49807360 7844 18446744073709551615 187650242969600 187650242972248 281474221946848 0 0 0 0 16781312 2 1 0 0 17 356 0 0 0 0 0 187650243100016 187650243100688 187650534129664 281474221948273 281474221948359 281474221948359 281474221948903 0\n",
+  "cmdline": "python3 -u /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_restart.py ",
+  "verified_complete_files": 4,
+  "verified_complete_bytes": 48247,
+  "partials": [
+    {
+      "path": "model/engram_extra.safetensors.part",
+      "bytes": 68157440
+    }
+  ],
+  "events": [
+    {
+      "event": "process",
+      "pid": 2207298,
+      "start_ticks": "175851895",
+      "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15",
+      "started_unix": 1795267135.5728822,
+      "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_restart.py",
+      "tool_sha256": "6c3d7e49a2366b9b6d62593ae64e877d97d30b7c3b44364f06eb59e349127ad9"
+    },
+    {
+      "event": "verified_existing",
+      "path": ".gitattributes"
+    },
+    {
+      "event": "verified_existing",
+      "path": "README.md"
+    },
+    {
+      "event": "verified_existing",
+      "path": "config.json"
+    },
+    {
+      "event": "verified_existing",
+      "path": "configuration.json"
+    },
+    {
+      "event": "download",
+      "path": "engram_extra.safetensors",
+      "size": 629310402
+    },
+    {
+      "event": "redirect_allowed",
+      "status": 302,
+      "hostname": "cdn-lfs-cn-1.modelscope.cn"
+    }
+  ],
+  "exit": null
+}

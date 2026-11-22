@@ -1,0 +1,60 @@
+{
+  "scope": "bounded expert only; not full layer or model",
+  "verified": true,
+  "results": [
+    {
+      "M": 1,
+      "stage": "gate_up",
+      "reference_ms": 831.8434110842645,
+      "candidate_ms": 685.6608730740845,
+      "speedup": 1.2131994747706498,
+      "reference_peak_allocated": 44521984,
+      "candidate_peak_allocated": 44195328
+    },
+    {
+      "M": 1,
+      "stage": "down",
+      "reference_ms": 416.4802320301533,
+      "candidate_ms": 343.74417597427964,
+      "speedup": 1.211599384483291,
+      "reference_peak_allocated": 44521984,
+      "candidate_peak_allocated": 44195328
+    },
+    {
+      "M": 1,
+      "stage": "full_expert",
+      "reference_ms": 1259.5135199371725,
+      "candidate_ms": 1037.5232298392802,
+      "speedup": 1.213961754024804,
+      "reference_peak_allocated": 60342784,
+      "candidate_peak_allocated": 60342784
+    },
+    {
+      "M": 8,
+      "stage": "gate_up",
+      "reference_ms": 847.1291640307754,
+      "candidate_ms": 700.9679868351668,
+      "speedup": 1.2085133414658757,
+      "reference_peak_allocated": 44838912,
+      "candidate_peak_allocated": 44512256
+    },
+    {
+      "M": 8,
+      "stage": "down",
+      "reference_ms": 423.398916143924,
+      "candidate_ms": 350.35426798276603,
+      "speedup": 1.2084879644301951,
+      "reference_peak_allocated": 44838912,
+      "candidate_peak_allocated": 44512256
+    },
+    {
+      "M": 8,
+      "stage": "full_expert",
+      "reference_ms": 1272.6140201557428,
+      "candidate_ms": 1052.6656869333237,
+      "speedup": 1.2089441462304933,
+      "reference_peak_allocated": 60892672,
+      "candidate_peak_allocated": 60892672
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                              
+LISTEN 0      4096         0.0.0.0:111        0.0.0.0:*    users:(("rpcbind",pid=17911,fd=8))  
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=21131,fd=3))     
+LISTEN 0      4096       127.0.0.1:9090       0.0.0.0:*    users:(("mihomo",pid=22576,fd=6))   
+LISTEN 0      128    192.168.45.92:30106      0.0.0.0:*    users:(("python3",pid=2822759,fd=3))
+LISTEN 0      128    192.168.45.92:30108      0.0.0.0:*    users:(("python3",pid=2822759,fd=5))
+LISTEN 0      4096            [::]:111           [::]:*    users:(("rpcbind",pid=17911,fd=11)) 
+LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=21131,fd=4))     
+LISTEN 0      4096               *:7890             *:*    users:(("mihomo",pid=22576,fd=3))   

@@ -1,0 +1,438 @@
+{
+  ".gitattributes": {
+    "size": 3557,
+    "mtime_ns": 1795267003705573385,
+    "inode": 3454727419
+  },
+  "README.md": {
+    "size": 41653,
+    "mtime_ns": 1795267004025585628,
+    "inode": 3454727420
+  },
+  "config.json": {
+    "size": 3008,
+    "mtime_ns": 1795267010001814260,
+    "inode": 3454727421
+  },
+  "configuration.json": {
+    "size": 29,
+    "mtime_ns": 1795267010369828339,
+    "inode": 3454727422
+  },
+  "engram_extra.safetensors": {
+    "size": 629310402,
+    "mtime_ns": 1795267247178887939,
+    "inode": 3454727423
+  },
+  "engram_int8/PARTS.sha256": {
+    "size": 2421,
+    "mtime_ns": 1795267254935184672,
+    "inode": 4500325568
+  },
+  "engram_int8/layers_14_engram_embed.scale.safetensors": {
+    "size": 12288533936,
+    "mtime_ns": 1795268815722793890,
+    "inode": 4500325569
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795272999366449357,
+    "inode": 4500325578
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795271276736709401,
+    "inode": 4500325577
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795271311358030582,
+    "inode": 4500325576
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-03-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795273862675396201,
+    "inode": 4500325574
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-04-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795275496565797329,
+    "inode": 4500325573
+  },
+  "engram_int8/layers_14_engram_embed.weight.safetensors.part-05-of-06": {
+    "size": 12408924784,
+    "mtime_ns": 1795273485845015055,
+    "inode": 4500325575
+  },
+  "engram_int8/layers_1_engram_embed.scale.safetensors": {
+    "size": 12288197488,
+    "mtime_ns": 1795276685739234183,
+    "inode": 4500325572
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-00-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795276827588654076,
+    "inode": 4500325581
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-01-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795277212131343652,
+    "inode": 4500325579
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-02-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795280705396745467,
+    "inode": 4500325580
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-03-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795279597758443449,
+    "inode": 4500325582
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-04-of-06": {
+    "size": 17179869184,
+    "mtime_ns": 1795282551291269767,
+    "inode": 4500325583
+  },
+  "engram_int8/layers_1_engram_embed.weight.safetensors.part-05-of-06": {
+    "size": 12406233200,
+    "mtime_ns": 1795279379246099853,
+    "inode": 4500325584
+  },
+  "engram_int8/reassemble_engram_weights.sh": {
+    "size": 4002,
+    "mtime_ns": 1795279386454375092,
+    "inode": 4500325588
+  },
+  "mtpq-00001-of-00004.safetensors": {
+    "size": 3218027560,
+    "mtime_ns": 1795280426366086896,
+    "inode": 3454727617
+  },
+  "mtpq-00002-of-00004.safetensors": {
+    "size": 3221076248,
+    "mtime_ns": 1795279980185045888,
+    "inode": 3454727619
+  },
+  "mtpq-00003-of-00004.safetensors": {
+    "size": 2861865224,
+    "mtime_ns": 1795280329038369117,
+    "inode": 3454727618
+  },
+  "mtpq-00004-of-00004.safetensors": {
+    "size": 1323827336,
+    "mtime_ns": 1795280715685138469,
+    "inode": 3454727620
+  },
+  "mtpq_manifest.json": {
+    "size": 3698,
+    "mtime_ns": 1795280430098229459,
+    "inode": 3454727616
+  },
+  "optional/quarot.safetensors": {
+    "size": 104857696,
+    "mtime_ns": 1795280455887214561,
+    "inode": 2167017490
+  },
+  "quant_model_description.json": {
+    "size": 11396950,
+    "mtime_ns": 1795280459507352845,
+    "inode": 3454727623
+  },
+  "quant_model_weights-00001-of-00072.safetensors": {
+    "size": 4294722072,
+    "mtime_ns": 1795281096387680760,
+    "inode": 3454727622
+  },
+  "quant_model_weights-00002-of-00072.safetensors": {
+    "size": 4294959368,
+    "mtime_ns": 1795281451629249586,
+    "inode": 3454727626
+  },
+  "quant_model_weights-00003-of-00072.safetensors": {
+    "size": 4294092376,
+    "mtime_ns": 1795282339419165698,
+    "inode": 3454727621
+  },
+  "quant_model_weights-00004-of-00072.safetensors": {
+    "size": 4291642480,
+    "mtime_ns": 1795281973637187819,
+    "inode": 3454727624
+  },
+  "quant_model_weights-00005-of-00072.safetensors": {
+    "size": 4290685648,
+    "mtime_ns": 1795282325962650989,
+    "inode": 3454727625
+  },
+  "quant_model_weights-00006-of-00072.safetensors": {
+    "size": 4292218808,
+    "mtime_ns": 1795283090791905569,
+    "inode": 3454727628
+  },
+  "quant_model_weights-00007-of-00072.safetensors": {
+    "size": 4290017928,
+    "mtime_ns": 1795283069919107188,
+    "inode": 3454727629
+  },
+  "quant_model_weights-00008-of-00072.safetensors": {
+    "size": 4294316424,
+    "mtime_ns": 1795283583534752892,
+    "inode": 3454727627
+  },
+  "quant_model_weights-00009-of-00072.safetensors": {
+    "size": 3658274192,
+    "mtime_ns": 1795283218904805865,
+    "inode": 3454727634
+  },
+  "quant_model_weights-00010-of-00072.safetensors": {
+    "size": 4294600440,
+    "mtime_ns": 1795284054912783018,
+    "inode": 3454727631
+  },
+  "quant_model_weights-00011-of-00072.safetensors": {
+    "size": 4295269720,
+    "mtime_ns": 1795284075001551410,
+    "inode": 3454727630
+  },
+  "quant_model_weights-00012-of-00072.safetensors": {
+    "size": 4292810200,
+    "mtime_ns": 1795284215386921124,
+    "inode": 3454727633
+  },
+  "quant_model_weights-00013-of-00072.safetensors": {
+    "size": 4294464488,
+    "mtime_ns": 1795284746031207995,
+    "inode": 3454727632
+  },
+  "quant_model_weights-00014-of-00072.safetensors": {
+    "size": 4291315968,
+    "mtime_ns": 1795284877028208739,
+    "inode": 3454727635
+  },
+  "quant_model_weights-00015-of-00072.safetensors": {
+    "size": 4289465704,
+    "mtime_ns": 1795285189996156130,
+    "inode": 3454727636
+  },
+  "quant_model_weights-00016-of-00072.safetensors": {
+    "size": 4294141136,
+    "mtime_ns": 1795285033210170905,
+    "inode": 3454727637
+  },
+  "quant_model_weights-00017-of-00072.safetensors": {
+    "size": 4290123392,
+    "mtime_ns": 1795285504768172390,
+    "inode": 3454727638
+  },
+  "quant_model_weights-00018-of-00072.safetensors": {
+    "size": 1498031712,
+    "mtime_ns": 1795285308804691584,
+    "inode": 3454727639
+  },
+  "quant_model_weights-00019-of-00072.safetensors": {
+    "size": 4294756512,
+    "mtime_ns": 1795286431871566182,
+    "inode": 3454727641
+  },
+  "quant_model_weights-00020-of-00072.safetensors": {
+    "size": 4293782080,
+    "mtime_ns": 1795286506642422106,
+    "inode": 3454727640
+  },
+  "quant_model_weights-00021-of-00072.safetensors": {
+    "size": 4294761376,
+    "mtime_ns": 1795286053641125334,
+    "inode": 3454727643
+  },
+  "quant_model_weights-00022-of-00072.safetensors": {
+    "size": 4295028200,
+    "mtime_ns": 1795286248864577889,
+    "inode": 3454727642
+  },
+  "quant_model_weights-00023-of-00072.safetensors": {
+    "size": 4283791352,
+    "mtime_ns": 1795287241154477300,
+    "inode": 3454727646
+  },
+  "quant_model_weights-00024-of-00072.safetensors": {
+    "size": 4295056432,
+    "mtime_ns": 1795287637497664101,
+    "inode": 3454727647
+  },
+  "quant_model_weights-00025-of-00072.safetensors": {
+    "size": 4291628432,
+    "mtime_ns": 1795287177120031460,
+    "inode": 3454727644
+  },
+  "quant_model_weights-00026-of-00072.safetensors": {
+    "size": 4290016872,
+    "mtime_ns": 1795287225113864617,
+    "inode": 3454727645
+  },
+  "quant_model_weights-00027-of-00072.safetensors": {
+    "size": 1346825864,
+    "mtime_ns": 1795287645457969598,
+    "inode": 3454727650
+  },
+  "quant_model_weights-00028-of-00072.safetensors": {
+    "size": 4295114896,
+    "mtime_ns": 1795287766966632801,
+    "inode": 3454727651
+  },
+  "quant_model_weights-00029-of-00072.safetensors": {
+    "size": 4295249504,
+    "mtime_ns": 1795288410071313575,
+    "inode": 3454727648
+  },
+  "quant_model_weights-00030-of-00072.safetensors": {
+    "size": 4292893568,
+    "mtime_ns": 1795288667829205689,
+    "inode": 3454727649
+  },
+  "quant_model_weights-00031-of-00072.safetensors": {
+    "size": 4294698152,
+    "mtime_ns": 1795288610783016396,
+    "inode": 3454727652
+  },
+  "quant_model_weights-00032-of-00072.safetensors": {
+    "size": 4291361536,
+    "mtime_ns": 1795288859308554195,
+    "inode": 3454727653
+  },
+  "quant_model_weights-00033-of-00072.safetensors": {
+    "size": 4289972760,
+    "mtime_ns": 1795289834121777413,
+    "inode": 3454727654
+  },
+  "quant_model_weights-00034-of-00072.safetensors": {
+    "size": 4294998904,
+    "mtime_ns": 1795290364938045691,
+    "inode": 3454727656
+  },
+  "quant_model_weights-00035-of-00072.safetensors": {
+    "size": 4290759864,
+    "mtime_ns": 1795290086999433099,
+    "inode": 3454727655
+  },
+  "quant_model_weights-00036-of-00072.safetensors": {
+    "size": 1256249776,
+    "mtime_ns": 1795289698600602777,
+    "inode": 3454727657
+  },
+  "quant_model_weights-00037-of-00072.safetensors": {
+    "size": 4292668624,
+    "mtime_ns": 1795290519971965772,
+    "inode": 3454727661
+  },
+  "quant_model_weights-00038-of-00072.safetensors": {
+    "size": 4294435936,
+    "mtime_ns": 1795290460765704700,
+    "inode": 3454727658
+  },
+  "quant_model_weights-00039-of-00072.safetensors": {
+    "size": 4294436056,
+    "mtime_ns": 1795290524508139010,
+    "inode": 3454727660
+  },
+  "quant_model_weights-00040-of-00072.safetensors": {
+    "size": 4292074768,
+    "mtime_ns": 1795290601855092922,
+    "inode": 3454727659
+  },
+  "quant_model_weights-00041-of-00072.safetensors": {
+    "size": 4294111528,
+    "mtime_ns": 1795290659713302550,
+    "inode": 3454727663
+  },
+  "quant_model_weights-00042-of-00072.safetensors": {
+    "size": 4291286520,
+    "mtime_ns": 1795290716231461002,
+    "inode": 3454727667
+  },
+  "quant_model_weights-00043-of-00072.safetensors": {
+    "size": 4290467128,
+    "mtime_ns": 1795290721779672890,
+    "inode": 3454727664
+  },
+  "quant_model_weights-00044-of-00072.safetensors": {
+    "size": 4295245720,
+    "mtime_ns": 1795290804098816692,
+    "inode": 3454727665
+  },
+  "quant_model_weights-00045-of-00072.safetensors": {
+    "size": 4230023800,
+    "mtime_ns": 1795290853884718035,
+    "inode": 3454727666
+  },
+  "quant_model_weights-00046-of-00072.safetensors": {
+    "size": 4294096744,
+    "mtime_ns": 1795290914095017491,
+    "inode": 3454727662
+  },
+  "quant_model_weights-00047-of-00072.safetensors": {
+    "size": 4291789768,
+    "mtime_ns": 1795290919147210436,
+    "inode": 3454727668
+  },
+  "quant_model_weights-00048-of-00072.safetensors": {
+    "size": 4294438456,
+    "mtime_ns": 1795290989837910143,
+    "inode": 3454727669
+  },
+  "quant_model_weights-00049-of-00072.safetensors": {
+    "size": 4293747976,
+    "mtime_ns": 1795291016118913825,
+    "inode": 3454727670
+  },
+  "quant_model_weights-00050-of-00072.safetensors": {
+    "size": 4291367784,
+    "mtime_ns": 1795291097778032420,
+    "inode": 3454727675
+  },
+  "quant_model_weights-00051-of-00072.safetensors": {
+    "size": 4293203896,
+    "mtime_ns": 1795291120982918624,
+    "inode": 3454727672
+  },
+  "quant_model_weights-00052-of-00072.safetensors": null,
+  "quant_model_weights-00053-of-00072.safetensors": null,
+  "quant_model_weights-00054-of-00072.safetensors": null,
+  "quant_model_weights-00055-of-00072.safetensors": null,
+  "quant_model_weights-00056-of-00072.safetensors": null,
+  "quant_model_weights-00057-of-00072.safetensors": null,
+  "quant_model_weights-00058-of-00072.safetensors": null,
+  "quant_model_weights-00059-of-00072.safetensors": null,
+  "quant_model_weights-00060-of-00072.safetensors": null,
+  "quant_model_weights-00061-of-00072.safetensors": null,
+  "quant_model_weights-00062-of-00072.safetensors": null,
+  "quant_model_weights-00063-of-00072.safetensors": null,
+  "quant_model_weights-00064-of-00072.safetensors": null,
+  "quant_model_weights-00065-of-00072.safetensors": null,
+  "quant_model_weights-00066-of-00072.safetensors": null,
+  "quant_model_weights-00067-of-00072.safetensors": null,
+  "quant_model_weights-00068-of-00072.safetensors": null,
+  "quant_model_weights-00069-of-00072.safetensors": null,
+  "quant_model_weights-00070-of-00072.safetensors": null,
+  "quant_model_weights-00071-of-00072.safetensors": null,
+  "quant_model_weights-00072-of-00072.safetensors": null,
+  "quant_model_weights.safetensors.index.json": null,
+  "release/msmodelslim/calib/mix_calib.jsonl": null,
+  "release/msmodelslim/patches/PATCHES.md": null,
+  "release/msmodelslim/patches/msmodelslim_v41_w4a8.patch": null,
+  "release/msmodelslim/recipes/deepseek_v4_1_flash_w4a8.yaml": null,
+  "release/msmodelslim/scripts/add_vision_weights.py": null,
+  "release/msmodelslim/scripts/apply_msmodelslim_patch.sh": null,
+  "release/msmodelslim/scripts/engram_convert_int8.py": null,
+  "release/msmodelslim/scripts/engram_dr_build.py": null,
+  "release/msmodelslim/scripts/make_dspark_ckpt.py": null,
+  "release/msmodelslim/scripts/make_qrot_vision_product.py": null,
+  "release/msmodelslim/scripts/mtpq_quantize_draft.py": null,
+  "release/msmodelslim/scripts/prepare_runtime_ckpt.py": null,
+  "release/msmodelslim/scripts/quant_dp_inner.sh": null,
+  "release/reports/quant-repro-accuracy.md": null,
+  "release/reports/quant-repro-validation.md": null,
+  "release/tools/check_release.sh": null,
+  "tokenizer.json": null,
+  "tokenizer_config.json": null,
+  "vision-00001-of-00001.safetensors": null
+}

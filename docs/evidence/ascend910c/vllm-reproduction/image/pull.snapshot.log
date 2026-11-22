@@ -1,0 +1,33 @@
+quay.nju.edu.cn/ascend/vllm-ascend@sha256:16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3: Pulling from ascend/vllm-ascend
+119d19e001ba: Already exists
+0f558e63da43: Already exists
+0223f5880560: Already exists
+31fed17ba85b: Already exists
+5a78e9f4bd0d: Already exists
+3dd4d7096f1f: Already exists
+d4db487e4127: Pulling fs layer
+3244087f9b69: Pulling fs layer
+36078230da0f: Pulling fs layer
+c70d5049ab14: Pulling fs layer
+b6b0fc017474: Pulling fs layer
+728a61a5e87f: Pulling fs layer
+c70d5049ab14: Waiting
+c91a61fb38b1: Pulling fs layer
+3a0cc6f24064: Pulling fs layer
+0525a0674dc7: Pulling fs layer
+728a61a5e87f: Waiting
+954deb54a6b2: Pulling fs layer
+eaa67cb50349: Pulling fs layer
+c91a61fb38b1: Waiting
+bff762a0ce2a: Pulling fs layer
+0525a0674dc7: Waiting
+3a0cc6f24064: Waiting
+954deb54a6b2: Waiting
+eaa67cb50349: Waiting
+bff762a0ce2a: Waiting
+d4db487e4127: Download complete
+d4db487e4127: Pull complete
+c70d5049ab14: Verifying Checksum
+c70d5049ab14: Download complete
+36078230da0f: Verifying Checksum
+36078230da0f: Download complete

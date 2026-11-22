@@ -1,0 +1,71 @@
+{
+  "ms-model": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend",
+    "utc": "2026-11-21T13:07:41.259459+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "ms-revisions": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/revisions",
+    "utc": "2026-11-21T13:07:41.260293+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "ms-files": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo/files?Revision=master&Recursive=true",
+    "utc": "2026-11-21T13:07:41.260441+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "github-repo": {
+    "url": "https://api.github.com/repos/chiro2001/deepseek-v4.1-flash-ascend910B",
+    "utc": "2026-11-21T13:07:41.260558+00:00",
+    "status": 403,
+    "final_url": "https://api.github.com/repos/chiro2001/deepseek-v4.1-flash-ascend910B",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:07:41 GMT",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "truncated": false,
+    "body_sha256": "bbfde17254415f38b322dffaa0c5f56816b182a80923e40f7592811aa766f35e"
+  },
+  "github-readme": {
+    "url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/main/README.md",
+    "utc": "2026-11-21T13:07:41.260694+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/chiro2001/deepseek-v4.1-flash-ascend910B/main/README.md",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Sat, 21 Nov 2026 13:07:41 GMT"
+    },
+    "truncated": false,
+    "body_sha256": "b25b91e6fd498e02ab14022ea748f34d5f61bd60363ebb2ec45a44023cbd0c94"
+  },
+  "nju-manifest": {
+    "url": "https://quay.nju.edu.cn/v2/ascend/vllm-ascend/manifests/deepseek-v4.1-flash-a3",
+    "utc": "2026-11-21T13:07:41.260901+00:00",
+    "transport_error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)>"
+  },
+  "quay-manifest": {
+    "url": "https://quay.io/v2/ascend/vllm-ascend/manifests/deepseek-v4.1-flash-a3",
+    "utc": "2026-11-21T13:07:41.261068+00:00",
+    "status": 200,
+    "final_url": "https://quay.io/v2/ascend/vllm-ascend/manifests/deepseek-v4.1-flash-a3",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:07:42 GMT",
+      "Content-Type": "application/vnd.oci.image.index.v1+json",
+      "Docker-Content-Digest": "sha256:2c906b38ad3cc9ed9badfe3d09451d194fa09a07e5c6d62a66b111731e626060"
+    },
+    "truncated": false,
+    "body_sha256": "2c906b38ad3cc9ed9badfe3d09451d194fa09a07e5c6d62a66b111731e626060"
+  },
+  "quay-tag": {
+    "url": "https://quay.io/api/v1/repository/ascend/vllm-ascend/tag/?specificTag=deepseek-v4.1-flash-a3",
+    "utc": "2026-11-21T13:07:41.261275+00:00",
+    "status": 200,
+    "final_url": "https://quay.io/api/v1/repository/ascend/vllm-ascend/tag/?specificTag=deepseek-v4.1-flash-a3",
+    "headers": {
+      "Date": "Sat, 21 Nov 2026 13:07:42 GMT",
+      "Content-Type": "application/json"
+    },
+    "truncated": false,
+    "body_sha256": "047c25516c25bf861114b19422d3d9a8d6a12769f1fcacc0a6b41518cac3bbdd"
+  }
+}

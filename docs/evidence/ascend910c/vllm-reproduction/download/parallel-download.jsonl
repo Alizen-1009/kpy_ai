@@ -1,0 +1,15 @@
+{"event": "process", "pid": 2210671, "start_ticks": "175934799", "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15", "started_unix": 1795267964.6156163, "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_parallel.py", "tool_sha256": "32a59ee9f1a77d6680fd8d02c5c3df27de472c51984661692859729cc40e9d68", "args": ["--workers", "4", "--resume", "--direct", "--execute"]}
+{"event": "verified_existing", "path": ".gitattributes"}
+{"event": "verified_existing", "path": "README.md"}
+{"event": "verified_existing", "path": "config.json"}
+{"event": "verified_existing", "path": "configuration.json"}
+{"event": "verified_existing", "path": "engram_extra.safetensors"}
+{"event": "verified_existing", "path": "engram_int8/PARTS.sha256"}
+{"event": "download", "path": "engram_int8/layers_14_engram_embed.scale.safetensors", "size": 12288533936}
+{"event": "download", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06", "size": 17179869184}
+{"event": "download", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06", "size": 17179869184}
+{"event": "download", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06", "size": 17179869184}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}

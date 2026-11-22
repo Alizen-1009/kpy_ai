@@ -1,0 +1,30 @@
+{
+  "kind": "registry_only_not_execution",
+  "python": "3.12.13 (main, Aug  3 2026, 02:40:28) [GCC 11.4.0]",
+  "source_sha256": "765896163c8ca5dae9167875b9fb7ab5c667fd99e1354ebc8f2120cde0fac279",
+  "packages": {
+    "torchvision": "0.25.0+cpu",
+    "torchaudio": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post4",
+    "torch": "2.10.0+cpu",
+    "triton_ascend": "3.2.2",
+    "vllm_ascend": "0.1.dev4224+g5de6eab3c",
+    "vllm": "0.23.0+empty"
+  },
+  "torch": {
+    "file": "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/__init__.py"
+  },
+  "torch_npu": {
+    "file": "/usr/local/python3.12.13/lib/python3.12/site-packages/torch_npu/__init__.py"
+  },
+  "vllm_ascend": {
+    "file": "/vllm-workspace/vllm-ascend/vllm_ascend/__init__.py"
+  },
+  "vllm_ascend._C": {
+    "error": "Traceback (most recent call last):\n  File \"/probe/probe_grouped_inventory.py\", line 8, in <module>\n    m = importlib.import_module(name)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/python3.12.13/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'vllm_ascend._C'\n"
+  },
+  "npu.npu_grouped_matmul": "{'': npu::npu_grouped_matmul(Tensor[] x, Tensor[] weight, *, Tensor[]? bias=None, Tensor[]? scale=None, Tensor[]? offset=None, Tensor[]? antiquant_scale=None, Tensor[]? antiquant_offset=None, Tensor[]? per_token_scale=None, Tensor? group_list=None, Tensor[]? activation_input=None, Tensor[]? activation_quant_scale=None, Tensor[]? activation_quant_offset=None, int? split_item=0, int? group_type=None, int? group_list_type=0, int? act_type=0, int[]? tuning_config=None, int? output_dtype=None, int? x_dtype=None, int? weight_dtype=None, int? scale_dtype=None, int? per_token_scale_dtype=None) -> Tensor[], 'List': npu::npu_grouped_matmul.List(Tensor[] x, Tensor[] weight, *, Tensor[]? bias=None, Tensor[]? scale=None, Tensor[]? offset=None, Tensor[]? antiquant_scale=None, Tensor[]? antiquant_offset=None, Tensor[]? per_token_scale=None, int[]? group_list=None, Tensor[]? activation_input=None, Tensor[]? activation_quant_scale=None, Tensor[]? activation_quant_offset=None, int? split_item=0, int? group_type=None, int? group_list_type=0, int? act_type=0, ScalarType? output_dtype=None) -> Tensor[]}",
+  "_C_ascend.grouped_matmul_swiglu_quant_v2": {
+    "error": "Traceback (most recent call last):\n  File \"/probe/probe_grouped_inventory.py\", line 16, in <module>\n    r[ns+'.'+op] = str(getattr(getattr(torch.ops,ns),op)._schemas)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py\", line 1319, in __getattr__\n    raise AttributeError(\nAttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'grouped_matmul_swiglu_quant_v2'\n"
+  }
+}

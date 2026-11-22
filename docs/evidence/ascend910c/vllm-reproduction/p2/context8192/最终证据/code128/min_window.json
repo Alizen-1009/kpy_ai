@@ -1,0 +1,118 @@
+{
+  "task": "min_window",
+  "request": {
+    "model": "p2-8192-20261121T224721Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-min_window]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回 text 中覆盖 pattern 全部字符及其重复次数的最短连续子串。若有多个同长答案，返回最靠左者；pattern 为空或不存在满足条件的子串时返回空字符串。大小写敏感。\n函数签名：def min_window(text, pattern):\n示例：例如 text=\"ADOBECODEBANC\", pattern=\"ABC\" 返回 \"BANC\"。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 153,
+    "total_tokens": 402,
+    "completion_tokens": 249,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 17,
+    "total": 17,
+    "case_results": [
+      {
+        "id": "empty-pattern",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "no-match",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "multiplicity",
+        "passed": true,
+        "actual": "\"aabdec\""
+      },
+      {
+        "id": "leftmost-tie",
+        "passed": true,
+        "actual": "\"ab\""
+      },
+      {
+        "id": "classic",
+        "passed": true,
+        "actual": "\"BANC\""
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "\"a\""
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "\"cbcc\""
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "\"b\""
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "\"a\""
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "\"c\""
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "\"acb\""
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "\"ba\""
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def min_window(text, pattern):\n    if not pattern or not text:\n        return \"\"\n    need = {}\n    for ch in pattern:\n        need[ch] = need.get(ch, 0) + 1\n    required = len(need)\n    formed = 0\n    window_counts = {}\n    left = 0\n    best_len = float('inf')\n    best_left = 0\n    for right, ch in enumerate(text):\n        window_counts[ch] = window_counts.get(ch, 0) + 1\n        if ch in need and window_counts[ch] == need[ch]:\n            formed += 1\n        while left <= right and formed == required:\n            if right - left + 1 < best_len:\n                best_len = right - left + 1\n                best_left = left\n            left_ch = text[left]\n            window_counts[left_ch] -= 1\n            if left_ch in need and window_counts[left_ch] < need[left_ch]:\n                formed -= 1\n            left += 1\n    if best_len == float('inf'):\n        return \"\"\n    return text[best_left:best_left + best_len]\n",
+    "extracted_code_sha256": "3bdcccd43d8eaba83dcbe0c31755344a17c3252ba677d666cf2ae5a61af48779"
+  }
+}

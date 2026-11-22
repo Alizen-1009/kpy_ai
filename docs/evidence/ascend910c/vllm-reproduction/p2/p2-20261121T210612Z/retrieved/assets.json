@@ -1,0 +1,63 @@
+{
+  "download_bytes": 4917006,
+  "files": [
+    {
+      "path": "LICENSE",
+      "available": true,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "tests/acc_eval.py",
+      "available": true,
+      "sha256": "aad813de1b1af090c4186b0a443b7839339928f90b63e7c3a654d0e028b8e6e2"
+    },
+    {
+      "path": "tests/vision_accuracy_check.py",
+      "available": true,
+      "sha256": "af13bc4785bfcddcd46a398fe7611c6942a4875e1eee8c767ce31148ebee675f"
+    },
+    {
+      "path": "experiments/delivery_matrix/workloads.py",
+      "available": true,
+      "sha256": "62db3507dd74ea69406a940963f93414ae2e9f87aa77424f8204f5c9b7ce4d35"
+    },
+    {
+      "path": "experiments/delivery_matrix/benchmark.py",
+      "available": true,
+      "sha256": "b39d9c3ddc44701d7463f0ee2b2a36b55e01fd6fe69fab85b11db20e8651f666"
+    },
+    {
+      "path": "experiments/operator_stack/parallel_tiny/dspark_general_quality_api_cpu/scoring.py",
+      "available": true,
+      "sha256": "4369e659ed465d8fe0b3812da0743a375acaedde95b8ad0e1514d36751399832"
+    },
+    {
+      "path": "experiments/operator_stack/parallel_tiny/dspark_general_quality_api_cpu/evidence/evaluator_sources.json",
+      "available": true,
+      "sha256": "a5c80ac30770971be7afdca675a4c653a5a77ee8646dd444e728343cf8341ac8"
+    },
+    {
+      "path": "tools/ced_pd_acceptance.py",
+      "available": true,
+      "sha256": "d12d746f1831431e6c6aa55447ae3b2d9a04e15b58800d505aaad508b7eff71e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/LICENSE",
+      "path": "gsm8k/LICENSE",
+      "bytes": 1062,
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/train.jsonl",
+      "path": "gsm8k/train.jsonl",
+      "bytes": 4166206,
+      "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/test.jsonl",
+      "path": "gsm8k/test.jsonl",
+      "bytes": 749738,
+      "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14"
+    }
+  ]
+}

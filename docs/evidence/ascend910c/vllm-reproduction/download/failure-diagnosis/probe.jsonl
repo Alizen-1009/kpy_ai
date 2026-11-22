@@ -1,0 +1,18 @@
+{"event": "pid_absent", "pid": 2210671}
+{"event": "budget", "free": 508214767616, "remaining": 158065939608, "extra": 196613849824, "reserve": 68719476736, "required": 423399266168}
+{"event": "sizes", "path": "quant_model_weights-00033-of-00072.safetensors", "expected": 4289972760, "sha256": "9142781f56ed977f52a73d3eaf4bba77367216b2ebe69a0553ebe2850992dcc5", "sizes": {"": null, ".part": 2265972736, ".part.lock": null}}
+{"event": "redirect", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
+{"event": "range_headers", "path": "quant_model_weights-00033-of-00072.safetensors", "status": 206, "content_range": "bytes 2264924160-2265972735/4289972760", "hostname": "cdn-lfs-cn-1.modelscope.cn", "start": 2264924160, "end": 2265972735}
+{"event": "range_body", "path": "quant_model_weights-00033-of-00072.safetensors", "bytes": 1048576, "expected": 1048576, "tail_match": true}
+{"event": "sizes", "path": "quant_model_weights-00034-of-00072.safetensors", "expected": 4294998904, "sha256": "4904a9aedbbb056f24d633322d44baeea35f708409598e336705d8e1b694c6c3", "sizes": {"": null, ".part": 1111490560, ".part.lock": null}}
+{"event": "redirect", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
+{"event": "range_headers", "path": "quant_model_weights-00034-of-00072.safetensors", "status": 206, "content_range": "bytes 1110441984-1111490559/4294998904", "hostname": "cdn-lfs-cn-1.modelscope.cn", "start": 1110441984, "end": 1111490559}
+{"event": "range_body", "path": "quant_model_weights-00034-of-00072.safetensors", "bytes": 1048576, "expected": 1048576, "tail_match": true}
+{"event": "sizes", "path": "quant_model_weights-00035-of-00072.safetensors", "expected": 4290759864, "sha256": "83761d078a38ba9708b09ed7a372c283f7f86b8d1031348f445a6ed87ec5d1fd", "sizes": {"": null, ".part": 794786553, ".part.lock": null}}
+{"event": "redirect", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
+{"event": "range_headers", "path": "quant_model_weights-00035-of-00072.safetensors", "status": 206, "content_range": "bytes 793737977-794786552/4290759864", "hostname": "cdn-lfs-cn-1.modelscope.cn", "start": 793737977, "end": 794786552}
+{"event": "range_body", "path": "quant_model_weights-00035-of-00072.safetensors", "bytes": 1048576, "expected": 1048576, "tail_match": true}
+{"event": "sizes", "path": "quant_model_weights-00036-of-00072.safetensors", "expected": 1256249776, "sha256": "db435023c4490f7191a73fc4ca8b7d7d0f3420215e9eac4dfa5e8959c305765e", "sizes": {"": null, ".part": 0, ".part.lock": null}}
+{"event": "redirect", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
+{"event": "range_headers", "path": "quant_model_weights-00036-of-00072.safetensors", "status": 206, "content_range": "bytes 0-0/1256249776", "hostname": "cdn-lfs-cn-1.modelscope.cn", "start": 0, "end": 0}
+{"event": "range_body", "path": "quant_model_weights-00036-of-00072.safetensors", "bytes": 1, "expected": 1, "tail_match": false}

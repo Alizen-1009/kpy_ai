@@ -1,0 +1,27 @@
+usage: acc_eval.py [-h] [--task TASK] [--limit LIMIT] [--base-url BASE_URL]
+                   [--base BASE_URL] [--model MODEL]
+                   [--gsm8k-data-dir GSM8K_DATA_DIR] [--enc-dir ENC_DIR]
+                   [--conc CONC] [--mode {chat,thinking}] [--effort EFFORT]
+                   [--max-tokens MAX_TOKENS] --out OUT [--tag TAG]
+                   [--serialize-prefill SERIALIZE_PREFILL]
+
+options:
+  -h, --help            show this help message and exit
+  --task TASK
+  --limit LIMIT
+  --base-url BASE_URL
+  --base BASE_URL       --base-url 的别名
+  --model MODEL         Exact served model name
+  --gsm8k-data-dir GSM8K_DATA_DIR
+                        Official train.jsonl/test.jsonl; same 8-shot order, no
+                        datasets dependency
+  --enc-dir ENC_DIR     官方 encoding 目录（覆盖环境变量 ENC_DIR 与默认猜测）
+  --conc CONC
+  --mode {chat,thinking}
+  --effort EFFORT
+  --max-tokens MAX_TOKENS
+  --out OUT
+  --tag TAG
+  --serialize-prefill SERIALIZE_PREFILL
+                        1=hold a global lock until first token (avoid
+                        concurrent prefills)

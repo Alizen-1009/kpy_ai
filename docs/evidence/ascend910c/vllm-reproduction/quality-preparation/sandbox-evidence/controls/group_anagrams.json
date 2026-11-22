@@ -1,0 +1,94 @@
+{
+  "task": "group_anagrams",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "empty-words",
+        "passed": true,
+        "actual": "[[\"\",\"\"],[\"a\"]]"
+      },
+      {
+        "id": "stable-order",
+        "passed": true,
+        "actual": "[[\"eat\",\"tea\",\"ate\"],[\"tan\"]]"
+      },
+      {
+        "id": "case-sensitive",
+        "passed": true,
+        "actual": "[[\"Ab\"],[\"ba\",\"ab\"]]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[[\"aac\"],[\"\",\"\",\"\"],[\"bbbc\"],[\"a\",\"a\"],[\"c\"],[\"bbc\"],[\"caaa\"],[\"cb\"],[\"b\"]]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[[\"\",\"\",\"\",\"\",\"\",\"\"],[\"bbaa\"],[\"bbca\"],[\"cba\"]]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[[\"ccabb\"],[\"b\"],[\"\"],[\"cc\"]]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[[\"\"],[\"babc\"],[\"aa\"],[\"aaa\"]]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[[\"\",\"\"],[\"acaa\"],[\"baa\"],[\"acba\"]]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[[\"c\",\"c\"],[\"cbbca\"],[\"acca\"],[\"bbca\"],[\"\"],[\"b\"],[\"bacbb\"]]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[[\"bbc\"],[\"abccc\"],[\"aac\"]]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[[\"aba\"],[\"aacbc\"],[\"ca\",\"ac\",\"ca\"],[\"ba\"],[\"bcca\"],[\"\"],[\"abcb\"],[\"acc\"],[\"aaabb\"],[\"caa\"],[\"bbcac\"]]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[[\"cacca\"]]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[[\"c\",\"c\"],[\"acca\"],[\"bbab\"],[\"bccc\"],[\"bac\"],[\"cb\"],[\"bbc\"],[\"ccccb\"],[\"a\"],[\"\",\"\"]]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[[\"\"],[\"ccccb\"],[\"acac\"],[\"aa\"],[\"acc\"],[\"cbaa\"],[\"bc\"],[\"bbc\"],[\"c\"],[\"aaa\"],[\"ccab\"]]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[[\"accb\"],[\"ac\"],[\"baa\"]]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def group_anagrams(words):\n    groups = {}\n    for word in words: groups.setdefault(''.join(sorted(word)),[]).append(word)\n    return list(groups.values())\n",
+    "extracted_code_sha256": "795682a1b7cf579a4073f4ca0f1932dce7e02483c6ea55efb9c8f75a10564915"
+  }
+}

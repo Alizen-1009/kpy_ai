@@ -1,0 +1,137 @@
+{
+  "purpose": "scorer validation only; not model Code128 score",
+  "image": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+  "positive": {
+    "passed": 128,
+    "total": 128,
+    "tasks_passed": 8
+  },
+  "wrong": {
+    "status": "fail",
+    "passed": 0,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "all-same",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "middle-repeat",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "unicode",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-00",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-01",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-02",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-03",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-04",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-05",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-06",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-07",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-08",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-09",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-10",
+        "passed": false,
+        "actual": "-1"
+      },
+      {
+        "id": "random-11",
+        "passed": false,
+        "actual": "-1"
+      }
+    ],
+    "failed_case_ids": [
+      "empty",
+      "all-same",
+      "middle-repeat",
+      "unicode",
+      "random-00",
+      "random-01",
+      "random-02",
+      "random-03",
+      "random-04",
+      "random-05",
+      "random-06",
+      "random-07",
+      "random-08",
+      "random-09",
+      "random-10",
+      "random-11"
+    ],
+    "isolation": "docker",
+    "extracted_code": "def longest_unique_substring(text):\n    return -1\n",
+    "extracted_code_sha256": "a6d4732a6a9ea831674e54b8da98cfebc199d3d129c2c35b87bb89d64fe78dba"
+  },
+  "loop": {
+    "status": "sandbox_error",
+    "error": "sandbox exited -9",
+    "passed": 0,
+    "total": 16,
+    "case_results": [],
+    "isolation": "docker",
+    "extracted_code": "def longest_unique_substring(text):\n    while True: pass\n",
+    "extracted_code_sha256": "c700285ae7e03270bebe6846c2e968932f44cd88d07c77208695a5d53ac53406"
+  },
+  "flood": {
+    "status": "sandbox_error",
+    "error": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "passed": 0,
+    "total": 16,
+    "case_results": [],
+    "isolation": "docker",
+    "extracted_code": "def longest_unique_substring(text):\n    print('x'*2000000); return 0\n",
+    "extracted_code_sha256": "ec0681426e5e2154ad7df5f895de98069d41d7bb76eab0e6c3e5b0eb64720344"
+  }
+}

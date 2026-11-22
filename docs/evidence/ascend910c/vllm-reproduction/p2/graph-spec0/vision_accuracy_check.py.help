@@ -1,0 +1,30 @@
+usage: vision_accuracy_check.py [-h] [--server SERVER]
+                                [--images-dir IMAGES_DIR]
+                                [--official-dir OFFICIAL_DIR] [--model MODEL]
+                                [--cases CASES] [--out OUT]
+                                [--max-tokens MAX_TOKENS]
+                                [--temperature TEMPERATURE]
+                                [--timeout TIMEOUT]
+                                [--min-hit-rate MIN_HIT_RATE] [--no-stream]
+                                [--no-measure-image-tokens] [--expect-dspark]
+                                [--self-test] [--dry-run]
+
+vision_accuracy_check.py — end-to-end vision acceptance probe for a served
+
+options:
+  -h, --help            show this help message and exit
+  --server SERVER
+  --images-dir IMAGES_DIR
+  --official-dir OFFICIAL_DIR
+  --model MODEL
+  --cases CASES         optional JSON list overriding the built-in suite
+  --out OUT
+  --max-tokens MAX_TOKENS
+  --temperature TEMPERATURE
+  --timeout TIMEOUT
+  --min-hit-rate MIN_HIT_RATE
+  --no-stream           disable SSE (TTFT unavailable)
+  --no-measure-image-tokens
+  --expect-dspark       record/warn about vllm:spec_decode_* metrics
+  --self-test
+  --dry-run

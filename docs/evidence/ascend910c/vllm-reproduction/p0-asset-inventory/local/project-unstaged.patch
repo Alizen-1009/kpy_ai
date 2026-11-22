@@ -1,0 +1,71 @@
+diff --git a/docs/deepseek-v4.1-flash-910c-status.md b/docs/deepseek-v4.1-flash-910c-status.md
+index a29dad4..ff15166 100644
+--- a/docs/deepseek-v4.1-flash-910c-status.md
++++ b/docs/deepseek-v4.1-flash-910c-status.md
+@@ -1,6 +1,10 @@
+ # DeepSeek-V4.1-Flash 在 910C 上的优化：当前理解与已有工作
+ 
+-## 1. 项目决定与文档范围
++> **最新主线已切换：vLLM-Ascend 发布 W4A8 方案复现。** 用户允许调整权重、优先W4；DeepInfer暂停新增优化并保留历史结果。下文关于“必须DeepInfer”和“仅官方原始权重”的决定属于历史阶段，已被最新决定替代，不应继续作为约束。
++>
++> 下一会话先读 [vLLM-Ascend handoff](vllm-ascend-910c-handoff.md)，按 [新复现计划](vllm-ascend-910c-reproduction-plan.md) 从只读资产盘点开始。新服务尚未部署；不继承历史验收为新方案通过。
++
++## 1. 项目决定与文档范围（历史记录）
+ 
+ 本项目确定以 **DeepSeek-V4.1-Flash** 为主优化模型，硬件为现有 SSH 别名 `910c` 对应的 Ascend 服务器。不再以 V4、GLM 或 Qwen 作为当前主线。
+ 
+@@ -95,7 +99,41 @@
+ - 固定顺序 FP32 mHC 规约通过 die 8 严格 BF16 压测，未放宽容差；旧 CPU BLAS/NPU 差异报告保留。RoPE、CPU 常驻 Engram、原始 FP4/FP8 cache、C1/C2 与 sparse attention 通过受控验证。
+ - 最终 196 项 CPU、die 8 的 22 项用例通过，覆盖真实双层 `V4Attention` 的 3-token prefill、5 步 decode 和逐字节 cache replay，以及 prepared `ModelRunner` 驱动的单层 `DeepseekModel`（Engram、mHC、C2/index/SWA、FP8/FP4 MoE）prefill/3 步 decode。HCCL 仅使用跨物理卡 dies 8/10，两 rank 各 15 个组件用例通过。见[适配记录第 12 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#12-阶段-3mhcropeengram原始-kv-及-eager-attention)和[证据目录](evidence/ascend910c/stage3/)。
+ - 官方 candidate-block 已接通并验证双层 160-token prefill、20 步 decode；197 项 CPU、die 8 的 23 项 all 用例通过。[记录第 13 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#13-阶段-3candidate-block-源层与消费层)。
+-- **阶段 3 不标记完成**：vision/VL、实际 scheduler/sampler 及多 rank 模型组合执行仍需各自的运行证据。未读取官方权重 payload，未开始阶段 4–5。
++- 后续真实 ViT/aligner 与 prepared VL 前向已通过有界合成验证，见下节；实际 scheduler/sampler 及多 rank 模型组合执行仍缺证据，**阶段 3 不标记完成**。未读取官方权重 payload，未开始阶段 4–5。
++
++### 阶段 3 续作：真实视觉/VL 有界 eager 前向通过
++
++- `official_910c` 显式分支接通真实 ViT 的 BF16 投影/残差、RMSNorm、2D RoPE、逐图完整非因果 softmax、SwiGLU，以及 RGB patchify、downsample、aligner 与 image/special token 注入。native 默认保留；投影只拆独立行，RoPE 保持 FP32，完整 checkpoint 分配保护未移除。
++- **210 项 CPU 回归、仅 die8 的 all 24 项 NPU 检查通过**。两张不同尺寸图像包含 padding、downsample 尾块；有独立 CPU 逐层数学参考、图像隔离逐位验证和 70-token 全图 softmax 检查。实际 `DeepseekVLForCausalLM` 经 prepared runner 跑 6-token 双图 prefill、2 步 decode，并与 fresh VL prefill 比较；包含 Engram/mHC/attention/MoE/head。
++- 这是缩小尺寸/层数的合成权重，不是官方视觉 payload 或全规模运行。主机原源码完整保留，验证在独立副本中进行。die8 峰值分配 41,550,336 bytes；容器退出 0 并移除，前后快照保留。CPU 初始旧 AST 测试作用域失败也保留；native RoPE dtype 审查问题已修复并加入回归。
++- 证据：`docs/evidence/ascend910c/stage3/official_stage3_vision_cpu_20261119T124359854353335_yh.json`、`operand_die8_20261119T124359900019795_yh/`；详细接口、范围和可复现入口见[适配记录第 14 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#14-阶段-3真实-vitaligner-与-prepared-vl-前向)。
++- 本节当时下一项为实际 scheduler/sampler 与 EP 多 rank 模型联合执行；现已完成，见下一节。
++
++### 阶段 3 验收完成：实际调度生成与跨卡联合模型
++
++- **阶段 3 在有界合成执行链范围内完成**。[验收清单](evidence/ascend910c/stage3/stage3_acceptance_yh.json)绑定最终报告、SHA256、清理证明与边界；[完整记录第 15 节](../ref/DeepInfer/doc/ascend910c-official-operand.md#15-阶段-3-验收真实调度生成链与跨卡-ep-模型联合执行)。阶段 4–5 未开始，不能据此宣称官方模型推理完成。
++- 真实 native `Scheduler → SequenceMetadata/ModelMetadata → ModelRunner → decoder → Sampler → post_process → Scheduler.process_outputs` 已执行，不再绕过输入准备或伪造输出历史。显式 eager sampler 保留 BF16 LM-head/FP32 logits，并按 CPU stable top-p/top-k/log-softmax 与 SplitMix64 CDF 参考采样；native 默认路径保留，CP>1、MTP、ZOS、grammar 等未支持配置明确拒绝。
++- **217 项 CPU 回归无 skip、die8 all 25 项、dies8/10 跨物理卡 HCCL 每 rank 16 项、Gloo 每 rank 15 项通过。** HCCL 新增单层真实 decoder/CPU Engram owner 分片/EP2 raw-FP4 MoE/实际调度与采样联合用例；两个不同 prompt origin，每 rank 14 token、4 prefill/10 decode，对照独立 singleton CPU 模型。
++- 逐步验证生成 token 回填、raw/compressed 历史、位置、长度/EOS 停止与完整 block/state 回收。token/token-logprob 和 prompt-logprob 对数学参考零容差，seed91 重复输出一致。native 零填充页 -1 与逐 token gate 标志两处真实契约缺口已补先失败后通过的回归，初始失败报告保留。
++- 最终证据：`official_stage3_scheduler_cpu_20261119T131151489687003_yh.json`、`operand_die8_20261119T131226055833314_yh/`、`ep_die8_10_20261119T131151506576596_yh/`、`stage3_final_gloo_20261119T131226056240279_yh/`。全部源码 hash 已对当前文件核对；NPU 容器退出0并清理，峰值 die8 all 41,550,336 bytes / HCCL 各 rank 34,498,048 bytes，均非全模型预算。
++- 上述是上一轮执行链证据；原始标准/官方几何缺口随后按下节补齐。未读取官方 payload；完整 40 层、内存可行性、生产 batching/preemption、跨 rank candidate-block decoder、Graph、CP>1、DSpark、长上下文及 GPU/950 硬件没有验收。全量 checkpoint allocation guard 保留，不改变持久 cache 精度，不使用 W8A8/离线重新量化替代。
++
++### 阶段 1–3 原始标准复核与官方几何补验
++
++- [完整标准矩阵](../ref/DeepInfer/doc/ascend910c-stage123-acceptance.md) 从修改前固定 Git `4e8adcf` 的原计划还原标准，不以新 TODO checkbox 为依据。历史原始执行记录显示：stage1通过 **11-17 16:23:10** → stage2跨卡通过 **17:21:10** → stage3部分执行 **11-18 11:17:45** → 本轮补齐 **11-19 13:42–13:43**。
++- 原计划把“真实官方 payload/完整预算”明确放在stage4，把“官方模型加载/推理”放在stage5，因此stage3可使用合成权重，但仍须真实模块、scheduler/sampler及多rank联合模型。此前缺少完整标准矩阵和原§13“实际配置/局部预算”的充分证据，本轮补齐。
++- 检查复现了真实遗漏：官方最小正方形图像 **1521 patch × 1024** 超过旧视觉1M总元素限制。已将有界activation与1M FP32 scratch分离，以行/head/query分块，保持完整每图softmax；CPU/die8在实际1024宽、16heads、2816FFN上通过，观察到最大显式FP32 scratch **973,440元素**。完整weight/scale的21种官方几何只做meta声明，不删除全模型分配保护，不冒充总预算。
++- **最新CPU222项无skip、die8 all26项、HCCL每rank16项、Gloo每rank15项通过。** [原标准审计17/17](evidence/ascend910c/stage3/stage123_criteria_audit_yh.json)核对阶段顺序、具名断言、轨迹、当前source hash与原loader AST；[反例测试2/2](evidence/ascend910c/stage3/stage123_audit_counterexamples_yh.json)证明完成声明和合法hash不能掩盖删除必要证据。
++- 该轮报告绑定在 [stage3_acceptance_yh.json](evidence/ascend910c/stage3/stage3_acceptance_yh.json)。**当时Stage1–3完成，Stage4–5未开始**；不外推完整官方尺寸scheduled VL、跨rank多层candidate共享、40层模型或所有路径笛卡尔组合。
++
++### Stage 4 与 Stage 5 均已正式验收
++
++- 原始标准/完整数字/证据链见 [Stage4–5验收记录](../ref/DeepInfer/doc/ascend910c-stage45-acceptance.md)。Stage4原始payload每次只读 **27,424,576 bytes**，CPU/die8各11项通过；包括真实5120→2304→5120完整专家，FP8投影、BF16 gate/vision/head、两张CPU Engram和实际mHC。除gate FP32误差7.39e-6外，报告的BF16及固定树测试均bit-exact；未改共享归档。
++- DP8/CP1/EP8/Engram8完整并行预算包含原始权重/SF、保守source/merge重叠、staging、实际CacheEngine、主/辅助state、framework/通信/解码workspace及host页缓存，峰值 **63,007,030,144 bytes/rank**，host **715,701,916,112 bytes**；不是只算KV字节单价。[receipt](evidence/ascend910c/stage4/stage4_receipt_yh.json)重新核对当前源码并重算预算，仍不单独授权完整分配。
++- 全量分配保留硬门禁：显式selector/receipt、精确8授权die、meta coverage/实际布局、实时HBM/host/cgroup及HF view+archive只读mount全部成立才执行。当前CPU **253项无skip**、shifted decoder die8诊断 **14项**通过。
++- Stage5已两次成功加载全部40层官方权重到8rank：每rankallocated **46,992,967,168 bytes**，原精度CPU Engram **25,344,768,768 bytes**。首轮发现nativeScheduler的page128/逻辑微批16容量约束，次轮实际执行全部40层后发现shifted-HC终端lazy mix单例batch维错误；两轮均正常移除容器，均不冒充生成通过。
++- HC错误已用真实tiny decoder0.324秒复现，修复仅在official模型末端对齐batch维，严格算子检查保持；CPU/NPU连续decode/replay回归通过。第三轮于 **2026-11-19 18:17** 启动，实际prefill及3次decode前向完成；8rank前三个token一致（首token为4），GPU head对独立CPU参考最大误差约2.9e-6。但最终fresh-prefill hidden对照失败（75.5%元素超既定容差，maxabs0.1787），未放宽容差、未跳过门禁，容器已清理。随后捕获定位首差异到layer30 FFN：真实状态重建与原decode逐位一致，证明mHC通用ReduceSum因batch相关FP32归约顺序在BF16 tie处引入一元素输入差异并放大。已改固定stream顺序FP32累加、最终一次BF16舍入，CPU253/NPU14及原始输入多行重放通过；未放宽容差或改精度。2026-11-20恢复授权SSH访问后，CPU/die8原始payload各11项重新通过，旧receipt确认拒绝新源码；[新receipt的8 rank独立复核](evidence/ascend910c/stage4/stage4_receipt_verified_mixorder_20261120T160059657834426_yh.json)通过。主机16:02以新receipt通过8–15全部idle guard，启动非诊断正式验证。
++- [Stage 5 确定性验收通过](evidence/ascend910c/stage5/stage5_full_8_15_20261120T160224094462081_yh/acceptance_yh.json)：8 个 rank 均完成 40 层 prefill、连续 3 次缓存 decode 和末步 fresh-prefill 重放，hidden 最大绝对差为 0，重放后提交第四个 token；生成 `[22, 271, 20, 13]`。四步均匹配独立 CPU head argmax，最大 logit 绝对误差 `2.861e-6`。每 rank 峰值分配 48,332,692,480 bytes、峰值保留 48,840,572,928 bytes，低于预算；block/state 全部回收，Docker exit 0，并[独立确认容器移除](evidence/ascend910c/stage5/stage5_full_8_15_20261120T160224094462081_yh/cleanup_independent_yh.json)。仅验收声明的短文本配置，不代表生产性能或通用质量。
+ 
+ ## 2. 模型结构与优化含义
+ 
+diff --git a/ref/DeepInfer b/ref/DeepInfer
+--- a/ref/DeepInfer
++++ b/ref/DeepInfer
+@@ -1 +1 @@
+-Subproject commit 4e8adcf006017cea76fa52487b57e3a4b90e1a24
++Subproject commit 4e8adcf006017cea76fa52487b57e3a4b90e1a24-dirty
+diff --git a/ref/deepseek-v4.1-flash-ascend910B b/ref/deepseek-v4.1-flash-ascend910B
+--- a/ref/deepseek-v4.1-flash-ascend910B
++++ b/ref/deepseek-v4.1-flash-ascend910B
+@@ -1 +1 @@
+-Subproject commit ab88ff84efa7970875f3f8cc38dfcb06c491b154
++Subproject commit ab88ff84efa7970875f3f8cc38dfcb06c491b154-dirty

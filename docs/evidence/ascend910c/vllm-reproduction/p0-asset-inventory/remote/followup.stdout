@@ -1,0 +1,21 @@
+sha256:77aea90962507771cfaf5304c926ee3f3539907eb59d37edb560177e7e7b4033 [] 23882916028
+ 
+SMALL_METADATA_SHA256 config.json 3311 8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879
+SMALL_METADATA_SHA256 tokenizer_config.json 801 6ac8c8dc065ed118161d02dd532749ae3f52c243deac27872134fae2f50d8547
+SMALL_METADATA_SHA256 tokenizer.json 6367257 c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b
+SMALL_METADATA_SHA256 configuration.json 26 563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467
+SMALL_METADATA_SHA256 model.safetensors.index.json 7470294 74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8
+KEY_GROUP engram 12 ['layers.14.engram.embed.weight', 'layers.14.engram.embed.scale', 'layers.14.engram.q_weight', 'layers.14.engram.k_weight', 'layers.14.engram.wkv.weight']
+KEY_GROUP draft 0 []
+KEY_GROUP vision 259 ['vision.patch_embed.proj.weight', 'vision.patch_embed.proj.bias', 'vision.blocks.0.norm1.weight', 'vision.blocks.0.attn.wqkv.weight', 'vision.blocks.0.attn.wqkv.bias']
+KEY_GROUP mtp 2401 ['mtp.0.hc_attn_base', 'mtp.0.hc_ffn_base', 'mtp.0.hc_attn_fn', 'mtp.0.hc_attn_scale', 'mtp.0.hc_ffn_fn']
+OFFICIAL_INVENTORY_SIZE_CHECK 84 []
+WORKSPACE_TOP [('envs_yh', 'dir'), ('cann92_runtime_yh', 'dir'), ('wheels_yh', 'dir'), ('conda_pkgs_yh', 'dir'), ('downloads_yh', 'dir'), ('tmp_yh', 'dir'), ('cann92_unpack_yh', 'dir'), ('cann92_sandbox_yh', 'dir'), ('src_yh', 'dir'), ('cann92_install_yh', 'dir'), ('scripts_yh', 'dir'), ('toolchain_yh', 'dir'), ('pip_cache_yh', 'dir'), ('reports_yh', 'dir'), ('logs_yh', 'dir'), ('home_yh', 'dir'), ('cann92_sdk_yh', 'dir'), ('cann92_rpm_root_yh', 'dir'), ('.compat_yh', 'dir'), ('OWNERSHIP_yh.txt', 'file'), ('references_yh', 'dir'), ('cpu-imports-yh.QkSNhow7', 'dir'), ('grouped_probe_20261121_yh', 'dir')]
+/usr/local/Ascend/cann/aarch64-linux/ascend_toolkit_install.info package_name=Ascend-cann-toolkit
+version=8.5.0
+innerversion=V100R001C25SPC001B232
+compatible_version=[V100R001C15],[V100R001C18],[V100R001C19],[V100R001C20],[V100R001C21],[V100R001C23]
+arch=aarch64
+os=linux
+path=/usr/local/Ascend/cann-8.5.0
+

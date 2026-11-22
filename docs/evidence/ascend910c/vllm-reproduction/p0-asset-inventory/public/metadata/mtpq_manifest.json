@@ -1,0 +1,196 @@
+{
+ "schema": "mtpq-draft-quant/1",
+ "generated_utc": "2026-09-15T16:11:31.524694+00:00",
+ "src": "/home/l00886679/models/out/quantval_20260915_2235/dspark",
+ "out": "/home/l00886679/models/out/quantval_20260915_2235/dspark-mtpq",
+ "options": {
+  "aggressive": false,
+  "quant_main_proj": false,
+  "quant_vocab": false,
+  "shard_gib": 3.0
+ },
+ "stats": {
+  "base_bytes": 31104279944,
+  "out_bytes": 10624294280,
+  "by_fmt": {
+   "FLOAT": 56,
+   "W8A8_DYNAMIC": 18,
+   "W4A8_DYNAMIC": 1152
+  },
+  "by_pattern": {
+   "mtp.N.attn.attn_sink": {
+    "n": 3,
+    "base": 768,
+    "out": 768
+   },
+   "mtp.N.attn.kv_norm.weight": {
+    "n": 3,
+    "base": 3072,
+    "out": 3072
+   },
+   "mtp.N.attn.q_norm.weight": {
+    "n": 3,
+    "base": 7680,
+    "out": 7680
+   },
+   "mtp.N.attn.wkv.weight": {
+    "n": 3,
+    "base": 15728640,
+    "out": 7876608
+   },
+   "mtp.N.attn.wo_a.weight": {
+    "n": 3,
+    "base": 201326592,
+    "out": 201326592
+   },
+   "mtp.N.attn.wo_b.weight": {
+    "n": 3,
+    "base": 251658240,
+    "out": 251658240
+   },
+   "mtp.N.attn.wq_a.weight": {
+    "n": 3,
+    "base": 39321600,
+    "out": 19691520
+   },
+   "mtp.N.attn.wq_b.weight": {
+    "n": 3,
+    "base": 251658240,
+    "out": 126615552
+   },
+   "mtp.N.attn_norm.weight": {
+    "n": 3,
+    "base": 30720,
+    "out": 30720
+   },
+   "mtp.N.embed.weight": {
+    "n": 1,
+    "base": 1323827200,
+    "out": 1323827200
+   },
+   "mtp.N.ffn.experts.N.w1.weight": {
+    "n": 384,
+    "base": 9059696640,
+    "out": 2275540992
+   },
+   "mtp.N.ffn.experts.N.w2.weight": {
+    "n": 384,
+    "base": 9059696640,
+    "out": 2406481920
+   },
+   "mtp.N.ffn.experts.N.w3.weight": {
+    "n": 384,
+    "base": 9059696640,
+    "out": 2275540992
+   },
+   "mtp.N.ffn.gate.bias": {
+    "n": 3,
+    "base": 1536,
+    "out": 1536
+   },
+   "mtp.N.ffn.gate.bias_vl": {
+    "n": 3,
+    "base": 1536,
+    "out": 1536
+   },
+   "mtp.N.ffn.gate.weight": {
+    "n": 3,
+    "base": 3932160,
+    "out": 3932160
+   },
+   "mtp.N.ffn.shared_experts.w1.weight": {
+    "n": 3,
+    "base": 70778880,
+    "out": 35444736
+   },
+   "mtp.N.ffn.shared_experts.w2.weight": {
+    "n": 3,
+    "base": 70778880,
+    "out": 35512320
+   },
+   "mtp.N.ffn.shared_experts.w3.weight": {
+    "n": 3,
+    "base": 70778880,
+    "out": 35444736
+   },
+   "mtp.N.ffn_norm.weight": {
+    "n": 3,
+    "base": 30720,
+    "out": 30720
+   },
+   "mtp.N.hc_attn_base": {
+    "n": 3,
+    "base": 288,
+    "out": 288
+   },
+   "mtp.N.hc_attn_fn": {
+    "n": 3,
+    "base": 5898240,
+    "out": 5898240
+   },
+   "mtp.N.hc_attn_scale": {
+    "n": 3,
+    "base": 36,
+    "out": 36
+   },
+   "mtp.N.hc_ffn_base": {
+    "n": 3,
+    "base": 288,
+    "out": 288
+   },
+   "mtp.N.hc_ffn_fn": {
+    "n": 3,
+    "base": 5898240,
+    "out": 5898240
+   },
+   "mtp.N.hc_ffn_scale": {
+    "n": 3,
+    "base": 36,
+    "out": 36
+   },
+   "mtp.N.main_norm.weight": {
+    "n": 1,
+    "base": 10240,
+    "out": 10240
+   },
+   "mtp.N.main_proj.weight": {
+    "n": 1,
+    "base": 157286400,
+    "out": 157286400
+   },
+   "mtp.N.confidence_head.proj.weight": {
+    "n": 1,
+    "base": 10752,
+    "out": 10752
+   },
+   "mtp.N.head.weight": {
+    "n": 1,
+    "base": 1323827200,
+    "out": 1323827200
+   },
+   "mtp.N.markov_head.embed.weight": {
+    "n": 1,
+    "base": 66191360,
+    "out": 66191360
+   },
+   "mtp.N.markov_head.head.weight": {
+    "n": 1,
+    "base": 66191360,
+    "out": 66191360
+   },
+   "mtp.N.norm.weight": {
+    "n": 1,
+    "base": 10240,
+    "out": 10240
+   }
+  }
+ },
+ "mtp_input_tensors": 1226,
+ "mtp_output_tensors": 4718,
+ "output_shards": [
+  "mtpq-00001-of-00004.safetensors",
+  "mtpq-00002-of-00004.safetensors",
+  "mtpq-00003-of-00004.safetensors",
+  "mtpq-00004-of-00004.safetensors"
+ ]
+}

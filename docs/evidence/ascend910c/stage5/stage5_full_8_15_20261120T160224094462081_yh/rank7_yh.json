@@ -1,0 +1,611 @@
+{
+  "passed": true,
+  "rank": 7,
+  "authorized_host_die": 15,
+  "local_device": 7,
+  "source_nodes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "prompt": "2+2=",
+  "prompt_ids": [
+    0,
+    20,
+    13,
+    20,
+    31
+  ],
+  "tokenizer_bos_id": 0,
+  "tokenizer_eos_id": 1,
+  "full_checkpoint_loaded": true,
+  "active_layers": 40,
+  "mtp_active": false,
+  "load_seconds": 43.696254092035815,
+  "allocation_admission": {
+    "device_source_bytes": 46934543808,
+    "cpu_engram_bytes": 25344768768,
+    "live_device_free_bytes": 65496580096,
+    "live_host_available_bytes": 1033466523648,
+    "full_meta_coverage_validated": true
+  },
+  "hf_load_stats": {
+    "params": 1150,
+    "aliases": 0,
+    "fp8": 290,
+    "expert_params": 80,
+    "experts": 3840,
+    "expert_skipped": 6,
+    "engram_tables": 2,
+    "engram_rows": 96002466
+  },
+  "official_checkpoint_payload_read": true,
+  "synthetic_weights": false,
+  "checkpoint_index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "checkpoint_config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+  "engram_tables": [
+    {
+      "layer": 1,
+      "rows": 48000800,
+      "row_start": 336005600,
+      "raw_cpu_bytes": 12672211200
+    },
+    {
+      "layer": 14,
+      "rows": 48002112,
+      "row_start": 336014784,
+      "raw_cpu_bytes": 12672557568
+    }
+  ],
+  "after_load": {
+    "allocated": 46992967168,
+    "reserved": 48840572928,
+    "free_total": [
+      16643313664,
+      65796046848
+    ]
+  },
+  "cache": {
+    "scheduler_page_capacity": 128,
+    "logical_query_cap": 16,
+    "blocks_shape": [
+      4,
+      114048
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "blocks_dtype": "torch.uint8",
+    "state_dtype": "torch.uint8"
+  },
+  "generated": [
+    22,
+    271,
+    20,
+    13
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "is_prompt": true,
+      "positions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "input_ids": [
+        0,
+        20,
+        13,
+        20,
+        31
+      ],
+      "sampled_token": 22,
+      "sampler_logprob": 0.0,
+      "model_logprob": -0.7999255061149597,
+      "max_abs_error": 2.86102294921875e-06,
+      "cpu_argmax": 22,
+      "raw_top5_ids": [
+        22,
+        23,
+        1240,
+        21,
+        20
+      ],
+      "raw_top5_logits": [
+        18.257966995239258,
+        17.56670379638672,
+        15.538074493408203,
+        15.354287147521973,
+        15.341181755065918
+      ]
+    },
+    {
+      "step": 1,
+      "is_prompt": false,
+      "positions": [
+        5
+      ],
+      "input_ids": [
+        22
+      ],
+      "sampled_token": 271,
+      "sampler_logprob": 0.0,
+      "model_logprob": -1.022629976272583,
+      "max_abs_error": 2.384185791015625e-06,
+      "cpu_argmax": 271,
+      "raw_top5_ids": [
+        271,
+        201,
+        14,
+        16,
+        303
+      ],
+      "raw_top5_logits": [
+        16.658201217651367,
+        15.837486267089844,
+        14.587278366088867,
+        14.42996883392334,
+        14.405186653137207
+      ]
+    },
+    {
+      "step": 2,
+      "is_prompt": false,
+      "positions": [
+        6
+      ],
+      "input_ids": [
+        271
+      ],
+      "sampled_token": 20,
+      "sampler_logprob": 0.0,
+      "model_logprob": -2.1719722747802734,
+      "max_abs_error": 2.86102294921875e-06,
+      "cpu_argmax": 20,
+      "raw_top5_ids": [
+        20,
+        22,
+        9832,
+        372,
+        7805
+      ],
+      "raw_top5_logits": [
+        18.4777774810791,
+        18.19947624206543,
+        18.139171600341797,
+        17.301664352416992,
+        17.115020751953125
+      ]
+    },
+    {
+      "step": 3,
+      "is_prompt": false,
+      "positions": [
+        7
+      ],
+      "input_ids": [
+        20
+      ],
+      "sampled_token": 13,
+      "sampler_logprob": 0.0,
+      "model_logprob": -0.16465389728546143,
+      "max_abs_error": 2.86102294921875e-06,
+      "cpu_argmax": 13,
+      "raw_top5_ids": [
+        13,
+        12,
+        15,
+        90,
+        16
+      ],
+      "raw_top5_logits": [
+        21.991741180419922,
+        19.253284454345703,
+        18.531444549560547,
+        18.205041885375977,
+        17.93592071533203
+      ]
+    }
+  ],
+  "replay_diagnostic": {
+    "hidden_max_abs": 0.0,
+    "relative_l2": 0.0,
+    "cosine": 1.000001311302185,
+    "decode_ngram_ids": [
+      [
+        20,
+        174,
+        22,
+        31
+      ]
+    ],
+    "replay_last_ngram_ids": [
+      [
+        20,
+        174,
+        22,
+        31
+      ]
+    ]
+  },
+  "text": "4\n\n2+",
+  "replay": {
+    "fresh_native_scheduler_prefill": true,
+    "full_prefix": [
+      0,
+      20,
+      13,
+      20,
+      31,
+      22,
+      271,
+      20
+    ],
+    "hidden_max_abs_error": 0.0,
+    "next_token": 13
+  },
+  "blocks_reclaimed": true,
+  "states_reclaimed": true,
+  "source_sha256": {
+    "deepinfer/config.py": "d93abb280c5ed2918ea4bdfc6d82f1e834c73941b8bf62d1877ab35c86d54727",
+    "deepinfer/hugging_face/loading.py": "d65964296fcf69e6b80e958e45bf5d99ac6b8e6f0c667ffef1ed5788757cf414",
+    "deepinfer/hugging_face/parameters.py": "a14f8c76956f6bbeddd25f2157e3ac01f72a79a0a78c4b4b6e1cf2e4743281aa",
+    "deepinfer/model_executor/models/v4_modules/builder.py": "2aa85c2d03b1caebf1def294f1a066ab57e5190a9954983e1f79edee22450ce0",
+    "deepinfer/model_executor/models/v4_modules/engram_parameters.py": "2b8bfb1d4b595dc337ceeac0fd574fff7549c9f2f6014cc672ad1bc9755ade53",
+    "deepinfer/hugging_face/config.py": "978c863928ece0e7f81c3e619c02d1287ade442f9282d7eb67bc739411595e49",
+    "doc/evidence/ascend910c/official_checkpoint_headers_yh.json": "1b42b3376ac4165299aa39c2dda10b553042bc393acf486661ca779881be392d",
+    "deepinfer/hugging_face/weights.py": "910631c055b10502843c9b8d25209ed2e2dea60332ba89abdb5e44b06527eaea",
+    "deepinfer/model_executor/models/v4_modules/containers.py": "08a1e40764dbd28e2ca6a996364dab6e3e620bf949586bfec2235648b51a7fe7",
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "a9acfc4f2e048ba652fb9569d3ec55cdffec8007b49f80d51dd036789d330227",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/model_executor/models/v4_modules/official_backend.py": "c42d7340d7623eaca46746932775a2ca0113275edc81a445ab811366194ee03e",
+    "deepinfer/model_executor/models/v4_modules/official_norm.py": "eba96de3ca1001ba230e69508398d1d52bbffefe76309b35c7c99b907c2acfee",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/model_executor/models/v4_modules/hc_lazy.py": "553c9fae0179443d38dd4d3b02f827492f0b2a613238efcdda1f8304b8027a51",
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "006adbcb87b3755839095560ad04a74899afd15bea5f26e18d697bf158ba8368",
+    "deepinfer/model_executor/models/v4_modules/official_rope.py": "c9987e04dd3cf65b45052a8445ae42e2733aa2ab24949a97fc25a11cab2cb747",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_cache.py": "8e755507dc6612d9cd084a158dcf7b1e3929b6a815cb05f9a723fb900a4ab188",
+    "deepinfer/model_executor/models/v4_modules/official_attention.py": "5cfc55d0052ed42125b134d62bfdca4286b48cbaf645ac712b110889da14db50",
+    "deepinfer/model_executor/models/v4_modules/official_compression.py": "80cf1c789a311d35baf81129aadc89a559ba4b2e1662a873d18227fbbe3e6ace",
+    "deepinfer/model_executor/models/v4_modules/engram_metadata.py": "3fc548d9ce782796f0810f6d753edd20cbcf40fbb86980c890254137a194acea",
+    "deepinfer/hugging_face/official_engram_loading.py": "0e089438b12b3462c5b3585d9cacd392ff2103fa039890d3b2e75645bcd123c7",
+    "deepinfer/model_executor/models/v4_modules/utils.py": "f7ba78bca8f92c74f8895fc255043764bef3f5b2ee83a5efecc65236033e50bd",
+    "deepinfer/model_executor/models/v4_modules/attn.py": "471873bd4ef5e309e225cb45ce8ca4712494349e91d780143f5f0a5fe7125ca5",
+    "deepinfer/model_executor/models/v4_modules/compress.py": "e8e17922c5351f682cb0067348b5caabbd57970761a704e2c94234c2362cdbf7",
+    "deepinfer/model_executor/models/v4_modules/index_attn.py": "38c0c2c76c3c1a94edf6ff63b9776e99718635a8495ac53b0891614853a3bc96",
+    "deepinfer/model_executor/models/v4_modules/cross_layer.py": "b7d0ca65aa96f715e6189f511c592c4341a4eff7898b8c4366a6912252bce7c5",
+    "deepinfer/model_executor/models/vision_encoder/vit.py": "a6c7a946c587e44ffb11e7bd621188fe91cc45ffeb163706c6be6b34a14bef1b",
+    "deepinfer/model_executor/models/vision_encoder/vl_aligner.py": "59b7f6ad4b5c40e4b064365e9b0fbd87609408915658d2eaff0273e9cb3c7fe8",
+    "deepinfer/model_executor/models/vision_encoder/official_image.py": "65daeeebb5ef79271cf94d4f7ebc410ec6859df78dd5b7da40ddb9f4c27b5147",
+    "deepinfer/model_executor/models/vision_encoder/official_vision.py": "82f50e6fbfe25e37dd2e2faaf0b5c0ed9a875d53c889e9556a6cd12ec06f8f7d",
+    "deepinfer/model_executor/models/deepseek_vl.py": "6eda92aa4a0b51b92ab95feb3e3c0714b15499a8a5783280ce6e1c86251b3e51",
+    "deepinfer/model_executor/models/decoder_layer.py": "d000cec7ed89700786525853732f290435504a034778a5581337898f37d78d1a",
+    "deepinfer/model_executor/model_loader.py": "5f0e56aa342e7632021017eb1cb46b9fe81aed8d6b7d23dc2db3534d09a5945f",
+    "deepinfer/model_executor/models/deepseek.py": "71fcda516a557a9b5935222e07f888bfcd21a165ce93738122bced58d05815c5",
+    "deepinfer/model_executor/input_metadata/input_metadata.py": "73499f47ba5d7a0d5c6e6ad1059403ba34fd89d1d62f5fca52c3841df4667714",
+    "deepinfer/model_executor/model_metadata_utils.py": "2db5926a9032755edab5ff13e71b6be39c46c5ea89fb9bff9e81fadecb392f25",
+    "deepinfer/worker/cache_engine.py": "558b90e8d5e5282e884e6e322b952c0a85a0426ddb98c0d5877018f71b723b39",
+    "deepinfer/worker/model_runner.py": "1cc261292e3b02a00148dbac890df59c66681de0b2048de5dd5e12016a8925b8",
+    "deepinfer/model_executor/layers/vocab_parallel_embedding.py": "3d75b92c2ba5cb934b57b8ad02e7b5dcc1fcc1c433e52e1c5a46ff7eecdb3a3b",
+    "deepinfer/model_executor/layers/sampler.py": "cca35c267e5b5c45494211cad56acdf89b0e9ea79c62f86265dba4d9184cc036",
+    "deepinfer/model_executor/layers/official_sampler.py": "7373f00b21c36f239f6da18b3066994185e1c49f8deb3be483a146aa757f8a69",
+    "deepinfer/platform.py": "04e8e40fe0dff0f0554bf729a41c141326f979a2a4d873b7cf92030ffb286902",
+    "deepinfer/quantization/__init__.py": "3191cd72afabdaba1ae098cf92b4de33cad0620cab8662a14eb6312c0636bb5b",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/allocation.py": "8a404b1d40609f2e58c59459c9162d9bc49db51b0c812d98f8e95ae41c84d516",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/linear.py": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+    "deepinfer/quantization/memory_plan.py": "ecc0bd3da751bace7142b8c96ceadd11005a0408830eca3a2a6394cc1c5bdfe5",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "deepinfer/quantization/preflight.py": "d48dfc276e981a265008bc968683729082e8338bed4574a26ce01090294c120d",
+    "deepinfer/quantization/runtime_linear.py": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+    "tests/quantization/test_official_activation.py": "6e659b5615bac63158c90bbcd19e8ceffb5cd3065c60589ff1aa1548cb1852cb",
+    "tests/quantization/test_official_allocation.py": "440d67fefe016f50639e4c183c938b823ffb9520880ca1d873c5768443f5e806",
+    "tests/quantization/test_official_attention.py": "eb993d4c40f59ef7ac6488e582fd394e554596b990c51208d328e9acb14b6561",
+    "tests/quantization/test_official_backend.py": "0e28a55ae67f95ee23a5e96613eb30e02a41bb9853fe78ef544f331232ee7440",
+    "tests/quantization/test_official_cache.py": "d605128d85b5d142511465e1f64586c96f8b26d41f1a59dc7e9f820f5b864ea9",
+    "tests/quantization/test_official_candidate_runtime.py": "b8f30f19f5fce7eeb62ec861a53786ecafb913ce508f6b88511ff3adbffc7da5",
+    "tests/quantization/test_official_compression.py": "ae8113d8639acf633bf2ed38e4aea40a5782a218b54423f1979044e105bcbcfb",
+    "tests/quantization/test_official_decoder_runtime.py": "5cf90ebbd84ca9abdf5074c66785f5cef222fb026df9f4808f17ea8dbaac58a3",
+    "tests/quantization/test_official_engram.py": "a8d7ef85c4cda71b009357cdcb364ee902320aa89b7bba9ac06e1a1f6f9f7c5c",
+    "tests/quantization/test_official_engram_loading.py": "f8fcac8ca763d0886dba00806cff3cf1764ee27ab192614b16a41558f211eb1a",
+    "tests/quantization/test_official_ep.py": "a206811830cbb8d82ab4dc26da96e8831916b0cc2c5da95eeb7363934b92c351",
+    "tests/quantization/test_official_fp4_compute.py": "441b0d051a81f8a5a4558f1b825e1fefdf606170062f5222b401478cb779af56",
+    "tests/quantization/test_official_fp4_loading.py": "0d14a03abcf976de616b641aef95bb8bd60a68b1de956a678d2a1ac07300d526",
+    "tests/quantization/test_official_fp4_materialization.py": "c20922678db89fcf92e0ec2fd24b4058945fc54ff47d7ceb1d83b0f1dd029062",
+    "tests/quantization/test_official_full_load_plan.py": "7b3f3ea1471a979789cb7547a5dfef5b611a2d7592bbaef4f56e4947ab9ed644",
+    "tests/quantization/test_official_geometry_runtime.py": "90fcfcfebb2aa6f48959dd85828fed33779284931c34d4717c16b28982731090",
+    "tests/quantization/test_official_hc_runtime.py": "fe3de5a767ec1e07189b44ed76d5f9921605b294299f496211257d7301f292fd",
+    "tests/quantization/test_official_hf_loading.py": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+    "tests/quantization/test_official_image.py": "2ef71cdff08457e91476a0bd8c63ec23549aeffcab0926f64bc8058b4f6fc0b0",
+    "tests/quantization/test_official_linear.py": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+    "tests/quantization/test_official_memory_plan.py": "0af93f4eeb529e51e24fb6fded6616fe2d95f7887ce8199107856002b4386573",
+    "tests/quantization/test_official_mhc.py": "9f7687416c53abdca590ea2b6c18943bda95a6f13cb0723d38cfac153f038a5e",
+    "tests/quantization/test_official_model_runtime.py": "ca7dd19e81c02e0bfebc484775413768af92bf59642754413bf85b5d56c69c9e",
+    "tests/quantization/test_official_moe.py": "db54663a7851047249f2cb322b5cbdfc306ba2d38e405700afcff8dc1e97413f",
+    "tests/quantization/test_official_norm.py": "3bb1031bf6bd3fd88c51b5eb991b6f4a75aa95a19865826bdb979b42ec888978",
+    "tests/quantization/test_official_operand.py": "1c2849c10c3c667798b5eaf4e579c4a1fdca3b1bd415a2970af2d685e3cf9c33",
+    "tests/quantization/test_official_payload_reader.py": "3bf2e06e449b71bb4d2ad26ba62d29138149a59ddc45ce995ad10cea03ebf6c4",
+    "tests/quantization/test_official_rope.py": "9abda813a0338700fd7cc96e136c8c3d6b0ac24fa1cb2baf67201304d5e6ca40",
+    "tests/quantization/test_official_runtime_linear.py": "11939fc92f84f44ed1c61956377ac5291a516aaad8ed7542e7c09b9adea2f8e0",
+    "tests/quantization/test_official_sampler.py": "fae599a826393cc59eb99c0952cb945d29c43f310a2dfae2c1a51f652d04a1f3",
+    "tests/quantization/test_official_scheduler_runtime.py": "e35583170749b81cdf9bc5047035fc499f8db87e440428902250bde7c72ac16d",
+    "tests/quantization/test_official_vision_runtime.py": "4f2567804d7851a1cf4134d4c310389d33621edf9bd5ebe4949e4ec5ef0dc16d",
+    "scripts/ascend910c/check_official_cpu_tests.py": "ae32ef8da638172a2ef35165f22693c02e37c17bb413262bb98d650f11147a8f",
+    "scripts/ascend910c/check_official_full_model.py": "b538ad7d29f3186f1502a95dd875142fa1033724389a8f5900587cce5b239064"
+  },
+  "source_unchanged_during_tests": true,
+  "checkpoint_shards_unchanged": true,
+  "checkpoint_shard_stamps": {
+    "model-00001-of-00048.safetensors": [
+      970533624,
+      1793599106467550480,
+      1467760328
+    ],
+    "model-00002-of-00048.safetensors": [
+      1323858272,
+      1793599277978066109,
+      1467760329
+    ],
+    "model-00003-of-00048.safetensors": [
+      7389759032,
+      1793600182312331475,
+      1467760330
+    ],
+    "model-00004-of-00048.safetensors": [
+      7389759032,
+      1793601068957929061,
+      1467760331
+    ],
+    "model-00005-of-00048.safetensors": [
+      7405953784,
+      1793601968552009360,
+      1467760332
+    ],
+    "model-00006-of-00048.safetensors": [
+      7389759032,
+      1793602833948651752,
+      1467760333
+    ],
+    "model-00007-of-00048.safetensors": [
+      7389759032,
+      1793603717865826904,
+      1467760334
+    ],
+    "model-00008-of-00048.safetensors": [
+      7389759032,
+      1793604896750367739,
+      1467760335
+    ],
+    "model-00009-of-00048.safetensors": [
+      7389759032,
+      1793605776683855774,
+      1467760336
+    ],
+    "model-00010-of-00048.safetensors": [
+      7389759032,
+      1793606648149067833,
+      1467760337
+    ],
+    "model-00011-of-00048.safetensors": [
+      7405953784,
+      1793607530366653688,
+      1467760338
+    ],
+    "model-00012-of-00048.safetensors": [
+      7389759032,
+      1793608425888712156,
+      1467760339
+    ],
+    "model-00013-of-00048.safetensors": [
+      7389761368,
+      1793609304682129775,
+      1467760340
+    ],
+    "model-00014-of-00048.safetensors": [
+      7389761368,
+      1793610183991818605,
+      1467760341
+    ],
+    "model-00015-of-00048.safetensors": [
+      7389761368,
+      1793611057785821561,
+      1467760342
+    ],
+    "model-00016-of-00048.safetensors": [
+      7389761368,
+      1793611928683656182,
+      1467760343
+    ],
+    "model-00017-of-00048.safetensors": [
+      7405956128,
+      1793612810401286228,
+      1467760344
+    ],
+    "model-00018-of-00048.safetensors": [
+      7389761368,
+      1793613713815689725,
+      1467760345
+    ],
+    "model-00019-of-00048.safetensors": [
+      7389761368,
+      1793614591345184378,
+      1467760346
+    ],
+    "model-00020-of-00048.safetensors": [
+      7389761368,
+      1793615524236763938,
+      1467760347
+    ],
+    "model-00021-of-00048.safetensors": [
+      7389761368,
+      1793616416034759011,
+      1467760348
+    ],
+    "model-00022-of-00048.safetensors": [
+      7389761368,
+      1793617279927680623,
+      1467760349
+    ],
+    "model-00023-of-00048.safetensors": [
+      7400713088,
+      1793618233399748303,
+      1467760350
+    ],
+    "model-00024-of-00048.safetensors": [
+      7389761368,
+      1793619156618265312,
+      1467760351
+    ],
+    "model-00025-of-00048.safetensors": [
+      7389761368,
+      1793620019779138983,
+      1467760352
+    ],
+    "model-00026-of-00048.safetensors": [
+      7389761368,
+      1793620881551949964,
+      1467760353
+    ],
+    "model-00027-of-00048.safetensors": [
+      7395337384,
+      1793621753917153346,
+      1467760354
+    ],
+    "model-00028-of-00048.safetensors": [
+      7389761368,
+      1793622615997969213,
+      1467760355
+    ],
+    "model-00029-of-00048.safetensors": [
+      7389761368,
+      1793623478186799327,
+      1467760356
+    ],
+    "model-00030-of-00048.safetensors": [
+      7389761368,
+      1793624355636216409,
+      1467760357
+    ],
+    "model-00031-of-00048.safetensors": [
+      7395337384,
+      1793625222889239963,
+      1467760358
+    ],
+    "model-00032-of-00048.safetensors": [
+      7389761368,
+      1793626108631160121,
+      1467760359
+    ],
+    "model-00033-of-00048.safetensors": [
+      7389761368,
+      1793626983908532841,
+      1467760360
+    ],
+    "model-00034-of-00048.safetensors": [
+      7389761368,
+      1793627845361334310,
+      1467760361
+    ],
+    "model-00035-of-00048.safetensors": [
+      7395337384,
+      1793628719290602127,
+      1467760362
+    ],
+    "model-00036-of-00048.safetensors": [
+      7389761368,
+      1793629586903624431,
+      1467760363
+    ],
+    "model-00037-of-00048.safetensors": [
+      7389761368,
+      1793630457080775557,
+      1467760364
+    ],
+    "model-00038-of-00048.safetensors": [
+      7389761368,
+      1793631332082100134,
+      1467760365
+    ],
+    "model-00039-of-00048.safetensors": [
+      7395337384,
+      1793632198763190873,
+      1467760366
+    ],
+    "model-00040-of-00048.safetensors": [
+      7389761368,
+      1793633067636344515,
+      1467760367
+    ],
+    "model-00041-of-00048.safetensors": [
+      7389761368,
+      1793633932513315203,
+      1467760368
+    ],
+    "model-00042-of-00048.safetensors": [
+      7389761368,
+      1793634797278277745,
+      1467760369
+    ],
+    "model-00043-of-00048.safetensors": [
+      1323837624,
+      1793634957364382903,
+      1467760370
+    ],
+    "model-00044-of-00048.safetensors": [
+      2652728736,
+      1793635266820184531,
+      1467760371
+    ],
+    "model-00045-of-00048.safetensors": [
+      2573998176,
+      1793635578472069909,
+      1467760372
+    ],
+    "model-00046-of-00048.safetensors": [
+      2706402896,
+      1793635895492161110,
+      1467760373
+    ],
+    "model-00047-of-00048.safetensors": [
+      101535150936,
+      1793647787045419596,
+      1467760374
+    ],
+    "model-00048-of-00048.safetensors": [
+      101537926640,
+      1793659927575743964,
+      1467760375
+    ]
+  },
+  "native_extension_sha256": "6d3695fbfc6571dae5e43557cfae44a2650d1f1a75c225c99bc641b2504797e7",
+  "native_scheduler": true,
+  "actual_runner_preparation": true,
+  "actual_sampler": true,
+  "golden_overrides": false,
+  "checkpoint_payload": "original indexed checkpoint, not synthetic",
+  "checkpoint_path": "/root/yuhao/DeepSeek-V4.1-Flash-1017-HF",
+  "prefill_calls": 1,
+  "decode_calls": 3,
+  "all_rank_tokens_identical": true,
+  "hf32_enabled": false,
+  "max_allocated_bytes": 48332692480,
+  "max_reserved_bytes": 48840572928,
+  "final_free_total": [
+    16807321600,
+    65796046848
+  ],
+  "runner_sha256": "b538ad7d29f3186f1502a95dd875142fa1033724389a8f5900587cce5b239064"
+}

@@ -1,0 +1,49 @@
+[W1121 05:02:06.973655033 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+{"name": "hc_apply_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "hc_apply_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/quantization/activation.py:46: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  exponents = ((sf_bits - 1) >> 23) + 1
+{"name": "norm_bf16_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M6", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M8", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M16", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M24", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M48", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "gate_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.239776611328125e-05}
+{"name": "gate_scores_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.7881393432617188e-07}
+{"name": "gate_ids_M48", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M48", "equal": false, "different": 6, "elements": 6, "max_abs": 1.1920928955078125e-07}
+{"name": "shared_up_M6", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M6", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M8", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M8", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M48", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M48", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+[2026-11-21 05:02:20] [WARNING] [1] profiler.py: Please use level1 or level2 if you want to collect aic metrics, reset aic metrics to None!
+[2026-11-21 05:02:20] [WARNING] [1] profiler.py: Please use level1 or level2 if you want to collect aic metrics, reset aic metrics to None!
+[2026-11-21 05:02:21] [WARNING] [1] profiler.py: Incorrect schedule: Stop profiler while current state is RECORD which may result in incomplete parsed data.
+[2026-11-21 05:02:22] [INFO] [134] profiler.py: Start parsing profiling data in sync mode at: /root/yuhao/deepinfer_910c_yh/reports_yh/stage5_moe_batch_die8_20261121T130159252432753_yh/trace/b06d856cb3a7_1_20261121050220023_ascend_pt
+|/-\|/-\|/-[2026-11-21 05:02:33] [INFO] [143] profiler.py: CANN profiling data parsed in a total time of 0:00:11.084183
+\|/-\[2026-11-21 05:02:38] [INFO] [134] profiler.py: All profiling data parsed in a total time of 0:00:16.552980
+{"scope": "layer30 first selected expert gate/up only; replay M8; not EP8 or serving TPS", "samples": [{"wall_seconds": 0.8905248469673097, "device_ms": 890.2449340820312}, {"wall_seconds": 0.8926459590438753, "device_ms": 892.5215454101562}, {"wall_seconds": 0.8916862518526614, "device_ms": 891.5723266601562}], "warmup": 1, "profiled_calls": 1, "profile_wall_seconds": 19.63039245409891, "peak_allocated_bytes": 44485632, "peak_reserved_bytes": 117440512, "activation_shape": [8, 5120], "output_shape": [8, 4608], "torch_version": "2.13.0+cpu", "torch_npu_version": "2.13.0.rc1", "fp4_source": "/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/quantization/fp4.py", "fp4_sha256": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b", "snapshot": "/root/yuhao/deepinfer_910c_yh/reports_yh/stage5_full_8_15_20261119T202949060872566_yh/rank0_replay_tensors_yh.pt"}
+[WARN]FormatFeatureList,feature_mgr.cpp:59:Do not support feature: AICORE_SHAPE, log is: It not support feature: AICORE_SHAPE!

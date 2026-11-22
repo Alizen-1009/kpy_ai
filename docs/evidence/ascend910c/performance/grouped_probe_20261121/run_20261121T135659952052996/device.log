@@ -1,0 +1,3 @@
+  File "/root/yuhao/deepinfer_910c_yh/grouped_probe_20261121_yh/probe_grouped_device.py", line 31
+    r['output_head']=out.flatten()[:8].tolist(); r['ref_head']=ref.flatten()[:8].tolist(); r['max_abs']=(out-ref).abs().max().item(); r['exact_bf16_oracle']=torch.equal(out,ref); r['peak_allocated']=torch.npu.max_memory_allocated(); r['format']=torch_npu.get_npu_format(packed)
+IndentationError: unexpected indent

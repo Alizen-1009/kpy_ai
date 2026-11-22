@@ -1,0 +1,46 @@
+[W1121 06:21:15.342686442 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+{"name": "hc_apply_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "hc_apply_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/deepinfer/quantization/activation.py:46: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  exponents = ((sf_bits - 1) >> 23) + 1
+{"name": "norm_bf16_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M6", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M8", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M16", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M24", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M48", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "gate_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.239776611328125e-05}
+{"name": "gate_scores_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.7881393432617188e-07}
+{"name": "gate_ids_M48", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M48", "equal": false, "different": 6, "elements": 6, "max_abs": 1.1920928955078125e-07}
+{"name": "shared_up_M6", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M6", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M8", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M8", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M48", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M48", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{
+  "passed": false,
+  "error": "ValueError: Activation tile exceeds aligned decode bounds",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/check_official_moe_replay.py\", line 133, in main\n    compare('reconstructed_vs_captured_decode',reconstructed.bfloat16(),move(current['hidden']))\n          ^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/check_official_moe_replay.py\", line 124, in check\n    for n in (16,24,32,40,48):\n       ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/benchmark_w4a8_real_ffn.py\", line 72, in run_block\n    fp8_input=a._tile(0,1,0,5120).cpu();a8_input=cq[:1].float()*cs[:1,None]\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/deepinfer/quantization/activation.py\", line 160, in _tile\n    raise ValueError(\"Activation tile exceeds aligned decode bounds\")\nValueError: Activation tile exceeds aligned decode bounds\n"
+}

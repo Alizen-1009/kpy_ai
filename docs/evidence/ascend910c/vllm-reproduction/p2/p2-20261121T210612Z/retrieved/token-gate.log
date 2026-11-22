@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/quality-run/p2-20261121T210612Z/token_gate.py", line 18, in <module>
+    items=scope['load_gsm8k'](200,str(p/'gsm8k'));rows=[]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "frozen", line 177, in load_gsm8k
+  File "frozen", line 130, in extract_gsm8k
+NameError: name 'NUM' is not defined

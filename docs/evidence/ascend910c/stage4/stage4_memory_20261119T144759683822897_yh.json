@@ -1,0 +1,290 @@
+{
+  "passed": true,
+  "aggregate_memory_budget_verified": true,
+  "full_model_allocation_authorized": false,
+  "upper_bound_not_measured": true,
+  "world_size": 8,
+  "cp": 1,
+  "ep": 8,
+  "engram_parallel": 8,
+  "dp": 8,
+  "requests_per_rank": 1,
+  "redundant_experts": 0,
+  "mtp_active": false,
+  "raw_partition_bytes": {
+    "replicated": 10817285568,
+    "routed_expert": 288777830400,
+    "cpu_engram": 202758032400,
+    "excluded_mtp": 7932874632
+  },
+  "ordinary_scale_extra_bytes": 26705920,
+  "source_merge_overlap_bytes_per_rank": 7225789888,
+  "routed_expert_max_bytes_per_rank": 36097228800,
+  "reserves": {
+    "framework": 3221225472,
+    "communication": 2147483648,
+    "scratch": 2147483648
+  },
+  "ranks": [
+    {
+      "rank": 0,
+      "available_bytes": 65408073728,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2401043584,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 1,
+      "available_bytes": 65692237824,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2685207680,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 2,
+      "available_bytes": 65399685120,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2392654976,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 3,
+      "available_bytes": 65703772160,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2696742016,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 4,
+      "available_bytes": 65415413760,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2408383616,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 5,
+      "available_bytes": 65688043520,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2681013376,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 6,
+      "available_bytes": 65415413760,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2408383616,
+      "bottleneck_phase": "load"
+    },
+    {
+      "rank": 7,
+      "available_bytes": 65692237824,
+      "routed_expert_bytes": 36097228800,
+      "replicated_bytes": 10843991488,
+      "source_merge_overlap_bytes": 7225789888,
+      "cache_bytes": 456192,
+      "state_bytes": 16498944,
+      "reserves_bytes": 7516192768,
+      "loader_staging_bytes": 1323827200,
+      "load_phase_bytes": 63007030144,
+      "runtime_phase_bytes": 61700158080,
+      "peak_bytes": 63007030144,
+      "remaining_bytes": 2685207680,
+      "bottleneck_phase": "load"
+    }
+  ],
+  "engram_tables": [
+    {
+      "name": "layers.1.engram.embed.weight",
+      "rows": 384006168,
+      "padded_rows": 384006400,
+      "rows_per_rank": 48000800,
+      "total_bytes": 98305638400,
+      "bytes_per_rank": 12288204800
+    },
+    {
+      "name": "layers.1.engram.embed.scale",
+      "rows": 384006168,
+      "padded_rows": 384006400,
+      "rows_per_rank": 48000800,
+      "total_bytes": 3072051200,
+      "bytes_per_rank": 384006400
+    },
+    {
+      "name": "layers.14.engram.embed.weight",
+      "rows": 384016682,
+      "padded_rows": 384016896,
+      "rows_per_rank": 48002112,
+      "total_bytes": 98308325376,
+      "bytes_per_rank": 12288540672
+    },
+    {
+      "name": "layers.14.engram.embed.scale",
+      "rows": 384016682,
+      "padded_rows": 384016896,
+      "rows_per_rank": 48002112,
+      "total_bytes": 3072135168,
+      "bytes_per_rank": 384016896
+    }
+  ],
+  "host": {
+    "available_bytes": 896173184614,
+    "engram_resident_bytes": 202758150144,
+    "loader_staging_bytes": 10590617600,
+    "reclaimable_page_cache_bytes": 502353148368,
+    "peak_bytes": 715701916112,
+    "remaining_bytes": 180471268502
+  },
+  "bottleneck": "hbm_rank_2",
+  "failures": [],
+  "assumptions": [
+    "Upper bound, not measured memory; no full-load authority is granted.",
+    "Rank-major equal expert counts; original I8 and UE8M0 bytes; zero redundancy.",
+    "All backbone nonexpert/nonEngram sources plus a full extra runtime copy retained.",
+    "Ordinary scales: FP32 plus retained U8 = 5 * raw bytes per copy.",
+    "Peak HBM = resident + reserves + max(loader staging, supplied cache + state).",
+    "Cache/state allocated after loading; overlap must be added to scratch reserve.",
+    "CPU = padded Engram + eight max(non-Engram tensor, bounded Engram streaming) staging buffers + active raw page cache.",
+    "DP8 aggregate tokens represented only by caller-supplied actual DeepInfer cache bytes; not inferred."
+  ],
+  "checkpoint": {
+    "root": "/root/yuhao/DeepSeek-V4.1-Flash-1017-HF",
+    "archive": "/root/syf/data_yf/DeepSeek-V4.1-Flash-1017-original_yf",
+    "config_sha256": "8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879",
+    "index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+    "all_header_hashes_match": true,
+    "tensor_count": 96085,
+    "payload_bytes_read": 0,
+    "payload_byte_limit": 33554432,
+    "samples": []
+  },
+  "official_checkpoint_payload_read": false,
+  "cuda_initialized": false,
+  "torch_npu_imported": false,
+  "host_observed_available_bytes": 1054321393664,
+  "host_budget_fraction": 0.85,
+  "npu_smi": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     Ascend910           | OK            | 160.9       39                0    / 0             |\n| 0     0                   | 0000:9D:00.0  | 0           0    / 0          3154 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 0     Ascend910           | OK            | -           39                0    / 0             |\n| 1     1                   | 0000:9F:00.0  | 0           0    / 0          2888 / 65536         |\n+===========================+===============+====================================================+\n| 1     Ascend910           | OK            | 164.9       40                0    / 0             |\n| 0     2                   | 0000:99:00.0  | 0           0    / 0          3165 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 1     Ascend910           | OK            | -           40                0    / 0             |\n| 1     3                   | 0000:9B:00.0  | 0           0    / 0          2875 / 65536         |\n+===========================+===============+====================================================+\n| 2     Ascend910           | OK            | 162.4       40                0    / 0             |\n| 0     4                   | 0000:95:00.0  | 0           0    / 0          3163 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 2     Ascend910           | OK            | -           40                0    / 0             |\n| 1     5                   | 0000:97:00.0  | 0           0    / 0          2880 / 65536         |\n+===========================+===============+====================================================+\n| 3     Ascend910           | OK            | 159.6       41                0    / 0             |\n| 0     6                   | 0000:91:00.0  | 0           0    / 0          3155 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 3     Ascend910           | OK            | -           40                0    / 0             |\n| 1     7                   | 0000:93:00.0  | 0           0    / 0          2890 / 65536         |\n+===========================+===============+====================================================+\n| 4     Ascend910           | OK            | 162.3       39                0    / 0             |\n| 0     8                   | 0000:8D:00.0  | 0           0    / 0          3158 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 4     Ascend910           | OK            | -           39                0    / 0             |\n| 1     9                   | 0000:8F:00.0  | 0           0    / 0          2887 / 65536         |\n+===========================+===============+====================================================+\n| 5     Ascend910           | OK            | 162.7       40                0    / 0             |\n| 0     10                  | 0000:89:00.0  | 0           0    / 0          3166 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 5     Ascend910           | OK            | -           39                0    / 0             |\n| 1     11                  | 0000:8B:00.0  | 0           0    / 0          2876 / 65536         |\n+===========================+===============+====================================================+\n| 6     Ascend910           | OK            | 167.8       40                0    / 0             |\n| 0     12                  | 0000:85:00.0  | 0           0    / 0          3151 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 6     Ascend910           | OK            | -           40                0    / 0             |\n| 1     13                  | 0000:87:00.0  | 0           0    / 0          2891 / 65536         |\n+===========================+===============+====================================================+\n| 7     Ascend910           | OK            | 174.1       40                0    / 0             |\n| 0     14                  | 0000:81:00.0  | 0           0    / 0          3151 / 65536         |\n+------------------------------------------------------------------------------------------------+\n| 7     Ascend910           | OK            | -           40                0    / 0             |\n| 1     15                  | 0000:83:00.0  | 0           0    / 0          2887 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 0                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 1                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 2                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 4                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 5                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 6                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 7                                                            |\n+===========================+===============+====================================================+\n",
+  "authorized_host_dies": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "actual_cache_layout": {
+    "source": "actual CacheEngine static APIs, no copied KV formula",
+    "block_size": 128,
+    "pages": 4,
+    "block_shape": [
+      114048
+    ],
+    "layout": [
+      [
+        2,
+        0,
+        22784
+      ],
+      [
+        8,
+        22784,
+        22784
+      ],
+      [
+        14,
+        45568,
+        22784
+      ],
+      [
+        20,
+        68352,
+        45568
+      ]
+    ],
+    "state_shape": [
+      2,
+      2749824
+    ],
+    "auxiliary_state_copies": 2,
+    "cache_bytes_per_rank": 456192,
+    "state_bytes_per_rank": 16498944,
+    "stored_state_bytes": 1362560,
+    "max_num_seqs": 1,
+    "max_num_batched_tokens": 16,
+    "non_mtp_active_layers": 40
+  },
+  "source_sha256": {
+    "scripts/ascend910c/check_official_memory.py": "6803e7a27c700f8aad6d700ecbb7714631bbcdb092487a0bf9af70b0ea4bc0f4",
+    "deepinfer/hugging_face/config.py": "978c863928ece0e7f81c3e619c02d1287ade442f9282d7eb67bc739411595e49",
+    "deepinfer/hugging_face/official_payload.py": "a275c5c8ab4e32c3e09b7baec6f0cf7fbb1316a9737c7a0c82b3c0afb0afb9fc",
+    "deepinfer/quantization/memory_plan.py": "ecc0bd3da751bace7142b8c96ceadd11005a0408830eca3a2a6394cc1c5bdfe5",
+    "deepinfer/worker/cache_engine.py": "558b90e8d5e5282e884e6e322b952c0a85a0426ddb98c0d5877018f71b723b39",
+    "deepinfer/model_executor/model_metadata_utils.py": "2db5926a9032755edab5ff13e71b6be39c46c5ea89fb9bff9e81fadecb392f25",
+    "deepinfer/model_executor/layer_utils.py": "0aa862777dd5932bc367f19deb89c070d9598a80e383df955e2f5982c8c96c2b",
+    "deepinfer/environ.py": "c63414c101ce21e199f2d7df27ec01ca53e3b0dc7a688f6047469551f6449f47"
+  }
+}

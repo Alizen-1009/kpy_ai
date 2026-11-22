@@ -1,0 +1,99 @@
+{
+  "task": "min_window",
+  "score": {
+    "status": "pass",
+    "passed": 17,
+    "total": 17,
+    "case_results": [
+      {
+        "id": "empty-pattern",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "no-match",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "multiplicity",
+        "passed": true,
+        "actual": "\"aabdec\""
+      },
+      {
+        "id": "leftmost-tie",
+        "passed": true,
+        "actual": "\"ab\""
+      },
+      {
+        "id": "classic",
+        "passed": true,
+        "actual": "\"BANC\""
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "\"a\""
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "\"cbcc\""
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "\"b\""
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "\"a\""
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "\"c\""
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "\"acb\""
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "\"\""
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "\"ba\""
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def min_window(text, pattern):\n    from collections import Counter\n    if not pattern: return ''\n    need, best = Counter(pattern), None\n    for i in range(len(text)):\n        have = Counter()\n        for j in range(i,len(text)):\n            have[text[j]] += 1\n            if all(have[k] >= v for k,v in need.items()):\n                candidate = text[i:j+1]\n                if best is None or len(candidate) < len(best): best = candidate\n                break\n    return best or ''\n",
+    "extracted_code_sha256": "18f030380a1b4c9f3784429e45aa408ee36fb6bd180b6054ae934913a714f8fc"
+  }
+}

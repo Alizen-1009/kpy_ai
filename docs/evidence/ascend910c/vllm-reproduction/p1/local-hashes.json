@@ -1,0 +1,47 @@
+[
+  {
+    "path": "scripts/vllm_ascend_repro/launch.py",
+    "local": "55f6dfaa467be07a29cbebb28d7453e7a61c272dd3a830af7096d63206199a78",
+    "staged": "55f6dfaa467be07a29cbebb28d7453e7a61c272dd3a830af7096d63206199a78"
+  },
+  {
+    "path": "scripts/vllm_ascend_repro/container_gate.py",
+    "local": "233e00a11121c123f664124d1e175d6433188d2d2e453db7be4429e9d79757d3",
+    "staged": "233e00a11121c123f664124d1e175d6433188d2d2e453db7be4429e9d79757d3"
+  },
+  {
+    "path": "scripts/vllm_ascend_repro/download_assets.py",
+    "local": "c1381e82f2f31caaab99bca7a43dbbb22c67afbc222b65509ac8aebb53b40c16",
+    "staged": "32a59ee9f1a77d6680fd8d02c5c3df27de472c51984661692859729cc40e9d68"
+  },
+  {
+    "path": "scripts/vllm_ascend_repro/reassemble_engram.py",
+    "local": "2424871224413ce712a60758d5fb75d9afb2dc829189cf476775a0a4bf53201f",
+    "staged": "2424871224413ce712a60758d5fb75d9afb2dc829189cf476775a0a4bf53201f"
+  },
+  {
+    "path": "scripts/vllm_ascend_repro/probe_service.py",
+    "local": "e47f9ef3b6aae2b097d7b94df8a199d644a176f59de3620b9f3346abddb89800",
+    "staged": "e47f9ef3b6aae2b097d7b94df8a199d644a176f59de3620b9f3346abddb89800"
+  },
+  {
+    "path": "docs/evidence/ascend910c/vllm-reproduction/launch/runtime-map.json",
+    "local": "0219f07e6ad02119a6f262999d7448c7afdcfb88fa4eb77765f6326624fa94e8",
+    "staged": "0219f07e6ad02119a6f262999d7448c7afdcfb88fa4eb77765f6326624fa94e8"
+  },
+  {
+    "path": "docs/evidence/ascend910c/vllm-reproduction/image/runtime/runtime_report.json",
+    "local": "007d5805c683e79d1a7221b97a5e5f802f3b4d89be3b52f34ddc795707202ca7",
+    "staged": "007d5805c683e79d1a7221b97a5e5f802f3b4d89be3b52f34ddc795707202ca7"
+  },
+  {
+    "path": "docs/evidence/ascend910c/vllm-reproduction/p0-asset-inventory/public/model-files.json",
+    "local": "62e252b4a6d8eb23a89b0f2af65960d564711230bb1aba8b788e8936d5ed927c",
+    "staged": "62e252b4a6d8eb23a89b0f2af65960d564711230bb1aba8b788e8936d5ed927c"
+  },
+  {
+    "path": "docs/evidence/ascend910c/vllm-reproduction/p0-asset-inventory/public/metadata/engram_int8/PARTS.sha256",
+    "local": "baba958502a4a6dc96f2e2e391eab4bff9baed1ec9ccc796fa4fc1e2b54ced78",
+    "staged": "baba958502a4a6dc96f2e2e391eab4bff9baed1ec9ccc796fa4fc1e2b54ced78"
+  }
+]

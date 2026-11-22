@@ -1,0 +1,48 @@
+[W1121 05:07:42.575750179 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+{"name": "hc_apply_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "hc_apply_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/quantization/activation.py:46: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  exponents = ((sf_bits - 1) >> 23) + 1
+{"name": "norm_bf16_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M6", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M8", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M16", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M16", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M24", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M24", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "norm_bf16_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_data_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "norm_sf_M48", "equal": true, "different": 0, "elements": 160, "max_abs": 0.0}
+{"name": "gate_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M6", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M6", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_scores_M8", "equal": true, "different": 0, "elements": 384, "max_abs": 0.0}
+{"name": "gate_ids_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M8", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.239776611328125e-05}
+{"name": "gate_scores_M48", "equal": false, "different": 314, "elements": 384, "max_abs": 1.7881393432617188e-07}
+{"name": "gate_ids_M48", "equal": true, "different": 0, "elements": 6, "max_abs": 0.0}
+{"name": "gate_weights_M48", "equal": false, "different": 6, "elements": 6, "max_abs": 1.1920928955078125e-07}
+{"name": "shared_up_M6", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M6", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M6", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M8", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M8", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M8", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+{"name": "shared_up_M48", "equal": true, "different": 0, "elements": 4608, "max_abs": 0.0}
+{"name": "shared_mid_M48", "equal": true, "different": 0, "elements": 2304, "max_abs": 0.0}
+{"name": "shared_down_M48", "equal": true, "different": 0, "elements": 5120, "max_abs": 0.0}
+[2026-11-21 05:08:03] [WARNING] [1] profiler.py: Please use level1 or level2 if you want to collect aic metrics, reset aic metrics to None!
+[2026-11-21 05:08:03] [WARNING] [1] profiler.py: Please use level1 or level2 if you want to collect aic metrics, reset aic metrics to None!
+[2026-11-21 05:08:07] [INFO] [134] profiler.py: Start parsing profiling data in sync mode at: /root/yuhao/deepinfer_910c_yh/reports_yh/stage5_moe_batch_die8_20261121T130734934263370_yh/trace/efcadda6204f_1_20261121050803878_ascend_pt
+|/-\|/-\|/-\|/-\|/-\|/-\|[2026-11-21 05:08:34] [INFO] [143] profiler.py: CANN profiling data parsed in a total time of 0:00:26.094358
+/-\|/[2026-11-21 05:08:39] [INFO] [134] profiler.py: All profiling data parsed in a total time of 0:00:31.649790
+[{"M": 1, "expert_id": 124, "activation_data_sha256": "4a4e4a8dfb1caa1669b1ff06e70d3de864705d99cc907fcb336c6a8bedc444bf", "activation_scales_sha256": "7301702c9c35220e2ed2b0c28b7490f38d291b9ae477a0e8821fdb461bd6e90b", "down_input_data_sha256": "fde47aabb76d2c5bcdab05f7cad8029d9af9067e6b0d3a311d7558d30d00ceb6", "down_input_scales_sha256": "50ff030687158564ae357b5c7b66090d6a002384e2fd619985820a16e701a1ed", "route_weight": 0.6009923219680786, "gate_up": {"samples": [{"wall_seconds": 0.8853986309841275, "device_ms": 880.1151733398438}, {"wall_seconds": 0.8802785151638091, "device_ms": 880.1568603515625}, {"wall_seconds": 0.8817373719066381, "device_ms": 881.5830688476562}], "peak_allocated_bytes": 44498432, "peak_reserved_bytes": 117440512}, "swiglu": {"samples": [{"wall_seconds": 0.008689992129802704, "device_ms": 8.54740047454834}, {"wall_seconds": 0.008755765855312347, "device_ms": 8.628640174865723}, {"wall_seconds": 0.008640719810500741, "device_ms": 8.528619766235352}], "peak_allocated_bytes": 60313088, "peak_reserved_bytes": 117440512}, "down": {"samples": [{"wall_seconds": 0.4399631009437144, "device_ms": 439.80230712890625}, {"wall_seconds": 0.4396366188302636, "device_ms": 439.50518798828125}, {"wall_seconds": 0.43951004394330084, "device_ms": 439.3909912109375}], "peak_allocated_bytes": 44498432, "peak_reserved_bytes": 117440512}, "full_expert": {"samples": [{"wall_seconds": 1.333654599962756, "device_ms": 1333.5020751953125}, {"wall_seconds": 1.3277313329745084, "device_ms": 1327.6011962890625}, {"wall_seconds": 1.3287899631541222, "device_ms": 1328.641357421875}], "peak_allocated_bytes": 60313088, "peak_reserved_bytes": 117440512}, "profile_compute_wall_seconds": 2.2343210459221154, "profile_including_export_seconds": 36.28366833901964}, {"M": 8, "expert_id": 124, "activation_data_sha256": "764f81902448eddbcdff2b1810340bd058d3cfd1991a0de1a7a15024f0a1a2aa", "activation_scales_sha256": "7a723d0386654680adb37ca82d182a5c01c34298df3d353b6b3e8361cf3d33a3", "down_input_data_sha256": "8fb61f49121176343d7de7d6f3fd467281eaeb6e817ae6ccb31f1e46a3c2094b", "down_input_scales_sha256": "d099374d2302ac892e4c51bdc3f2a9e18006e0b1da2961df5289b3ea8717c216", "route_weight": 0.6009923219680786, "gate_up": {"samples": [{"wall_seconds": 0.8945457220543176, "device_ms": 894.3343505859375}, {"wall_seconds": 0.8959914171136916, "device_ms": 895.81591796875}, {"wall_seconds": 0.8944272769149393, "device_ms": 894.2384033203125}], "peak_allocated_bytes": 44662272, "peak_reserved_bytes": 117440512}, "swiglu": {"samples": [{"wall_seconds": 0.00830260687507689, "device_ms": 8.157520294189453}, {"wall_seconds": 0.008297238033264875, "device_ms": 8.166740417480469}, {"wall_seconds": 0.008359899977222085, "device_ms": 8.23550033569336}], "peak_allocated_bytes": 60676096, "peak_reserved_bytes": 117440512}, "down": {"samples": [{"wall_seconds": 0.4464874209370464, "device_ms": 446.34259033203125}, {"wall_seconds": 0.44668044801801443, "device_ms": 446.55950927734375}, {"wall_seconds": 0.446986649883911, "device_ms": 446.8463134765625}], "peak_allocated_bytes": 44662272, "peak_reserved_bytes": 117440512}, "full_expert": {"samples": [{"wall_seconds": 1.3439731651451439, "device_ms": 1343.8323974609375}, {"wall_seconds": 1.347227968974039, "device_ms": 1347.0584716796875}, {"wall_seconds": 1.3467245299834758, "device_ms": 1346.600830078125}], "peak_allocated_bytes": 60676096, "peak_reserved_bytes": 117440512}}]
+[WARN]FormatFeatureList,feature_mgr.cpp:59:Do not support feature: AICORE_SHAPE, log is: It not support feature: AICORE_SHAPE!

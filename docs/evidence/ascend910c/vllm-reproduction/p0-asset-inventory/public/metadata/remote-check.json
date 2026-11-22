@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-21T13:13:48.586245+00:00",
+  "get": {
+    "url": "https://modelscope.cn/api/v1/models/chiro2001/DeepSeek-V4.1-Flash-w4a8-Ascend/repo?Revision=50029772e7757c3d9cec50481661091b369af901&FilePath=config.json",
+    "status": 200,
+    "bytes": 3008,
+    "sha256": "f796648afd448324b203d8990d5bcf3132322822a08340ae00be65ec8213f91b",
+    "match": true
+  },
+  "docker_root": "/home/docker",
+  "docker_rc": 0,
+  "df_bytes": "Filesystem                                                1B-blocks          Used    Available Use% Mounted on\n/dev/mapper/openeuler-root                              73391005696   64997076992   4619055104  94% /\n/dev/mapper/uuid.c1130000-0000-0100-edd9-b01cd12f83ae 3838880604160 2962934878208 875945725952  78% /root/syf/data_yf\n/dev/mapper/uuid.11130000-0000-0100-ed4b-ac7772890feb 3779302981632 2809061732352 778186674176  79% /data2\n/dev/mapper/openeuler-home                             390472556544  310448484352  60114132992  84% /home\n",
+  "df_inodes": "Filesystem                                               Inodes   IUsed     IFree IUse% Mounted on\n/dev/mapper/uuid.c1130000-0000-0100-edd9-b01cd12f83ae 375073792 2555559 372518233    1% /root/syf/data_yf\n/dev/mapper/uuid.11130000-0000-0100-ed4b-ac7772890feb 234422272 3825397 230596875    2% /data2\n",
+  "workspace_exists": {
+    "/root/yuhao/deepinfer_910c_yh": true,
+    "/root/yuhao/vllm_ascend_repro_yh": false
+  }
+}

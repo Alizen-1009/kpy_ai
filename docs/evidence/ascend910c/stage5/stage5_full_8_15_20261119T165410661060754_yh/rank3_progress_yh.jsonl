@@ -1,0 +1,3 @@
+{"event": "groups_ready", "rank": 3, "wall_time": 1795078470.3934884, "ep": 8, "cp": 1, "engram": 8}
+{"event": "load_begin", "rank": 3, "wall_time": 1795078472.459218}
+{"event": "load_complete", "rank": 3, "wall_time": 1795078528.7043643, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16655765504, 65796046848]}

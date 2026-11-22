@@ -1,0 +1,5 @@
+
+Authorized users only. All activities may be monitored and reported.
+EVIDENCE /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/p1-20261121T203514Z-4f842308
+FAILED AssertionError('container exited')
+DONE /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/p1-20261121T203514Z-4f842308

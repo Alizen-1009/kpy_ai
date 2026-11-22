@@ -1,0 +1,2 @@
+[w4a8] task=gsm8k mode=chat n=5 conc=1 缓存=0
+== w4a8 gsm8k/chat: 5/5 = 100.0% (空=0, 89.8s) ==

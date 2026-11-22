@@ -1,0 +1,21 @@
+{
+  "image": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+  "cid": "67993945c3595dc9bc76bbddc429c2c4d7d49be7cadd5b3d4b1bdbd7795e3525",
+  "files": [
+    {
+      "source": "/vllm-workspace/vllm-ascend/vllm_ascend/spec_decode/dflash_proposer.py",
+      "file": "sources/spec_decode/dflash_proposer.py",
+      "sha256": "ab62258e33af5b93c05e8dc513092791455d938dba3bb6e63d56bb45c8b0a2ef"
+    },
+    {
+      "source": "/vllm-workspace/vllm-ascend/vllm_ascend/spec_decode/utils.py",
+      "file": "sources/spec_decode/utils.py",
+      "sha256": "b52cf6ad171881faf605197727e8521f0e40d9f2c716c92d33b70d8e6fd87c66"
+    },
+    {
+      "source": "/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/spec_decode/utils.py",
+      "file": "sources/ops/triton/spec_decode/utils.py",
+      "sha256": "7bc055816eb5a9dd84c0f0ae115533561957aab644584fad34d318269cd7f50c"
+    }
+  ]
+}

@@ -1,0 +1,1015 @@
+[
+  {
+    "payload": "dsa_v1.py",
+    "line": 2,
+    "module": "collections.abc",
+    "names": [
+      "Callable"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 3,
+    "module": "dataclasses",
+    "names": [
+      "dataclass"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 4,
+    "module": "typing",
+    "names": [
+      "TYPE_CHECKING",
+      "Any",
+      "TypeAlias"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 11,
+    "module": "vllm.config",
+    "names": [
+      "CUDAGraphMode",
+      "VllmConfig"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 12,
+    "module": "vllm.distributed",
+    "names": [
+      "get_tensor_model_parallel_world_size"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 13,
+    "module": "vllm.triton_utils",
+    "names": [
+      "HAS_TRITON"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 14,
+    "module": "vllm.v1.attention.backend",
+    "names": [
+      "AttentionBackend",
+      "AttentionCGSupport",
+      "AttentionImplBase",
+      "AttentionMetadataBuilder"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 20,
+    "module": "vllm.v1.kv_cache_interface",
+    "names": [
+      "AttentionSpec"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 22,
+    "module": "vllm_ascend.ascend_config",
+    "names": [
+      "get_ascend_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 23,
+    "module": "vllm_ascend.ascend_forward_context",
+    "names": [
+      "_EXTRA_CTX"
+    ],
+    "status": "selected payload; definitions present: ; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 24,
+    "module": "vllm_ascend.attention.attention_v1",
+    "names": [
+      "AscendAttentionState"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 25,
+    "module": "vllm_ascend.attention.dsa_attn_kv_plan",
+    "names": [
+      "get_dsa_attn_kv_plan",
+      "is_a5_bf16_kv_enabled"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 29,
+    "module": "vllm_ascend.attention.utils",
+    "names": [
+      "AscendCommonAttentionMetadata",
+      "enable_pcp",
+      "get_or_register_attention_buffer",
+      "maybe_save_kv_layer_to_connector",
+      "notify_kv_cache_written",
+      "split_decodes_and_prefills",
+      "wait_for_kv_layer_from_connector"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 38,
+    "module": "vllm_ascend.core.kv_cache_interface",
+    "names": [
+      "AscendMLAAttentionSpec"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 39,
+    "module": "vllm_ascend.device.device_op",
+    "names": [
+      "DeviceOperator"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 40,
+    "module": "vllm_ascend.device.hardware_profile",
+    "names": [
+      "HardwareCapability",
+      "get_current_hardware_profile"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 41,
+    "module": "vllm_ascend.distributed.kv_transfer.kv_pool.ascend_store.attention_fence",
+    "names": [
+      "record_attention_compute_start"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 42,
+    "module": "vllm_ascend.distributed.parallel_state",
+    "names": [
+      "get_otp_group"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 43,
+    "module": "vllm_ascend.models.deepseek_v4.compressor",
+    "names": [
+      "AscendCompressorMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 44,
+    "module": "vllm_ascend.models.deepseek_v4.indexer",
+    "names": [
+      "AscendIndexerMetadata",
+      "IndexerOverlapPlan"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 45,
+    "module": "vllm_ascend.ops.cv_linear",
+    "names": [
+      "CVLinearWrapper"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 46,
+    "module": "vllm_ascend.ops.linear",
+    "names": [
+      "AscendUnquantizedLinearMethod"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 47,
+    "module": "vllm_ascend.ops.rope_dsv4",
+    "names": [
+      "get_cos_and_sin_dsa",
+      "get_full_cos_and_sin_dsa"
+    ],
+    "status": "selected payload; definitions present: get_cos_and_sin_dsa,get_full_cos_and_sin_dsa; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 48,
+    "module": "vllm_ascend.quantization.methods",
+    "names": [
+      "AscendW8A8DynamicLinearMethod"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 49,
+    "module": "vllm_ascend.utils",
+    "names": [
+      "get_potential_max_tokens",
+      "npu_stream_switch",
+      "olora_tp_enable",
+      "oproj_tp_enable"
+    ],
+    "status": "captured image source; definitions present: get_potential_max_tokens,npu_stream_switch,olora_tp_enable,oproj_tp_enable; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 55,
+    "module": "vllm_ascend.worker.device_metadata",
+    "names": [
+      "DeviceMetadataStage",
+      "DeviceMetadataTask",
+      "wait_for_device_metadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 60,
+    "module": "vllm_ascend.worker.npu_input_batch",
+    "names": [
+      "NPUInputBatch"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 63,
+    "module": "vllm.v1.core.sched.output",
+    "names": [
+      "SchedulerOutput"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 65,
+    "module": "vllm_ascend.ops.triton.rms_norm",
+    "names": [
+      "triton_q_rms"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 68,
+    "module": "vllm_ascend.ops.triton.rms_norm",
+    "names": [
+      "triton_q_rms"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 226,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 283,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 306,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 313,
+    "module": "vllm_ascend.ascend_forward_context",
+    "names": [
+      "_EXTRA_CTX"
+    ],
+    "status": "selected payload; definitions present: ; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 379,
+    "module": "vllm_ascend.utils",
+    "names": [
+      "enable_dsa_cp"
+    ],
+    "status": "captured image source; definitions present: enable_dsa_cp; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 411,
+    "module": "vllm_ascend.utils",
+    "names": [
+      "enable_dsa_cp"
+    ],
+    "status": "captured image source; definitions present: enable_dsa_cp; others may be imports/constants"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 296,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 386,
+    "module": "vllm_ascend.attention.context_parallel.dsa_cp",
+    "names": [
+      "AscendDSACPMetadataBuilder"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 390,
+    "module": "vllm_ascend.attention.context_parallel.dsa_cp",
+    "names": [
+      "AscendDSAPCPMetadataBuilder"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 418,
+    "module": "vllm_ascend.attention.context_parallel.dsa_cp",
+    "names": [
+      "AscendDSACPImpl"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 422,
+    "module": "vllm_ascend.attention.context_parallel.dsa_cp",
+    "names": [
+      "AscendDSAPCPImpl"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 872,
+    "module": "scipy.linalg",
+    "names": [
+      "hadamard"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dsa_v1.py",
+    "line": 1194,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 6,
+    "module": "typing",
+    "names": [
+      "Any"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 9,
+    "module": "vllm.config",
+    "names": [
+      "CUDAGraphMode",
+      "VllmConfig",
+      "get_layers_from_vllm_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 10,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 11,
+    "module": "vllm.logger",
+    "names": [
+      "logger"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 12,
+    "module": "vllm.model_executor.layers.attention_layer_base",
+    "names": [
+      "AttentionLayerBase"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 13,
+    "module": "vllm.v1.attention.backends.utils",
+    "names": [
+      "CommonAttentionMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 14,
+    "module": "vllm.v1.kv_cache_interface",
+    "names": [
+      "UniformTypeKVCacheSpecs"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 15,
+    "module": "vllm.v1.worker.utils",
+    "names": [
+      "AttentionGroup"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 17,
+    "module": "vllm_ascend.ascend_config",
+    "names": [
+      "get_ascend_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 18,
+    "module": "vllm_ascend.ascend_forward_context",
+    "names": [
+      "set_ascend_forward_context"
+    ],
+    "status": "selected payload; definitions present: set_ascend_forward_context; others may be imports/constants"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 19,
+    "module": "vllm_ascend.attention.attention_v1",
+    "names": [
+      "AscendAttentionState"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 20,
+    "module": "vllm_ascend.attention.dsa_v1",
+    "names": [
+      "AscendDSAMetadataBuilder"
+    ],
+    "status": "selected payload; definitions present: AscendDSAMetadataBuilder; others may be imports/constants"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 21,
+    "module": "vllm_ascend.attention.utils",
+    "names": [
+      "AscendCommonAttentionMetadata",
+      "enable_pcp"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 22,
+    "module": "vllm_ascend.ops.triton.spec_decode.utils",
+    "names": [
+      "copy_and_expand_dflash_and_dspark_inputs_kernel"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 23,
+    "module": "vllm_ascend.spec_decode.dflash_proposer",
+    "names": [
+      "AscendDflashProposer",
+      "_compute_num_programs"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 24,
+    "module": "vllm_ascend.spec_decode.llm_base_proposer",
+    "names": [
+      "_DSPARK_PTR_PROBE",
+      "_dspark_ptr_line",
+      "_dspark_row_dump",
+      "_dspark_ptr_snapshot"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "dspark_proposer.py",
+    "line": 30,
+    "module": "vllm_ascend.spec_decode.utils",
+    "names": [
+      "DynamicSpecScheduler"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 5,
+    "module": "collections.abc",
+    "names": [
+      "Callable"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 6,
+    "module": "contextlib",
+    "names": [
+      "AbstractContextManager",
+      "nullcontext"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 7,
+    "module": "functools",
+    "names": [
+      "partial"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 8,
+    "module": "typing",
+    "names": [
+      "Any",
+      "cast"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 14,
+    "module": "vllm.config",
+    "names": [
+      "CUDAGraphMode",
+      "VllmConfig",
+      "get_layers_from_vllm_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 15,
+    "module": "vllm.distributed.parallel_state",
+    "names": [
+      "get_pp_group",
+      "get_tp_group",
+      "get_world_group",
+      "init_model_parallel_group"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 21,
+    "module": "vllm.forward_context",
+    "names": [
+      "BatchDescriptor",
+      "ForwardContext",
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 22,
+    "module": "vllm.logger",
+    "names": [
+      "logger"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 23,
+    "module": "vllm.model_executor.layers.attention_layer_base",
+    "names": [
+      "AttentionLayerBase"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 24,
+    "module": "vllm.model_executor.model_loader",
+    "names": [
+      "get_model"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 25,
+    "module": "vllm.model_executor.models",
+    "names": [
+      "supports_multimodal"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 26,
+    "module": "vllm.model_executor.models.deepseek_eagle3",
+    "names": [
+      "Eagle3DeepseekV2ForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 27,
+    "module": "vllm.model_executor.models.deepseek_v2",
+    "names": [
+      "DeepseekV32IndexerCache"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 28,
+    "module": "vllm.model_executor.models.llama_eagle3",
+    "names": [
+      "Eagle3LlamaForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 29,
+    "module": "vllm.model_executor.models.qwen3_dflash",
+    "names": [
+      "DFlashQwen3ForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 30,
+    "module": "vllm.model_executor.models.qwen3_dspark",
+    "names": [
+      "Qwen3DSparkForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 31,
+    "module": "vllm.models.kimi_k3.nvidia.dspark_mla",
+    "names": [
+      "K3DSparkForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 32,
+    "module": "vllm.triton_utils",
+    "names": [
+      "HAS_TRITON",
+      "triton"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 33,
+    "module": "vllm.utils.platform_utils",
+    "names": [
+      "is_pin_memory_available"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 34,
+    "module": "vllm.v1.attention.backends.utils",
+    "names": [
+      "CommonAttentionMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 35,
+    "module": "vllm.v1.core.sched.output",
+    "names": [
+      "SchedulerOutput"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 36,
+    "module": "vllm.v1.sample.metadata",
+    "names": [
+      "SamplingMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 37,
+    "module": "vllm.v1.spec_decode.llm_base_proposer",
+    "names": [
+      "SpecDecodeBaseProposer"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 38,
+    "module": "vllm.v1.spec_decode.metadata",
+    "names": [
+      "SpecDecodeMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 39,
+    "module": "vllm.v1.spec_decode.utils",
+    "names": [
+      "PADDING_SLOT_ID",
+      "compute_new_slot_mapping",
+      "extend_all_queries_by_N"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 44,
+    "module": "vllm.v1.worker.gpu_input_batch",
+    "names": [
+      "CachedRequestState",
+      "InputBatch"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 46,
+    "module": "vllm_ascend.ascend_config",
+    "names": [
+      "get_ascend_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 47,
+    "module": "vllm_ascend.ascend_forward_context",
+    "names": [
+      "_EXTRA_CTX",
+      "set_ascend_forward_context"
+    ],
+    "status": "selected payload; definitions present: set_ascend_forward_context; others may be imports/constants"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 48,
+    "module": "vllm_ascend.attention.attention_v1",
+    "names": [
+      "AscendAttentionState"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 49,
+    "module": "vllm_ascend.attention.utils",
+    "names": [
+      "AscendCommonAttentionMetadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 50,
+    "module": "vllm_ascend.compilation.acl_graph",
+    "names": [
+      "ACLGraphWrapper",
+      "update_full_graph_params"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 51,
+    "module": "vllm_ascend.compilation.breakable_aclgraph",
+    "names": [
+      "BreakableACLGraphWrapper"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 52,
+    "module": "vllm_ascend.device.device_op",
+    "names": [
+      "DeviceOperator"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 53,
+    "module": "vllm_ascend.distributed.kv_transfer.sparse_kv_offload.sparse_kv_offload_manager",
+    "names": [
+      "prepare_sparse_kv_offload_mtp_dummy_metadata"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 56,
+    "module": "vllm_ascend.distributed.parallel_state",
+    "names": [
+      "get_lmhead_tp_group"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 57,
+    "module": "vllm_ascend.models.deepseek_v4.dspark",
+    "names": [
+      "DSparkDeepseekV4ForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 58,
+    "module": "vllm_ascend.models.llama_eagle3_vwn",
+    "names": [
+      "Eagle3VwnLlamaForCausalLM"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 59,
+    "module": "vllm_ascend.ops.triton.spec_decode.utils",
+    "names": [
+      "prepare_inputs_padded_kernel"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 60,
+    "module": "vllm_ascend.ops.triton.triton_utils",
+    "names": [
+      "get_vectorcore_num"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 61,
+    "module": "vllm_ascend.ops.vocab_parallel_embedding",
+    "names": [
+      "lmhead_all_to_all"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 420,
+    "module": "vllm_ascend.spec_decode.utils",
+    "names": [
+      "SlidingWindowAdapter",
+      "_maybe_eager_context",
+      "patch_tensor_parallel_group"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 425,
+    "module": "vllm_ascend.utils",
+    "names": [
+      "check_gdn_layer",
+      "enable_sp",
+      "lmhead_tp_enable",
+      "vllm_version_is"
+    ],
+    "status": "captured image source; definitions present: check_gdn_layer,enable_sp,lmhead_tp_enable,vllm_version_is; others may be imports/constants"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 426,
+    "module": "vllm_ascend.worker.device_metadata",
+    "names": [
+      "DeviceMetadataExecutor",
+      "DeviceMetadataTask",
+      "DeviceMetadataTaskProvider"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 240,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 328,
+    "module": "vllm.forward_context",
+    "names": [
+      "get_forward_context"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 702,
+    "module": "vllm.compilation.backends",
+    "names": [
+      "set_model_tag"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  },
+  {
+    "payload": "llm_base_proposer.py",
+    "line": 762,
+    "module": "vllm_ascend.ascend_config",
+    "names": [
+      "get_ascend_config"
+    ],
+    "status": "not-captured: image dependency, must verify before DSpark launch"
+  }
+]

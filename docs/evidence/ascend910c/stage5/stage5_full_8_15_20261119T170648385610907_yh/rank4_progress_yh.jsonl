@@ -1,0 +1,44 @@
+{"event": "groups_ready", "rank": 4, "wall_time": 1795079225.2146573, "ep": 8, "cp": 1, "engram": 8}
+{"event": "load_begin", "rank": 4, "wall_time": 1795079227.2926607}
+{"event": "load_complete", "rank": 4, "wall_time": 1795079284.6755998, "allocated": 46992967168, "reserved": 48840572928, "free_total": [16362299392, 65787658240]}
+{"event": "forward_begin", "rank": 4, "wall_time": 1795079285.1942806, "step": 0, "prefix": [0, 20, 13, 20, 31]}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079285.9536605, "layer": 0}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079324.787502, "layer": 1}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079375.254766, "layer": 2}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079412.7559483, "layer": 3}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079452.125502, "layer": 4}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079486.722402, "layer": 5}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079526.9452026, "layer": 6}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079562.1811614, "layer": 7}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079596.0572765, "layer": 8}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079637.5060563, "layer": 9}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079671.1190498, "layer": 10}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079701.5712903, "layer": 11}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079738.7240016, "layer": 12}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079768.3929806, "layer": 13}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079801.7902174, "layer": 14}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079850.9641683, "layer": 15}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079888.5163484, "layer": 16}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079918.412044, "layer": 17}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079952.4263952, "layer": 18}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795079994.0323572, "layer": 19}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080024.6581254, "layer": 20}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080060.1718636, "layer": 21}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080090.2305708, "layer": 22}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080131.506161, "layer": 23}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080169.445988, "layer": 24}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080204.81171, "layer": 25}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080236.262333, "layer": 26}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080270.4599667, "layer": 27}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080310.4108331, "layer": 28}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080340.9258556, "layer": 29}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080374.3483732, "layer": 30}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080409.7900844, "layer": 31}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080447.5551918, "layer": 32}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080482.3254776, "layer": 33}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080519.2010148, "layer": 34}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080556.6617923, "layer": 35}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080590.3035424, "layer": 36}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080624.324803, "layer": 37}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080657.3781474, "layer": 38}
+{"event": "layer_begin", "rank": 4, "wall_time": 1795080694.2650185, "layer": 39}

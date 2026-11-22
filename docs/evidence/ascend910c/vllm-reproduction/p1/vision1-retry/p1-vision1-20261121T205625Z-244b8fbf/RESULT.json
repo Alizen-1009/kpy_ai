@@ -1,0 +1,10 @@
+{
+  "status": "ready_smoke_completed_retained_for_P2",
+  "cid": "1fdb00879533bb97ba7ef9f7bf7f64639a03e8b01bdfbdfe198b8a03fcf98a65",
+  "runid": "p1-vision1-20261121T205625Z-244b8fbf",
+  "stop": [
+    "docker",
+    "stop",
+    "1fdb00879533bb97ba7ef9f7bf7f64639a03e8b01bdfbdfe198b8a03fcf98a65"
+  ]
+}

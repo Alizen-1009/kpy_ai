@@ -1,0 +1,94 @@
+{
+  "task": "topological_order",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "tie-break",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\"]"
+      },
+      {
+        "id": "duplicate-edge",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\"]"
+      },
+      {
+        "id": "cycle",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[\"a\",\"b\"]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[\"c\",\"b\",\"a\",\"d\"]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[\"c\",\"e\",\"b\",\"d\",\"a\"]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\",\"d\",\"e\"]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[\"b\",\"a\"]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[\"a\",\"b\",\"c\",\"d\",\"e\"]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[\"a\",\"b\"]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def topological_order(nodes, edges):\n    remaining, out = set(nodes), []\n    while remaining:\n        ready = sorted(n for n in remaining if not any(v == n and u in remaining for u,v in edges))\n        if not ready: return []\n        out.append(ready[0]); remaining.remove(ready[0])\n    return out\n",
+    "extracted_code_sha256": "7021dca7d4264d5ddfd2aa259dfb5ae243e9c96f4a3b41e5b4907b8dda4088c7"
+  }
+}

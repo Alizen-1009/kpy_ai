@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "ended_unix": 1795292510.9131439,
+  "identity": {
+    "supervisor": {
+      "pid": 2220464,
+      "start_ticks": "178273338"
+    },
+    "started_unix": 1795291349.9800825,
+    "tool_sha256": "c1381e82f2f31caaab99bca7a43dbbb22c67afbc222b65509ac8aebb53b40c16",
+    "manifest_sha256": "62e252b4a6d8eb23a89b0f2af65960d564711230bb1aba8b788e8936d5ed927c",
+    "downloader": {
+      "pid": 2220465,
+      "start_ticks": "178273353"
+    },
+    "args": [
+      "/usr/bin/python3",
+      "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/recovery-3-20261121T200226Z/download_assets.py",
+      "--manifest",
+      "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/model-files.json",
+      "--dest",
+      "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model",
+      "--workers",
+      "4",
+      "--resume",
+      "--direct",
+      "--retries",
+      "3",
+      "--execute"
+    ]
+  }
+}

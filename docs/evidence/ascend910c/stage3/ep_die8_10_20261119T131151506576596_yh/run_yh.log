@@ -1,0 +1,865 @@
+[W1119 05:11:59.519693072 ProcessGroupHCCL.cpp:1235] Warning: The watchdog timeout 30000ms(which is set by init_process_group) is less than or equal to HCCL execution timeout 30000ms! The plog may not be recorded. (function ProcessGroupHCCL)
+[rank0]:[W1119 05:11:59.572350240 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+[W1119 05:11:59.670827173 ProcessGroupHCCL.cpp:1235] Warning: The watchdog timeout 30000ms(which is set by init_process_group) is less than or equal to HCCL execution timeout 30000ms! The plog may not be recorded. (function ProcessGroupHCCL)
+[rank1]:[W1119 05:11:59.722745522 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank0]:[W1119 05:12:01.262408901 ArgSortKernelNpuOpApi.cpp:45] Warning: Warning: kernel [ArgSort] can not support dtype int32 or int64 on AiCore, Now this kernel is running on AiCpu.If you are more concerned about high-performance execution,please cast dtype to float32. (function operator())
+[rank1]:[W1119 05:12:01.262850858 ArgSortKernelNpuOpApi.cpp:45] Warning: Warning: kernel [ArgSort] can not support dtype int32 or int64 on AiCore, Now this kernel is running on AiCpu.If you are more concerned about high-performance execution,please cast dtype to float32. (function operator())
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/model_executor/models/v4_modules/official_moe.py:308: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  local_ids = (selected % self.experts.num_experts)[:, None]
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/model_executor/models/v4_modules/official_moe.py:308: UserWarning: Cannot create tensor with internal format while allow_internal_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:466.)
+  local_ids = (selected % self.experts.num_experts)[:, None]
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/platform.py:251: UserWarning: CUDA_VISIBLE_DEVICES is not set; using ASCEND_RT_VISIBLE_DEVICES=0,1.
+  return platform_class()
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:388: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:312: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/contrib/transfer_to_npu.py:312: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/npu_ops/__init__.py:3: ImportWarning: Patch import:
+  deep_select.interface.topk -> deepinfer.npu_ops.deep_select.topk
+  flash_attn.cute.interface._flash_attn_fwd -> deepinfer.npu_ops.vit_attn._flash_attn_fwd
+  patch_imports(
+[rank0]:[W1119 05:12:04.491993681 ProcessGroupGloo.cpp:524] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[rank1]:[W1119 05:12:04.502965309 ProcessGroupGloo.cpp:524] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/npu/__init__.py:598: UserWarning: The return value of get_device_capability is only for compatibility with PyTorch and does not represent the actual capability of the NPU device.
+  warnings.warn(warning_str)
+/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch_npu/npu/__init__.py:598: UserWarning: The return value of get_device_capability is only for compatibility with PyTorch and does not represent the actual capability of the NPU device.
+  warnings.warn(warning_str)
+{
+  "scope": "two-rank synthetic raw-FP8/FP4 EP and components; HCCL additionally runs native scheduled decoder/Engram/attention/MoE/sampler; no official checkpoint/native-kernel equivalence",
+  "backend": "hccl",
+  "official_checkpoint_payload_read": false,
+  "world_size": 2,
+  "host_dies": [
+    8,
+    10
+  ],
+  "exposed_davinci_nodes": [
+    8,
+    10
+  ],
+  "policy_sha256": "98646914078dfae5bb6c1ec34b898fc585ca9adb1b92dedff2b0c736303ac9de",
+  "source_sha256": {
+    "deepinfer/model_executor/models/v4_modules/official_moe.py": "a9acfc4f2e048ba652fb9569d3ec55cdffec8007b49f80d51dd036789d330227",
+    "deepinfer/model_executor/utils.py": "b05666d23d6e39efb86a1644999372ea4b85a54c01586fc1227590683740c7a6",
+    "deepinfer/quantization/activation.py": "820aa721f913b3cbf72df6a710dc1a781353ee32026b59345a9efa123dc50282",
+    "deepinfer/quantization/fp4.py": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+    "deepinfer/quantization/official.py": "eae593fd7c0f3a07746f1696ed074a445ecaf27a680f8b6443a8bfd6d8fe7877",
+    "tests/quantization/test_official_ep.py": "a206811830cbb8d82ab4dc26da96e8831916b0cc2c5da95eeb7363934b92c351",
+    "deepinfer/quantization/linear.py": "dd13f8f600ac4b424b638ffd12d97e2d5ec97f57223ed67dfeabeaaf3fa3e157",
+    "deepinfer/model_executor/models/v4_modules/official_backend.py": "c42d7340d7623eaca46746932775a2ca0113275edc81a445ab811366194ee03e",
+    "tests/quantization/test_official_backend.py": "0e28a55ae67f95ee23a5e96613eb30e02a41bb9853fe78ef544f331232ee7440",
+    "tests/quantization/test_official_linear.py": "47cb0624d9d623f76bc9cee03235b1991a9406c77e6a3a43fb01ff2a710e2bca",
+    "tests/quantization/test_official_moe.py": "db54663a7851047249f2cb322b5cbdfc306ba2d38e405700afcff8dc1e97413f",
+    "deepinfer/model_executor/models/decoder_layer.py": "d000cec7ed89700786525853732f290435504a034778a5581337898f37d78d1a",
+    "tests/quantization/test_official_norm.py": "3bb1031bf6bd3fd88c51b5eb991b6f4a75aa95a19865826bdb979b42ec888978",
+    "deepinfer/model_executor/models/v4_modules/official_norm.py": "eba96de3ca1001ba230e69508398d1d52bbffefe76309b35c7c99b907c2acfee",
+    "deepinfer/model_executor/models/v4_modules/utils.py": "f7ba78bca8f92c74f8895fc255043764bef3f5b2ee83a5efecc65236033e50bd",
+    "deepinfer/model_executor/models/v4_modules/official_engram.py": "d3fbf5e2c58f25867d90a863b6ea51c37671ab28b4e5d70b00d37a7e19a72ec6",
+    "deepinfer/model_executor/models/v4_modules/official_mhc.py": "3735ec11c0899780903f646e3ab4b91b890ef444675bb0d2fdcd796a615ad75a",
+    "deepinfer/model_executor/models/v4_modules/hc.py": "65ffb858c0b02e244bdb8932cd9b8431b28d6f48a4fa7a7f87c06ea897d65572",
+    "deepinfer/quantization/runtime_linear.py": "b0c69adc81d48290128360eb8badb133021d41b585217716e2519abcf42d4780",
+    "tests/quantization/test_official_engram.py": "a8d7ef85c4cda71b009357cdcb364ee902320aa89b7bba9ac06e1a1f6f9f7c5c",
+    "tests/quantization/test_official_hc_runtime.py": "fe3de5a767ec1e07189b44ed76d5f9921605b294299f496211257d7301f292fd",
+    "tests/quantization/test_official_mhc.py": "47a2ce936276da86012f1667084b30f406677ed7bc50b71cc32ace202f06dab0",
+    "deepinfer/model_executor/models/deepseek.py": "dcfc5b83c0b45ac76d4b023ccc0fc3526871f8d955129ec1d1f9796d1eef7c4f",
+    "deepinfer/model_executor/model_loader.py": "171c773a99e404ddf1e1ec707f59565d28717737cafad80650c9c87778d4f04c",
+    "tests/quantization/test_official_scheduler_runtime.py": "e35583170749b81cdf9bc5047035fc499f8db87e440428902250bde7c72ac16d",
+    "tests/quantization/test_official_decoder_runtime.py": "8dad16079d89f9b4a89e8c68a9be92be408aee2e0b42137dd232e66808f31910",
+    "deepinfer/worker/model_runner.py": "23db1c79a70dae6190655e7fb65a4453d7da00159c8ab613ac0a3011e47cad30",
+    "deepinfer/model_executor/models/v4_modules/official_cache.py": "8e755507dc6612d9cd084a158dcf7b1e3929b6a815cb05f9a723fb900a4ab188",
+    "deepinfer/model_executor/layers/sampler.py": "cca35c267e5b5c45494211cad56acdf89b0e9ea79c62f86265dba4d9184cc036",
+    "deepinfer/model_executor/layers/official_sampler.py": "7373f00b21c36f239f6da18b3066994185e1c49f8deb3be483a146aa757f8a69",
+    "scripts/ascend910c/check_official_ep.py": "df2ade9ffa0efacfb9ff33321e057d1cf4d296658b37fb3a63e80d9923e21393",
+    "deepinfer/model_executor/models/v4_modules/__init__.py": "b4598007774b87200a0a4bfc4f27bb7f7f70627636f8661a9c2c553e277459a8",
+    "deepinfer/model_executor/models/v4_modules/attn.py": "471873bd4ef5e309e225cb45ce8ca4712494349e91d780143f5f0a5fe7125ca5",
+    "deepinfer/model_executor/models/v4_modules/builder.py": "2aa85c2d03b1caebf1def294f1a066ab57e5190a9954983e1f79edee22450ce0",
+    "deepinfer/model_executor/models/v4_modules/compress.py": "e8e17922c5351f682cb0067348b5caabbd57970761a704e2c94234c2362cdbf7",
+    "deepinfer/model_executor/models/v4_modules/containers.py": "c192e07733edd5188cdbe478ad1d77a39a578b7f1db89720d18f96bab6f9e718",
+    "deepinfer/model_executor/models/v4_modules/cross_layer.py": "b7d0ca65aa96f715e6189f511c592c4341a4eff7898b8c4366a6912252bce7c5",
+    "deepinfer/model_executor/models/v4_modules/engram.py": "94e83ac03a4e993372d0be21a8316e30d61cf4d2009f0f1a683967d9fffffd0c",
+    "deepinfer/model_executor/models/v4_modules/engram_metadata.py": "3fc548d9ce782796f0810f6d753edd20cbcf40fbb86980c890254137a194acea",
+    "deepinfer/model_executor/models/v4_modules/engram_parameters.py": "2b8bfb1d4b595dc337ceeac0fd574fff7549c9f2f6014cc672ad1bc9755ade53",
+    "deepinfer/model_executor/models/v4_modules/hc_blocks.py": "d37962bb3c47ec541f62302054f16e1f21899c7fabc1fefce55caea405522cca",
+    "deepinfer/model_executor/models/v4_modules/hc_lazy.py": "553c9fae0179443d38dd4d3b02f827492f0b2a613238efcdda1f8304b8027a51",
+    "deepinfer/model_executor/models/v4_modules/heads.py": "697439602617d53409fea41c8cc1d95b1002842823d7ccd824fb720b5111ae2e",
+    "deepinfer/model_executor/models/v4_modules/index_attn.py": "38c0c2c76c3c1a94edf6ff63b9776e99718635a8495ac53b0891614853a3bc96",
+    "deepinfer/model_executor/models/v4_modules/linear.py": "8ba53ee0cb9ce7bcf0f1c93e7da24abb10c8ad8bada730366147c8b869cf334a",
+    "deepinfer/model_executor/models/v4_modules/mhc_modeling.py": "97d52d87b262bffe3970a0b46c329cdcc1c514c09ec48b32008269b225d5de4d",
+    "deepinfer/model_executor/models/v4_modules/mhc_ops.py": "43c676593e8d1b865eddb4732aa185375be650b46cf17fa71074a0a942139f8d",
+    "deepinfer/model_executor/models/v4_modules/mla_attn.py": "7cf38a5bfa3800577c177a83e4cfecc1d0cf2b48b5bbadcfa1039b71ae882789",
+    "deepinfer/model_executor/models/v4_modules/mlp.py": "71fb72689b67b25128295ffc751a7012e923849083ede40e20728a031288328c",
+    "deepinfer/model_executor/models/v4_modules/moe.py": "4e154e1536e5926bf4e4b7b58d5ccc71a692b46c8d26d7edcc56827bfe540de3",
+    "deepinfer/model_executor/models/v4_modules/norm.py": "8b8e9defe8b587a5574ded543512690b881420fa7488f8b552422a1976807562",
+    "deepinfer/model_executor/models/v4_modules/official_attention.py": "5cfc55d0052ed42125b134d62bfdca4286b48cbaf645ac712b110889da14db50",
+    "deepinfer/model_executor/models/v4_modules/official_compression.py": "80cf1c789a311d35baf81129aadc89a559ba4b2e1662a873d18227fbbe3e6ace",
+    "deepinfer/model_executor/models/v4_modules/official_rope.py": "c9987e04dd3cf65b45052a8445ae42e2733aa2ab24949a97fc25a11cab2cb747",
+    "deepinfer/model_executor/models/v4_modules/rope.py": "df59daa787408247204f543bd3c8f02ce8a15b38c970f30da7883a949d5ab686",
+    "deepinfer/model_executor/models/v4_modules/yoco.py": "7dc8ad7b6ca4902bcef67b1cbc4804592995c5b6af9ebaa00b59cc338c1aa6ec",
+    "tests/quantization/test_official_activation.py": "6e659b5615bac63158c90bbcd19e8ceffb5cd3065c60589ff1aa1548cb1852cb",
+    "tests/quantization/test_official_attention.py": "eb993d4c40f59ef7ac6488e582fd394e554596b990c51208d328e9acb14b6561",
+    "tests/quantization/test_official_cache.py": "d605128d85b5d142511465e1f64586c96f8b26d41f1a59dc7e9f820f5b864ea9",
+    "tests/quantization/test_official_candidate_runtime.py": "b8f30f19f5fce7eeb62ec861a53786ecafb913ce508f6b88511ff3adbffc7da5",
+    "tests/quantization/test_official_compression.py": "ae8113d8639acf633bf2ed38e4aea40a5782a218b54423f1979044e105bcbcfb",
+    "tests/quantization/test_official_engram_loading.py": "f8fcac8ca763d0886dba00806cff3cf1764ee27ab192614b16a41558f211eb1a",
+    "tests/quantization/test_official_fp4_compute.py": "441b0d051a81f8a5a4558f1b825e1fefdf606170062f5222b401478cb779af56",
+    "tests/quantization/test_official_fp4_loading.py": "0d14a03abcf976de616b641aef95bb8bd60a68b1de956a678d2a1ac07300d526",
+    "tests/quantization/test_official_fp4_materialization.py": "c20922678db89fcf92e0ec2fd24b4058945fc54ff47d7ceb1d83b0f1dd029062",
+    "tests/quantization/test_official_hf_loading.py": "b14328a12ad8278c85856fe7e2c584a24666f8d552b323abd790a6adf90a68fd",
+    "tests/quantization/test_official_image.py": "2ef71cdff08457e91476a0bd8c63ec23549aeffcab0926f64bc8058b4f6fc0b0",
+    "tests/quantization/test_official_model_runtime.py": "ca7dd19e81c02e0bfebc484775413768af92bf59642754413bf85b5d56c69c9e",
+    "tests/quantization/test_official_operand.py": "1c2849c10c3c667798b5eaf4e579c4a1fdca3b1bd415a2970af2d685e3cf9c33",
+    "tests/quantization/test_official_rope.py": "9abda813a0338700fd7cc96e136c8c3d6b0ac24fa1cb2baf67201304d5e6ca40",
+    "tests/quantization/test_official_runtime_linear.py": "11939fc92f84f44ed1c61956377ac5291a516aaad8ed7542e7c09b9adea2f8e0",
+    "tests/quantization/test_official_sampler.py": "fae599a826393cc59eb99c0952cb945d29c43f310a2dfae2c1a51f652d04a1f3",
+    "tests/quantization/test_official_vision_runtime.py": "ce15ae5f36146f8f88f1615c250452acf545857d89045230e5bfd3d257e6f36c"
+  },
+  "torch": "2.13.0+cpu",
+  "python": "3.12.16",
+  "ascend_launch_blocking": "0",
+  "passed": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 34498048,
+      "hf32_enabled": false,
+      "container_local_device": 0,
+      "device": "npu:0",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 0,
+          "tokens": 3,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 0,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 0,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 0,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 0,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 0,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 0,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 0,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 0,
+          "passed": true,
+          "tokens": 0,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "engram_raw_owner_gather_projection_gate",
+          "rank": 0,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_empty_origin",
+          "rank": 0,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": true
+        },
+        {
+          "case": "engram_collective_contract_rejections",
+          "rank": 0,
+          "passed": true,
+          "runtime_errors_agreed": 4,
+          "ordering_and_counts_validated": true,
+          "peer_source_mutation_rejected": true
+        },
+        {
+          "case": "actual_hc_runtime_shifted_and_head",
+          "rank": 0,
+          "passed": true,
+          "actual_hc_runtime": true,
+          "ordinary_and_shifted": true,
+          "lazy_consumption_and_head": true,
+          "fp32_parameter_dtype_preserved": true,
+          "bf16_results_exact_fixture": true
+        },
+        {
+          "case": "scheduled_decoder_engram_mhc_attention_ep_sampler",
+          "passed": true,
+          "actual_native_scheduler": true,
+          "native_extension_path": "/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/_C.cpython-312-aarch64-linux-gnu.so",
+          "native_extension_sha256": "6d3695fbfc6571dae5e43557cfae44a2650d1f1a75c225c99bc641b2504797e7",
+          "actual_runner_input_preparation": true,
+          "actual_sampler": true,
+          "sequence_history_and_engram_mapping": true,
+          "prefill_replay": true,
+          "traces": [
+            {
+              "case": "free_greedy_length",
+              "generated": [
+                26,
+                12,
+                31,
+                26
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "output": 26
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    26
+                  ],
+                  "output": 12
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    12
+                  ],
+                  "output": 31
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    31
+                  ],
+                  "output": 26
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            },
+            {
+              "case": "golden_eos",
+              "generated": [
+                7,
+                31
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "output": 7
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    7
+                  ],
+                  "output": 31
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_STOPPED"
+            },
+            {
+              "case": "stochastic_seeded",
+              "generated": [
+                13,
+                26,
+                26,
+                12
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "output": 13
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    13
+                  ],
+                  "output": 26
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    26
+                  ],
+                  "output": 26
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    26
+                  ],
+                  "output": 12
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            },
+            {
+              "case": "stochastic_repeat",
+              "generated": [
+                13,
+                26,
+                26,
+                12
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    3,
+                    4,
+                    5
+                  ],
+                  "output": 13
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    13
+                  ],
+                  "output": 26
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    26
+                  ],
+                  "output": 26
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    26
+                  ],
+                  "output": 12
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            }
+          ],
+          "official_payload": false,
+          "speculative": false,
+          "cp_size": 1,
+          "ep_size": 2,
+          "sharded_engram": true,
+          "singleton_cpu_model_oracle": true,
+          "native_sampling_reference_exact": true,
+          "seeded_repeatability": true,
+          "prompt_logprobs_reference_exact": true,
+          "rank": 0
+        }
+      ],
+      "torch_npu_imported": true
+    },
+    {
+      "rank": 1,
+      "backend": "hccl",
+      "passed": true,
+      "device_name": "Ascend910_9362",
+      "peak_allocated_bytes": 34498048,
+      "hf32_enabled": false,
+      "container_local_device": 1,
+      "device": "npu:1",
+      "cases": [
+        {
+          "case": 0,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 1,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 2,
+          "rank": 1,
+          "tokens": 1,
+          "passed": true
+        },
+        {
+          "case": 3,
+          "rank": 1,
+          "tokens": 2,
+          "passed": true
+        },
+        {
+          "case": 4,
+          "rank": 1,
+          "tokens": 0,
+          "passed": true
+        },
+        {
+          "case": "preflight_and_compute_recovery",
+          "rank": 1,
+          "passed": true
+        },
+        {
+          "case": "bound_gate_shared_raw_moe",
+          "rank": 1,
+          "tokens": 12,
+          "passed": true
+        },
+        {
+          "case": "gate_ties_tiny_scores_epsilon",
+          "rank": 1,
+          "passed": true,
+          "lowest_index_ties": true,
+          "tiny_score_logit": -100.0,
+          "denominator": "sum+1e-20"
+        },
+        {
+          "case": "residual_norm_fp8_rounding",
+          "rank": 1,
+          "passed": true,
+          "norm_rounds_before_fp8": true,
+          "fp8_bytes_exact": true,
+          "residual_bf16_exact": true
+        },
+        {
+          "case": "norm_gate_shared_raw_moe",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "norm_moe_empty_origin",
+          "rank": 1,
+          "passed": true,
+          "tokens": 13,
+          "residual_norm_gate_shared_routed_combine": true
+        },
+        {
+          "case": "engram_raw_owner_gather_projection_gate",
+          "rank": 1,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_empty_origin",
+          "rank": 1,
+          "passed": true,
+          "raw_gather_bytes_exact": true,
+          "hash_exact": true,
+          "zero_dot_ascend_sign_branch": true,
+          "no_embedding_decode_or_requantization": true,
+          "gate_projection_exact_fixture": true,
+          "cpu_residency_bytes": 198,
+          "empty_origin": false
+        },
+        {
+          "case": "engram_collective_contract_rejections",
+          "rank": 1,
+          "passed": true,
+          "runtime_errors_agreed": 4,
+          "ordering_and_counts_validated": true,
+          "peer_source_mutation_rejected": true
+        },
+        {
+          "case": "actual_hc_runtime_shifted_and_head",
+          "rank": 1,
+          "passed": true,
+          "actual_hc_runtime": true,
+          "ordinary_and_shifted": true,
+          "lazy_consumption_and_head": true,
+          "fp32_parameter_dtype_preserved": true,
+          "bf16_results_exact_fixture": true
+        },
+        {
+          "case": "scheduled_decoder_engram_mhc_attention_ep_sampler",
+          "passed": true,
+          "actual_native_scheduler": true,
+          "native_extension_path": "/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/_C.cpython-312-aarch64-linux-gnu.so",
+          "native_extension_sha256": "6d3695fbfc6571dae5e43557cfae44a2650d1f1a75c225c99bc641b2504797e7",
+          "actual_runner_input_preparation": true,
+          "actual_sampler": true,
+          "sequence_history_and_engram_mapping": true,
+          "prefill_replay": true,
+          "traces": [
+            {
+              "case": "free_greedy_length",
+              "generated": [
+                9,
+                14,
+                5,
+                26
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "output": 9
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    9
+                  ],
+                  "output": 14
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    14
+                  ],
+                  "output": 5
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    5
+                  ],
+                  "output": 26
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            },
+            {
+              "case": "golden_eos",
+              "generated": [
+                7,
+                31
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "output": 7
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    7
+                  ],
+                  "output": 31
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_STOPPED"
+            },
+            {
+              "case": "stochastic_seeded",
+              "generated": [
+                9,
+                31,
+                15,
+                9
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "output": 9
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    9
+                  ],
+                  "output": 31
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    31
+                  ],
+                  "output": 15
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    15
+                  ],
+                  "output": 9
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            },
+            {
+              "case": "stochastic_repeat",
+              "generated": [
+                9,
+                31,
+                15,
+                9
+              ],
+              "steps": [
+                {
+                  "is_prompt": true,
+                  "positions": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "input_ids": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "output": 9
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    3
+                  ],
+                  "input_ids": [
+                    9
+                  ],
+                  "output": 31
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    4
+                  ],
+                  "input_ids": [
+                    31
+                  ],
+                  "output": 15
+                },
+                {
+                  "is_prompt": false,
+                  "positions": [
+                    5
+                  ],
+                  "input_ids": [
+                    15
+                  ],
+                  "output": 9
+                }
+              ],
+              "blocks_reclaimed": true,
+              "states_reclaimed": true,
+              "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+            }
+          ],
+          "official_payload": false,
+          "speculative": false,
+          "cp_size": 1,
+          "ep_size": 2,
+          "sharded_engram": true,
+          "singleton_cpu_model_oracle": true,
+          "native_sampling_reference_exact": true,
+          "seeded_repeatability": true,
+          "prompt_logprobs_reference_exact": true,
+          "rank": 1
+        }
+      ],
+      "torch_npu_imported": true
+    }
+  ]
+}

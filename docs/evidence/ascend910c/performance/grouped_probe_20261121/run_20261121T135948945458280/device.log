@@ -1,0 +1,18 @@
+{"source_sha256": "b8b08a9b4973bb777f2da98e00cc9047aae3678c572e3aa721b6fb38bef7e300", "torch": "2.13.0+cpu", "torch_npu": "2.13.0.rc1"}
+[W1121 05:59:55.900380182 NPUCachingAllocator.cpp:177] Warning: The current CANN and Soc versions require processing for 32 padding size, with memory allocation. (function operator())
+Traceback (most recent call last):
+  File "/root/yuhao/deepinfer_910c_yh/grouped_probe_20261121_yh/probe_grouped_rounding.py", line 25, in <module>
+    out=torch_npu.npu_grouped_matmul([a.npu()],[packed],scale=[scale],bias=None,per_token_scale=[t.npu()],group_list=torch.tensor([m],dtype=torch.int64).npu(),group_list_type=1,group_type=0,split_item=2,output_dtype=torch.bfloat16)[0].cpu().float()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/_ops.py", line 1279, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: npu_grouped_matmul:../third_party/op-plugin/op_plugin/ops/opapi/GroupedMatmulKernelNpuOpApi.cpp:323 NPU function error: call aclnnGroupedMatmulWeightNz failed, error code is 561103
+[ERROR] 2026-11-21-05:59:55 (PID:1, Device:0, RankID:-1) ERR00100 PTA call acl api failed.
+[PID: 1] 2026-11-21-05:59:55.653.878 Invalid_Argument(EZ0026): Parameter K of GroupedMatmul has incorrect value 32. Reason: GMM_tiling: K should be divisible by 64.
+        Solution: Check whether the parameter value is correct.
+TraceBack (most recent call last):
+        Failed to execute operator aclnnGroupedMatmulWeightNz_3_GroupedMatmul. Reason: Failed to execute tiling.
+        Kernel GetWorkspace failed. opType: 5
+        Parameter input of GroupedMatmul is invalid. Reason: ADD_TO_LAUNCHER_LIST_AICORE failed, ret = 561000.
+

@@ -1,0 +1,118 @@
+{
+  "task": "lru_cache",
+  "request": {
+    "model": "p2-graph-20261121T230225Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-lru_cache]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：实现一个 LRU 缓存操作器。operations 是按顺序排列的列表，每项是 [\"get\", key] 或 [\"put\", key, value]。容量为非负整数。get 命中时返回值并将该键设为最近使用；get 未命中时返回 None；put 更新已有键并刷新其使用顺序；超出容量时删除最久未使用项。函数返回所有 get 操作结果组成的列表，不修改 operations。\n函数签名：def lru_cache(operations, capacity):\n示例：例如 capacity=2 且操作为 put(a,1), put(b,2), get(a), put(c,3), get(b)，结果是 [1, None]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 217,
+    "total_tokens": 377,
+    "completion_tokens": 160,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 17,
+    "total": 17,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "miss",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "evicts-least-recent",
+        "passed": true,
+        "actual": "[1,null,3]"
+      },
+      {
+        "id": "zero-capacity",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "update-existing",
+        "passed": true,
+        "actual": "[9]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[null,null,-16,-14]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[null,-5]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[-16,-5,-16]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[null,null,null,null,null,null,13]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[null]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[null,null,null,null,null]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[null,null,15,null]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[null,null,null,null,null]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[null,null]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[null,null,4,null]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def lru_cache(operations, capacity):\n    from collections import OrderedDict\n\n    cache = OrderedDict()\n    results = []\n\n    for op in operations:\n        if op[0] == \"get\":\n            key = op[1]\n            if key in cache:\n                value = cache.pop(key)\n                cache[key] = value\n                results.append(value)\n            else:\n                results.append(None)\n        elif op[0] == \"put\":\n            key, value = op[1], op[2]\n            if key in cache:\n                cache.pop(key)\n            cache[key] = value\n            if capacity == 0:\n                cache.clear()\n            elif len(cache) > capacity:\n                cache.popitem(last=False)\n\n    return results\n",
+    "extracted_code_sha256": "012768741ae40300c7e3aa6705ce67dbb4acbe6949630c80f6441924b1408465"
+  }
+}

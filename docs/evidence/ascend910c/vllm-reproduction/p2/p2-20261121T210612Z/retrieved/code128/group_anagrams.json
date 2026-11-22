@@ -1,0 +1,21 @@
+{
+  "task": "group_anagrams",
+  "request": {
+    "model": "p1-vision1-20261121T205625Z-244b8fbf",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-group_anagrams]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：把变位词分组。两个字符串当且仅当字符及其出现次数完全相同才属于同一组。组的顺序按该组第一次出现的位置排列，组内字符串保留原始相对顺序。空输入返回空列表；大小写敏感，不修改输入。\n函数签名：def group_anagrams(words):\n示例：例如 [\"eat\",\"tea\",\"tan\",\"ate\"] 返回 [[\"eat\",\"tea\",\"ate\"],[\"tan\"]]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 400,
+  "error": "HTTP Error 400: Bad Request",
+  "score": {
+    "passed": 0,
+    "total": 16,
+    "status": "error"
+  }
+}

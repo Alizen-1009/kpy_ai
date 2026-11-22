@@ -1,0 +1,359 @@
+{
+  "rank": 1,
+  "backend": "hccl",
+  "passed": true,
+  "device_name": "Ascend910_9362",
+  "peak_allocated_bytes": 34498048,
+  "hf32_enabled": false,
+  "container_local_device": 1,
+  "device": "npu:1",
+  "cases": [
+    {
+      "case": 0,
+      "rank": 1,
+      "tokens": 2,
+      "passed": true
+    },
+    {
+      "case": 1,
+      "rank": 1,
+      "tokens": 1,
+      "passed": true
+    },
+    {
+      "case": 2,
+      "rank": 1,
+      "tokens": 1,
+      "passed": true
+    },
+    {
+      "case": 3,
+      "rank": 1,
+      "tokens": 2,
+      "passed": true
+    },
+    {
+      "case": 4,
+      "rank": 1,
+      "tokens": 0,
+      "passed": true
+    },
+    {
+      "case": "preflight_and_compute_recovery",
+      "rank": 1,
+      "passed": true
+    },
+    {
+      "case": "bound_gate_shared_raw_moe",
+      "rank": 1,
+      "tokens": 12,
+      "passed": true
+    },
+    {
+      "case": "gate_ties_tiny_scores_epsilon",
+      "rank": 1,
+      "passed": true,
+      "lowest_index_ties": true,
+      "tiny_score_logit": -100.0,
+      "denominator": "sum+1e-20"
+    },
+    {
+      "case": "residual_norm_fp8_rounding",
+      "rank": 1,
+      "passed": true,
+      "norm_rounds_before_fp8": true,
+      "fp8_bytes_exact": true,
+      "residual_bf16_exact": true
+    },
+    {
+      "case": "norm_gate_shared_raw_moe",
+      "rank": 1,
+      "passed": true,
+      "tokens": 13,
+      "residual_norm_gate_shared_routed_combine": true
+    },
+    {
+      "case": "norm_moe_empty_origin",
+      "rank": 1,
+      "passed": true,
+      "tokens": 13,
+      "residual_norm_gate_shared_routed_combine": true
+    },
+    {
+      "case": "engram_raw_owner_gather_projection_gate",
+      "rank": 1,
+      "passed": true,
+      "raw_gather_bytes_exact": true,
+      "hash_exact": true,
+      "zero_dot_ascend_sign_branch": true,
+      "no_embedding_decode_or_requantization": true,
+      "gate_projection_exact_fixture": true,
+      "cpu_residency_bytes": 198,
+      "empty_origin": false
+    },
+    {
+      "case": "engram_empty_origin",
+      "rank": 1,
+      "passed": true,
+      "raw_gather_bytes_exact": true,
+      "hash_exact": true,
+      "zero_dot_ascend_sign_branch": true,
+      "no_embedding_decode_or_requantization": true,
+      "gate_projection_exact_fixture": true,
+      "cpu_residency_bytes": 198,
+      "empty_origin": false
+    },
+    {
+      "case": "engram_collective_contract_rejections",
+      "rank": 1,
+      "passed": true,
+      "runtime_errors_agreed": 4,
+      "ordering_and_counts_validated": true,
+      "peer_source_mutation_rejected": true
+    },
+    {
+      "case": "actual_hc_runtime_shifted_and_head",
+      "rank": 1,
+      "passed": true,
+      "actual_hc_runtime": true,
+      "ordinary_and_shifted": true,
+      "lazy_consumption_and_head": true,
+      "fp32_parameter_dtype_preserved": true,
+      "bf16_results_exact_fixture": true
+    },
+    {
+      "case": "scheduled_decoder_engram_mhc_attention_ep_sampler",
+      "passed": true,
+      "actual_native_scheduler": true,
+      "native_extension_path": "/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/_C.cpython-312-aarch64-linux-gnu.so",
+      "native_extension_sha256": "6d3695fbfc6571dae5e43557cfae44a2650d1f1a75c225c99bc641b2504797e7",
+      "actual_runner_input_preparation": true,
+      "actual_sampler": true,
+      "sequence_history_and_engram_mapping": true,
+      "prefill_replay": true,
+      "traces": [
+        {
+          "case": "free_greedy_length",
+          "generated": [
+            9,
+            14,
+            5,
+            26
+          ],
+          "steps": [
+            {
+              "is_prompt": true,
+              "positions": [
+                0,
+                1,
+                2
+              ],
+              "input_ids": [
+                6,
+                7,
+                8
+              ],
+              "output": 9
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                3
+              ],
+              "input_ids": [
+                9
+              ],
+              "output": 14
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                4
+              ],
+              "input_ids": [
+                14
+              ],
+              "output": 5
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                5
+              ],
+              "input_ids": [
+                5
+              ],
+              "output": 26
+            }
+          ],
+          "blocks_reclaimed": true,
+          "states_reclaimed": true,
+          "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+        },
+        {
+          "case": "golden_eos",
+          "generated": [
+            7,
+            31
+          ],
+          "steps": [
+            {
+              "is_prompt": true,
+              "positions": [
+                0,
+                1,
+                2
+              ],
+              "input_ids": [
+                6,
+                7,
+                8
+              ],
+              "output": 7
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                3
+              ],
+              "input_ids": [
+                7
+              ],
+              "output": 31
+            }
+          ],
+          "blocks_reclaimed": true,
+          "states_reclaimed": true,
+          "status": "SequenceStatus.FINISHED_STOPPED"
+        },
+        {
+          "case": "stochastic_seeded",
+          "generated": [
+            9,
+            31,
+            15,
+            9
+          ],
+          "steps": [
+            {
+              "is_prompt": true,
+              "positions": [
+                0,
+                1,
+                2
+              ],
+              "input_ids": [
+                6,
+                7,
+                8
+              ],
+              "output": 9
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                3
+              ],
+              "input_ids": [
+                9
+              ],
+              "output": 31
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                4
+              ],
+              "input_ids": [
+                31
+              ],
+              "output": 15
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                5
+              ],
+              "input_ids": [
+                15
+              ],
+              "output": 9
+            }
+          ],
+          "blocks_reclaimed": true,
+          "states_reclaimed": true,
+          "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+        },
+        {
+          "case": "stochastic_repeat",
+          "generated": [
+            9,
+            31,
+            15,
+            9
+          ],
+          "steps": [
+            {
+              "is_prompt": true,
+              "positions": [
+                0,
+                1,
+                2
+              ],
+              "input_ids": [
+                6,
+                7,
+                8
+              ],
+              "output": 9
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                3
+              ],
+              "input_ids": [
+                9
+              ],
+              "output": 31
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                4
+              ],
+              "input_ids": [
+                31
+              ],
+              "output": 15
+            },
+            {
+              "is_prompt": false,
+              "positions": [
+                5
+              ],
+              "input_ids": [
+                15
+              ],
+              "output": 9
+            }
+          ],
+          "blocks_reclaimed": true,
+          "states_reclaimed": true,
+          "status": "SequenceStatus.FINISHED_LENGTH_CAPPED"
+        }
+      ],
+      "official_payload": false,
+      "speculative": false,
+      "cp_size": 1,
+      "ep_size": 2,
+      "sharded_engram": true,
+      "singleton_cpu_model_oracle": true,
+      "native_sampling_reference_exact": true,
+      "seeded_repeatability": true,
+      "prompt_logprobs_reference_exact": true,
+      "rank": 1
+    }
+  ],
+  "torch_npu_imported": true
+}

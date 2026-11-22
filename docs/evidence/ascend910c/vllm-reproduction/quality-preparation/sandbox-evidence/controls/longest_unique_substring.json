@@ -1,0 +1,94 @@
+{
+  "task": "longest_unique_substring",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "0"
+      },
+      {
+        "id": "all-same",
+        "passed": true,
+        "actual": "1"
+      },
+      {
+        "id": "middle-repeat",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "unicode",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "4"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "4"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "0"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "3"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def longest_unique_substring(text):\n    seen, left, best = {}, 0, 0\n    for i,ch in enumerate(text):\n        left = max(left,seen.get(ch,-1)+1)\n        best = max(best,i-left+1); seen[ch] = i\n    return best\n",
+    "extracted_code_sha256": "bdd6a2bd5837f558c4120cfaa82631a63ddcdb64e4207ec1f7d8d72fb71c7670"
+  }
+}

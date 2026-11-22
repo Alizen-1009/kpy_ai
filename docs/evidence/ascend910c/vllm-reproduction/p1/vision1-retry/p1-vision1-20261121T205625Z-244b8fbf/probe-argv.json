@@ -1,0 +1,19 @@
+[
+  "python3",
+  "-B",
+  "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/deployment_v2_yh/scripts/vllm_ascend_repro/probe_service.py",
+  "--base-url",
+  "http://127.0.0.1:18550",
+  "--expected-model",
+  "p1-vision1-20261121T205625Z-244b8fbf",
+  "--run-id",
+  "p1-vision1-20261121T205625Z-244b8fbf",
+  "--out",
+  "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/p1-vision1-20261121T205625Z-244b8fbf/smoke",
+  "--timeout",
+  "180",
+  "--count",
+  "3",
+  "--max-tokens",
+  "128"
+]

@@ -1,0 +1,23 @@
+{
+  "model": "p1-vision1-20261121T205625Z-244b8fbf",
+  "messages": [
+    {
+      "role": "user",
+      "content": "请记住我的纸船名字叫青栗。"
+    },
+    {
+      "role": "assistant",
+      "content": "好的，我记住了。"
+    },
+    {
+      "role": "user",
+      "content": "我的纸船叫什么名字？"
+    }
+  ],
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "temperature": 0,
+  "max_tokens": 128
+}

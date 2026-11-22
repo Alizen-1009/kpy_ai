@@ -1,0 +1,31 @@
+
+Authorized users only. All activities may be monitored and reported.
+test_official_minimum_vision_norm (tests.quantization.test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_official_minimum_vision_norm) ... ERROR
+
+======================================================================
+ERROR: test_official_minimum_vision_norm (tests.quantization.test_official_geometry_runtime.OfficialGeometryRuntimeTests.test_official_minimum_vision_norm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/tests/quantization/test_official_geometry_runtime.py", line 70, in test_official_minimum_vision_norm
+    result, residual = vit._norm(x, torch.ones(cfg["hidden_size"], dtype=torch.bfloat16), x, official_910c=True)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/model_executor/models/vision_encoder/vit.py", line 69, in _norm
+    return (op(x), x) if residual is None else op(x, residual=residual)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/yuhao/deepinfer_910c_yh/envs_yh/deepinfer-py312_yh/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/syf/data_yf/yuhao_deepinfer_910c_yh/src_yh/DeepInfer_stage3_20261119T123307_yh/deepinfer/model_executor/models/v4_modules/official_norm.py", line 47, in forward
+    raise ValueError("Norm input must be bounded non-meta BF16/FP32 [tokens,hidden] or [batch,tokens,hidden]")
+ValueError: Norm input must be bounded non-meta BF16/FP32 [tokens,hidden] or [batch,tokens,hidden]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.041s
+
+FAILED (errors=1)

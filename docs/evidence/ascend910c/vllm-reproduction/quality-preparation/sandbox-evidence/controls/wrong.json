@@ -1,0 +1,108 @@
+{
+  "status": "fail",
+  "passed": 0,
+  "total": 16,
+  "case_results": [
+    {
+      "id": "empty",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "all-same",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "middle-repeat",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "unicode",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-00",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-01",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-02",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-03",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-04",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-05",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-06",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-07",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-08",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-09",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-10",
+      "passed": false,
+      "actual": "-1"
+    },
+    {
+      "id": "random-11",
+      "passed": false,
+      "actual": "-1"
+    }
+  ],
+  "failed_case_ids": [
+    "empty",
+    "all-same",
+    "middle-repeat",
+    "unicode",
+    "random-00",
+    "random-01",
+    "random-02",
+    "random-03",
+    "random-04",
+    "random-05",
+    "random-06",
+    "random-07",
+    "random-08",
+    "random-09",
+    "random-10",
+    "random-11"
+  ],
+  "isolation": "docker",
+  "extracted_code": "def longest_unique_substring(text):\n    return -1\n",
+  "extracted_code_sha256": "a6d4732a6a9ea831674e54b8da98cfebc199d3d129c2c35b87bb89d64fe78dba"
+}

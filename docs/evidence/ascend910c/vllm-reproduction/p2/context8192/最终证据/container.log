@@ -1,0 +1,1185 @@
+[serve-v2] model=model tp=8 dp=1 port=18550 graph=0 prefix=0 spec=0(sp=7) kv=bfloat16 vision=1
+[serve-v2] bind=127.0.0.1 mm_limit_images=1 decode_guard=off
+[serve-v2] spec=0 sp_tokens=7 sp_schedule=<none>
+[serve-v2] npugraph_ex=0 static=0 cpu_bind=0 multistream=0 dsa=0 fused_mc2=0 mc2_alg= reduce_sample=0 loader_mt=0 lazy=1 max_len=8192 bat=8192 seqs=1
+[serve-v2] cmd: vllm serve /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model --host 127.0.0.1 --port 18550 --served-model-name p2-8192-20261121T224721Z --tensor-parallel-size 8 --enable-expert-parallel --trust-remote-code --dtype bfloat16 --kv-cache-dtype bfloat16 --max-model-len 8192 --max-num-seqs 1 --max-num-batched-tokens 8192 --block-size 128 --gpu-memory-utilization 0.85 --additional-config {"enable_engram":true,"enable_cpu_binding":false,"ascend_compilation_config":{"enable_npugraph_ex":false,"enable_static_kernel":false},"multistream_overlap_shared_expert":false,"multistream_dsv4_dsa_overlap":false,"enable_prefill_mc2":false,"enable_mc2_hierarchy_comm":false,"engram_storage":"int8"} --quantization ascend --enforce-eager --no-enable-prefix-caching --safetensors-load-strategy lazy --limit-mm-per-prompt {"image": 1} --tokenizer-mode=deepseek_v4 --default-chat-template-kwargs={"enable_thinking":false}
+INFO 11-21 22:47:29 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:47:29 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:47:29 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:47:29 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:47:29 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 22:47:46 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:47:46 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345] 
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.27.1
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345]   █▄█▀ █     █     █     █  model   /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:345] 
+(APIServer pid=1) INFO 11-21 22:47:47 [api_utils.py:273] non-default args: {'model_tag': '/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model', 'default_chat_template_kwargs': {'enable_thinking': False}, 'host': '127.0.0.1', 'port': 18550, 'model': '/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model', 'tokenizer_mode': 'deepseek_v4', 'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 8192, 'quantization': 'ascend', 'enforce_eager': True, 'served_model_name': ['p2-8192-20261121T224721Z'], 'safetensors_load_strategy': 'lazy', 'tensor_parallel_size': 8, 'enable_expert_parallel': True, 'block_size': 128, 'gpu_memory_utilization': 0.85, 'kv_cache_dtype': 'bfloat16', 'enable_prefix_caching': False, 'limit_mm_per_prompt': {'image': 1}, 'max_num_batched_tokens': 8192, 'max_num_seqs': 1, 'additional_config': {'enable_engram': True, 'enable_cpu_binding': False, 'ascend_compilation_config': {'enable_npugraph_ex': False, 'enable_static_kernel': False}, 'multistream_overlap_shared_expert': False, 'multistream_dsv4_dsa_overlap': False, 'enable_prefill_mc2': False, 'enable_mc2_hierarchy_comm': False, 'engram_storage': 'int8'}}
+(APIServer pid=1) WARNING 11-21 22:47:47 [envs.py:2128] Unknown vLLM environment variable detected: VLLM_ADMISSION_GATE
+(APIServer pid=1) INFO 11-21 22:48:00 [model.py:645] Resolved architecture: DeepseekV41ForCausalLM
+(APIServer pid=1) INFO 11-21 22:48:01 [model.py:2214] Downcasting torch.float32 to torch.bfloat16.
+(APIServer pid=1) INFO 11-21 22:48:01 [model.py:1883] Using max model len 8192
+(APIServer pid=1) INFO 11-21 22:48:02 [scheduler.py:242] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=1) WARNING 11-21 22:48:02 [vllm.py:1194] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=1) WARNING 11-21 22:48:02 [vllm.py:1247] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=1) INFO 11-21 22:48:02 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=1) INFO 11-21 22:48:02 [vllm.py:1426] Cudagraph is disabled under eager mode
+(APIServer pid=1) WARNING 11-21 22:48:02 [platform.py:651] GPU-specific parameter is not supported on Ascend. parameter=disable_cascade_attn, value=True, action: resetting to False.
+(APIServer pid=1) INFO 11-21 22:48:02 [platform.py:863] The timeout interval of the HCCL operator is 1836s. Timeout in seconds for execute_model RPC calls in multiprocessing must be greater than 1836s, Set VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=3000
+(APIServer pid=1) INFO 11-21 22:48:02 [ascend_config.py:161] Dynamic EPLB is False
+(APIServer pid=1) INFO 11-21 22:48:02 [ascend_config.py:162] The number of redundant experts is 0
+(APIServer pid=1) INFO 11-21 22:48:02 [platform.py:1090] Compilation disabled, using eager mode by default
+(APIServer pid=1) INFO 11-21 22:48:02 [platform.py:1167] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(APIServer pid=1) INFO 11-21 22:48:02 [platform.py:1356] Set PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+(APIServer pid=1) INFO 11-21 22:48:02 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+INFO 11-21 22:48:07 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:07 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:07 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:07 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:07 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(EngineCore pid=122) INFO 11-21 22:48:13 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(EngineCore pid=122) INFO 11-21 22:48:13 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(EngineCore pid=122) INFO 11-21 22:48:13 [core.py:121] Initializing a V1 LLM engine (v0.27.1) with config: model='/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model', speculative_config=None, tokenizer='/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model', skip_tokenizer_init=False, tokenizer_mode=deepseek_v4, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=8, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=True, quantization=ascend, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=npu, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=p2-8192-20261121T224721Z, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'vllm_ascend.compilation.compiler_interface.AscendCompiler', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [8192], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=122) INFO 11-21 22:48:13 [multiproc_executor.py:140] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=192.168.45.92 (local), world_size=8, local_world_size=8
+INFO 11-21 22:48:18 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:18 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:18 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:18 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:18 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 22:48:25 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:48:25 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:48:27 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:27 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:27 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:27 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:27 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:48:28 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:48:28 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:48:28 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=139) INFO 11-21 22:48:30 [parallel_state.py:1640] world_size=8 rank=0 local_rank=0 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:48:34 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:48:34 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:48:36 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:36 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:36 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:36 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:36 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:48:36 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:48:37 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:48:37 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=148) INFO 11-21 22:48:38 [parallel_state.py:1640] world_size=8 rank=1 local_rank=1 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:48:43 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:48:43 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:48:45 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:45 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:45 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:45 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:45 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:48:46 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:48:46 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:48:46 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=182) INFO 11-21 22:48:47 [parallel_state.py:1640] world_size=8 rank=2 local_rank=2 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:48:52 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:48:53 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:48:55 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:48:55 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:48:55 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:48:55 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:48:55 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:48:55 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:48:55 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:48:55 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=218) INFO 11-21 22:48:57 [parallel_state.py:1640] world_size=8 rank=3 local_rank=3 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:49:02 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:49:02 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:49:04 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:49:04 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:49:04 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:49:04 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:49:04 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:49:04 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:49:04 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:49:04 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=254) INFO 11-21 22:49:06 [parallel_state.py:1640] world_size=8 rank=4 local_rank=4 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:49:11 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:49:11 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:49:13 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:49:13 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:49:13 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:49:13 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:49:13 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:49:13 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:49:13 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:49:13 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=290) INFO 11-21 22:49:15 [parallel_state.py:1640] world_size=8 rank=5 local_rank=5 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:49:20 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:49:20 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 11-21 22:49:22 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:49:22 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:49:22 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:49:22 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:49:22 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 11-21 22:49:22 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:49:23 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:49:23 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=326) INFO 11-21 22:49:24 [parallel_state.py:1640] world_size=8 rank=6 local_rank=6 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+INFO 11-21 22:49:29 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 22:49:29 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+WARNING 11-21 22:49:32 [patch_triton.py:332] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+INFO 11-21 22:49:32 [ascend_config.py:161] Dynamic EPLB is False
+INFO 11-21 22:49:32 [ascend_config.py:162] The number of redundant experts is 0
+(Worker pid=362) INFO 11-21 22:49:33 [parallel_state.py:1640] world_size=8 rank=7 local_rank=7 distributed_init_method=tcp://127.0.0.1:54911 backend=hccl
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+(Worker pid=139) INFO 11-21 22:49:33 [parallel_state.py:1977] rank 0 in world size 8 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+(Worker pid=362) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker pid=254) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker pid=218) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker pid=148) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker pid=326) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker pid=290) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker pid=182) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker pid=139) INFO 11-21 22:49:34 [platform.py:1379] FA3 will not be enabled when rl_config.enable_training_consistency is false. Note that Ascend NPU will use its registered plugin backend instead.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:34 [model_runner_v1.py:4005] Starting to load model /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model...
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:34 [interface.py:414] Using default backend AttentionBackendEnum.TORCH_SDPA for vit attention
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:34 [mm_encoder_attention.py:375] Using AttentionBackendEnum.TORCH_SDPA for MMEncoderAttention.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:35 [modelslim_config.py:615] Using the vLLM Ascend modelslim Quantization now!
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:36 [expert_map_manager.py:245] [EP Rank 0/8] Expert parallelism is enabled. Expert placement strategy: linear. Local/global number of experts: 48/384. Experts local to global index map: 0->0, 1->1, 2->2, 3->3, 4->4, 5->5, 6->6, 7->7, 8->8, 9->9, 10->10, 11->11, 12->12, 13->13, 14->14, 15->15, 16->16, 17->17, 18->18, 19->19, 20->20, 21->21, 22->22, 23->23, 24->24, 25->25, 26->26, 27->27, 28->28, 29->29, 30->30, 31->31, 32->32, 33->33, 34->34, 35->35, 36->36, 37->37, 38->38, 39->39, 40->40, 41->41, 42->42, 43->43, 44->44, 45->45, 46->46, 47->47.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:49:52 [weight_utils.py:867] Filesystem type for checkpoints: XFS. Checkpoint size: 283.55 GiB. Available RAM: 749.14 GiB.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:51:49 [default_loader.py:430] Loading weights took 116.54 seconds
+INFO 11-21 22:51:54 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:51:54 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:51:54 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:51:54 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:51:54 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:52:06 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:52:06 [model_runner_v1.py:4145] Model runner load_model total time: 151.77 seconds
+INFO 11-21 22:52:24 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:24 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:24 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:24 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:24 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 22:52:26 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:26 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:26 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:26 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:26 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:52:30 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:52:30 [model_runner_v1.py:4145] Model runner load_model total time: 176.68 seconds
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:52:32 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:52:32 [model_runner_v1.py:4145] Model runner load_model total time: 178.26 seconds
+INFO 11-21 22:52:39 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:39 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:39 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:39 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:39 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:52:45 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:52:45 [model_runner_v1.py:4145] Model runner load_model total time: 191.03 seconds
+INFO 11-21 22:52:46 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:46 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:46 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:46 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:46 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:46 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:46 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:46 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:46 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 22:52:46 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 22:52:52 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:52:52 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:52:52 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:52:52 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:52:52 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:52:53 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:52:53 [model_runner_v1.py:4145] Model runner load_model total time: 199.18 seconds
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:52:53 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:52:53 [model_runner_v1.py:4145] Model runner load_model total time: 199.22 seconds
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:52:58 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:52:58 [model_runner_v1.py:4145] Model runner load_model total time: 204.46 seconds
+INFO 11-21 22:53:11 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 22:53:11 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 22:53:11 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 22:53:11 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 22:53:11 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:18 [model_runner_v1.py:4092] Loading model weights took 37.4330 GB
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:18 [model_runner_v1.py:4145] Model runner load_model total time: 223.98 seconds
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:20 [gpu_model_runner.py:6465] Encoder cache will be initialized with a budget of 8192 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:26 [worker.py:628] Available KV cache memory: 6.87 GiB
+(EngineCore pid=122) INFO 11-21 22:53:27 [kv_cache_utils.py:2235] GPU KV cache size: 156,335 tokens
+(EngineCore pid=122) INFO 11-21 22:53:27 [kv_cache_utils.py:2236] Maximum concurrency for 8,192 tokens per request: 19.08x
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:27 [kernel_warmup.py:44] Starting Triton kernel warmup.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:27 [kernel_warmup.py:36] rejection_sampler Triton warmup complete in 0.000s.
+(Worker_TP6_EP6 pid=326) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 5.743s.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP5_EP5 pid=290) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 5.938s.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP0_EP0 pid=139) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 5.970s.
+(Worker_TP7_EP7 pid=362) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 5.970s.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP4_EP4 pid=254) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 6.068s.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP1_EP1 pid=148) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 6.150s.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP3_EP3 pid=218) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 6.174s.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP2_EP2 pid=182) [WARNING] AutoBlockify disabled for kernel 'token_bin_counts_and_mask_kernel'. Unsafe ops: atomic operations. Enabling may cause correctness issues. To force enable: set has_auto_blockify_blacklist_op=False.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:33 [kernel_warmup.py:36] penalties Triton warmup complete in 6.202s.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:33 [kernel_warmup.py:36] rms Triton warmup complete in 0.000s.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:55 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 22.104s.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:55 [kernel_warmup.py:53] Triton kernel warmup finished in 27.848s.
+(Worker_TP6_EP6 pid=326) INFO 11-21 22:53:55 [worker.py:826] Free memory on device (60.89/61.27 GiB) on startup. Desired GPU memory utilization is (0.85, 52.08 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7225480192` (6.73 GiB) to fit into requested memory, or `--kv-cache-memory=16684049408` (15.54 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.88 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:56 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 22.760s.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:56 [kernel_warmup.py:53] Triton kernel warmup finished in 28.963s.
+(Worker_TP2_EP2 pid=182) INFO 11-21 22:53:56 [worker.py:826] Free memory on device (60.88/61.27 GiB) on startup. Desired GPU memory utilization is (0.85, 52.08 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7224906752` (6.73 GiB) to fit into requested memory, or `--kv-cache-memory=16671261696` (15.53 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.88 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:56 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 22.892s.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:56 [kernel_warmup.py:53] Triton kernel warmup finished in 29.067s.
+(Worker_TP3_EP3 pid=218) INFO 11-21 22:53:56 [worker.py:826] Free memory on device (61.13/61.28 GiB) on startup. Desired GPU memory utilization is (0.85, 52.09 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7235600588` (6.74 GiB) to fit into requested memory, or `--kv-cache-memory=16948765696` (15.78 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.89 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:56 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 23.210s.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:56 [kernel_warmup.py:53] Triton kernel warmup finished in 29.181s.
+(Worker_TP7_EP7 pid=362) INFO 11-21 22:53:56 [worker.py:826] Free memory on device (61.12/61.28 GiB) on startup. Desired GPU memory utilization is (0.85, 52.09 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7235367116` (6.74 GiB) to fit into requested memory, or `--kv-cache-memory=16936702976` (15.77 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.88 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:56 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 23.339s.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:56 [kernel_warmup.py:53] Triton kernel warmup finished in 29.278s.
+(Worker_TP5_EP5 pid=290) INFO 11-21 22:53:56 [worker.py:826] Free memory on device (61.12/61.28 GiB) on startup. Desired GPU memory utilization is (0.85, 52.09 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7236399308` (6.74 GiB) to fit into requested memory, or `--kv-cache-memory=16932983808` (15.77 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.89 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:56 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 23.375s.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:56 [kernel_warmup.py:53] Triton kernel warmup finished in 29.345s.
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:53:56 [worker.py:826] Free memory on device (60.88/61.27 GiB) on startup. Desired GPU memory utilization is (0.85, 52.08 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7224390656` (6.73 GiB) to fit into requested memory, or `--kv-cache-memory=16676541440` (15.53 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.87 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:57 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 23.525s.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:57 [kernel_warmup.py:53] Triton kernel warmup finished in 29.594s.
+(Worker_TP4_EP4 pid=254) INFO 11-21 22:53:57 [worker.py:826] Free memory on device (60.89/61.27 GiB) on startup. Desired GPU memory utilization is (0.85, 52.08 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7226962944` (6.73 GiB) to fit into requested memory, or `--kv-cache-memory=16683009024` (15.54 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.88 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:57 [kernel_warmup.py:36] deepseek_v41_indexer Triton warmup complete in 23.483s.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:57 [kernel_warmup.py:53] Triton kernel warmup finished in 29.633s.
+(Worker_TP1_EP1 pid=148) INFO 11-21 22:53:57 [worker.py:826] Free memory on device (61.12/61.28 GiB) on startup. Desired GPU memory utilization is (0.85, 52.09 GiB). Actual usage: 37.43 GiB for weights, 4.66 GiB for peak activation, 3.11 GiB for non-torch memory, 0.0 GiB for NPU graph memory. Replace gpu_memory_utilization with `--kv-cache-memory=7237685452` (6.74 GiB) to fit into requested memory, or `--kv-cache-memory=16938464256` (15.78 GiB) to fully utilize NPU free memory. Current KV cache memory: 6.89 GiB. After warmup: torch reserved memory 44.85 GiB, torch allocated memory 44.58 GiB.
+(EngineCore pid=122) INFO 11-21 22:53:57 [core.py:355] init engine (profile, create kv cache, warmup model) took 39.07 s
+(EngineCore pid=122) INFO 11-21 22:53:58 [ascend_config.py:161] Dynamic EPLB is False
+(EngineCore pid=122) INFO 11-21 22:53:58 [ascend_config.py:162] The number of redundant experts is 0
+(EngineCore pid=122) WARNING 11-21 22:53:59 [vllm.py:1194] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=122) WARNING 11-21 22:53:59 [vllm.py:1247] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=122) INFO 11-21 22:53:59 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(EngineCore pid=122) INFO 11-21 22:53:59 [vllm.py:1426] Cudagraph is disabled under eager mode
+(EngineCore pid=122) INFO 11-21 22:53:59 [platform.py:863] The timeout interval of the HCCL operator is 1836s. Timeout in seconds for execute_model RPC calls in multiprocessing must be greater than 1836s, Set VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=3000
+(EngineCore pid=122) INFO 11-21 22:53:59 [platform.py:1090] Compilation disabled, using eager mode by default
+(EngineCore pid=122) INFO 11-21 22:53:59 [platform.py:1167] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(EngineCore pid=122) INFO 11-21 22:53:59 [utils.py:1221] Block size is set to 128 if prefix cache or chunked prefill is enabled.
+(EngineCore pid=122) INFO 11-21 22:53:59 [platform.py:1356] Set PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+(EngineCore pid=122) INFO 11-21 22:53:59 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=1) INFO 11-21 22:53:59 [api_server.py:678] Supported tasks: ['generate']
+(APIServer pid=1) INFO 11-21 22:53:59 [base.py:235] Multi-modal warmup completed in 0.527s
+(APIServer pid=1) INFO 11-21 22:53:59 [base.py:235] Readonly multi-modal warmup completed in 0.046s
+(APIServer pid=1) INFO 11-21 22:53:59 [api_server.py:682] Starting vLLM server on http://127.0.0.1:18550
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:37] Available routes are:
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /docs, Methods: HEAD, GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /redoc, Methods: HEAD, GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /load, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /version, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /health, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/messages, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /generative_scoring, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /v1/completions/derender, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=1) INFO 11-21 22:53:59 [launcher.py:99] API server: waiting for HTTP server to start
+(APIServer pid=1) INFO 11-21 22:54:00 [launcher.py:105] API server: HTTP server started
+(APIServer pid=1) INFO:     127.0.0.1:40994 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     127.0.0.1:41006 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 11-21 22:54:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.8 tokens/s, Avg generation throughput: 0.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=20 dec=17 d2h=56.074 hash=0.466 hp=1070.568 meta=0.003 pad=0.131 route=2.636 total=60.881 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=20 dec=17 d2h=72.780 hash=0.447 hp=1072.633 meta=0.002 pad=0.120 route=2.700 total=77.631 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=20 dec=17 d2h=132.836 hash=0.434 hp=1082.223 meta=0.003 pad=0.132 route=2.714 total=137.684 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=20 dec=17 d2h=67.105 hash=0.446 hp=1071.193 meta=0.002 pad=0.130 route=2.715 total=71.955 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=20 dec=17 d2h=50.679 hash=0.435 hp=1068.990 meta=0.003 pad=0.142 route=2.749 total=55.550 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=20 dec=17 d2h=85.028 hash=0.458 hp=1078.692 meta=0.003 pad=0.129 route=2.751 total=89.894 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=20 dec=17 d2h=80.601 hash=0.455 hp=1072.993 meta=0.003 pad=0.133 route=2.734 total=85.463 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=20 dec=17 d2h=48.677 hash=0.457 hp=1071.331 meta=0.003 pad=0.148 route=2.582 total=53.186 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=40 dec=20 d2h=21.611 hash=0.394 hp=180.372 meta=0.002 pad=0.120 route=2.439 total=25.117 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=40 dec=20 d2h=6.945 hash=0.371 hp=180.282 meta=0.002 pad=0.142 route=2.504 total=10.482 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=40 dec=20 d2h=20.960 hash=0.380 hp=180.388 meta=0.002 pad=0.127 route=2.458 total=24.475 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=40 dec=20 d2h=16.016 hash=0.393 hp=180.329 meta=0.002 pad=0.130 route=2.468 total=19.540 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=40 dec=20 d2h=18.377 hash=0.386 hp=180.353 meta=0.002 pad=0.123 route=2.462 total=21.898 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=40 dec=20 d2h=16.934 hash=0.390 hp=180.344 meta=0.002 pad=0.125 route=2.479 total=20.448 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=40 dec=20 d2h=11.734 hash=0.391 hp=180.314 meta=0.002 pad=0.126 route=2.524 total=15.258 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=40 dec=20 d2h=0.125 hash=0.376 hp=180.297 meta=0.003 pad=0.143 route=2.365 total=3.262 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:54:40 [loggers.py:310] Engine 000: Avg prompt throughput: 21.7 tokens/s, Avg generation throughput: 4.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=60 dec=20 d2h=17.667 hash=0.387 hp=182.546 meta=0.002 pad=0.124 route=2.513 total=21.180 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=60 dec=20 d2h=21.585 hash=0.397 hp=182.654 meta=0.002 pad=0.120 route=2.480 total=25.091 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=60 dec=20 d2h=6.941 hash=0.374 hp=182.580 meta=0.002 pad=0.142 route=2.545 total=10.471 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=60 dec=20 d2h=15.056 hash=0.397 hp=182.552 meta=0.002 pad=0.129 route=2.507 total=18.575 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=60 dec=20 d2h=15.923 hash=0.390 hp=182.561 meta=0.002 pad=0.125 route=2.520 total=19.431 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=60 dec=20 d2h=10.878 hash=0.400 hp=182.696 meta=0.002 pad=0.127 route=2.559 total=14.402 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=60 dec=20 d2h=19.538 hash=0.389 hp=182.616 meta=0.002 pad=0.128 route=2.488 total=23.049 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=60 dec=20 d2h=0.126 hash=0.376 hp=182.537 meta=0.002 pad=0.140 route=2.357 total=3.253 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=80 dec=20 d2h=21.309 hash=0.399 hp=186.279 meta=0.002 pad=0.121 route=2.383 total=24.722 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=80 dec=20 d2h=1.859 hash=0.393 hp=187.269 meta=0.002 pad=0.130 route=2.252 total=5.105 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=80 dec=20 d2h=15.253 hash=0.398 hp=186.382 meta=0.002 pad=0.129 route=2.407 total=18.675 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=80 dec=20 d2h=18.742 hash=0.388 hp=186.311 meta=0.002 pad=0.124 route=2.407 total=22.167 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=80 dec=20 d2h=16.144 hash=0.391 hp=186.381 meta=0.002 pad=0.125 route=2.426 total=19.563 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=80 dec=20 d2h=11.393 hash=0.399 hp=186.204 meta=0.002 pad=0.126 route=2.458 total=14.818 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=80 dec=20 d2h=7.782 hash=0.376 hp=186.364 meta=0.002 pad=0.141 route=2.446 total=11.220 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=80 dec=20 d2h=0.340 hash=0.377 hp=186.359 meta=0.002 pad=0.142 route=2.402 total=3.515 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=100 dec=20 d2h=8.939 hash=0.374 hp=188.508 meta=0.002 pad=0.140 route=2.514 total=12.443 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=100 dec=20 d2h=19.807 hash=0.397 hp=189.092 meta=0.002 pad=0.122 route=2.460 total=23.289 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=100 dec=20 d2h=18.683 hash=0.387 hp=189.033 meta=0.002 pad=0.123 route=2.476 total=22.169 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=100 dec=20 d2h=14.519 hash=0.396 hp=189.057 meta=0.002 pad=0.130 route=2.478 total=18.010 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=100 dec=20 d2h=2.333 hash=0.386 hp=188.924 meta=0.002 pad=0.130 route=2.520 total=5.834 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=100 dec=20 d2h=12.243 hash=0.395 hp=188.987 meta=0.002 pad=0.126 route=2.528 total=15.732 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=100 dec=20 d2h=13.503 hash=0.394 hp=189.531 meta=0.002 pad=0.129 route=2.492 total=16.988 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=100 dec=20 d2h=0.127 hash=0.376 hp=188.993 meta=0.002 pad=0.141 route=2.329 total=3.230 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:54:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=120 dec=20 d2h=15.131 hash=0.387 hp=190.046 meta=0.002 pad=0.128 route=2.486 total=18.634 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=120 dec=20 d2h=17.067 hash=0.399 hp=190.063 meta=0.002 pad=0.122 route=2.466 total=20.564 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=120 dec=20 d2h=2.592 hash=0.391 hp=189.650 meta=0.002 pad=0.128 route=2.484 total=6.077 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=120 dec=20 d2h=15.520 hash=0.389 hp=190.138 meta=0.002 pad=0.124 route=2.475 total=19.021 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=120 dec=20 d2h=11.619 hash=0.397 hp=190.112 meta=0.002 pad=0.128 route=2.491 total=15.124 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=120 dec=20 d2h=4.339 hash=0.399 hp=189.965 meta=0.002 pad=0.147 route=2.501 total=7.858 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=120 dec=20 d2h=12.660 hash=0.402 hp=190.030 meta=0.002 pad=0.131 route=2.472 total=16.156 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=120 dec=20 d2h=0.126 hash=0.380 hp=189.896 meta=0.002 pad=0.140 route=2.314 total=3.219 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=140 dec=20 d2h=13.928 hash=0.386 hp=190.969 meta=0.002 pad=0.124 route=2.549 total=17.490 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=140 dec=20 d2h=9.421 hash=0.394 hp=191.020 meta=0.002 pad=0.128 route=2.560 total=12.996 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=140 dec=20 d2h=2.907 hash=0.395 hp=191.078 meta=0.003 pad=0.147 route=2.574 total=6.489 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=140 dec=20 d2h=13.603 hash=0.391 hp=191.028 meta=0.002 pad=0.128 route=2.543 total=17.169 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=140 dec=20 d2h=10.139 hash=0.397 hp=191.155 meta=0.002 pad=0.131 route=2.548 total=13.709 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=140 dec=20 d2h=14.707 hash=0.398 hp=191.114 meta=0.002 pad=0.123 route=2.528 total=18.268 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=140 dec=20 d2h=6.676 hash=0.381 hp=191.059 meta=0.002 pad=0.128 route=2.561 total=10.241 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=140 dec=20 d2h=0.128 hash=0.382 hp=191.026 meta=0.002 pad=0.139 route=2.408 total=3.316 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=160 dec=20 d2h=12.872 hash=0.384 hp=193.755 meta=0.002 pad=0.126 route=2.463 total=16.332 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=160 dec=20 d2h=14.182 hash=0.396 hp=193.698 meta=0.002 pad=0.123 route=2.435 total=17.635 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=160 dec=20 d2h=9.057 hash=0.393 hp=193.670 meta=0.002 pad=0.126 route=2.472 total=12.525 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=160 dec=20 d2h=7.326 hash=0.382 hp=193.727 meta=0.002 pad=0.126 route=2.534 total=10.838 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=160 dec=20 d2h=9.809 hash=0.398 hp=193.665 meta=0.002 pad=0.130 route=2.459 total=13.274 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=160 dec=20 d2h=13.301 hash=0.387 hp=193.785 meta=0.002 pad=0.124 route=2.447 total=16.754 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=160 dec=20 d2h=2.079 hash=0.395 hp=193.791 meta=0.003 pad=0.147 route=2.462 total=5.540 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=160 dec=20 d2h=0.131 hash=0.386 hp=193.767 meta=0.002 pad=0.151 route=2.302 total=3.225 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:53272 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=180 dec=19 d2h=11.042 hash=0.399 hp=216.004 meta=0.003 pad=0.129 route=2.600 total=14.652 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=180 dec=19 d2h=12.525 hash=0.394 hp=216.915 meta=0.002 pad=0.123 route=2.596 total=16.133 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=180 dec=19 d2h=11.494 hash=0.389 hp=216.786 meta=0.002 pad=0.128 route=2.605 total=15.105 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=180 dec=19 d2h=9.423 hash=0.401 hp=216.737 meta=0.002 pad=0.126 route=2.612 total=13.031 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=180 dec=19 d2h=7.250 hash=0.390 hp=216.660 meta=0.002 pad=0.126 route=2.609 total=10.860 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=180 dec=19 d2h=10.373 hash=0.409 hp=217.058 meta=0.002 pad=0.131 route=2.579 total=13.976 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=180 dec=19 d2h=8.755 hash=0.401 hp=216.813 meta=0.002 pad=0.130 route=2.607 total=12.373 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=180 dec=19 d2h=0.139 hash=0.387 hp=216.751 meta=0.002 pad=0.137 route=2.318 total=3.237 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=200 dec=20 d2h=15.336 hash=0.399 hp=199.856 meta=0.003 pad=0.119 route=2.463 total=18.819 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=200 dec=20 d2h=7.981 hash=0.393 hp=199.790 meta=0.002 pad=0.126 route=2.478 total=11.468 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=200 dec=20 d2h=11.782 hash=0.390 hp=199.826 meta=0.002 pad=0.126 route=2.477 total=15.274 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=200 dec=20 d2h=12.494 hash=0.393 hp=199.816 meta=0.002 pad=0.123 route=2.472 total=15.984 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=200 dec=20 d2h=8.930 hash=0.401 hp=199.934 meta=0.002 pad=0.126 route=2.568 total=12.497 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=200 dec=20 d2h=8.127 hash=0.410 hp=199.846 meta=0.002 pad=0.132 route=2.473 total=11.627 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=200 dec=20 d2h=8.458 hash=0.408 hp=199.809 meta=0.002 pad=0.130 route=2.470 total=11.959 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=200 dec=20 d2h=0.130 hash=0.384 hp=199.912 meta=0.002 pad=0.136 route=2.312 total=3.219 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:10 [loggers.py:310] Engine 000: Avg prompt throughput: 17.4 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=220 dec=20 d2h=11.864 hash=0.395 hp=202.511 meta=0.002 pad=0.124 route=2.615 total=15.482 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=220 dec=20 d2h=7.619 hash=0.403 hp=202.473 meta=0.002 pad=0.131 route=2.457 total=11.094 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=220 dec=20 d2h=7.669 hash=0.391 hp=202.442 meta=0.002 pad=0.127 route=2.458 total=11.134 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=220 dec=20 d2h=5.324 hash=0.385 hp=202.991 meta=0.002 pad=0.138 route=2.453 total=8.773 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=220 dec=20 d2h=7.034 hash=0.406 hp=202.484 meta=0.002 pad=0.132 route=2.454 total=10.508 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=220 dec=20 d2h=8.274 hash=0.405 hp=202.374 meta=0.002 pad=0.128 route=2.493 total=11.768 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=220 dec=20 d2h=14.603 hash=0.404 hp=202.411 meta=0.003 pad=0.121 route=2.431 total=18.053 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=220 dec=20 d2h=0.127 hash=0.386 hp=202.311 meta=0.002 pad=0.138 route=2.313 total=3.220 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=240 dec=20 d2h=23.117 hash=0.393 hp=221.213 meta=0.002 pad=0.128 route=2.431 total=26.555 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=240 dec=20 d2h=25.657 hash=0.404 hp=221.071 meta=0.002 pad=0.127 route=2.433 total=29.089 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=240 dec=20 d2h=31.430 hash=0.410 hp=221.142 meta=0.002 pad=0.122 route=2.400 total=34.862 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=240 dec=20 d2h=27.325 hash=0.400 hp=221.127 meta=0.002 pad=0.124 route=2.418 total=30.768 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=240 dec=20 d2h=24.188 hash=0.405 hp=221.153 meta=0.002 pad=0.131 route=2.430 total=27.643 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=240 dec=20 d2h=16.950 hash=0.387 hp=221.141 meta=0.002 pad=0.145 route=2.438 total=20.385 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=240 dec=20 d2h=16.778 hash=0.391 hp=221.120 meta=0.002 pad=0.136 route=2.605 total=20.169 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=240 dec=20 d2h=1.795 hash=0.422 hp=222.374 meta=0.002 pad=0.149 route=2.070 total=4.890 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=260 dec=20 d2h=22.347 hash=0.396 hp=223.797 meta=0.002 pad=0.130 route=2.396 total=25.762 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=260 dec=20 d2h=24.261 hash=0.408 hp=224.013 meta=0.002 pad=0.132 route=2.433 total=27.709 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=260 dec=20 d2h=29.978 hash=0.409 hp=223.895 meta=0.002 pad=0.123 route=2.366 total=33.387 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=260 dec=20 d2h=24.821 hash=0.404 hp=223.795 meta=0.002 pad=0.128 route=2.379 total=28.242 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=260 dec=20 d2h=22.330 hash=0.412 hp=223.872 meta=0.002 pad=0.133 route=2.376 total=25.753 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=260 dec=20 d2h=15.715 hash=0.390 hp=223.893 meta=0.002 pad=0.147 route=2.422 total=19.149 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=260 dec=20 d2h=0.131 hash=0.403 hp=223.672 meta=0.002 pad=0.156 route=1.953 total=3.099 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=260 dec=20 d2h=15.963 hash=0.396 hp=223.839 meta=0.002 pad=0.138 route=2.661 total=19.419 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:46536 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=280 dec=19 d2h=19.184 hash=0.404 hp=233.661 meta=0.002 pad=0.124 route=2.394 total=22.682 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=280 dec=19 d2h=16.914 hash=0.406 hp=233.426 meta=0.002 pad=0.127 route=2.406 total=20.408 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=280 dec=19 d2h=9.530 hash=0.399 hp=232.973 meta=0.002 pad=0.141 route=2.397 total=13.026 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=280 dec=19 d2h=22.298 hash=0.407 hp=233.597 meta=0.003 pad=0.121 route=2.387 total=25.792 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=280 dec=19 d2h=15.760 hash=0.410 hp=233.361 meta=0.002 pad=0.129 route=2.397 total=19.269 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=280 dec=19 d2h=1.724 hash=0.419 hp=233.088 meta=0.002 pad=0.137 route=2.142 total=4.910 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=280 dec=19 d2h=12.928 hash=0.397 hp=234.517 meta=0.002 pad=0.126 route=2.343 total=16.358 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=280 dec=19 d2h=8.673 hash=0.395 hp=233.617 meta=0.002 pad=0.135 route=2.731 total=12.206 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:30 [loggers.py:310] Engine 000: Avg prompt throughput: 18.9 tokens/s, Avg generation throughput: 4.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=300 dec=20 d2h=20.731 hash=0.394 hp=216.868 meta=0.002 pad=0.123 route=2.302 total=24.051 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=300 dec=20 d2h=0.126 hash=0.391 hp=216.647 meta=0.002 pad=0.130 route=1.917 total=3.029 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=300 dec=20 d2h=18.487 hash=0.401 hp=216.922 meta=0.002 pad=0.125 route=2.300 total=21.811 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=300 dec=20 d2h=18.995 hash=0.407 hp=216.873 meta=0.002 pad=0.125 route=2.298 total=22.321 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=300 dec=20 d2h=21.668 hash=0.407 hp=216.917 meta=0.003 pad=0.121 route=2.289 total=24.985 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=300 dec=20 d2h=4.467 hash=0.407 hp=216.831 meta=0.002 pad=0.135 route=2.302 total=7.801 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=300 dec=20 d2h=16.841 hash=0.407 hp=216.930 meta=0.002 pad=0.127 route=2.309 total=20.158 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=300 dec=20 d2h=7.337 hash=0.391 hp=216.962 meta=0.002 pad=0.136 route=2.578 total=10.700 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=320 dec=20 d2h=17.910 hash=0.395 hp=213.951 meta=0.002 pad=0.122 route=2.402 total=21.376 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=320 dec=20 d2h=0.125 hash=0.400 hp=213.918 meta=0.002 pad=0.130 route=1.961 total=3.082 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=320 dec=20 d2h=2.913 hash=0.402 hp=213.865 meta=0.002 pad=0.134 route=2.415 total=6.395 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=320 dec=20 d2h=15.903 hash=0.399 hp=213.870 meta=0.002 pad=0.125 route=2.401 total=19.367 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=320 dec=20 d2h=15.561 hash=0.410 hp=214.004 meta=0.002 pad=0.125 route=2.398 total=19.033 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=320 dec=20 d2h=13.801 hash=0.404 hp=213.940 meta=0.002 pad=0.126 route=2.413 total=17.260 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=320 dec=20 d2h=18.626 hash=0.407 hp=213.956 meta=0.002 pad=0.121 route=2.396 total=22.090 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=320 dec=20 d2h=4.527 hash=0.391 hp=213.878 meta=0.002 pad=0.136 route=2.718 total=8.034 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=340 dec=20 d2h=13.643 hash=0.409 hp=211.852 meta=0.002 pad=0.125 route=2.282 total=16.960 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=340 dec=20 d2h=14.503 hash=0.403 hp=212.095 meta=0.003 pad=0.123 route=2.284 total=17.810 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=340 dec=20 d2h=14.450 hash=0.397 hp=211.941 meta=0.002 pad=0.175 route=2.356 total=17.865 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=340 dec=20 d2h=16.008 hash=0.397 hp=211.949 meta=0.002 pad=0.122 route=2.288 total=19.320 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=340 dec=20 d2h=0.126 hash=0.397 hp=211.823 meta=0.002 pad=0.129 route=1.894 total=3.023 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=340 dec=20 d2h=11.594 hash=0.404 hp=211.955 meta=0.002 pad=0.126 route=2.294 total=14.895 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=340 dec=20 d2h=2.507 hash=0.401 hp=211.902 meta=0.002 pad=0.134 route=2.301 total=5.836 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=340 dec=20 d2h=2.782 hash=0.391 hp=211.933 meta=0.002 pad=0.137 route=2.572 total=6.147 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.7 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=360 dec=20 d2h=0.400 hash=0.396 hp=210.682 meta=0.002 pad=0.128 route=1.926 total=3.306 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=360 dec=20 d2h=14.948 hash=0.394 hp=210.764 meta=0.002 pad=0.123 route=2.300 total=18.252 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=360 dec=20 d2h=13.354 hash=0.397 hp=210.757 meta=0.002 pad=0.124 route=2.300 total=16.658 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=360 dec=20 d2h=15.185 hash=0.412 hp=210.714 meta=0.002 pad=0.122 route=2.286 total=18.495 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=360 dec=20 d2h=10.282 hash=0.408 hp=210.765 meta=0.002 pad=0.126 route=2.310 total=13.581 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=360 dec=20 d2h=11.829 hash=0.406 hp=210.788 meta=0.002 pad=0.125 route=2.293 total=15.136 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=360 dec=20 d2h=1.800 hash=0.388 hp=210.722 meta=0.002 pad=0.133 route=2.534 total=5.111 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=360 dec=20 d2h=3.411 hash=0.404 hp=210.638 meta=0.002 pad=0.133 route=2.308 total=6.734 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=380 dec=20 d2h=13.437 hash=0.394 hp=209.183 meta=0.002 pad=0.123 route=2.372 total=16.817 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=380 dec=20 d2h=11.680 hash=0.397 hp=209.177 meta=0.002 pad=0.125 route=2.333 total=15.031 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=380 dec=20 d2h=13.338 hash=0.410 hp=209.212 meta=0.002 pad=0.123 route=2.316 total=16.701 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=380 dec=20 d2h=3.301 hash=0.401 hp=209.130 meta=0.002 pad=0.133 route=2.341 total=6.666 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=380 dec=20 d2h=9.052 hash=0.404 hp=209.210 meta=0.002 pad=0.125 route=2.346 total=12.403 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=380 dec=20 d2h=10.704 hash=0.404 hp=209.163 meta=0.003 pad=0.127 route=2.327 total=14.061 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=380 dec=20 d2h=0.152 hash=0.395 hp=209.208 meta=0.002 pad=0.128 route=1.976 total=3.126 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=380 dec=20 d2h=0.805 hash=0.389 hp=209.266 meta=0.002 pad=0.134 route=2.545 total=4.160 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:55:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=400 dec=20 d2h=0.669 hash=0.397 hp=208.177 meta=0.002 pad=0.128 route=2.403 total=4.078 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=400 dec=20 d2h=14.076 hash=0.389 hp=208.315 meta=0.002 pad=0.121 route=2.467 total=17.564 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=400 dec=20 d2h=12.303 hash=0.408 hp=208.383 meta=0.002 pad=0.122 route=2.484 total=15.803 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=400 dec=20 d2h=10.935 hash=0.393 hp=208.353 meta=0.002 pad=0.124 route=2.476 total=14.430 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=400 dec=20 d2h=2.710 hash=0.400 hp=208.302 meta=0.002 pad=0.133 route=2.479 total=6.215 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=400 dec=20 d2h=8.223 hash=0.404 hp=208.330 meta=0.002 pad=0.125 route=2.478 total=11.709 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=400 dec=20 d2h=9.696 hash=0.408 hp=208.401 meta=0.003 pad=0.125 route=2.455 total=13.184 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=400 dec=20 d2h=0.141 hash=0.385 hp=208.388 meta=0.002 pad=0.134 route=2.326 total=3.246 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=420 dec=20 d2h=10.620 hash=0.393 hp=208.253 meta=0.002 pad=0.125 route=2.427 total=14.074 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=420 dec=20 d2h=10.054 hash=0.403 hp=208.366 meta=0.002 pad=0.125 route=2.448 total=13.515 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=420 dec=20 d2h=9.256 hash=0.402 hp=208.262 meta=0.002 pad=0.127 route=2.419 total=12.714 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=420 dec=20 d2h=13.602 hash=0.391 hp=208.469 meta=0.002 pad=0.122 route=2.417 total=17.052 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=420 dec=20 d2h=3.329 hash=0.400 hp=208.246 meta=0.002 pad=0.134 route=2.428 total=6.796 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=420 dec=20 d2h=7.518 hash=0.401 hp=208.281 meta=0.002 pad=0.127 route=2.439 total=10.971 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=420 dec=20 d2h=1.079 hash=0.401 hp=208.213 meta=0.002 pad=0.128 route=2.343 total=4.442 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=420 dec=20 d2h=0.218 hash=0.383 hp=208.140 meta=0.002 pad=0.137 route=2.353 total=3.345 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:56:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=440 dec=20 d2h=13.470 hash=0.390 hp=207.641 meta=0.002 pad=0.121 route=2.482 total=16.955 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=440 dec=20 d2h=2.334 hash=0.400 hp=207.822 meta=0.002 pad=0.127 route=2.520 total=5.833 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=440 dec=20 d2h=10.336 hash=0.409 hp=207.759 meta=0.002 pad=0.125 route=2.589 total=13.963 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=440 dec=20 d2h=12.285 hash=0.395 hp=207.799 meta=0.002 pad=0.125 route=2.489 total=15.779 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=440 dec=20 d2h=8.474 hash=0.402 hp=207.952 meta=0.003 pad=0.127 route=2.484 total=11.968 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=440 dec=20 d2h=7.194 hash=0.401 hp=207.928 meta=0.002 pad=0.126 route=2.505 total=10.681 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=440 dec=20 d2h=3.049 hash=0.403 hp=208.066 meta=0.002 pad=0.133 route=2.464 total=6.532 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=440 dec=20 d2h=0.128 hash=0.384 hp=207.845 meta=0.002 pad=0.136 route=2.360 total=3.260 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=460 dec=20 d2h=11.729 hash=0.394 hp=207.776 meta=0.002 pad=0.123 route=2.559 total=15.285 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=460 dec=20 d2h=8.155 hash=0.403 hp=207.683 meta=0.002 pad=0.125 route=2.462 total=11.631 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=460 dec=20 d2h=7.135 hash=0.402 hp=207.699 meta=0.002 pad=0.124 route=2.480 total=10.605 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=460 dec=20 d2h=10.973 hash=0.447 hp=207.909 meta=0.002 pad=0.123 route=2.412 total=14.448 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=460 dec=20 d2h=2.878 hash=0.402 hp=207.728 meta=0.002 pad=0.127 route=2.481 total=6.360 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=460 dec=20 d2h=3.318 hash=0.409 hp=207.540 meta=0.002 pad=0.131 route=2.460 total=6.806 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=460 dec=20 d2h=9.510 hash=0.411 hp=207.889 meta=0.002 pad=0.122 route=2.457 total=12.994 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=460 dec=20 d2h=0.124 hash=0.385 hp=207.763 meta=0.002 pad=0.135 route=2.316 total=3.215 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:37778 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=480 dec=19 d2h=20.983 hash=0.391 hp=234.081 meta=0.002 pad=0.125 route=2.537 total=24.533 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=480 dec=19 d2h=13.960 hash=0.407 hp=234.107 meta=0.002 pad=0.128 route=2.543 total=17.520 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=480 dec=19 d2h=18.633 hash=0.405 hp=233.984 meta=0.002 pad=0.125 route=2.525 total=22.183 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=480 dec=19 d2h=19.244 hash=0.402 hp=234.651 meta=0.002 pad=0.124 route=2.549 total=22.797 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=480 dec=19 d2h=14.532 hash=0.407 hp=233.992 meta=0.002 pad=0.132 route=2.530 total=18.097 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=480 dec=19 d2h=17.453 hash=0.405 hp=233.912 meta=0.002 pad=0.124 route=2.546 total=20.998 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=480 dec=19 d2h=13.672 hash=0.417 hp=235.623 meta=0.002 pad=0.125 route=2.498 total=17.214 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=480 dec=19 d2h=0.127 hash=0.398 hp=237.320 meta=0.002 pad=0.139 route=2.357 total=3.282 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:56:10 [loggers.py:310] Engine 000: Avg prompt throughput: 12.2 tokens/s, Avg generation throughput: 4.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=500 dec=20 d2h=38.027 hash=0.408 hp=241.872 meta=0.002 pad=0.125 route=2.658 total=41.754 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=500 dec=20 d2h=39.562 hash=0.404 hp=242.708 meta=0.002 pad=0.127 route=2.667 total=43.288 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=500 dec=20 d2h=40.017 hash=0.407 hp=242.732 meta=0.003 pad=0.126 route=2.652 total=43.750 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=500 dec=20 d2h=39.503 hash=0.399 hp=242.753 meta=0.002 pad=0.127 route=2.718 total=43.284 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=500 dec=20 d2h=35.911 hash=0.413 hp=242.757 meta=0.002 pad=0.135 route=2.648 total=39.658 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=500 dec=20 d2h=37.786 hash=0.416 hp=241.221 meta=0.002 pad=0.127 route=2.648 total=41.525 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=500 dec=20 d2h=18.189 hash=0.414 hp=243.540 meta=0.002 pad=0.132 route=2.667 total=21.935 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=500 dec=20 d2h=0.131 hash=0.407 hp=241.106 meta=0.002 pad=0.145 route=2.481 total=3.452 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=520 dec=20 d2h=29.699 hash=0.383 hp=228.935 meta=0.002 pad=0.125 route=2.446 total=33.157 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=520 dec=20 d2h=37.434 hash=0.404 hp=228.938 meta=0.002 pad=0.118 route=2.431 total=40.896 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=520 dec=20 d2h=28.967 hash=0.404 hp=229.038 meta=0.002 pad=0.127 route=2.427 total=32.435 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=520 dec=20 d2h=28.057 hash=0.403 hp=229.162 meta=0.002 pad=0.125 route=2.444 total=31.518 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=520 dec=20 d2h=29.861 hash=0.413 hp=228.838 meta=0.002 pad=0.126 route=2.460 total=33.361 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=520 dec=20 d2h=8.475 hash=0.405 hp=228.823 meta=0.002 pad=0.130 route=2.278 total=11.783 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=520 dec=20 d2h=21.203 hash=0.415 hp=231.248 meta=0.002 pad=0.133 route=2.375 total=24.631 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=520 dec=20 d2h=7.718 hash=0.393 hp=227.777 meta=0.002 pad=0.128 route=2.482 total=11.009 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:56:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=540 dec=20 d2h=45.527 hash=0.391 hp=246.791 meta=0.002 pad=0.126 route=2.376 total=48.896 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=540 dec=20 d2h=47.396 hash=0.401 hp=246.585 meta=0.002 pad=0.125 route=2.364 total=50.770 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=540 dec=20 d2h=46.773 hash=0.401 hp=246.500 meta=0.002 pad=0.126 route=2.375 total=50.143 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=540 dec=20 d2h=48.275 hash=0.413 hp=246.761 meta=0.002 pad=0.122 route=2.350 total=51.655 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=540 dec=20 d2h=54.999 hash=0.408 hp=246.717 meta=0.002 pad=0.119 route=2.358 total=58.370 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=540 dec=20 d2h=27.502 hash=0.414 hp=246.630 meta=0.002 pad=0.128 route=2.371 total=30.883 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=540 dec=20 d2h=2.268 hash=0.398 hp=246.370 meta=0.002 pad=0.140 route=2.012 total=5.275 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=540 dec=20 d2h=15.470 hash=0.393 hp=247.774 meta=0.002 pad=0.139 route=2.545 total=18.806 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=560 dec=20 d2h=47.827 hash=0.402 hp=239.313 meta=0.002 pad=0.119 route=2.334 total=51.183 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=560 dec=20 d2h=40.565 hash=0.409 hp=239.326 meta=0.002 pad=0.122 route=2.329 total=43.930 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=560 dec=20 d2h=38.080 hash=0.384 hp=239.270 meta=0.002 pad=0.125 route=2.357 total=41.436 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=560 dec=20 d2h=23.236 hash=0.406 hp=239.128 meta=0.002 pad=0.128 route=2.356 total=26.602 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=560 dec=20 d2h=39.245 hash=0.397 hp=239.322 meta=0.002 pad=0.125 route=2.356 total=42.597 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=560 dec=20 d2h=39.840 hash=0.396 hp=239.296 meta=0.003 pad=0.125 route=2.343 total=43.202 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=560 dec=20 d2h=0.121 hash=0.393 hp=239.014 meta=0.002 pad=0.140 route=1.941 total=3.059 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=560 dec=20 d2h=16.159 hash=0.380 hp=238.822 meta=0.002 pad=0.140 route=2.624 total=19.557 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:56:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     127.0.0.1:56328 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=580 dec=19 d2h=35.245 hash=0.395 hp=265.411 meta=0.002 pad=0.124 route=2.317 total=38.583 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=580 dec=19 d2h=34.501 hash=0.395 hp=265.389 meta=0.002 pad=0.126 route=2.330 total=37.831 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=580 dec=19 d2h=36.162 hash=0.408 hp=265.385 meta=0.002 pad=0.122 route=2.310 total=39.508 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=580 dec=19 d2h=34.578 hash=0.393 hp=265.345 meta=0.002 pad=0.127 route=2.320 total=37.913 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=580 dec=19 d2h=0.122 hash=0.394 hp=263.473 meta=0.002 pad=0.138 route=1.908 total=3.032 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=580 dec=19 d2h=13.939 hash=0.379 hp=264.324 meta=0.002 pad=0.141 route=2.611 total=17.319 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=580 dec=19 d2h=21.139 hash=0.404 hp=264.640 meta=0.002 pad=0.128 route=2.325 total=24.480 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=580 dec=19 d2h=44.129 hash=0.405 hp=265.869 meta=0.002 pad=0.118 route=2.304 total=47.458 n=149 padded=149 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=600 dec=20 d2h=13.615 hash=0.403 hp=209.594 meta=0.002 pad=0.128 route=2.405 total=17.025 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=600 dec=20 d2h=20.464 hash=0.406 hp=209.249 meta=0.002 pad=0.122 route=2.384 total=23.870 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=600 dec=20 d2h=19.198 hash=0.398 hp=209.375 meta=0.002 pad=0.125 route=2.389 total=22.593 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=600 dec=20 d2h=20.800 hash=0.399 hp=209.260 meta=0.002 pad=0.127 route=2.401 total=24.200 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=600 dec=20 d2h=15.744 hash=0.400 hp=209.444 meta=0.002 pad=0.142 route=2.404 total=19.160 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=600 dec=20 d2h=5.366 hash=0.404 hp=209.991 meta=0.002 pad=0.136 route=2.410 total=8.781 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=600 dec=20 d2h=0.139 hash=0.366 hp=210.211 meta=0.002 pad=0.140 route=2.263 total=3.150 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=600 dec=20 d2h=14.732 hash=0.413 hp=209.546 meta=0.002 pad=0.143 route=2.401 total=18.160 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:56:40 [loggers.py:310] Engine 000: Avg prompt throughput: 14.9 tokens/s, Avg generation throughput: 4.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=620 dec=20 d2h=18.683 hash=0.404 hp=219.819 meta=0.002 pad=0.136 route=2.383 total=22.080 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=620 dec=20 d2h=19.724 hash=0.400 hp=220.315 meta=0.002 pad=0.125 route=2.369 total=23.100 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=620 dec=20 d2h=21.283 hash=0.406 hp=220.362 meta=0.002 pad=0.121 route=2.360 total=24.666 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=620 dec=20 d2h=16.071 hash=0.398 hp=220.507 meta=0.002 pad=0.141 route=2.389 total=19.471 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=620 dec=20 d2h=20.239 hash=0.398 hp=220.461 meta=0.002 pad=0.125 route=2.385 total=23.620 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=620 dec=20 d2h=14.518 hash=0.403 hp=220.368 meta=0.002 pad=0.127 route=2.376 total=17.902 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=620 dec=20 d2h=6.180 hash=0.403 hp=220.335 meta=0.002 pad=0.136 route=2.395 total=9.585 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=620 dec=20 d2h=0.141 hash=0.365 hp=220.439 meta=0.002 pad=0.140 route=2.253 total=3.139 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=640 dec=20 d2h=18.988 hash=0.396 hp=219.038 meta=0.003 pad=0.126 route=2.335 total=22.320 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=640 dec=20 d2h=24.906 hash=0.405 hp=219.050 meta=0.002 pad=0.123 route=2.327 total=28.247 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=640 dec=20 d2h=18.273 hash=0.398 hp=219.005 meta=0.002 pad=0.127 route=2.357 total=21.612 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=640 dec=20 d2h=20.217 hash=0.408 hp=219.001 meta=0.002 pad=0.123 route=2.340 total=23.559 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=640 dec=20 d2h=13.629 hash=0.401 hp=218.982 meta=0.002 pad=0.127 route=2.347 total=16.971 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=640 dec=20 d2h=6.256 hash=0.408 hp=218.911 meta=0.002 pad=0.136 route=2.355 total=9.614 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=640 dec=20 d2h=17.961 hash=0.397 hp=218.659 meta=0.002 pad=0.142 route=2.355 total=21.314 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=640 dec=20 d2h=0.129 hash=0.360 hp=218.914 meta=0.002 pad=0.140 route=2.234 total=3.099 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:33252 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 11-21 22:56:50 [loggers.py:310] Engine 000: Avg prompt throughput: 15.3 tokens/s, Avg generation throughput: 4.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=660 dec=19 d2h=16.406 hash=0.404 hp=238.398 meta=0.002 pad=0.125 route=2.416 total=19.827 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=660 dec=19 d2h=11.594 hash=0.419 hp=238.310 meta=0.002 pad=0.129 route=2.397 total=15.018 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=660 dec=19 d2h=22.649 hash=0.408 hp=238.693 meta=0.002 pad=0.122 route=2.389 total=26.061 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=660 dec=19 d2h=16.184 hash=0.401 hp=238.933 meta=0.002 pad=0.142 route=2.429 total=19.620 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=660 dec=19 d2h=20.416 hash=0.411 hp=238.489 meta=0.002 pad=0.158 route=2.393 total=23.864 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=660 dec=19 d2h=18.724 hash=0.402 hp=238.480 meta=0.002 pad=0.127 route=2.415 total=22.132 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=660 dec=19 d2h=18.607 hash=0.404 hp=238.546 meta=0.003 pad=0.126 route=2.398 total=22.015 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=660 dec=19 d2h=0.126 hash=0.362 hp=238.653 meta=0.002 pad=0.139 route=2.269 total=3.136 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=680 dec=20 d2h=21.151 hash=0.399 hp=218.544 meta=0.002 pad=0.122 route=2.331 total=24.488 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=680 dec=20 d2h=15.698 hash=0.401 hp=218.553 meta=0.002 pad=0.127 route=2.351 total=19.044 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=680 dec=20 d2h=17.919 hash=0.399 hp=218.492 meta=0.003 pad=0.127 route=2.341 total=21.256 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=680 dec=20 d2h=13.605 hash=0.411 hp=218.407 meta=0.002 pad=0.125 route=2.328 total=16.941 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=680 dec=20 d2h=18.650 hash=0.403 hp=218.687 meta=0.002 pad=0.125 route=2.336 total=21.991 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=680 dec=20 d2h=18.174 hash=0.403 hp=218.562 meta=0.002 pad=0.128 route=2.347 total=21.509 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=680 dec=20 d2h=13.192 hash=0.390 hp=218.449 meta=0.002 pad=0.142 route=2.375 total=16.551 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=680 dec=20 d2h=0.126 hash=0.361 hp=218.489 meta=0.002 pad=0.139 route=2.221 total=3.090 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=700 dec=20 d2h=14.108 hash=0.407 hp=217.850 meta=0.002 pad=0.124 route=2.331 total=17.442 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=700 dec=20 d2h=17.081 hash=0.399 hp=217.874 meta=0.002 pad=0.125 route=2.336 total=20.413 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=700 dec=20 d2h=14.955 hash=0.398 hp=217.961 meta=0.002 pad=0.125 route=2.347 total=18.291 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=700 dec=20 d2h=17.189 hash=0.397 hp=218.012 meta=0.003 pad=0.126 route=2.332 total=20.512 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=700 dec=20 d2h=12.912 hash=0.382 hp=217.879 meta=0.002 pad=0.141 route=2.378 total=16.264 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=700 dec=20 d2h=16.938 hash=0.395 hp=217.954 meta=0.002 pad=0.126 route=2.362 total=20.271 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=700 dec=20 d2h=20.334 hash=0.399 hp=217.959 meta=0.002 pad=0.121 route=2.327 total=23.660 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=700 dec=20 d2h=0.130 hash=0.363 hp=217.798 meta=0.002 pad=0.137 route=2.221 total=3.090 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=720 dec=20 d2h=25.640 hash=0.400 hp=225.659 meta=0.002 pad=0.125 route=2.266 total=28.908 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=720 dec=20 d2h=29.253 hash=0.401 hp=225.484 meta=0.002 pad=0.122 route=2.258 total=32.520 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=720 dec=20 d2h=23.229 hash=0.414 hp=225.600 meta=0.002 pad=0.124 route=2.251 total=26.498 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=720 dec=20 d2h=25.670 hash=0.394 hp=225.490 meta=0.003 pad=0.125 route=2.268 total=28.930 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=720 dec=20 d2h=25.150 hash=0.397 hp=225.534 meta=0.002 pad=0.127 route=2.296 total=28.427 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=720 dec=20 d2h=6.169 hash=0.394 hp=226.908 meta=0.002 pad=0.129 route=2.038 total=9.189 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=720 dec=20 d2h=21.204 hash=0.398 hp=225.579 meta=0.002 pad=0.143 route=2.297 total=24.499 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=720 dec=20 d2h=8.474 hash=0.365 hp=225.574 meta=0.002 pad=0.138 route=2.403 total=11.620 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=740 dec=20 d2h=26.887 hash=0.393 hp=227.613 meta=0.002 pad=0.125 route=2.237 total=30.091 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=740 dec=20 d2h=26.420 hash=0.402 hp=227.638 meta=0.002 pad=0.125 route=2.212 total=29.633 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=740 dec=20 d2h=22.952 hash=0.385 hp=227.584 meta=0.002 pad=0.142 route=2.250 total=26.180 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=740 dec=20 d2h=25.071 hash=0.412 hp=227.523 meta=0.002 pad=0.123 route=2.198 total=28.281 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=740 dec=20 d2h=30.483 hash=0.399 hp=227.618 meta=0.002 pad=0.121 route=2.209 total=33.695 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=740 dec=20 d2h=0.125 hash=0.389 hp=227.408 meta=0.002 pad=0.129 route=1.828 total=2.919 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=740 dec=20 d2h=26.720 hash=0.393 hp=227.592 meta=0.002 pad=0.125 route=2.219 total=29.927 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=740 dec=20 d2h=9.652 hash=0.363 hp=227.559 meta=0.002 pad=0.138 route=2.513 total=12.900 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=760 dec=20 d2h=5.897 hash=0.399 hp=228.397 meta=0.002 pad=0.129 route=2.003 total=8.884 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=760 dec=20 d2h=28.107 hash=0.396 hp=228.685 meta=0.002 pad=0.125 route=2.254 total=31.344 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=760 dec=20 d2h=27.084 hash=0.415 hp=228.589 meta=0.002 pad=0.126 route=2.213 total=30.320 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=760 dec=20 d2h=27.740 hash=0.402 hp=228.511 meta=0.002 pad=0.126 route=2.238 total=30.988 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=760 dec=20 d2h=27.754 hash=0.396 hp=228.632 meta=0.002 pad=0.126 route=2.266 total=30.985 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=760 dec=20 d2h=24.479 hash=0.390 hp=228.619 meta=0.002 pad=0.142 route=2.271 total=27.738 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=760 dec=20 d2h=16.428 hash=0.398 hp=230.648 meta=0.002 pad=0.126 route=2.072 total=19.497 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=760 dec=20 d2h=11.202 hash=0.364 hp=228.627 meta=0.002 pad=0.138 route=2.534 total=14.477 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=780 dec=20 d2h=36.758 hash=0.401 hp=238.171 meta=0.002 pad=0.124 route=2.276 total=40.027 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=780 dec=20 d2h=36.418 hash=0.393 hp=238.149 meta=0.002 pad=0.125 route=2.281 total=39.680 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=780 dec=20 d2h=33.682 hash=0.387 hp=238.141 meta=0.002 pad=0.140 route=2.304 total=36.960 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=780 dec=20 d2h=4.927 hash=0.389 hp=237.835 meta=0.002 pad=0.129 route=2.273 total=8.161 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=780 dec=20 d2h=36.094 hash=0.394 hp=238.207 meta=0.002 pad=0.125 route=2.295 total=39.351 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=780 dec=20 d2h=18.099 hash=0.401 hp=237.980 meta=0.002 pad=0.127 route=2.293 total=21.367 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=780 dec=20 d2h=3.467 hash=0.397 hp=239.823 meta=0.002 pad=0.131 route=1.899 total=6.347 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=780 dec=20 d2h=20.089 hash=0.362 hp=238.198 meta=0.002 pad=0.138 route=2.562 total=23.389 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=800 dec=20 d2h=29.140 hash=0.396 hp=232.237 meta=0.002 pad=0.128 route=2.283 total=32.385 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=800 dec=20 d2h=3.147 hash=0.390 hp=232.026 meta=0.002 pad=0.130 route=2.256 total=6.374 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=800 dec=20 d2h=0.124 hash=0.389 hp=231.937 meta=0.002 pad=0.133 route=1.815 total=2.919 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=800 dec=20 d2h=30.395 hash=0.405 hp=232.227 meta=0.002 pad=0.124 route=2.214 total=33.613 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=800 dec=20 d2h=30.508 hash=0.398 hp=232.209 meta=0.002 pad=0.127 route=2.218 total=33.721 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=800 dec=20 d2h=14.516 hash=0.403 hp=232.069 meta=0.002 pad=0.128 route=2.229 total=17.733 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=800 dec=20 d2h=27.814 hash=0.392 hp=232.162 meta=0.002 pad=0.142 route=2.241 total=31.042 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=800 dec=20 d2h=13.848 hash=0.368 hp=232.128 meta=0.002 pad=0.140 route=2.503 total=17.102 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=820 dec=20 d2h=30.261 hash=0.402 hp=231.496 meta=0.002 pad=0.126 route=2.247 total=33.504 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=820 dec=20 d2h=6.721 hash=0.388 hp=231.276 meta=0.002 pad=0.130 route=2.285 total=9.968 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=820 dec=20 d2h=4.613 hash=0.389 hp=231.276 meta=0.002 pad=0.130 route=2.012 total=7.599 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=820 dec=20 d2h=16.107 hash=0.396 hp=233.221 meta=0.002 pad=0.126 route=2.090 total=19.174 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=820 dec=20 d2h=29.213 hash=0.399 hp=231.424 meta=0.002 pad=0.127 route=2.267 total=32.450 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=820 dec=20 d2h=17.530 hash=0.400 hp=231.318 meta=0.002 pad=0.128 route=2.263 total=20.775 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=820 dec=20 d2h=27.189 hash=0.389 hp=231.519 meta=0.002 pad=0.143 route=2.278 total=30.445 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=820 dec=20 d2h=13.730 hash=0.365 hp=231.540 meta=0.002 pad=0.138 route=2.536 total=17.004 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=840 dec=20 d2h=9.361 hash=0.399 hp=233.757 meta=0.002 pad=0.130 route=2.223 total=12.578 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=840 dec=20 d2h=21.572 hash=0.400 hp=233.831 meta=0.002 pad=0.127 route=2.218 total=24.781 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=840 dec=20 d2h=31.890 hash=0.403 hp=233.894 meta=0.002 pad=0.126 route=2.204 total=35.105 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=840 dec=20 d2h=11.243 hash=0.394 hp=233.774 meta=0.002 pad=0.129 route=2.241 total=14.464 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=840 dec=20 d2h=0.124 hash=0.384 hp=233.657 meta=0.002 pad=0.126 route=1.827 total=2.909 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=840 dec=20 d2h=30.148 hash=0.400 hp=233.998 meta=0.002 pad=0.129 route=2.220 total=33.359 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=840 dec=20 d2h=29.055 hash=0.389 hp=234.005 meta=0.002 pad=0.143 route=2.237 total=32.283 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=840 dec=20 d2h=15.881 hash=0.365 hp=233.989 meta=0.002 pad=0.142 route=2.499 total=19.125 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=860 dec=20 d2h=18.337 hash=0.398 hp=229.020 meta=0.002 pad=0.126 route=2.212 total=21.561 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=860 dec=20 d2h=7.263 hash=0.393 hp=229.039 meta=0.002 pad=0.128 route=2.223 total=10.495 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=860 dec=20 d2h=9.209 hash=0.390 hp=228.947 meta=0.002 pad=0.128 route=2.240 total=12.449 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=860 dec=20 d2h=26.849 hash=0.402 hp=229.058 meta=0.002 pad=0.124 route=2.197 total=30.077 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=860 dec=20 d2h=24.240 hash=0.399 hp=229.217 meta=0.002 pad=0.124 route=2.211 total=27.462 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=860 dec=20 d2h=0.123 hash=0.381 hp=228.878 meta=0.002 pad=0.123 route=1.831 total=2.929 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=860 dec=20 d2h=23.935 hash=0.390 hp=229.005 meta=0.002 pad=0.140 route=2.229 total=27.177 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=860 dec=20 d2h=10.851 hash=0.365 hp=228.980 meta=0.002 pad=0.138 route=2.515 total=14.109 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=880 dec=20 d2h=5.940 hash=0.398 hp=225.326 meta=0.002 pad=0.129 route=2.305 total=9.235 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=880 dec=20 d2h=7.638 hash=0.394 hp=225.406 meta=0.002 pad=0.128 route=2.319 total=10.937 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=880 dec=20 d2h=0.121 hash=0.383 hp=225.334 meta=0.002 pad=0.123 route=1.844 total=2.922 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=880 dec=20 d2h=20.322 hash=0.400 hp=225.429 meta=0.002 pad=0.125 route=2.289 total=23.598 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=880 dec=20 d2h=23.395 hash=0.404 hp=225.544 meta=0.002 pad=0.125 route=2.279 total=26.680 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=880 dec=20 d2h=20.827 hash=0.395 hp=225.503 meta=0.002 pad=0.142 route=2.311 total=24.128 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=880 dec=20 d2h=16.290 hash=0.404 hp=225.412 meta=0.002 pad=0.127 route=2.284 total=19.572 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=880 dec=20 d2h=6.971 hash=0.364 hp=225.691 meta=0.002 pad=0.138 route=2.574 total=10.286 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:38064 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=900 dec=19 d2h=5.636 hash=0.398 hp=239.250 meta=0.002 pad=0.127 route=2.209 total=8.834 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=900 dec=19 d2h=16.405 hash=0.401 hp=239.555 meta=0.002 pad=0.125 route=2.202 total=19.599 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=900 dec=19 d2h=0.922 hash=0.379 hp=239.581 meta=0.002 pad=0.123 route=1.867 total=3.739 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=900 dec=19 d2h=19.683 hash=0.405 hp=239.441 meta=0.002 pad=0.124 route=2.163 total=22.855 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=900 dec=19 d2h=7.480 hash=0.401 hp=239.483 meta=0.002 pad=0.128 route=2.205 total=10.678 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=900 dec=19 d2h=14.567 hash=0.403 hp=239.636 meta=0.002 pad=0.126 route=2.195 total=17.763 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=900 dec=19 d2h=15.709 hash=0.392 hp=241.368 meta=0.002 pad=0.140 route=2.198 total=18.892 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=900 dec=19 d2h=5.265 hash=0.368 hp=238.862 meta=0.002 pad=0.135 route=2.470 total=8.482 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:57:50 [loggers.py:310] Engine 000: Avg prompt throughput: 16.5 tokens/s, Avg generation throughput: 4.1 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=920 dec=20 d2h=22.626 hash=0.399 hp=234.358 meta=0.002 pad=0.129 route=2.228 total=25.790 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=920 dec=20 d2h=26.962 hash=0.397 hp=234.399 meta=0.002 pad=0.127 route=2.219 total=30.118 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=920 dec=20 d2h=28.130 hash=0.397 hp=234.637 meta=0.002 pad=0.126 route=2.228 total=31.292 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=920 dec=20 d2h=13.645 hash=0.397 hp=234.319 meta=0.002 pad=0.124 route=2.232 total=16.791 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=920 dec=20 d2h=33.981 hash=0.402 hp=234.595 meta=0.002 pad=0.125 route=2.207 total=37.139 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=920 dec=20 d2h=41.473 hash=0.423 hp=233.752 meta=0.002 pad=0.126 route=2.167 total=44.657 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=920 dec=20 d2h=31.579 hash=0.374 hp=234.291 meta=0.002 pad=0.116 route=2.415 total=34.734 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=920 dec=20 d2h=0.122 hash=0.384 hp=234.079 meta=0.002 pad=0.143 route=1.846 total=2.865 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=940 dec=20 d2h=28.679 hash=0.398 hp=234.779 meta=0.002 pad=0.127 route=2.211 total=31.821 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=940 dec=20 d2h=29.792 hash=0.396 hp=234.732 meta=0.002 pad=0.128 route=2.202 total=32.929 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=940 dec=20 d2h=1.479 hash=0.396 hp=236.683 meta=0.002 pad=0.127 route=1.805 total=4.210 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=940 dec=20 d2h=34.573 hash=0.405 hp=234.705 meta=0.002 pad=0.126 route=2.190 total=37.717 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=940 dec=20 d2h=13.855 hash=0.381 hp=234.352 meta=0.002 pad=0.143 route=2.242 total=17.008 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=940 dec=20 d2h=16.581 hash=0.399 hp=234.675 meta=0.002 pad=0.124 route=2.196 total=19.689 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=940 dec=20 d2h=33.336 hash=0.371 hp=234.761 meta=0.002 pad=0.119 route=2.405 total=36.478 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=940 dec=20 d2h=25.523 hash=0.400 hp=234.683 meta=0.002 pad=0.130 route=2.210 total=28.672 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:58:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.3 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=960 dec=20 d2h=0.121 hash=0.402 hp=231.492 meta=0.002 pad=0.125 route=1.793 total=2.852 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=960 dec=20 d2h=26.933 hash=0.403 hp=231.534 meta=0.002 pad=0.126 route=2.207 total=30.089 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=960 dec=20 d2h=30.808 hash=0.409 hp=231.726 meta=0.002 pad=0.125 route=2.197 total=33.969 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=960 dec=20 d2h=23.542 hash=0.407 hp=231.580 meta=0.002 pad=0.127 route=2.211 total=26.702 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=960 dec=20 d2h=25.545 hash=0.406 hp=231.620 meta=0.002 pad=0.125 route=2.209 total=28.702 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=960 dec=20 d2h=15.346 hash=0.406 hp=231.450 meta=0.002 pad=0.123 route=2.213 total=18.488 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=960 dec=20 d2h=30.486 hash=0.368 hp=231.536 meta=0.002 pad=0.114 route=2.427 total=33.641 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=960 dec=20 d2h=12.059 hash=0.381 hp=231.455 meta=0.002 pad=0.140 route=2.255 total=15.230 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:54528 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=980 dec=19 d2h=6.163 hash=0.393 hp=237.447 meta=0.002 pad=0.123 route=2.062 total=9.125 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=980 dec=19 d2h=12.591 hash=0.399 hp=237.694 meta=0.002 pad=0.125 route=2.204 total=15.716 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=980 dec=19 d2h=8.981 hash=0.395 hp=238.153 meta=0.002 pad=0.131 route=2.107 total=12.011 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=980 dec=19 d2h=8.399 hash=0.404 hp=236.067 meta=0.002 pad=0.124 route=2.031 total=11.372 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=980 dec=19 d2h=16.070 hash=0.392 hp=236.171 meta=0.002 pad=0.131 route=2.207 total=19.205 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=980 dec=19 d2h=17.373 hash=0.401 hp=237.517 meta=0.002 pad=0.124 route=2.169 total=20.483 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=980 dec=19 d2h=13.835 hash=0.395 hp=237.656 meta=0.002 pad=0.126 route=2.194 total=16.957 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=980 dec=19 d2h=16.465 hash=0.371 hp=237.679 meta=0.002 pad=0.114 route=2.392 total=19.590 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1000 dec=20 d2h=20.554 hash=0.394 hp=217.297 meta=0.002 pad=0.124 route=2.224 total=23.720 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1000 dec=20 d2h=9.541 hash=0.392 hp=216.774 meta=0.002 pad=0.125 route=2.249 total=12.714 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1000 dec=20 d2h=6.435 hash=0.394 hp=216.747 meta=0.002 pad=0.123 route=2.251 total=9.593 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1000 dec=20 d2h=12.572 hash=0.394 hp=216.858 meta=0.002 pad=0.125 route=2.231 total=15.738 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1000 dec=20 d2h=16.260 hash=0.401 hp=216.776 meta=0.002 pad=0.125 route=2.219 total=19.430 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1000 dec=20 d2h=16.333 hash=0.408 hp=216.829 meta=0.002 pad=0.124 route=2.210 total=19.495 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1000 dec=20 d2h=16.075 hash=0.364 hp=216.758 meta=0.002 pad=0.114 route=2.434 total=19.228 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1000 dec=20 d2h=0.128 hash=0.390 hp=216.776 meta=0.002 pad=0.146 route=1.846 total=2.894 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:58:10 [loggers.py:310] Engine 000: Avg prompt throughput: 17.1 tokens/s, Avg generation throughput: 4.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1020 dec=20 d2h=8.767 hash=0.404 hp=210.368 meta=0.002 pad=0.125 route=2.132 total=11.842 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1020 dec=20 d2h=9.656 hash=0.386 hp=210.386 meta=0.002 pad=0.124 route=2.150 total=12.731 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1020 dec=20 d2h=0.261 hash=0.384 hp=210.288 meta=0.002 pad=0.123 route=1.780 total=2.930 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1020 dec=20 d2h=4.222 hash=0.392 hp=209.730 meta=0.002 pad=0.129 route=2.143 total=7.284 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1020 dec=20 d2h=1.843 hash=0.395 hp=210.395 meta=0.002 pad=0.125 route=1.956 total=4.710 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1020 dec=20 d2h=6.586 hash=0.391 hp=210.254 meta=0.002 pad=0.127 route=2.153 total=9.662 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1020 dec=20 d2h=9.167 hash=0.404 hp=210.332 meta=0.002 pad=0.125 route=2.131 total=12.239 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1020 dec=20 d2h=8.936 hash=0.365 hp=210.593 meta=0.002 pad=0.113 route=2.341 total=11.992 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1040 dec=20 d2h=9.150 hash=0.382 hp=209.039 meta=0.002 pad=0.124 route=2.167 total=12.236 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1040 dec=20 d2h=6.000 hash=0.390 hp=209.056 meta=0.002 pad=0.125 route=2.167 total=9.086 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1040 dec=20 d2h=0.545 hash=0.388 hp=209.100 meta=0.002 pad=0.124 route=1.856 total=3.303 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1040 dec=20 d2h=8.110 hash=0.395 hp=209.058 meta=0.002 pad=0.124 route=2.155 total=11.194 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1040 dec=20 d2h=0.124 hash=0.385 hp=209.099 meta=0.002 pad=0.122 route=1.778 total=2.788 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1040 dec=20 d2h=9.138 hash=0.401 hp=208.945 meta=0.002 pad=0.126 route=2.151 total=12.224 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1040 dec=20 d2h=8.547 hash=0.366 hp=208.861 meta=0.002 pad=0.113 route=2.353 total=11.623 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1040 dec=20 d2h=3.987 hash=0.390 hp=209.060 meta=0.002 pad=0.128 route=2.173 total=7.077 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:58:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1060 dec=20 d2h=4.516 hash=0.389 hp=209.211 meta=0.002 pad=0.127 route=2.193 total=7.626 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1060 dec=20 d2h=9.442 hash=0.386 hp=209.204 meta=0.002 pad=0.125 route=2.187 total=12.553 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1060 dec=20 d2h=9.113 hash=0.365 hp=209.180 meta=0.002 pad=0.113 route=2.377 total=12.206 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1060 dec=20 d2h=10.091 hash=0.402 hp=209.201 meta=0.002 pad=0.124 route=2.155 total=13.194 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1060 dec=20 d2h=8.013 hash=0.398 hp=209.266 meta=0.002 pad=0.125 route=2.169 total=11.124 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1060 dec=20 d2h=6.116 hash=0.394 hp=209.199 meta=0.002 pad=0.125 route=2.181 total=9.225 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1060 dec=20 d2h=0.349 hash=0.389 hp=209.229 meta=0.002 pad=0.125 route=1.869 total=3.124 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1060 dec=20 d2h=0.130 hash=0.387 hp=209.256 meta=0.002 pad=0.122 route=1.786 total=2.808 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1080 dec=20 d2h=9.148 hash=0.382 hp=209.025 meta=0.002 pad=0.124 route=2.179 total=12.245 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1080 dec=20 d2h=0.165 hash=0.385 hp=208.960 meta=0.002 pad=0.122 route=1.824 total=2.882 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1080 dec=20 d2h=0.126 hash=0.384 hp=208.987 meta=0.002 pad=0.124 route=1.782 total=2.809 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1080 dec=20 d2h=6.371 hash=0.391 hp=208.982 meta=0.002 pad=0.125 route=2.173 total=9.468 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1080 dec=20 d2h=11.305 hash=0.407 hp=208.985 meta=0.002 pad=0.124 route=2.175 total=14.424 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1080 dec=20 d2h=7.677 hash=0.401 hp=209.037 meta=0.002 pad=0.125 route=2.155 total=10.774 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1080 dec=20 d2h=4.429 hash=0.391 hp=209.039 meta=0.002 pad=0.128 route=2.188 total=7.533 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1080 dec=20 d2h=9.090 hash=0.365 hp=209.020 meta=0.002 pad=0.113 route=2.373 total=12.206 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO 11-21 22:58:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 4.7 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.2%, Prefix cache hit rate: 0.0%
+(Worker_TP2_EP2 pid=182) [bneck] mode=stock steps=1100 dec=20 d2h=9.077 hash=0.382 hp=208.811 meta=0.002 pad=0.125 route=2.175 total=12.177 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP7_EP7 pid=362) [bneck] mode=stock steps=1100 dec=20 d2h=0.139 hash=0.387 hp=208.731 meta=0.002 pad=0.123 route=1.796 total=2.838 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP5_EP5 pid=290) [bneck] mode=stock steps=1100 dec=20 d2h=0.434 hash=0.390 hp=208.731 meta=0.002 pad=0.125 route=1.854 total=3.202 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP3_EP3 pid=218) [bneck] mode=stock steps=1100 dec=20 d2h=4.521 hash=0.386 hp=208.751 meta=0.002 pad=0.128 route=2.177 total=7.623 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP1_EP1 pid=148) [bneck] mode=stock steps=1100 dec=20 d2h=11.120 hash=0.402 hp=208.883 meta=0.002 pad=0.123 route=2.152 total=14.220 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP4_EP4 pid=254) [bneck] mode=stock steps=1100 dec=20 d2h=7.576 hash=0.397 hp=208.756 meta=0.002 pad=0.125 route=2.154 total=10.675 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP6_EP6 pid=326) [bneck] mode=stock steps=1100 dec=20 d2h=6.455 hash=0.392 hp=208.889 meta=0.002 pad=0.127 route=2.168 total=9.555 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(Worker_TP0_EP0 pid=139) [bneck] mode=stock steps=1100 dec=20 d2h=8.906 hash=0.364 hp=208.780 meta=0.002 pad=0.114 route=2.374 total=11.997 n=1 padded=1 max=8192 lookup=(8192, 6144) fake=0 mirror=0/0
+(APIServer pid=1) INFO:     127.0.0.1:40322 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 11-21 22:58:33 [launcher.py:112] [shutdown] API server: shutdown triggered
+(APIServer pid=1) INFO 11-21 22:58:33 [launcher.py:128] [shutdown] API server: stopping engine client mode=abort timeout=0s
+(APIServer pid=1) INFO 11-21 22:58:33 [core_client.py:686] [shutdown] MPClient: start timeout=0s
+(APIServer pid=1) INFO 11-21 22:58:33 [core_client.py:688] [shutdown] MPClient: stopping engine manager
+(APIServer pid=1) INFO 11-21 22:58:33 [utils.py:612] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=1) WARNING 11-21 22:58:33 [utils.py:632] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=1) WARNING 11-21 22:58:33 [utils.py:637] [shutdown] Process manager: force killing remaining process EngineCore pid 122
+(EngineCore pid=122) INFO 11-21 22:58:33 [core.py:1332] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=122) INFO 11-21 22:58:33 [core.py:1468] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=122) INFO 11-21 22:58:33 [core.py:1499] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=122) INFO 11-21 22:58:33 [core.py:1345] [shutdown] EngineCore: exiting busy loop
+(EngineCore pid=122) INFO 11-21 22:58:33 [multiproc_executor.py:440] [shutdown] Executor: waiting for worker exit count=8
+(Worker_TP0_EP0 pid=139) INFO 11-21 22:58:33 [multiproc_executor.py:804] Parent process exited, terminating worker queues
+(APIServer pid=1) INFO 11-21 22:58:33 [core_client.py:690] [shutdown] MPClient: engine manager stopped
+(APIServer pid=1) INFO 11-21 22:58:33 [core_client.py:691] [shutdown] MPClient: cleaning up background resources
+(APIServer pid=1) INFO 11-21 22:58:33 [core_client.py:693] [shutdown] MPClient: complete
+(APIServer pid=1) INFO 11-21 22:58:33 [launcher.py:137] [shutdown] API server: engine client stopped
+(APIServer pid=1) INFO 11-21 22:58:33 [launcher.py:140] [shutdown] API server: signalling HTTP server shutdown
+(APIServer pid=1) INFO 11-21 22:58:33 [launcher.py:161] [shutdown] API server: shutting down FastAPI HTTP server
+[W1121 22:47:27.459202366 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+2026-11-21 22:47:37,873 - 1 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+[W1121 22:48:04.939893773 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+(EngineCore pid=122) 2026-11-21 22:48:13,605 - 122 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:48:15.914934925 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+2026-11-21 22:48:24,358 - 139 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:48:24.138450674 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'factor', 'beta_fast', 'original_max_position_embeddings'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'factor', 'beta_fast', 'original_max_position_embeddings'}
+2026-11-21 22:48:33,532 - 148 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:48:33.324483421 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'beta_fast', 'original_max_position_embeddings', 'factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'beta_fast', 'original_max_position_embeddings', 'factor'}
+2026-11-21 22:48:42,772 - 182 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:48:43.565882515 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+2026-11-21 22:48:52,005 - 218 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:48:52.800552511 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+2026-11-21 22:49:01,252 - 254 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:49:01.034525061 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+2026-11-21 22:49:10,406 - 290 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:49:10.210384339 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+2026-11-21 22:49:19,649 - 326 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[W1121 22:49:20.514267232 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_fast', 'beta_slow', 'original_max_position_embeddings'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_fast', 'beta_slow', 'original_max_position_embeddings'}
+2026-11-21 22:49:28,903 - 362 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+[rank1]:[W1121 22:49:34.505709192 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank4]:[W1121 22:49:34.505709212 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank7]:[W1121 22:49:34.505709842 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank6]:[W1121 22:49:34.506220181 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank3]:[W1121 22:49:34.506225292 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank5]:[W1121 22:49:34.506717000 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank2]:[W1121 22:49:34.518389197 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank0]:[W1121 22:49:34.518389197 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+(Worker_TP7_EP7 pid=362) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP4_EP4 pid=254) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP0_EP0 pid=139) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'factor', 'beta_fast', 'original_max_position_embeddings'}
+(Worker_TP1_EP1 pid=148) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'beta_fast', 'original_max_position_embeddings', 'factor'}
+(Worker_TP2_EP2 pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP6_EP6 pid=326) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_fast', 'beta_slow', 'original_max_position_embeddings'}
+(Worker_TP3_EP3 pid=218) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP7_EP7 pid=362) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP4_EP4 pid=254) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP0_EP0 pid=139) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'factor', 'beta_fast', 'original_max_position_embeddings'}
+(Worker_TP1_EP1 pid=148) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_slow', 'beta_fast', 'original_max_position_embeddings', 'factor'}
+(Worker_TP6_EP6 pid=326) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_fast', 'beta_slow', 'original_max_position_embeddings'}
+(Worker_TP2_EP2 pid=182) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP3_EP3 pid=218) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(Worker_TP5_EP5 pid=290) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(Worker_TP5_EP5 pid=290) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   0% Completed | 0/78 [00:00<?, ?it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   1% Completed | 1/78 [00:18<24:16, 18.92s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   3% Completed | 2/78 [00:19<09:56,  7.86s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   5% Completed | 4/78 [00:19<03:39,  2.96s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   8% Completed | 6/78 [00:24<03:15,  2.71s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:   9% Completed | 7/78 [00:28<03:50,  3.24s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  10% Completed | 8/78 [00:34<04:24,  3.78s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  12% Completed | 9/78 [00:39<04:49,  4.20s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  13% Completed | 10/78 [00:44<05:10,  4.57s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  14% Completed | 11/78 [00:52<05:54,  5.30s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  15% Completed | 12/78 [01:00<06:45,  6.14s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  17% Completed | 13/78 [01:09<07:46,  7.18s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  18% Completed | 14/78 [01:18<08:02,  7.54s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  19% Completed | 15/78 [01:18<05:44,  5.48s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  21% Completed | 16/78 [01:19<04:09,  4.03s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  22% Completed | 17/78 [01:20<03:08,  3.08s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  23% Completed | 18/78 [01:20<02:20,  2.34s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  24% Completed | 19/78 [01:21<01:47,  1.82s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  26% Completed | 20/78 [01:22<01:24,  1.46s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  27% Completed | 21/78 [01:22<01:08,  1.20s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  28% Completed | 22/78 [01:23<00:57,  1.03s/it]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  29% Completed | 23/78 [01:23<00:42,  1.28it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  31% Completed | 24/78 [01:24<00:40,  1.34it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  32% Completed | 25/78 [01:24<00:37,  1.43it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  33% Completed | 26/78 [01:25<00:34,  1.50it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  35% Completed | 27/78 [01:26<00:33,  1.53it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  36% Completed | 28/78 [01:26<00:32,  1.55it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  37% Completed | 29/78 [01:27<00:31,  1.58it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  38% Completed | 30/78 [01:27<00:30,  1.60it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  40% Completed | 31/78 [01:28<00:29,  1.61it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  41% Completed | 32/78 [01:28<00:22,  2.04it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  42% Completed | 33/78 [01:29<00:23,  1.92it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  44% Completed | 34/78 [01:29<00:24,  1.81it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  45% Completed | 35/78 [01:30<00:25,  1.72it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  46% Completed | 36/78 [01:31<00:24,  1.70it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  47% Completed | 37/78 [01:31<00:24,  1.71it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  49% Completed | 38/78 [01:32<00:23,  1.72it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  50% Completed | 39/78 [01:32<00:22,  1.70it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  51% Completed | 40/78 [01:33<00:22,  1.72it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  53% Completed | 41/78 [01:33<00:17,  2.17it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  54% Completed | 42/78 [01:34<00:18,  1.97it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  55% Completed | 43/78 [01:34<00:18,  1.88it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  56% Completed | 44/78 [01:35<00:19,  1.78it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  58% Completed | 45/78 [01:36<00:18,  1.75it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  59% Completed | 46/78 [01:36<00:18,  1.70it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  60% Completed | 47/78 [01:37<00:18,  1.69it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  62% Completed | 48/78 [01:37<00:18,  1.64it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  63% Completed | 49/78 [01:38<00:17,  1.62it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  64% Completed | 50/78 [01:38<00:14,  1.88it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  65% Completed | 51/78 [01:39<00:15,  1.77it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  67% Completed | 52/78 [01:40<00:15,  1.73it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  68% Completed | 53/78 [01:40<00:14,  1.72it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  69% Completed | 54/78 [01:41<00:14,  1.71it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  71% Completed | 55/78 [01:42<00:13,  1.67it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  72% Completed | 56/78 [01:42<00:13,  1.65it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  73% Completed | 57/78 [01:43<00:12,  1.64it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  74% Completed | 58/78 [01:43<00:12,  1.67it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  76% Completed | 59/78 [01:44<00:10,  1.75it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  77% Completed | 60/78 [01:44<00:10,  1.71it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  78% Completed | 61/78 [01:45<00:10,  1.68it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  79% Completed | 62/78 [01:46<00:09,  1.69it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  81% Completed | 63/78 [01:46<00:08,  1.69it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  82% Completed | 64/78 [01:47<00:08,  1.66it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  83% Completed | 65/78 [01:47<00:07,  1.65it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  85% Completed | 66/78 [01:48<00:07,  1.63it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  86% Completed | 67/78 [01:49<00:06,  1.63it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  87% Completed | 68/78 [01:49<00:04,  2.08it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  88% Completed | 69/78 [01:50<00:04,  1.90it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  90% Completed | 70/78 [01:50<00:04,  1.75it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  91% Completed | 71/78 [01:51<00:04,  1.70it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  92% Completed | 72/78 [01:51<00:03,  1.71it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  94% Completed | 73/78 [01:52<00:02,  1.68it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  95% Completed | 74/78 [01:53<00:02,  1.66it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  96% Completed | 75/78 [01:53<00:01,  1.64it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  97% Completed | 76/78 [01:54<00:01,  1.61it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards:  99% Completed | 77/78 [01:54<00:00,  1.98it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards: 100% Completed | 78/78 [01:56<00:00,  1.15it/s]
+(Worker_TP0_EP0 pid=139) 
+Loading safetensors checkpoint shards: 100% Completed | 78/78 [01:56<00:00,  1.49s/it]
+(Worker_TP0_EP0 pid=139) 
+[W1121 22:51:51.284350973 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+(Worker_TP0_EP0 pid=139) /usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+(Worker_TP0_EP0 pid=139)   gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+(Worker_TP0_EP0 pid=139) /usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+(Worker_TP0_EP0 pid=139)   gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+[W1121 22:52:21.188298077 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[W1121 22:52:23.171523646 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[W1121 22:52:36.976814849 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[W1121 22:52:43.407884143 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1121 22:52:44.465191044 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+can not use command: npu-smi info
+[W1121 22:52:49.875135019 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+[W1121 22:53:09.544812471 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+can not use command: npu-smi info
+(EngineCore pid=122) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(EngineCore pid=122) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'beta_fast', 'original_max_position_embeddings', 'beta_slow', 'factor'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'factor', 'beta_slow', 'original_max_position_embeddings', 'beta_fast'}
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.
+(APIServer pid=1) INFO:     Shutting down
+(APIServer pid=1) INFO:     Waiting for application shutdown.
+(APIServer pid=1) INFO:     Application shutdown complete.
+/usr/local/python3.12.13/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 248 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/local/python3.12.13/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 10 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

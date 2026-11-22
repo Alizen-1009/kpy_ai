@@ -1,0 +1,30 @@
+{
+  "supervisor": {
+    "pid": 2217726,
+    "start_ticks": "178053203",
+    "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15"
+  },
+  "started_unix": 1795289148.6344724,
+  "args": [
+    "/usr/bin/python3",
+    "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/recovery-2-20261121T192543771511Z/download_assets.py",
+    "--manifest",
+    "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/model-files.json",
+    "--dest",
+    "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/model",
+    "--workers",
+    "4",
+    "--resume",
+    "--direct",
+    "--execute"
+  ],
+  "recovery_path": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/logs/recovery-2-20261121T192543771511Z",
+  "tool_sha256": "a95b9fd43fcc6f5cf3611874519549d7c91e0f74472560a812e1a4b2ecd4e999",
+  "supervisor_sha256": "0f01fa503b819944fdd444c3266d1cf2d93d531ea4d41fff919f1f3fd4cced88",
+  "manifest_sha256": "62e252b4a6d8eb23a89b0f2af65960d564711230bb1aba8b788e8936d5ed927c",
+  "downloader": {
+    "pid": 2217727,
+    "start_ticks": "178053206",
+    "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15"
+  }
+}

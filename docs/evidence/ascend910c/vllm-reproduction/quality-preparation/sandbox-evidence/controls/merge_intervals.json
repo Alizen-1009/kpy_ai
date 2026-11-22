@@ -1,0 +1,94 @@
+{
+  "task": "merge_intervals",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "single-point",
+        "passed": true,
+        "actual": "[[2,2]]"
+      },
+      {
+        "id": "touching",
+        "passed": true,
+        "actual": "[[1,5],[8,9]]"
+      },
+      {
+        "id": "nested-and-unsorted",
+        "passed": true,
+        "actual": "[[1,7],[8,10],[12,12]]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[[2,4],[12,12]]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[[-9,-9],[-7,12]]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[[2,8]]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[[-11,14]]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[[-9,-6],[-1,19]]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[[-7,9],[12,12]]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[[-9,7]]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[[-9,-2]]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[[-11,-3],[2,14]]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[[12,20]]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[[-12,-3],[-2,17]]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def merge_intervals(intervals):\n    out = []\n    for a,b in sorted(intervals):\n        if out and a <= out[-1][1]: out[-1][1] = max(b,out[-1][1])\n        else: out.append([a,b])\n    return out\n",
+    "extracted_code_sha256": "ceb0b0a6d919f1f9567b7b74d80d398c0d816193cfc95082c4f459ff326a4f2a"
+  }
+}

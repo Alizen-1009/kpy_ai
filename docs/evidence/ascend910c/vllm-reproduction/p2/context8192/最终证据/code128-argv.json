@@ -1,0 +1,1 @@
+["python3", "code128_client.py", "--model", "p2-8192-20261121T224721Z", "--image", "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef", "--out", "code128", "--execute", "--timeout", "1800"]

@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "standards": {
+    "baseline_commit": "4e8adcf006017cea76fa52487b57e3a4b90e1a24",
+    "todo_sha256": "fdfd243168128b28afb5aa9425bc35a5306500452cff0eeca1f8f639a2b8731a",
+    "operand_sha256": "09d5af6e47806afb073e1a937bbd79721a7e7a69b1694d96194ce05a80656be0",
+    "synthetic_stage3_basis": "Original TODO explicitly reserves real payload for stage4 and official full-model inference for stage5; stage3 still requires real execution interfaces and official geometry/precision."
+  },
+  "criteria": [
+    {
+      "id": "ORDER",
+      "stage": 0,
+      "requirement": "Historical stage1 pass precedes stage2 pass, both precede stage3 partial execution",
+      "passed": true,
+      "evidence": [
+        {
+          "stage": 1,
+          "first_verified_or_partial_execution": "20261117T162310",
+          "report": "official_activation_execution_yh.json"
+        },
+        {
+          "stage": 2,
+          "first_verified_or_partial_execution": "20261117T172110",
+          "report": "official_ep_hccl_crosscard_execution_yh.json"
+        },
+        {
+          "stage": 3,
+          "first_verified_or_partial_execution": "20261118T111745",
+          "report": "official_backend_hccl_execution_yh.json"
+        }
+      ]
+    },
+    {
+      "id": "S1-SCALE-RNE",
+      "stage": 1,
+      "requirement": "group32/raw/packed scales and deterministic finite-BF16 RNE producer",
+      "passed": true,
+      "evidence": [
+        "baseline operand §8",
+        "official_activation_cpu_yh.json",
+        "official_activation_npu_yh.json",
+        "current CPU test + NPU named case"
+      ]
+    },
+    {
+      "id": "S1-SWIGLU",
+      "stage": 1,
+      "requirement": "FP32 SwiGLU, route weighting and direct FP8 quantization without BF16 interround",
+      "passed": true,
+      "evidence": [
+        "baseline operand §8",
+        "CPU scalar oracle / NPU SwiGLU case"
+      ]
+    },
+    {
+      "id": "S1-GEMM",
+      "stage": 1,
+      "requirement": "FP8 activation -> original packed FP4 GEMM with tails and bounded decoding",
+      "passed": true,
+      "evidence": [
+        "baseline operand §8",
+        "current NPU GEMM/tail cases"
+      ]
+    },
+    {
+      "id": "S2-RUNTIME",
+      "stage": 2,
+      "requirement": "Real grouped FFN, ownership, true counts, empty experts and poisoned padding",
+      "passed": true,
+      "evidence": [
+        "baseline operand §9",
+        "official_grouped_cpu_yh.json",
+        "current CPU ownership/count/padding tests"
+      ]
+    },
+    {
+      "id": "S2-ARITHMETIC",
+      "stage": 2,
+      "requirement": "Route weight before down quantization and FP32 combine; no double weighting",
+      "passed": true,
+      "evidence": [
+        "baseline operand §9",
+        "current CPU counterexample",
+        "historical HCCL6/rank"
+      ]
+    },
+    {
+      "id": "S2-COLLECTIVES",
+      "stage": 2,
+      "requirement": "Real cross-card dispatch/combine, zero origins/peers and collective rejection/recovery",
+      "passed": true,
+      "evidence": [
+        "baseline operand §9",
+        "historical/current HCCL component cases"
+      ]
+    },
+    {
+      "id": "S3-LINEAR-NORM-MOE",
+      "stage": 3,
+      "requirement": "FP8/BF16 projections, output/bias rounding, Norm, gate/shared/raw-MoE binding",
+      "passed": true,
+      "evidence": [
+        "baseline operand §§10-11",
+        "NPU ordinary projection probes",
+        "CPU Norm test",
+        "HCCL bound MoE"
+      ]
+    },
+    {
+      "id": "S3-MHC-ROPE",
+      "stage": 3,
+      "requirement": "Fixed-order mHC pre/post/head, shifted/lazy HC and RoPE contracts",
+      "passed": true,
+      "evidence": [
+        "baseline operand §12",
+        "NPU mhc/hc_runtime/rope probes"
+      ]
+    },
+    {
+      "id": "S3-ENGRAM",
+      "stage": 3,
+      "requirement": "CPU-resident original FP8/scale row gather, hash, projection/gate and real owner collectives",
+      "passed": true,
+      "evidence": [
+        "baseline operand §12",
+        "NPU Engram probe",
+        "EP model owner sharding below"
+      ]
+    },
+    {
+      "id": "S3-CACHE-ATTENTION",
+      "stage": 3,
+      "requirement": "Original FP4/FP8 persistent caches, C1/C2, index top-K and sparse attention",
+      "passed": true,
+      "evidence": [
+        "baseline operand §12",
+        "named NPU cache/compression/index/attention cases + CPU raw precision test"
+      ]
+    },
+    {
+      "id": "S3-SHARING-CANDIDATES",
+      "stage": 3,
+      "requirement": "Real source/consumer layers and candidate-block selection, including forced newest block",
+      "passed": true,
+      "evidence": [
+        "baseline operand §§12-13",
+        "NPU model_runtime/candidate_runtime observations"
+      ]
+    },
+    {
+      "id": "S3-VISION-VL",
+      "stage": 3,
+      "requirement": "Actual vision/aligner, unequal isolated images, complete image softmax, token injection and actual VL prefill/decode",
+      "passed": true,
+      "evidence": [
+        "baseline TODO stage3 remaining milestone",
+        "NPU vision_runtime + prepared actual VL class"
+      ]
+    },
+    {
+      "id": "S3-SCHEDULER-SAMPLER",
+      "stage": 3,
+      "requirement": "Actual native Scheduler -> runner input prep -> sampler -> committed sequence, not prepared-only",
+      "passed": true,
+      "evidence": [
+        "baseline TODO stage3 / operand §12 warning",
+        "NPU scheduler_runtime",
+        "native extension digest in report"
+      ]
+    },
+    {
+      "id": "S3-DISTRIBUTED-MODEL-LIFECYCLE",
+      "stage": 3,
+      "requirement": "Cross-card combined model, sharded experts/Engram, independent CPU oracle, generation/EOS/length/reclamation",
+      "passed": true,
+      "evidence": [
+        "baseline TODO stage3 / operand §12 warning",
+        "HCCL joint model cases and independently checked per-step traces"
+      ]
+    },
+    {
+      "id": "S3-OFFICIAL-GEOMETRY",
+      "stage": 3,
+      "requirement": "Original §13 official-config/per-operation budget compatibility, not aggregate model feasibility",
+      "passed": true,
+      "evidence": [
+        "baseline operand §13 final paragraph",
+        "NPU official_geometry metadata + real 1024/16-head/2816 min-image/FFN microexecution"
+      ]
+    },
+    {
+      "id": "S3-NO-STAGE45-BYPASS",
+      "stage": 3,
+      "requirement": "Preserve full-checkpoint allocation guard and leave official payload/aggregate memory/full inference for stages4-5",
+      "passed": true,
+      "evidence": [
+        "baseline TODO stage4/5 definitions",
+        "original/current load_model AST identical",
+        "NPU/EP payload flags + geometry boundaries"
+      ]
+    }
+  ],
+  "audit_runner_sha256": "8031a673fb12028cae2aea6d99f6361a6c9a606c90d7394c5c975b2154340c4b",
+  "report_sha256": {
+    "official_activation_cpu_yh.json": "d64e5f33826e68f16336e4d11d43c6fd9580f75a08dc1d5e10f912aa7209aff9",
+    "official_grouped_cpu_yh.json": "1abf31bd1c98efb5ca524b675bdc7fa886789004f19beef031d2d96d88d682d5",
+    "official_activation_npu_yh.json": "69441721fe5c225a2e9c53a287d4434c2c57214e8e317512b30d8c2d6ec7b02b",
+    "official_ep_hccl_crosscard_yh.json": "c195bd3b8d2e2af742e26fa747e1ac0f568a953bf1b623270706d97c6e5b8a1c",
+    "official_activation_execution_yh.json": "e1691afdf612bf97d881e6a566ed7d348a7ddcc2280f0deaa74f97e35e2aa03d",
+    "official_ep_hccl_crosscard_execution_yh.json": "36cc3f8f7c7dd2273f1d083a03e4a9942a9a543a1c4300982cd5deb25d87319a",
+    "official_backend_hccl_execution_yh.json": "e2f5900bbdd93452c0589c9b6cbd5b7c377b7418424594e0936d02b43720a523",
+    "stage3/official_stage3_geometry_cpu_20261119T134250538161306_yh.json": "db4b54752a3eedb21c38b028c8d202f89f4a19151b63c6740227e46fa5418518",
+    "stage3/operand_die8_20261119T134250531652498_yh/npu_yh.json": "d92a6d02cba01f7e7ec24eaf1a2d3be36b04572490b11231ca3f0f2d0ab8eebe",
+    "stage3/ep_die8_10_20261119T134349541129205_yh/ep_yh.json": "c7eb0162a8044bf72f47300874df49999d0f592e97682402f79b76650431e7df",
+    "stage3/stage3_geometry_gloo_20261119T134349550129968_yh/gloo_yh.json": "9ffc13e1d4933b304ac43da32d6a02a6fc0b1dc352b16f2eecd44932103ad859"
+  },
+  "mutable_completion_checkbox_used": false,
+  "required_criteria": 17,
+  "failed_criteria": [],
+  "limitations": [
+    "No full Cartesian combination of scheduled VL and multi-layer candidate-sharing is established or required by the original separate milestones",
+    "Metadata-only official shapes plus bounded real-dimension vision checks do not certify full official payload or aggregate memory feasibility"
+  ]
+}

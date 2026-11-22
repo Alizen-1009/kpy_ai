@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests_run": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "scripts/ascend910c/check_stage123_acceptance.py": "8031a673fb12028cae2aea6d99f6361a6c9a606c90d7394c5c975b2154340c4b",
+    "scripts/ascend910c/tests/test_stage123_acceptance.py": "c81e53241fc56bc837708f1e56d53ce15315cf9e2be5c18647fac943d1b76cb2"
+  },
+  "test_output": "test_true_checkbox_and_valid_hashes_do_not_hide_missing_required_geometry (test_stage123_acceptance.Stage123AcceptanceTests.test_true_checkbox_and_valid_hashes_do_not_hide_missing_required_geometry) ... ok\ntest_unchecked_checkbox_does_not_override_real_passing_evidence (test_stage123_acceptance.Stage123AcceptanceTests.test_unchecked_checkbox_does_not_override_real_passing_evidence) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.321s\n\nOK\n",
+  "scope": "Completion flags and valid report digests alone cannot override a missing original requirement"
+}

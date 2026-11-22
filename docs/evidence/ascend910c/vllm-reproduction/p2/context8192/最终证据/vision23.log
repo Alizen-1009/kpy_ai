@@ -1,0 +1,11 @@
+usage: vision_accuracy_check.py [-h] [--server SERVER]
+                                [--images-dir IMAGES_DIR]
+                                [--official-dir OFFICIAL_DIR] [--model MODEL]
+                                [--cases CASES] [--out OUT]
+                                [--max-tokens MAX_TOKENS]
+                                [--temperature TEMPERATURE]
+                                [--timeout TIMEOUT]
+                                [--min-hit-rate MIN_HIT_RATE] [--no-stream]
+                                [--no-measure-image-tokens] [--expect-dspark]
+                                [--self-test] [--dry-run]
+vision_accuracy_check.py: error: --images-dir is required for the built-in suite

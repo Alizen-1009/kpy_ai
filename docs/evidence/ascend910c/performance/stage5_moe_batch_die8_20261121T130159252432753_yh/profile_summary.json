@@ -1,0 +1,13 @@
+{
+  "kernel_count": 61308,
+  "kernel_type_counts_and_summed_us": [
+    [
+      "N/A",
+      [
+        61308,
+        346737.378999997
+      ]
+    ]
+  ],
+  "mm_calls": 720
+}

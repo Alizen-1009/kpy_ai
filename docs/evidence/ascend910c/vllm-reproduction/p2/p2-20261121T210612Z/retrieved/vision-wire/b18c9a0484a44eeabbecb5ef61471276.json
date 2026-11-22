@@ -1,0 +1,10 @@
+{
+  "url": "http://127.0.0.1:18550/v1/models",
+  "request_body_base64": "",
+  "request_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_body_base64": "eyJvYmplY3QiOiJsaXN0IiwiZGF0YSI6W3siaWQiOiJwMS12aXNpb24xLTIwMjYxMTIxVDIwNTYyNVotMjQ0YjhmYmYiLCJvYmplY3QiOiJtb2RlbCIsImNyZWF0ZWQiOjE3OTUzMDEwMTYsIm93bmVkX2J5IjoidmxsbSIsInJvb3QiOiIvcm9vdC9zeWYvZGF0YV95Zi95dWhhb192bGxtX2FzY2VuZF9yZXByb195aC9tb2RlbCIsInBhcmVudCI6bnVsbCwibWF4X21vZGVsX2xlbiI6NDA5NiwicGVybWlzc2lvbiI6W3siaWQiOiJtb2RlbHBlcm0tYTNkODYyZDU0ZDliMDVhMSIsIm9iamVjdCI6Im1vZGVsX3Blcm1pc3Npb24iLCJjcmVhdGVkIjoxNzk1MzAxMDE2LCJhbGxvd19jcmVhdGVfZW5naW5lIjpmYWxzZSwiYWxsb3dfc2FtcGxpbmciOnRydWUsImFsbG93X2xvZ3Byb2JzIjp0cnVlLCJhbGxvd19zZWFyY2hfaW5kaWNlcyI6ZmFsc2UsImFsbG93X3ZpZXciOnRydWUsImFsbG93X2ZpbmVfdHVuaW5nIjpmYWxzZSwib3JnYW5pemF0aW9uIjoiKiIsImdyb3VwIjpudWxsLCJpc19ibG9ja2luZyI6ZmFsc2V9XX1dfQ==",
+  "response_sha256": "dad40e8c2cd9b48591cab870cb3b4d00411232e6506c93d6f71b53f9b150791c",
+  "status": 200,
+  "error": null,
+  "note": "Raw bytes retain usage/finish_reason; not a quality verdict."
+}

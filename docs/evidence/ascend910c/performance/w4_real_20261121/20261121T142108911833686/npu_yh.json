@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "error": "ValueError: Activation tile exceeds aligned decode bounds",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/check_official_moe_replay.py\", line 133, in main\n    compare('reconstructed_vs_captured_decode',reconstructed.bfloat16(),move(current['hidden']))\n          ^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/check_official_moe_replay.py\", line 124, in check\n    for n in (16,24,32,40,48):\n       ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/scripts/ascend910c/benchmark_w4a8_real_ffn.py\", line 72, in run_block\n    fp8_input=a._tile(0,1,0,5120).cpu();a8_input=cq[:1].float()*cs[:1,None]\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_w4_real_20261121_yh/deepinfer/quantization/activation.py\", line 160, in _tile\n    raise ValueError(\"Activation tile exceeds aligned decode bounds\")\nValueError: Activation tile exceeds aligned decode bounds\n"
+}

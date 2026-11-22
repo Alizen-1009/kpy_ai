@@ -1,0 +1,18 @@
+{
+  "scope": "offline synthetic scorer controls only; no model inference",
+  "gsm_positive": 100,
+  "gsm_negative_controls_rejected": 4,
+  "vision_selftest_stdout": "SELF-TEST PASS: 23 cases (21 image QA + 2 negative incl. blank-image probe); scoring/empty/garbled/error/blank-PNG paths OK\n",
+  "vision_exit": 0,
+  "code_case_counts": {
+    "lru_cache": 17,
+    "merge_intervals": 16,
+    "topological_order": 16,
+    "longest_unique_substring": 16,
+    "kth_largest": 15,
+    "min_window": 17,
+    "group_anagrams": 16,
+    "flatten_dict": 15
+  },
+  "code_sandbox_execution": "NOT RUN"
+}

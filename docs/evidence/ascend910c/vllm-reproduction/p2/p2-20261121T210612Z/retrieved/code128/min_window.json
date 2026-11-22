@@ -1,0 +1,21 @@
+{
+  "task": "min_window",
+  "request": {
+    "model": "p1-vision1-20261121T205625Z-244b8fbf",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-min_window]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回 text 中覆盖 pattern 全部字符及其重复次数的最短连续子串。若有多个同长答案，返回最靠左者；pattern 为空或不存在满足条件的子串时返回空字符串。大小写敏感。\n函数签名：def min_window(text, pattern):\n示例：例如 text=\"ADOBECODEBANC\", pattern=\"ABC\" 返回 \"BANC\"。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 400,
+  "error": "HTTP Error 400: Bad Request",
+  "score": {
+    "passed": 0,
+    "total": 17,
+    "status": "error"
+  }
+}

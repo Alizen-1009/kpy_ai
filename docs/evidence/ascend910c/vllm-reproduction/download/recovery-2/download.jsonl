@@ -1,0 +1,130 @@
+{"event": "verified_existing", "path": ".gitattributes"}
+{"event": "verified_existing", "path": "README.md"}
+{"event": "verified_existing", "path": "config.json"}
+{"event": "verified_existing", "path": "configuration.json"}
+{"event": "verified_existing", "path": "engram_extra.safetensors"}
+{"event": "verified_existing", "path": "engram_int8/PARTS.sha256"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.scale.safetensors"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-03-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-04-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_14_engram_embed.weight.safetensors.part-05-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.scale.safetensors"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-00-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-01-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-02-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-03-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-04-of-06"}
+{"event": "verified_existing", "path": "engram_int8/layers_1_engram_embed.weight.safetensors.part-05-of-06"}
+{"event": "verified_existing", "path": "engram_int8/reassemble_engram_weights.sh"}
+{"event": "verified_existing", "path": "mtpq-00001-of-00004.safetensors"}
+{"event": "verified_existing", "path": "mtpq-00002-of-00004.safetensors"}
+{"event": "verified_existing", "path": "mtpq-00003-of-00004.safetensors"}
+{"event": "verified_existing", "path": "mtpq-00004-of-00004.safetensors"}
+{"event": "verified_existing", "path": "mtpq_manifest.json"}
+{"event": "verified_existing", "path": "optional/quarot.safetensors"}
+{"event": "verified_existing", "path": "quant_model_description.json"}
+{"event": "verified_existing", "path": "quant_model_weights-00001-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00002-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00003-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00004-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00005-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00006-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00007-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00008-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00009-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00010-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00011-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00012-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00013-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00014-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00015-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00016-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00017-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00018-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00019-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00020-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00021-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00022-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00023-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00024-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00025-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00026-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00027-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00028-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00029-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00030-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00031-of-00072.safetensors"}
+{"event": "verified_existing", "path": "quant_model_weights-00032-of-00072.safetensors"}
+{"event": "download", "path": "quant_model_weights-00033-of-00072.safetensors", "size": 4289972760}
+{"event": "download", "path": "quant_model_weights-00034-of-00072.safetensors", "size": 4294998904}
+{"event": "download", "path": "quant_model_weights-00035-of-00072.safetensors", "size": 4290759864}
+{"event": "download", "path": "quant_model_weights-00036-of-00072.safetensors", "size": 1256249776}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00036-of-00072.safetensors", "size": 1256249776}
+{"event": "download", "path": "quant_model_weights-00037-of-00072.safetensors", "size": 4292668624}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00033-of-00072.safetensors", "size": 4289972760}
+{"event": "download", "path": "quant_model_weights-00038-of-00072.safetensors", "size": 4294435936}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00035-of-00072.safetensors", "size": 4290759864}
+{"event": "download", "path": "quant_model_weights-00039-of-00072.safetensors", "size": 4294436056}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00034-of-00072.safetensors", "size": 4294998904}
+{"event": "download", "path": "quant_model_weights-00040-of-00072.safetensors", "size": 4292074768}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00038-of-00072.safetensors", "size": 4294435936}
+{"event": "download", "path": "quant_model_weights-00041-of-00072.safetensors", "size": 4294111528}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00037-of-00072.safetensors", "size": 4292668624}
+{"event": "download", "path": "quant_model_weights-00042-of-00072.safetensors", "size": 4291286520}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00039-of-00072.safetensors", "size": 4294436056}
+{"event": "download", "path": "quant_model_weights-00043-of-00072.safetensors", "size": 4290467128}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00040-of-00072.safetensors", "size": 4292074768}
+{"event": "download", "path": "quant_model_weights-00044-of-00072.safetensors", "size": 4295245720}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00041-of-00072.safetensors", "size": 4294111528}
+{"event": "download", "path": "quant_model_weights-00045-of-00072.safetensors", "size": 4230023800}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00042-of-00072.safetensors", "size": 4291286520}
+{"event": "download", "path": "quant_model_weights-00046-of-00072.safetensors", "size": 4294096744}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00043-of-00072.safetensors", "size": 4290467128}
+{"event": "download", "path": "quant_model_weights-00047-of-00072.safetensors", "size": 4291789768}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00044-of-00072.safetensors", "size": 4295245720}
+{"event": "download", "path": "quant_model_weights-00048-of-00072.safetensors", "size": 4294438456}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00045-of-00072.safetensors", "size": 4230023800}
+{"event": "download", "path": "quant_model_weights-00049-of-00072.safetensors", "size": 4293747976}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00046-of-00072.safetensors", "size": 4294096744}
+{"event": "download", "path": "quant_model_weights-00050-of-00072.safetensors", "size": 4291367784}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00047-of-00072.safetensors", "size": 4291789768}
+{"event": "download", "path": "quant_model_weights-00051-of-00072.safetensors", "size": 4293203896}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00048-of-00072.safetensors", "size": 4294438456}
+{"event": "download", "path": "quant_model_weights-00052-of-00072.safetensors", "size": 4290635264}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00049-of-00072.safetensors", "size": 4293747976}
+{"event": "download", "path": "quant_model_weights-00053-of-00072.safetensors", "size": 4294438808}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00050-of-00072.safetensors", "size": 4291367784}
+{"event": "download", "path": "quant_model_weights-00054-of-00072.safetensors", "size": 2749380352}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "complete", "path": "quant_model_weights-00051-of-00072.safetensors", "size": 4293203896}
+{"event": "download", "path": "quant_model_weights-00055-of-00072.safetensors", "size": 4290911368}
+{"event": "redirect", "host": "cdn-lfs-cn-1.modelscope.cn", "status": 302}
+{"event": "file_failed", "path": "quant_model_weights-00053-of-00072.safetensors", "error_type": "ValueError", "reason": "size/hash mismatch"}
+{"event": "file_failed", "path": "quant_model_weights-00055-of-00072.safetensors", "error_type": "InterruptedError", "reason": "download group stopped; partial retained"}
+{"event": "file_failed", "path": "quant_model_weights-00054-of-00072.safetensors", "error_type": "InterruptedError", "reason": "download group stopped; partial retained"}
+{"event": "file_failed", "path": "quant_model_weights-00052-of-00072.safetensors", "error_type": "InterruptedError", "reason": "download group stopped; partial retained"}
+{"event": "failed", "error_type": "ValueError"}

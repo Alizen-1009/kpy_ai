@@ -1,0 +1,113 @@
+{
+  "task": "group_anagrams",
+  "request": {
+    "model": "p2-8192-20261121T224721Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-group_anagrams]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：把变位词分组。两个字符串当且仅当字符及其出现次数完全相同才属于同一组。组的顺序按该组第一次出现的位置排列，组内字符串保留原始相对顺序。空输入返回空列表；大小写敏感，不修改输入。\n函数签名：def group_anagrams(words):\n示例：例如 [\"eat\",\"tea\",\"tan\",\"ate\"] 返回 [[\"eat\",\"tea\",\"ate\"],[\"tan\"]]。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 165,
+    "total_tokens": 234,
+    "completion_tokens": 69,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "[]"
+      },
+      {
+        "id": "empty-words",
+        "passed": true,
+        "actual": "[[\"\",\"\"],[\"a\"]]"
+      },
+      {
+        "id": "stable-order",
+        "passed": true,
+        "actual": "[[\"eat\",\"tea\",\"ate\"],[\"tan\"]]"
+      },
+      {
+        "id": "case-sensitive",
+        "passed": true,
+        "actual": "[[\"Ab\"],[\"ba\",\"ab\"]]"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "[[\"aac\"],[\"\",\"\",\"\"],[\"bbbc\"],[\"a\",\"a\"],[\"c\"],[\"bbc\"],[\"caaa\"],[\"cb\"],[\"b\"]]"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "[[\"\",\"\",\"\",\"\",\"\",\"\"],[\"bbaa\"],[\"bbca\"],[\"cba\"]]"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "[[\"ccabb\"],[\"b\"],[\"\"],[\"cc\"]]"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "[[\"\"],[\"babc\"],[\"aa\"],[\"aaa\"]]"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "[[\"\",\"\"],[\"acaa\"],[\"baa\"],[\"acba\"]]"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "[[\"c\",\"c\"],[\"cbbca\"],[\"acca\"],[\"bbca\"],[\"\"],[\"b\"],[\"bacbb\"]]"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "[[\"bbc\"],[\"abccc\"],[\"aac\"]]"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "[[\"aba\"],[\"aacbc\"],[\"ca\",\"ac\",\"ca\"],[\"ba\"],[\"bcca\"],[\"\"],[\"abcb\"],[\"acc\"],[\"aaabb\"],[\"caa\"],[\"bbcac\"]]"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "[[\"cacca\"]]"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "[[\"c\",\"c\"],[\"acca\"],[\"bbab\"],[\"bccc\"],[\"bac\"],[\"cb\"],[\"bbc\"],[\"ccccb\"],[\"a\"],[\"\",\"\"]]"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "[[\"\"],[\"ccccb\"],[\"acac\"],[\"aa\"],[\"acc\"],[\"cbaa\"],[\"bc\"],[\"bbc\"],[\"c\"],[\"aaa\"],[\"ccab\"]]"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "[[\"accb\"],[\"ac\"],[\"baa\"]]"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def group_anagrams(words):\n    groups = {}\n    order = []\n    for word in words:\n        key = tuple(sorted(word))\n        if key not in groups:\n            groups[key] = []\n            order.append(key)\n        groups[key].append(word)\n    return [groups[key] for key in order]\n",
+    "extracted_code_sha256": "c23441c15c973704accb6e85378a3babf2673f0a9b52fdb2f43d3b8c5b9ff844"
+  }
+}

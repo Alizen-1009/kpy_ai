@@ -1,0 +1,21 @@
+{
+  "task": "flatten_dict",
+  "request": {
+    "model": "p1-vision1-20261121T205625Z-244b8fbf",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-flatten_dict]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：递归展开只含字符串键和字典/JSON 标量叶子的嵌套字典。返回新字典，键由路径段用 sep 连接；根空字典返回空字典；非根空字典作为空字典叶子保留。不得修改输入。\n函数签名：def flatten_dict(data, sep=\".\"):\n示例：例如 {\"a\": {\"b\": 2}, \"c\": 3} 返回 {\"a.b\": 2, \"c\": 3}。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 400,
+  "error": "HTTP Error 400: Bad Request",
+  "score": {
+    "passed": 0,
+    "total": 15,
+    "status": "error"
+  }
+}

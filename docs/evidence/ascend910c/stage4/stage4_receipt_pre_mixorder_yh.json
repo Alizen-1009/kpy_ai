@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "reports": {
+    "payload_cpu": {
+      "path": "stage4_payload_cpu_bound_20261119T145521234299562_yh.json",
+      "sha256": "590e314c07c44d313f68b5c07853a76e63a903e4c8730f24f71fec311f44b8e3"
+    },
+    "payload_npu": {
+      "path": "stage4_payload_die8_20261119T145526649130086_yh/npu_yh.json",
+      "sha256": "6ec0a0a0ce9d95877e0e7dc19e7c111b91307229755e79a943534345bb0ba14f"
+    },
+    "npu_execution": {
+      "path": "stage4_payload_die8_20261119T145526649130086_yh/execution_yh.json",
+      "sha256": "0ad86d754bad78d36a959b6d43eaa3b41f28f8cc209b3b62ebc32e7ccfab0a15"
+    },
+    "memory": {
+      "path": "stage4_memory_20261119T144759683822897_yh.json",
+      "sha256": "9639f86c96f13feb09ef6ff162805cad599ddfcf3914149a8bf73cd1b9c60d25"
+    },
+    "cpu_regression": {
+      "path": "stage5_shifted_cpu_20261119T181040577294465_yh.json",
+      "sha256": "6849b402c96d223a62b0502253aa83ed895e629e6b098f5775c840aaa5f9110e"
+    }
+  },
+  "audited_headers": {
+    "path": "headers_audit_yh.json",
+    "sha256": "1b42b3376ac4165299aa39c2dda10b553042bc393acf486661ca779881be392d"
+  },
+  "scope": "Stage4 acceptance evidence. Full load still requires explicit selector, fresh memory, actual meta-tree/cache checks and read-only mounts."
+}

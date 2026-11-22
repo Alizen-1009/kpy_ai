@@ -1,0 +1,4 @@
+Version=9.1.0
+version_dir=cann
+required_package_driver_version=">=25.5.0"
+timestamp=20260730_231653901

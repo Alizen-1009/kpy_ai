@@ -1,0 +1,21 @@
+{
+  "task": "longest_unique_substring",
+  "request": {
+    "model": "p1-vision1-20261121T205625Z-244b8fbf",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-longest_unique_substring]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回字符串中不含重复字符的最长连续子串长度。按 Unicode 字符比较；空串返回 0。\n函数签名：def longest_unique_substring(text):\n示例：例如 \"abba\" 返回 2。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 400,
+  "error": "HTTP Error 400: Bad Request",
+  "score": {
+    "passed": 0,
+    "total": 16,
+    "status": "error"
+  }
+}

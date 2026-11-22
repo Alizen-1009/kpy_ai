@@ -1,0 +1,89 @@
+{
+  "task": "kth_largest",
+  "score": {
+    "status": "pass",
+    "passed": 15,
+    "total": 15,
+    "case_results": [
+      {
+        "id": "single",
+        "passed": true,
+        "actual": "7"
+      },
+      {
+        "id": "duplicate-rank",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "negative",
+        "passed": true,
+        "actual": "-9"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "-24"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "30"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "-24"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "-19"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "10"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "-10"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "-29"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "-7"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "8"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "-9"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "-27"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def kth_largest(numbers, k):\n    return sorted(numbers, reverse=True)[k-1]\n",
+    "extracted_code_sha256": "29bb04b529edb65819fd7861f78ea9f6165a301231db6c058a08bfaecf60dee5"
+  }
+}

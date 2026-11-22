@@ -1,0 +1,35 @@
+{
+  "scope": "layer30 first selected expert gate/up only; replay M8; not EP8 or serving TPS",
+  "samples": [
+    {
+      "wall_seconds": 0.8905248469673097,
+      "device_ms": 890.2449340820312
+    },
+    {
+      "wall_seconds": 0.8926459590438753,
+      "device_ms": 892.5215454101562
+    },
+    {
+      "wall_seconds": 0.8916862518526614,
+      "device_ms": 891.5723266601562
+    }
+  ],
+  "warmup": 1,
+  "profiled_calls": 1,
+  "profile_wall_seconds": 19.63039245409891,
+  "peak_allocated_bytes": 44485632,
+  "peak_reserved_bytes": 117440512,
+  "activation_shape": [
+    8,
+    5120
+  ],
+  "output_shape": [
+    8,
+    4608
+  ],
+  "torch_version": "2.13.0+cpu",
+  "torch_npu_version": "2.13.0.rc1",
+  "fp4_source": "/root/yuhao/deepinfer_910c_yh/src_yh/DeepInfer_stage4_20261119T141621_yh/deepinfer/quantization/fp4.py",
+  "fp4_sha256": "1100b1f8caca4ce65824829fdf19eeb25f9c003e05cde8cd5ad9c1fabc89534b",
+  "snapshot": "/root/yuhao/deepinfer_910c_yh/reports_yh/stage5_full_8_15_20261119T202949060872566_yh/rank0_replay_tensors_yh.pt"
+}

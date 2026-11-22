@@ -1,0 +1,1030 @@
+
+Authorized users only. All activities may be monitored and reported.
+COMMAND ['npu-smi', 'info'] EXIT 0
++------------------------------------------------------------------------------------------------+
+| npu-smi 25.5.1                   Version: 25.5.1                                               |
++---------------------------+---------------+----------------------------------------------------+
+| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|
+| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |
++===========================+===============+====================================================+
+| 0     Ascend910           | OK            | 161.0       40                0    / 0             |
+| 0     0                   | 0000:9D:00.0  | 0           0    / 0          3156 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 0     Ascend910           | OK            | -           40                0    / 0             |
+| 1     1                   | 0000:9F:00.0  | 0           0    / 0          2887 / 65536         |
++===========================+===============+====================================================+
+| 1     Ascend910           | OK            | 165.1       42                0    / 0             |
+| 0     2                   | 0000:99:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 1     Ascend910           | OK            | -           41                0    / 0             |
+| 1     3                   | 0000:9B:00.0  | 0           0    / 0          2874 / 65536         |
++===========================+===============+====================================================+
+| 2     Ascend910           | OK            | 163.2       41                0    / 0             |
+| 0     4                   | 0000:95:00.0  | 0           0    / 0          3162 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 2     Ascend910           | OK            | -           42                0    / 0             |
+| 1     5                   | 0000:97:00.0  | 0           0    / 0          2878 / 65536         |
++===========================+===============+====================================================+
+| 3     Ascend910           | OK            | 159.4       42                0    / 0             |
+| 0     6                   | 0000:91:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 3     Ascend910           | OK            | -           41                0    / 0             |
+| 1     7                   | 0000:93:00.0  | 0           0    / 0          2890 / 65536         |
++===========================+===============+====================================================+
+| 4     Ascend910           | OK            | 162.5       40                0    / 0             |
+| 0     8                   | 0000:8D:00.0  | 0           0    / 0          3156 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 4     Ascend910           | OK            | -           40                0    / 0             |
+| 1     9                   | 0000:8F:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
+| 5     Ascend910           | OK            | 162.2       41                0    / 0             |
+| 0     10                  | 0000:89:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 5     Ascend910           | OK            | -           41                0    / 0             |
+| 1     11                  | 0000:8B:00.0  | 0           0    / 0          2877 / 65536         |
++===========================+===============+====================================================+
+| 6     Ascend910           | OK            | 168.1       41                0    / 0             |
+| 0     12                  | 0000:85:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 6     Ascend910           | OK            | -           41                0    / 0             |
+| 1     13                  | 0000:87:00.0  | 0           0    / 0          2892 / 65536         |
++===========================+===============+====================================================+
+| 7     Ascend910           | OK            | 175.1       41                0    / 0             |
+| 0     14                  | 0000:81:00.0  | 0           0    / 0          3153 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 7     Ascend910           | OK            | -           41                0    / 0             |
+| 1     15                  | 0000:83:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
++---------------------------+---------------+----------------------------------------------------+
+| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |
++===========================+===============+====================================================+
+| No running processes found in NPU 0                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 1                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 2                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 3                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 4                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 5                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 6                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 7                                                            |
++===========================+===============+====================================================+
+ 
+COMMAND ['docker', 'image', 'inspect', 'sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef'] EXIT 0
+[
+    {
+        "Id": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+        "RepoTags": [],
+        "RepoDigests": [
+            "quay.nju.edu.cn/ascend/vllm-ascend@sha256:16a57b897a2f475f85b0e90df1644c9870c2418b368b2adf447c5173eae211c3"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-11T02:02:59.735385934Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/bin:/usr/local/Ascend/ascend-toolkit/latest/bin:/usr/local/Ascend/ascend-toolkit/latest/compiler/ccec_compiler/bin:/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/show_kernel_debug_data:/usr/local/Ascend/cann-9.1.0/tools/msobjdump:/usr/local/Ascend/cann-9.1.0/bin:/usr/local/Ascend/cann-9.1.0/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/profiler/bin:/usr/local/Ascend/cann-9.1.0/tools/ascend_system_advisor/asys:/usr/local/python3.12.13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LD_LIBRARY_PATH=/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.13/lib:",
+                "ASCEND_TOOLKIT_HOME=/usr/local/Ascend/cann-9.1.0",
+                "ASCEND_TOOLKIT_LATEST_HOME=/usr/local/Ascend/ascend-toolkit/latest",
+                "PYTHONPATH=/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:",
+                "ASCEND_AICPU_PATH=/usr/local/Ascend/cann-9.1.0",
+                "ASCEND_OPP_PATH=/usr/local/Ascend/cann-9.1.0/opp",
+                "TOOLCHAIN_HOME=/usr/local/Ascend/cann-9.1.0/toolkit",
+                "ASCEND_HOME_PATH=/usr/local/Ascend/cann-9.1.0",
+                "CMAKE_PREFIX_PATH=/usr/local/Ascend/cann-9.1.0/toolkit/tools/tikicpulib/lib/cmake:/usr/local/Ascend/cann-9.1.0/lib64/cmake",
+                "ATB_HOME_PATH=/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1",
+                "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE=0",
+                "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE=0",
+                "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE=0",
+                "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT=1",
+                "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT=5",
+                "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE=1",
+                "ATB_COMPARE_TILING_EVERY_KERNEL=0",
+                "ATB_SHARE_MEMORY_NAME_SUFFIX=",
+                "ATB_MATMUL_SHUFFLE_K_ENABLE=1",
+                "LCCL_DETERMINISTIC=0",
+                "LCCL_PARALLEL=0",
+                "ATB_CXX_ABI=1",
+                "DEBIAN_FRONTEND=noninteractive",
+                "SOC_VERSION=ascend910_9391",
+                "TASK_QUEUE_ENABLE=1",
+                "OMP_NUM_THREADS=1"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/workspace",
+            "Entrypoint": [
+                "/bin/bash",
+                "-c",
+                "    source /usr/local/Ascend/ascend-toolkit/set_env.sh &&     source /usr/local/Ascend/cann-9.1.0/share/info/ascendnpu-ir/bin/set_env.sh &&     source /usr/local/Ascend/nnal/atb/set_env.sh --cxx_abi=${ATB_CXX_ABI:-1}&&     exec \"$@\"",
+                "--"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.version": "22.04"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 24930899801,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/home/docker/overlay2/85099e275d511a33a0da64bb26a2b7ddc0a6755cdeaa5cbe6262d81af31408a8/diff:/home/docker/overlay2/a4f5bb6dfd3fcd4fa62f74755857054ee4d903cc2139693c23ef040cdd99747f/diff:/home/docker/overlay2/beae0f4f7da46cf08b6bd01b536ea0bc79fc9e19f60003f0870c9c9d29b4709d/diff:/home/docker/overlay2/8e5c49f122276842bb493e8a0bbc149f8f0b34b25f22fc42a06d3ec28a113451/diff:/home/docker/overlay2/84741daf96a52da8f540625fe87109ea1ddad81c66b46a2641cd20d8965b27bf/diff:/home/docker/overlay2/ed7c82a45fe22ebf1d83db27f20dc4137dea4b48bba846c24450aee3a76ef5dc/diff:/home/docker/overlay2/ba54d505461bd540eb62023d816d95c227cb494ee886d438f45e110d6d04476c/diff:/home/docker/overlay2/a0b5091bb552cb280709bdce34fd4fdd4088741dc85a843925dcd42bb65205ef/diff:/home/docker/overlay2/63cf198be77d05e5559035da817d8fa0d727cdb0295aa03b31f407913c85fafc/diff:/home/docker/overlay2/a9720715d056046aa827c18ea3fb8b1e9845102e554c6aeff794df04935cc8f5/diff:/home/docker/overlay2/c52e803fc24efe3d089da41ab2287ced3060a20e93f3c2063804861055476bb9/diff:/home/docker/overlay2/3d96f796b0ba16f8fc40c272ffcd177195a2daa907a976f799fbf742c2d83f1b/diff:/home/docker/overlay2/0e9d298c1b7aaef8eaa1a02839758c773446252baea232c2c9cb9e036e4e7fda/diff:/home/docker/overlay2/0b731119ca907573c1a21f55d17e0ecc1a146c706a630f0c98c9ca5c6f2acdc5/diff:/home/docker/overlay2/0e38c0f67dea3ee5c5723b232212f27f689130674f10194224de0642815666d9/diff:/home/docker/overlay2/175bd7b60274903a6fae2d32870d547382310a66522423afa19848a231925675/diff:/home/docker/overlay2/cfe5e9b65aad169c07ccdf0235b61358e3683b64da0978270b5baae6f304675c/diff",
+                "MergedDir": "/home/docker/overlay2/a16b69ae127a4e2fa80f8b76e797bbaafe26751f1cdce40717f3c2cf19889673/merged",
+                "UpperDir": "/home/docker/overlay2/a16b69ae127a4e2fa80f8b76e797bbaafe26751f1cdce40717f3c2cf19889673/diff",
+                "WorkDir": "/home/docker/overlay2/a16b69ae127a4e2fa80f8b76e797bbaafe26751f1cdce40717f3c2cf19889673/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:349cd24b7d434a8beb71a40f461c42b9f58e19b2637af5065f91bb019759cb91",
+                "sha256:4571be4bea72ee1b7bd9bbc0fc1de716a451dde31cf42e42bd47538cd9cfed2c",
+                "sha256:b4509214d0493f0366bdb5ea376c2d0ee39cb06e3470c7375ef37590ff1c297b",
+                "sha256:1f64c6c2600b11a69df139f8ae4a8206716177966ddc7200a5b0a1c1fb53b0cc",
+                "sha256:5d03b67af71a257fa0e8b468adf75d19d459132e36c7bee8609c8145b0ba5157",
+                "sha256:39cf6df97da7a108f2345aa099d8a22972c7484d16ac679a0feaf6862dd9fe3c",
+                "sha256:8ed4e4ec4596d2ddd7cd608ef3be679a6f66e973ee74c40f341db1f6636755ae",
+                "sha256:8a6ca57856a1aac350c3ebdae5138d90f6e84af448dd61b2136d6784335aab55",
+                "sha256:a0dc3dd7f362263edcf6763660196d032d0bacdd253dbd38435b7f5083565cde",
+                "sha256:0290a98c0fb0cb9877fd76371a229d665ac894a2739dd1eb45aa405e3dfe326c",
+                "sha256:bb52942e68c6b3b3acf67f54b6455375e21df3377112c36c0d61b5aee99a5ad6",
+                "sha256:3bf11c93d0ad479c6dfb8c2d9bbf01761e6b3c06a5cb15f77b7ec7c464de8e28",
+                "sha256:759e40e672af58cb8feba48a9ce7ac5eb4f244cd283783a21dc057163bc8b239",
+                "sha256:5b8d00fd01b610e013a937bcbcfd4665e9a50c6799116e3595c799070d11cdb4",
+                "sha256:7f586d6f502a8f6cd6c9dfcd60559a91dc57a61fe8c476eb2b2d1d343c5d6a36",
+                "sha256:2996800a3809d98874b69fe7e6fe05a568f73ea353417c90030e33be50d04b92",
+                "sha256:61079ab969202aee4e8c151e0e3f0d5df2363e444c28e73030a57e1886c29cc8",
+                "sha256:977bac39f62beecba0bbcbf08b6b154521dacdd6c658629bbc9b33eb7ad4c50f"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+ 
+IMAGE_ENV_UNATTESTED {"PATH": "/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/bin:/usr/local/Ascend/ascend-toolkit/latest/bin:/usr/local/Ascend/ascend-toolkit/latest/compiler/ccec_compiler/bin:/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/show_kernel_debug_data:/usr/local/Ascend/cann-9.1.0/tools/msobjdump:/usr/local/Ascend/cann-9.1.0/bin:/usr/local/Ascend/cann-9.1.0/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/profiler/bin:/usr/local/Ascend/cann-9.1.0/tools/ascend_system_advisor/asys:/usr/local/python3.12.13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", "LD_LIBRARY_PATH": "/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.13/lib:", "ASCEND_TOOLKIT_HOME": "/usr/local/Ascend/cann-9.1.0", "ASCEND_TOOLKIT_LATEST_HOME": "/usr/local/Ascend/ascend-toolkit/latest", "PYTHONPATH": "/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe:", "ASCEND_AICPU_PATH": "/usr/local/Ascend/cann-9.1.0", "ASCEND_OPP_PATH": "/usr/local/Ascend/cann-9.1.0/opp", "TOOLCHAIN_HOME": "/usr/local/Ascend/cann-9.1.0/toolkit", "ASCEND_HOME_PATH": "/usr/local/Ascend/cann-9.1.0", "CMAKE_PREFIX_PATH": "/usr/local/Ascend/cann-9.1.0/toolkit/tools/tikicpulib/lib/cmake:/usr/local/Ascend/cann-9.1.0/lib64/cmake", "ATB_HOME_PATH": "/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1", "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE": "0", "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE": "0", "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE": "0", "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT": "1", "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT": "5", "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE": "1", "ATB_COMPARE_TILING_EVERY_KERNEL": "0", "ATB_SHARE_MEMORY_NAME_SUFFIX": "", "ATB_MATMUL_SHUFFLE_K_ENABLE": "1", "LCCL_DETERMINISTIC": "0", "LCCL_PARALLEL": "0", "ATB_CXX_ABI": "1", "DEBIAN_FRONTEND": "noninteractive", "SOC_VERSION": "ascend910_9391", "TASK_QUEUE_ENABLE": "1", "OMP_NUM_THREADS": "1"}
+COMMAND ['npu-smi', 'info'] EXIT 0
++------------------------------------------------------------------------------------------------+
+| npu-smi 25.5.1                   Version: 25.5.1                                               |
++---------------------------+---------------+----------------------------------------------------+
+| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|
+| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |
++===========================+===============+====================================================+
+| 0     Ascend910           | OK            | 160.9       40                0    / 0             |
+| 0     0                   | 0000:9D:00.0  | 0           0    / 0          3156 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 0     Ascend910           | OK            | -           40                0    / 0             |
+| 1     1                   | 0000:9F:00.0  | 0           0    / 0          2887 / 65536         |
++===========================+===============+====================================================+
+| 1     Ascend910           | OK            | 165.6       42                0    / 0             |
+| 0     2                   | 0000:99:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 1     Ascend910           | OK            | -           41                0    / 0             |
+| 1     3                   | 0000:9B:00.0  | 0           0    / 0          2874 / 65536         |
++===========================+===============+====================================================+
+| 2     Ascend910           | OK            | 162.8       41                0    / 0             |
+| 0     4                   | 0000:95:00.0  | 0           0    / 0          3161 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 2     Ascend910           | OK            | -           42                0    / 0             |
+| 1     5                   | 0000:97:00.0  | 0           0    / 0          2878 / 65536         |
++===========================+===============+====================================================+
+| 3     Ascend910           | OK            | 160.1       41                0    / 0             |
+| 0     6                   | 0000:91:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 3     Ascend910           | OK            | -           41                0    / 0             |
+| 1     7                   | 0000:93:00.0  | 0           0    / 0          2890 / 65536         |
++===========================+===============+====================================================+
+| 4     Ascend910           | OK            | 162.8       40                0    / 0             |
+| 0     8                   | 0000:8D:00.0  | 0           0    / 0          3157 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 4     Ascend910           | OK            | -           40                0    / 0             |
+| 1     9                   | 0000:8F:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
+| 5     Ascend910           | OK            | 163.6       41                0    / 0             |
+| 0     10                  | 0000:89:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 5     Ascend910           | OK            | -           40                0    / 0             |
+| 1     11                  | 0000:8B:00.0  | 0           0    / 0          2877 / 65536         |
++===========================+===============+====================================================+
+| 6     Ascend910           | OK            | 167.3       41                0    / 0             |
+| 0     12                  | 0000:85:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 6     Ascend910           | OK            | -           41                0    / 0             |
+| 1     13                  | 0000:87:00.0  | 0           0    / 0          2892 / 65536         |
++===========================+===============+====================================================+
+| 7     Ascend910           | OK            | 175.6       41                0    / 0             |
+| 0     14                  | 0000:81:00.0  | 0           0    / 0          3153 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 7     Ascend910           | OK            | -           41                0    / 0             |
+| 1     15                  | 0000:83:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
++---------------------------+---------------+----------------------------------------------------+
+| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |
++===========================+===============+====================================================+
+| No running processes found in NPU 0                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 1                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 2                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 3                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 4                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 5                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 6                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 7                                                            |
++===========================+===============+====================================================+
+ 
+COMMAND ['docker', 'create', '--label', 'owner=yuhao-vllm-repro', '--label', 'run_id=p1-device-dc8cf3596ad1498591503512d8072b85', '--network', 'none', '--ipc', 'private', '--security-opt', 'no-new-privileges', '--memory', '8g', '--cpus', '4', '--pids-limit', '512', '--tmpfs', '/tmp:rw,exec,nosuid,nodev,size=1073741824', '--workdir', '/tmp', '--env', 'LD_LIBRARY_PATH=/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.13/lib', '--env', 'PYTHONPATH=/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe', '--env', 'HOME=/tmp', '--env', 'XDG_CACHE_HOME=/tmp/cache', '--env', 'TRITON_CACHE_DIR=/tmp/triton', '--env', 'NUMBA_CACHE_DIR=/tmp/numba', '--env', 'PYTHONDONTWRITEBYTECODE=1', '--device', '/dev/davinci10:/dev/davinci10:rwm', '--device', '/dev/davinci11:/dev/davinci11:rwm', '--device', '/dev/davinci12:/dev/davinci12:rwm', '--device', '/dev/davinci13:/dev/davinci13:rwm', '--device', '/dev/davinci14:/dev/davinci14:rwm', '--device', '/dev/davinci15:/dev/davinci15:rwm', '--device', '/dev/davinci8:/dev/davinci8:rwm', '--device', '/dev/davinci9:/dev/davinci9:rwm', '--device', '/dev/davinci_manager:/dev/davinci_manager:rwm', '--device', '/dev/devmm_svm:/dev/devmm_svm:rwm', '--device', '/dev/hisi_hdc:/dev/hisi_hdc:rwm', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hbm.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hash.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_jit_kernel.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_plan_kernel.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_gate.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/model.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/ascend_forward_context.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/rope_dsv4.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/dsa_v1.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/token_dispatcher_moemask.py,dst=/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py,readonly', '--mount', 'type=bind,src=/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/serve_v2.sh,dst=/opt/dsv41/scripts/serve_v2.sh,readonly', '--mount', 'type=bind,src=/usr/local/Ascend/driver,dst=/usr/local/Ascend/driver,readonly', '--mount', 'type=bind,src=/etc/ascend_install.info,dst=/etc/ascend_install.info,readonly', '--entrypoint', '/bin/bash', 'sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef', '-lc', 'exec python3 -B -u -c \'import os; os.environ[\'"\'"\'LD_LIBRARY_PATH\'"\'"\']=\'"\'"\':\'"\'"\'.join(x for x in os.environ.get(\'"\'"\'LD_LIBRARY_PATH\'"\'"\',\'"\'"\'\'"\'"\').split(\'"\'"\':\'"\'"\') if x); os.environ[\'"\'"\'PYTHONPATH\'"\'"\']=\'"\'"\':\'"\'"\'.join(x for x in os.environ.get(\'"\'"\'PYTHONPATH\'"\'"\',\'"\'"\'\'"\'"\').split(\'"\'"\':\'"\'"\') if x); exec("PAYLOADS=[\'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py\'"\'"\', \'"\'"\'/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py\'"\'"\', \'"\'"\'/opt/dsv41/scripts/serve_v2.sh\'"\'"\']\\nimport sys,runpy,traceback,importlib,json,ast,pathlib,os\\nfailures=[]\\nsys.argv=[\'"\'"\'vllm\'"\'"\',\'"\'"\'serve\'"\'"\',\'"\'"\'--help\'"\'"\']\\ntry:\\n runpy.run_module(\'"\'"\'vllm.entrypoints.cli.main\'"\'"\',run_name=\'"\'"\'__main__\'"\'"\')\\nexcept SystemExit as e:\\n print(\'"\'"\'CLI_EXIT\'"\'"\',e.code,flush=True)\\n if e.code not in (0,None): failures.append(\'"\'"\'CLI\'"\'"\')\\nexcept BaseException:\\n traceback.print_exc(); failures.append(\'"\'"\'CLI\'"\'"\')\\nfor name in [\'"\'"\'vllm_ascend.models.deepseek_v41.model\'"\'"\',\'"\'"\'vllm_ascend.attention.dsa_v1\'"\'"\']:\\n try: importlib.import_module(name); print(\'"\'"\'ORDERED_IMPORT_OK\'"\'"\',name,flush=True)\\n except Exception: traceback.print_exc(); failures.append(name)\\ntry:\\n import torch\\n print(\'"\'"\'DEVICE_NODES\'"\'"\',sorted(str(p) for p in pathlib.Path(\'"\'"\'/dev\'"\'"\').glob(\'"\'"\'davinci*\'"\'"\')),flush=True)\\n for p in PAYLOADS:\\n  if not p.endswith(\'"\'"\'.py\'"\'"\'): continue\\n  for n in ast.walk(ast.parse(pathlib.Path(p).read_text())):\\n   if isinstance(n,ast.Call) and ast.unparse(n.func).startswith(\'"\'"\'torch.ops.\'"\'"\'):\\n    name=ast.unparse(n.func); print(\'"\'"\'PAYLOAD_CALL\'"\'"\',p,n.lineno,ast.unparse(n),flush=True)\\n    try:\\n     op=torch.ops\\n     for bit in name.split(\'"\'"\'.\'"\'"\')[2:]: op=getattr(op,bit)\\n     print(\'"\'"\'ACTUAL_SCHEMAS\'"\'"\',name,str(op._schemas),flush=True)\\n    except Exception: traceback.print_exc(); failures.append(name)\\n from vllm.model_executor.layers.quantization import get_quantization_config\\n print(\'"\'"\'QUANTIZER_ASCEND\'"\'"\',get_quantization_config(\'"\'"\'ascend\'"\'"\'),flush=True)\\n from vllm.tokenizers.registry import TokenizerRegistry\\n print(\'"\'"\'TOKENIZER_REGISTRY\'"\'"\',vars(TokenizerRegistry),flush=True)\\nexcept Exception: traceback.print_exc(); failures.append(\'"\'"\'registrations\'"\'"\')\\nprint(\'"\'"\'PROBE_FAILURES\'"\'"\',json.dumps(failures),flush=True)\\nsys.exit(bool(failures))\\n")\''] EXIT 0
+e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980
+ 
+COMMAND ['docker', 'inspect', 'e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980'] EXIT 0
+[
+    {
+        "Id": "e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980",
+        "Created": "2026-11-21T13:52:53.255558634Z",
+        "Path": "/bin/bash",
+        "Args": [
+            "-lc",
+            "exec python3 -B -u -c 'import os; os.environ['\"'\"'LD_LIBRARY_PATH'\"'\"']='\"'\"':'\"'\"'.join(x for x in os.environ.get('\"'\"'LD_LIBRARY_PATH'\"'\"','\"'\"''\"'\"').split('\"'\"':'\"'\"') if x); os.environ['\"'\"'PYTHONPATH'\"'\"']='\"'\"':'\"'\"'.join(x for x in os.environ.get('\"'\"'PYTHONPATH'\"'\"','\"'\"''\"'\"').split('\"'\"':'\"'\"') if x); exec(\"PAYLOADS=['\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py'\"'\"', '\"'\"'/opt/dsv41/scripts/serve_v2.sh'\"'\"']\\nimport sys,runpy,traceback,importlib,json,ast,pathlib,os\\nfailures=[]\\nsys.argv=['\"'\"'vllm'\"'\"','\"'\"'serve'\"'\"','\"'\"'--help'\"'\"']\\ntry:\\n runpy.run_module('\"'\"'vllm.entrypoints.cli.main'\"'\"',run_name='\"'\"'__main__'\"'\"')\\nexcept SystemExit as e:\\n print('\"'\"'CLI_EXIT'\"'\"',e.code,flush=True)\\n if e.code not in (0,None): failures.append('\"'\"'CLI'\"'\"')\\nexcept BaseException:\\n traceback.print_exc(); failures.append('\"'\"'CLI'\"'\"')\\nfor name in ['\"'\"'vllm_ascend.models.deepseek_v41.model'\"'\"','\"'\"'vllm_ascend.attention.dsa_v1'\"'\"']:\\n try: importlib.import_module(name); print('\"'\"'ORDERED_IMPORT_OK'\"'\"',name,flush=True)\\n except Exception: traceback.print_exc(); failures.append(name)\\ntry:\\n import torch\\n print('\"'\"'DEVICE_NODES'\"'\"',sorted(str(p) for p in pathlib.Path('\"'\"'/dev'\"'\"').glob('\"'\"'davinci*'\"'\"')),flush=True)\\n for p in PAYLOADS:\\n  if not p.endswith('\"'\"'.py'\"'\"'): continue\\n  for n in ast.walk(ast.parse(pathlib.Path(p).read_text())):\\n   if isinstance(n,ast.Call) and ast.unparse(n.func).startswith('\"'\"'torch.ops.'\"'\"'):\\n    name=ast.unparse(n.func); print('\"'\"'PAYLOAD_CALL'\"'\"',p,n.lineno,ast.unparse(n),flush=True)\\n    try:\\n     op=torch.ops\\n     for bit in name.split('\"'\"'.'\"'\"')[2:]: op=getattr(op,bit)\\n     print('\"'\"'ACTUAL_SCHEMAS'\"'\"',name,str(op._schemas),flush=True)\\n    except Exception: traceback.print_exc(); failures.append(name)\\n from vllm.model_executor.layers.quantization import get_quantization_config\\n print('\"'\"'QUANTIZER_ASCEND'\"'\"',get_quantization_config('\"'\"'ascend'\"'\"'),flush=True)\\n from vllm.tokenizers.registry import TokenizerRegistry\\n print('\"'\"'TOKENIZER_REGISTRY'\"'\"',vars(TokenizerRegistry),flush=True)\\nexcept Exception: traceback.print_exc(); failures.append('\"'\"'registrations'\"'\"')\\nprint('\"'\"'PROBE_FAILURES'\"'\"',json.dumps(failures),flush=True)\\nsys.exit(bool(failures))\\n\")'"
+        ],
+        "State": {
+            "Status": "created",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "0001-01-01T00:00:00Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+        "ResolvConfPath": "",
+        "HostnamePath": "",
+        "HostsPath": "",
+        "LogPath": "",
+        "Name": "/hungry_einstein",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "3",
+                    "max-size": "100m"
+                }
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,exec,nosuid,nodev,size=1073741824"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 8589934592,
+            "NanoCpus": 4000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [
+                {
+                    "PathOnHost": "/dev/davinci10",
+                    "PathInContainer": "/dev/davinci10",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci11",
+                    "PathInContainer": "/dev/davinci11",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci12",
+                    "PathInContainer": "/dev/davinci12",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci13",
+                    "PathInContainer": "/dev/davinci13",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci14",
+                    "PathInContainer": "/dev/davinci14",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci15",
+                    "PathInContainer": "/dev/davinci15",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci8",
+                    "PathInContainer": "/dev/davinci8",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci9",
+                    "PathInContainer": "/dev/davinci9",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/davinci_manager",
+                    "PathInContainer": "/dev/davinci_manager",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/devmm_svm",
+                    "PathInContainer": "/dev/devmm_svm",
+                    "CgroupPermissions": "rwm"
+                },
+                {
+                    "PathOnHost": "/dev/hisi_hdc",
+                    "PathInContainer": "/dev/hisi_hdc",
+                    "CgroupPermissions": "rwm"
+                }
+            ],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 17179869184,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 512,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hbm.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hash.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_jit_kernel.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_plan_kernel.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_gate.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/model.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/ascend_forward_context.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/rope_dsv4.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/dsa_v1.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/token_dispatcher_moemask.py",
+                    "Target": "/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/serve_v2.sh",
+                    "Target": "/opt/dsv41/scripts/serve_v2.sh",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/usr/local/Ascend/driver",
+                    "Target": "/usr/local/Ascend/driver",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/etc/ascend_install.info",
+                    "Target": "/etc/ascend_install.info",
+                    "ReadOnly": true
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/home/docker/overlay2/c99e90f6631b0ce624373258da233bc3ed5812e399f1bed45a56cf34e13aec05-init/diff:/home/docker/overlay2/a16b69ae127a4e2fa80f8b76e797bbaafe26751f1cdce40717f3c2cf19889673/diff:/home/docker/overlay2/85099e275d511a33a0da64bb26a2b7ddc0a6755cdeaa5cbe6262d81af31408a8/diff:/home/docker/overlay2/a4f5bb6dfd3fcd4fa62f74755857054ee4d903cc2139693c23ef040cdd99747f/diff:/home/docker/overlay2/beae0f4f7da46cf08b6bd01b536ea0bc79fc9e19f60003f0870c9c9d29b4709d/diff:/home/docker/overlay2/8e5c49f122276842bb493e8a0bbc149f8f0b34b25f22fc42a06d3ec28a113451/diff:/home/docker/overlay2/84741daf96a52da8f540625fe87109ea1ddad81c66b46a2641cd20d8965b27bf/diff:/home/docker/overlay2/ed7c82a45fe22ebf1d83db27f20dc4137dea4b48bba846c24450aee3a76ef5dc/diff:/home/docker/overlay2/ba54d505461bd540eb62023d816d95c227cb494ee886d438f45e110d6d04476c/diff:/home/docker/overlay2/a0b5091bb552cb280709bdce34fd4fdd4088741dc85a843925dcd42bb65205ef/diff:/home/docker/overlay2/63cf198be77d05e5559035da817d8fa0d727cdb0295aa03b31f407913c85fafc/diff:/home/docker/overlay2/a9720715d056046aa827c18ea3fb8b1e9845102e554c6aeff794df04935cc8f5/diff:/home/docker/overlay2/c52e803fc24efe3d089da41ab2287ced3060a20e93f3c2063804861055476bb9/diff:/home/docker/overlay2/3d96f796b0ba16f8fc40c272ffcd177195a2daa907a976f799fbf742c2d83f1b/diff:/home/docker/overlay2/0e9d298c1b7aaef8eaa1a02839758c773446252baea232c2c9cb9e036e4e7fda/diff:/home/docker/overlay2/0b731119ca907573c1a21f55d17e0ecc1a146c706a630f0c98c9ca5c6f2acdc5/diff:/home/docker/overlay2/0e38c0f67dea3ee5c5723b232212f27f689130674f10194224de0642815666d9/diff:/home/docker/overlay2/175bd7b60274903a6fae2d32870d547382310a66522423afa19848a231925675/diff:/home/docker/overlay2/cfe5e9b65aad169c07ccdf0235b61358e3683b64da0978270b5baae6f304675c/diff",
+                "MergedDir": "/home/docker/overlay2/c99e90f6631b0ce624373258da233bc3ed5812e399f1bed45a56cf34e13aec05/merged",
+                "UpperDir": "/home/docker/overlay2/c99e90f6631b0ce624373258da233bc3ed5812e399f1bed45a56cf34e13aec05/diff",
+                "WorkDir": "/home/docker/overlay2/c99e90f6631b0ce624373258da233bc3ed5812e399f1bed45a56cf34e13aec05/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hbm.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_hash.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_plan_kernel.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/token_dispatcher_moemask.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/serve_v2.sh",
+                "Destination": "/opt/dsv41/scripts/serve_v2.sh",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/usr/local/Ascend/driver",
+                "Destination": "/usr/local/Ascend/driver",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_jit_kernel.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/engram_gate.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/model.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/ascend_forward_context.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/rope_dsv4.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/payload/preflight_584e300ab3594275976e6ec7c68281ed/dsa_v1.py",
+                "Destination": "/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/etc/ascend_install.info",
+                "Destination": "/etc/ascend_install.info",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "e298447ca31f",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PYTHONPATH=/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/cann-9.1.0/python/site-packages:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe",
+                "HOME=/tmp",
+                "XDG_CACHE_HOME=/tmp/cache",
+                "TRITON_CACHE_DIR=/tmp/triton",
+                "NUMBA_CACHE_DIR=/tmp/numba",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "LD_LIBRARY_PATH=/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/python3.12.13/lib",
+                "PATH=/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/bin:/usr/local/Ascend/ascend-toolkit/latest/bin:/usr/local/Ascend/ascend-toolkit/latest/compiler/ccec_compiler/bin:/usr/local/Ascend/ascend-toolkit/latest/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/show_kernel_debug_data:/usr/local/Ascend/cann-9.1.0/tools/msobjdump:/usr/local/Ascend/cann-9.1.0/bin:/usr/local/Ascend/cann-9.1.0/tools/ccec_compiler/bin:/usr/local/Ascend/cann-9.1.0/tools/profiler/bin:/usr/local/Ascend/cann-9.1.0/tools/ascend_system_advisor/asys:/usr/local/python3.12.13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "ASCEND_TOOLKIT_HOME=/usr/local/Ascend/cann-9.1.0",
+                "ASCEND_TOOLKIT_LATEST_HOME=/usr/local/Ascend/ascend-toolkit/latest",
+                "ASCEND_AICPU_PATH=/usr/local/Ascend/cann-9.1.0",
+                "ASCEND_OPP_PATH=/usr/local/Ascend/cann-9.1.0/opp",
+                "TOOLCHAIN_HOME=/usr/local/Ascend/cann-9.1.0/toolkit",
+                "ASCEND_HOME_PATH=/usr/local/Ascend/cann-9.1.0",
+                "CMAKE_PREFIX_PATH=/usr/local/Ascend/cann-9.1.0/toolkit/tools/tikicpulib/lib/cmake:/usr/local/Ascend/cann-9.1.0/lib64/cmake",
+                "ATB_HOME_PATH=/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1",
+                "ATB_STREAM_SYNC_EVERY_KERNEL_ENABLE=0",
+                "ATB_STREAM_SYNC_EVERY_RUNNER_ENABLE=0",
+                "ATB_STREAM_SYNC_EVERY_OPERATION_ENABLE=0",
+                "ATB_OPSRUNNER_KERNEL_CACHE_LOCAL_COUNT=1",
+                "ATB_OPSRUNNER_KERNEL_CACHE_GLOABL_COUNT=5",
+                "ATB_WORKSPACE_MEM_ALLOC_ALG_TYPE=1",
+                "ATB_COMPARE_TILING_EVERY_KERNEL=0",
+                "ATB_SHARE_MEMORY_NAME_SUFFIX=",
+                "ATB_MATMUL_SHUFFLE_K_ENABLE=1",
+                "LCCL_DETERMINISTIC=0",
+                "LCCL_PARALLEL=0",
+                "ATB_CXX_ABI=1",
+                "DEBIAN_FRONTEND=noninteractive",
+                "SOC_VERSION=ascend910_9391",
+                "TASK_QUEUE_ENABLE=1",
+                "OMP_NUM_THREADS=1"
+            ],
+            "Cmd": [
+                "-lc",
+                "exec python3 -B -u -c 'import os; os.environ['\"'\"'LD_LIBRARY_PATH'\"'\"']='\"'\"':'\"'\"'.join(x for x in os.environ.get('\"'\"'LD_LIBRARY_PATH'\"'\"','\"'\"''\"'\"').split('\"'\"':'\"'\"') if x); os.environ['\"'\"'PYTHONPATH'\"'\"']='\"'\"':'\"'\"'.join(x for x in os.environ.get('\"'\"'PYTHONPATH'\"'\"','\"'\"''\"'\"').split('\"'\"':'\"'\"') if x); exec(\"PAYLOADS=['\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hbm.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_hash.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_jit_kernel.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_plan_kernel.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/engram_gate.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ascend_forward_context.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ops/rope_dsv4.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py'\"'\"', '\"'\"'/vllm-workspace/vllm-ascend/vllm_ascend/ops/fused_moe/token_dispatcher.py'\"'\"', '\"'\"'/opt/dsv41/scripts/serve_v2.sh'\"'\"']\\nimport sys,runpy,traceback,importlib,json,ast,pathlib,os\\nfailures=[]\\nsys.argv=['\"'\"'vllm'\"'\"','\"'\"'serve'\"'\"','\"'\"'--help'\"'\"']\\ntry:\\n runpy.run_module('\"'\"'vllm.entrypoints.cli.main'\"'\"',run_name='\"'\"'__main__'\"'\"')\\nexcept SystemExit as e:\\n print('\"'\"'CLI_EXIT'\"'\"',e.code,flush=True)\\n if e.code not in (0,None): failures.append('\"'\"'CLI'\"'\"')\\nexcept BaseException:\\n traceback.print_exc(); failures.append('\"'\"'CLI'\"'\"')\\nfor name in ['\"'\"'vllm_ascend.models.deepseek_v41.model'\"'\"','\"'\"'vllm_ascend.attention.dsa_v1'\"'\"']:\\n try: importlib.import_module(name); print('\"'\"'ORDERED_IMPORT_OK'\"'\"',name,flush=True)\\n except Exception: traceback.print_exc(); failures.append(name)\\ntry:\\n import torch\\n print('\"'\"'DEVICE_NODES'\"'\"',sorted(str(p) for p in pathlib.Path('\"'\"'/dev'\"'\"').glob('\"'\"'davinci*'\"'\"')),flush=True)\\n for p in PAYLOADS:\\n  if not p.endswith('\"'\"'.py'\"'\"'): continue\\n  for n in ast.walk(ast.parse(pathlib.Path(p).read_text())):\\n   if isinstance(n,ast.Call) and ast.unparse(n.func).startswith('\"'\"'torch.ops.'\"'\"'):\\n    name=ast.unparse(n.func); print('\"'\"'PAYLOAD_CALL'\"'\"',p,n.lineno,ast.unparse(n),flush=True)\\n    try:\\n     op=torch.ops\\n     for bit in name.split('\"'\"'.'\"'\"')[2:]: op=getattr(op,bit)\\n     print('\"'\"'ACTUAL_SCHEMAS'\"'\"',name,str(op._schemas),flush=True)\\n    except Exception: traceback.print_exc(); failures.append(name)\\n from vllm.model_executor.layers.quantization import get_quantization_config\\n print('\"'\"'QUANTIZER_ASCEND'\"'\"',get_quantization_config('\"'\"'ascend'\"'\"'),flush=True)\\n from vllm.tokenizers.registry import TokenizerRegistry\\n print('\"'\"'TOKENIZER_REGISTRY'\"'\"',vars(TokenizerRegistry),flush=True)\\nexcept Exception: traceback.print_exc(); failures.append('\"'\"'registrations'\"'\"')\\nprint('\"'\"'PROBE_FAILURES'\"'\"',json.dumps(failures),flush=True)\\nsys.exit(bool(failures))\\n\")'"
+            ],
+            "Image": "sha256:1f2c08195c5b119aa9a107861fa2efa5d2b93b161f1ae91cb5358923a78cbcef",
+            "Volumes": null,
+            "WorkingDir": "/tmp",
+            "Entrypoint": [
+                "/bin/bash"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.version": "22.04",
+                "owner": "yuhao-vllm-repro",
+                "run_id": "p1-device-dc8cf3596ad1498591503512d8072b85"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "",
+                    "DriverOpts": null,
+                    "NetworkID": "",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]
+ 
+GATE_PASS e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980
+START_EXIT 1
+INFO 11-21 13:52:58 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 11-21 13:52:58 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 11-21 13:52:58 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 11-21 13:52:58 [__init__.py:237] Platform plugin ascend is activated
+INFO 11-21 13:52:58 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 11-21 13:53:15 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 11-21 13:53:15 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+usage: vllm serve [model_tag] [options]
+
+Launch a local OpenAI-compatible API server to serve LLM
+completions via HTTP. Defaults to Qwen/Qwen3-0.6B if no model is specified.
+
+Search by using: `--help=<ConfigGroup>` to explore options by section (e.g.,
+--help=ModelConfig, --help=Frontend)
+  Use `--help=all` to show all available flags at once.
+
+Config Groups:
+  positional arguments    
+  options                 
+  Frontend                Arguments for the OpenAI-compatible frontend server.
+  ModelConfig             Configuration for the model.
+  LoadConfig              Configuration for loading the model weights.
+  AttentionConfig         Configuration for attention mechanisms in vLLM.
+  MambaConfig             Configuration for Mamba SSM backends.
+  StructuredOutputsConfig Dataclass which contains structured outputs config for the engine.
+  ParallelConfig          Configuration for the distributed execution.
+  CacheConfig             Configuration for the KV cache.
+  OffloadConfig           Configuration for model weight offloading to reduce GPU memory usage.
+  MultiModalConfig        Controls the behavior of multimodal models.
+  LoRAConfig              Configuration for LoRA.
+  ObservabilityConfig     Configuration for observability - metrics and tracing.
+  SchedulerConfig         Scheduler configuration.
+  CompilationConfig       Configuration for compilation.
+  
+      You must pass CompilationConfig to VLLMConfig constructor.
+      VLLMConfig's post_init does further initialization. If used outside of the
+      VLLMConfig, some fields will be left in an improper state.
+  
+      It contains PassConfig, which controls the custom fusion/transformation passes.
+      The rest has three parts:
+  
+      - Top-level Compilation control:
+          - [`mode`][vllm.config.CompilationConfig.mode]
+          - [`debug_dump_path`][vllm.config.CompilationConfig.debug_dump_path]
+          - [`cache_dir`][vllm.config.CompilationConfig.cache_dir]
+          - [`backend`][vllm.config.CompilationConfig.backend]
+          - [`custom_ops`][vllm.config.CompilationConfig.custom_ops]
+          - [`splitting_ops`][vllm.config.CompilationConfig.splitting_ops]
+          - [`compile_mm_encoder`][vllm.config.CompilationConfig.compile_mm_encoder]
+      - CudaGraph capture:
+          - [`cudagraph_mode`][vllm.config.CompilationConfig.cudagraph_mode]
+          - [`cudagraph_capture_sizes`]
+          [vllm.config.CompilationConfig.cudagraph_capture_sizes]
+          - [`max_cudagraph_capture_size`]
+          [vllm.config.CompilationConfig.max_cudagraph_capture_size]
+          - [`cudagraph_num_of_warmups`]
+          [vllm.config.CompilationConfig.cudagraph_num_of_warmups]
+          - [`cudagraph_copy_inputs`]
+          [vllm.config.CompilationConfig.cudagraph_copy_inputs]
+      - Inductor compilation:
+          - [`compile_sizes`][vllm.config.CompilationConfig.compile_sizes]
+          - [`compile_ranges_endpoints`]
+              [vllm.config.CompilationConfig.compile_ranges_endpoints]
+          - [`inductor_compile_config`]
+          [vllm.config.CompilationConfig.inductor_compile_config]
+          - [`inductor_passes`][vllm.config.CompilationConfig.inductor_passes]
+          - custom inductor passes
+  
+      Why we have different sizes for cudagraph and inductor:
+      - cudagraph: a cudagraph captured for a specific size can only be used
+          for the same size. We need to capture all the sizes we want to use.
+      - inductor: a graph compiled by inductor for a general shape can be used
+          for different sizes. Inductor can also compile for specific sizes,
+          where it can have more information to optimize the graph with fully
+          static shapes. However, we find the general shape compilation is
+          sufficient for most cases. It might be beneficial to compile for
+          certain small batchsizes, where inductor is good at optimizing.
+      
+  KernelConfig            Configuration for kernel selection and warmup behavior.
+  VllmConfig              Dataclass which contains all vllm-related configuration. This
+      simplifies passing around the distinct configurations in the codebase.
+      
+
+For full list:            vllm serve --help=all
+For a section:            vllm serve --help=ModelConfig    (case-insensitive)
+For a flag:               vllm serve --help=max-model-len  (_ or - accepted)
+Documentation:            https://docs.vllm.ai
+CLI_EXIT 0
+ORDERED_IMPORT_OK vllm_ascend.attention.dsa_v1
+DEVICE_NODES ['/dev/davinci10', '/dev/davinci11', '/dev/davinci12', '/dev/davinci13', '/dev/davinci14', '/dev/davinci15', '/dev/davinci8', '/dev/davinci9', '/dev/davinci_manager']
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py 734 torch.ops.vllm.dsa_v41_forward(hidden_states, output, self.v41_layer_name)
+ACTUAL_SCHEMAS torch.ops.vllm.dsa_v41_forward {'': vllm::dsa_v41_forward(Tensor hidden_states, Tensor(a1!) output, str layer_name) -> ()}
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py 815 torch.ops._C_ascend.npu_hc_pre_v2(x, hc_fn, hc_scale, hc_base, pre_mix, hc_mult=self.hc_mult, hc_sinkhorn_iters=self.hc_sinkhorn_iters, norm_eps=self.norm_eps, hc_eps=self.hc_eps)
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py 828 torch.ops._C_ascend.npu_hc_post(x.unsqueeze(0), residual.unsqueeze(0), post.unsqueeze(0), comb.unsqueeze(0)).squeeze(0)
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py 828 torch.ops._C_ascend.npu_hc_post(x.unsqueeze(0), residual.unsqueeze(0), post.unsqueeze(0), comb.unsqueeze(0))
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 100 torch.ops._C_ascend.compressor_metadata_out(full_compress_cos, full_compress_sin, metadata.query_start_loc, metadata.start_pos, metadata.block_table, metadata.storage_block_size, get_dsa_attn_kv_plan(vllm_config).get_dsa_compressor_slot_mapping_format(), compress_ratio, metadata.num_actual_reqs, *outputs)
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1709 torch.ops._C_ascend.inplace_partial_rotary_mul(o_proj_input[:actual_tokens].unsqueeze(1), cos[:actual_tokens], -sin[:actual_tokens], rotary_mode='interleave', partial_slice=[self.nope_head_dim, self.head_dim])
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1767 torch.ops._C_ascend.inplace_partial_rotary_mul(q.unsqueeze(1), cos, sin, rotary_mode='interleave', partial_slice=[self.nope_head_dim, self.head_dim])
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1936 torch.ops._C_ascend.inplace_partial_rotary_mul(q.unsqueeze(1), cos, sin, rotary_mode='interleave', partial_slice=[self.nope_head_dim, self.head_dim])
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 873 torch.ops._C_ascend.npu_vllm_quant_lightning_indexer_metadata(actual_seq_lengths_query=query_start_loc[1:].clone(), actual_seq_lengths_key=seq_lens.clone(), num_heads_q=self.model_config.hf_config.index_n_heads, num_heads_k=1, head_dim=self.model_config.hf_config.index_head_dim, query_quant_mode=0, key_quant_mode=0, batch_size=len(seq_lens), max_seqlen_q=max_seqlen_q, max_seqlen_k=max_seqlen_kv, layout_query='TND', layout_key='PA_BSND', sparse_count=self.model_config.hf_config.index_topk, sparse_mode=3, pre_tokens=(1 << 63) - 1, next_tokens=(1 << 63) - 1, cmp_ratio=4, device=str(self.seqused_q.device))
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1749 torch.ops._C_ascend.npu_rms_norm_dynamic_quant(q_a, self.q_norm.weight, epsilon=self.eps)
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1792 torch.ops._C_ascend.inplace_partial_rotary_mul(kv.unsqueeze(1), cos, sin, rotary_mode='interleave', partial_slice=[self.nope_head_dim, self.head_dim])
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1898 torch.ops._C_ascend.inplace_partial_rotary_mul(kv.unsqueeze(1), cos, sin, rotary_mode='interleave', partial_slice=[self.nope_head_dim, self.head_dim])
+PAYLOAD_CALL /vllm-workspace/vllm-ascend/vllm_ascend/attention/dsa_v1.py 1876 torch.ops._C_ascend.npu_rms_norm_dynamic_quant(wq_a_result, self.q_norm.weight, epsilon=self.eps)
+QUANTIZER_ASCEND <class 'vllm_ascend.quantization.configs.modelslim_config.AscendModelSlimConfig'>
+TOKENIZER_REGISTRY {'tokenizers': {'cohere': ('vllm.tokenizers.hf', 'CachedHfTokenizer'), 'deepseek_v32': ('vllm.tokenizers.deepseek_v32', 'DeepseekV32Tokenizer'), 'deepseek_v4': ('vllm.tokenizers.deepseek_v4', 'DeepseekV4Tokenizer'), 'hf': ('vllm.tokenizers.hf', 'CachedHfTokenizer'), 'kimi_audio': ('vllm.tokenizers.kimi_audio', 'KimiAudioTokenizer'), 'kimi_k3': ('vllm.tokenizers.hf', 'CachedHfTokenizer'), 'mistral': ('vllm.tokenizers.mistral', 'MistralTokenizer'), 'inkling': ('vllm.tokenizers.hf', 'CachedHfTokenizer'), 'deepseek_v41': ('vllm_ascend.patch.platform.patch_deepseek_v41_frontend.tokenizer', 'DeepseekV41Tokenizer')}}
+PROBE_FAILURES ["vllm_ascend.models.deepseek_v41.model", "torch.ops._C_ascend.npu_hc_pre_v2", "torch.ops._C_ascend.npu_hc_post(x.unsqueeze(0), residual.unsqueeze(0), post.unsqueeze(0), comb.unsqueeze(0)).squeeze", "torch.ops._C_ascend.npu_hc_post", "torch.ops._C_ascend.compressor_metadata_out", "torch.ops._C_ascend.inplace_partial_rotary_mul", "torch.ops._C_ascend.inplace_partial_rotary_mul", "torch.ops._C_ascend.inplace_partial_rotary_mul", "torch.ops._C_ascend.npu_vllm_quant_lightning_indexer_metadata", "torch.ops._C_ascend.npu_rms_norm_dynamic_quant", "torch.ops._C_ascend.inplace_partial_rotary_mul", "torch.ops._C_ascend.inplace_partial_rotary_mul", "torch.ops._C_ascend.npu_rms_norm_dynamic_quant"]
+ can not use command: npu-smi info
+2026-11-21 13:53:05,631 - 1 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.27.1+empty: default 1
+Traceback (most recent call last):
+  File "<string>", line 13, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/vllm-workspace/vllm-ascend/vllm_ascend/models/deepseek_v41/model.py", line 240, in <module>
+    from .engram_device_index import device_engram_lookup  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'vllm_ascend.models.deepseek_v41.engram_device_index'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_hc_pre_v2'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_hc_post(x'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_hc_post'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'compressor_metadata_out'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'inplace_partial_rotary_mul'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'inplace_partial_rotary_mul'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'inplace_partial_rotary_mul'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_vllm_quant_lightning_indexer_metadata'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_rms_norm_dynamic_quant'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'inplace_partial_rotary_mul'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'inplace_partial_rotary_mul'
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/_ops.py", line 1319, in __getattr__
+    raise AttributeError(
+AttributeError: '_OpNamespace' '_C_ascend' object has no attribute 'npu_rms_norm_dynamic_quant'
+
+COMMAND ['docker', 'inspect', '--format', '{{json .State}}', 'e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980'] EXIT 0
+{"Status":"exited","Running":false,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":0,"ExitCode":1,"Error":"","StartedAt":"2026-11-21T13:52:53.329711674Z","FinishedAt":"2026-11-21T13:53:19.322841421Z"}
+ 
+COMMAND ['docker', 'stop', 'e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980'] EXIT 0
+e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980
+ 
+COMMAND ['docker', 'rm', 'e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980'] EXIT 0
+e298447ca31fd64e0c00525d732b39ba3ca19d703a986a1632621c904c41e980
+ 
+COMMAND ['npu-smi', 'info'] EXIT 0
++------------------------------------------------------------------------------------------------+
+| npu-smi 25.5.1                   Version: 25.5.1                                               |
++---------------------------+---------------+----------------------------------------------------+
+| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|
+| Chip  Phy-ID              | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |
++===========================+===============+====================================================+
+| 0     Ascend910           | OK            | 161.2       40                0    / 0             |
+| 0     0                   | 0000:9D:00.0  | 0           0    / 0          3156 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 0     Ascend910           | OK            | -           40                0    / 0             |
+| 1     1                   | 0000:9F:00.0  | 0           0    / 0          2887 / 65536         |
++===========================+===============+====================================================+
+| 1     Ascend910           | OK            | 165.8       42                0    / 0             |
+| 0     2                   | 0000:99:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 1     Ascend910           | OK            | -           41                0    / 0             |
+| 1     3                   | 0000:9B:00.0  | 0           0    / 0          2874 / 65536         |
++===========================+===============+====================================================+
+| 2     Ascend910           | OK            | 163.0       41                0    / 0             |
+| 0     4                   | 0000:95:00.0  | 0           0    / 0          3162 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 2     Ascend910           | OK            | -           42                0    / 0             |
+| 1     5                   | 0000:97:00.0  | 0           0    / 0          2878 / 65536         |
++===========================+===============+====================================================+
+| 3     Ascend910           | OK            | 159.9       42                0    / 0             |
+| 0     6                   | 0000:91:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 3     Ascend910           | OK            | -           41                0    / 0             |
+| 1     7                   | 0000:93:00.0  | 0           0    / 0          2890 / 65536         |
++===========================+===============+====================================================+
+| 4     Ascend910           | OK            | 162.6       40                0    / 0             |
+| 0     8                   | 0000:8D:00.0  | 0           0    / 0          3157 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 4     Ascend910           | OK            | -           40                0    / 0             |
+| 1     9                   | 0000:8F:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
+| 5     Ascend910           | OK            | 163.1       41                0    / 0             |
+| 0     10                  | 0000:89:00.0  | 0           0    / 0          3164 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 5     Ascend910           | OK            | -           41                0    / 0             |
+| 1     11                  | 0000:8B:00.0  | 0           0    / 0          2877 / 65536         |
++===========================+===============+====================================================+
+| 6     Ascend910           | OK            | 167.8       41                0    / 0             |
+| 0     12                  | 0000:85:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 6     Ascend910           | OK            | -           41                0    / 0             |
+| 1     13                  | 0000:87:00.0  | 0           0    / 0          2892 / 65536         |
++===========================+===============+====================================================+
+| 7     Ascend910           | OK            | 175.5       41                0    / 0             |
+| 0     14                  | 0000:81:00.0  | 0           0    / 0          3154 / 65536         |
++------------------------------------------------------------------------------------------------+
+| 7     Ascend910           | OK            | -           41                0    / 0             |
+| 1     15                  | 0000:83:00.0  | 0           0    / 0          2888 / 65536         |
++===========================+===============+====================================================+
++---------------------------+---------------+----------------------------------------------------+
+| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |
++===========================+===============+====================================================+
+| No running processes found in NPU 0                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 1                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 2                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 3                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 4                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 5                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 6                                                            |
++===========================+===============+====================================================+
+| No running processes found in NPU 7                                                            |
++===========================+===============+====================================================+
+ 

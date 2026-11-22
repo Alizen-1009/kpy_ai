@@ -1,0 +1,32 @@
+[
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/model.py",
+    "sha256": "dfbc3c0d3b0f9ce3349509de5dfb3799a47f834eec26a951769bf4a54e6c022b",
+    "line": 1377,
+    "signature": "self, input_ids, positions, padded_tokens=None"
+  },
+  {
+    "source": "ref/deepseek-v4.1-flash-ascend910B/patches/files/model.py",
+    "sha256": "dfbc3c0d3b0f9ce3349509de5dfb3799a47f834eec26a951769bf4a54e6c022b",
+    "line": 1587,
+    "signature": "self, input_ids, positions, padded_tokens=None"
+  },
+  {
+    "source": "docs/evidence/ascend910c/vllm-reproduction/image/runtime/__vllm-workspace__vllm-ascend__vllm_ascend__models__deepseek_v41__vl_model.py.source",
+    "sha256": "b7bdd54bc5080ea70bab0f27c3dc5d91dbc720e333df2933efb7df9855b71caf",
+    "line": 222,
+    "signature": "self, input_ids, positions, padded_tokens=None"
+  },
+  {
+    "source": "docs/evidence/ascend910c/vllm-reproduction/image/runtime/__vllm-workspace__vllm-ascend__vllm_ascend__models__deepseek_v41__model.py.source",
+    "sha256": "fe2e0603e672c13e931c24fb3545f821d904c5e5b618ccc6e52973cb4623edcf",
+    "line": 535,
+    "signature": "self, input_ids, positions, padded_tokens=None"
+  },
+  {
+    "source": "docs/evidence/ascend910c/vllm-reproduction/image/runtime/__vllm-workspace__vllm-ascend__vllm_ascend__models__deepseek_v41__model.py.source",
+    "sha256": "fe2e0603e672c13e931c24fb3545f821d904c5e5b618ccc6e52973cb4623edcf",
+    "line": 627,
+    "signature": "self, input_ids, positions, padded_tokens=None"
+  }
+]

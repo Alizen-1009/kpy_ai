@@ -1,0 +1,56 @@
+{
+  "index_keys": 190728,
+  "index_unique_refs": 82,
+  "direct_refs": 80,
+  "reassembly_refs": {
+    "engram_int8/layers_14_engram_embed.weight.safetensors": {
+      "parts": [
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-00-of-06",
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-01-of-06",
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-02-of-06",
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-03-of-06",
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-04-of-06",
+        "engram_int8/layers_14_engram_embed.weight.safetensors.part-05-of-06"
+      ],
+      "bytes": 98308270704,
+      "sha256": "bee6e08838c75d40c4b1f5f8d7e4716aba34f90c03c17e77ad406e36188cccaa"
+    },
+    "engram_int8/layers_1_engram_embed.weight.safetensors": {
+      "parts": [
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-00-of-06",
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-01-of-06",
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-02-of-06",
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-03-of-06",
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-04-of-06",
+        "engram_int8/layers_1_engram_embed.weight.safetensors.part-05-of-06"
+      ],
+      "bytes": 98305579120,
+      "sha256": "51d28f161232e3bf600b92ef4e3c38ceb9164b801bd456503bb1a29da496ea9f"
+    }
+  },
+  "index_groups": {
+    "backbone": 185734,
+    "vision": 266,
+    "engram_table_scale": 4,
+    "engram_extra": 6,
+    "draft": 4718
+  },
+  "file_bytes_groups": {
+    "metadata_release": 36095335,
+    "engram_extra": 629310402,
+    "engram_table_scale": 221190581248,
+    "draft": 10624796368,
+    "quarot": 104857696,
+    "backbone": 292239101648,
+    "vision": 970564624
+  },
+  "total_download_bytes": 525795307321,
+  "metadata_download_bytes": 35822421,
+  "peak_keep_parts_bytes": 722409157145,
+  "quant_tags": {
+    "FLOAT": 2169,
+    "W8A8_DYNAMIC": 799,
+    "W4A8_DYNAMIC": 188928,
+    "1.0.0": 1
+  }
+}

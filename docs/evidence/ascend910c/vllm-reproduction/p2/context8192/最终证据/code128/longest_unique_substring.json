@@ -1,0 +1,113 @@
+{
+  "task": "longest_unique_substring",
+  "request": {
+    "model": "p2-8192-20261121T224721Z",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "messages": [
+      {
+        "role": "user",
+        "content": "[delivery-matrix-code-longest_unique_substring]\n你正在为 Python 3.10+ 实现一个独立函数。只使用 Python 标准库。最终只输出 Python 代码，可以用一个 ```python 代码块；不要附加解释。\n任务：返回字符串中不含重复字符的最长连续子串长度。按 Unicode 字符比较；空串返回 0。\n函数签名：def longest_unique_substring(text):\n示例：例如 \"abba\" 返回 2。\n请严格遵守函数契约，并覆盖空输入、边界和重复值等情况。"
+      }
+    ]
+  },
+  "http_status": 200,
+  "usage": {
+    "prompt_tokens": 122,
+    "total_tokens": 226,
+    "completion_tokens": 104,
+    "prompt_tokens_details": null
+  },
+  "finish_reason": "stop",
+  "score": {
+    "status": "pass",
+    "passed": 16,
+    "total": 16,
+    "case_results": [
+      {
+        "id": "empty",
+        "passed": true,
+        "actual": "0"
+      },
+      {
+        "id": "all-same",
+        "passed": true,
+        "actual": "1"
+      },
+      {
+        "id": "middle-repeat",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "unicode",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "random-00",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-01",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-02",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-03",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-04",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-05",
+        "passed": true,
+        "actual": "5"
+      },
+      {
+        "id": "random-06",
+        "passed": true,
+        "actual": "4"
+      },
+      {
+        "id": "random-07",
+        "passed": true,
+        "actual": "4"
+      },
+      {
+        "id": "random-08",
+        "passed": true,
+        "actual": "0"
+      },
+      {
+        "id": "random-09",
+        "passed": true,
+        "actual": "2"
+      },
+      {
+        "id": "random-10",
+        "passed": true,
+        "actual": "3"
+      },
+      {
+        "id": "random-11",
+        "passed": true,
+        "actual": "3"
+      }
+    ],
+    "failed_case_ids": [],
+    "isolation": "docker",
+    "extracted_code": "def longest_unique_substring(text):\n    last_seen = {}\n    start = 0\n    best = 0\n    for i, ch in enumerate(text):\n        if ch in last_seen and last_seen[ch] >= start:\n            start = last_seen[ch] + 1\n        last_seen[ch] = i\n        current = i - start + 1\n        if current > best:\n            best = current\n    return best\n",
+    "extracted_code_sha256": "b0ec17a97e5a9ca4a38d21935a93f2f1c3463f89a7fbdd93979f61077f470d9f"
+  }
+}

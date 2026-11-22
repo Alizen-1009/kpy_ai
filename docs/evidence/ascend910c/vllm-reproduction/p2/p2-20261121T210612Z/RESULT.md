@@ -1,0 +1,13 @@
+# P2 actual quality — partial, NOT overall PASS
+
+Service unchanged: p1-vision1-20261121T205625Z-244b8fbf, CID 1fdb00879533bb97ba7ef9f7bf7f64639a03e8b01bdfbdfe198b8a03fcf98a65, loopback18550. models unique identity and listener PID2227670 matched docker top. SPEC0 GRAPH0 VISION1 maxlen4096 retained. Service still running after evaluation. No restart, configuration edits, system pip, long needle, or performance benchmark.
+
+Remote new directory: /root/syf/data_yf/yuhao_vllm_ascend_repro_yh/quality-run/p2-20261121T210612Z. Frozen assets copied in assets.tgz; task-local venv, stdlib clients only. Retrieved evidence under retrieved/.
+
+- GSM200: **198/200 (99%)**, empty0/errors0. First200, frozen8shot, official encoder, temperature0,512, serial. Actual /tokenize all200:1163–1273 prompt tokens; no prompt+512 exceeds4096. Raw SSE for all200 and usage retained. Finish reasons **198 stop / 2 length**: numerical threshold met but NOT full GSM acceptance due truncation. Runtime5559.9s. Prior separate5-item diagnostic5/5 retained, not counted as extra independent quality. wire-audit.json contains all usage records.
+- Code8: **BLOCKED, not a model quality score**. Frozen client requested4096 output tokens; server rejected all8 HTTP400 because maxlen4096 leaves no prompt budget. Client summary0/128 is error accounting, NOT 128 actually executed failing tests. Raw error bodies saved. No model code generated or executed; therefore sandbox inspect/fullCID cleanup was not exercised in this run (no sandbox container created). Do not claim Code8 sandbox acceptance. Need separately admitted larger maxlen configuration or explicit approval for a separately labelled output-budget adapter change; did not silently change frozen client.
+- Vision23: **23/23**, empty/garbled/errors0, minhit1.0, both mandatory negatives pass, blank negative passes; at most1 image. Original scorer run, then serial repeated with raw-wire wrapper to recover finish_reason audit omitted by original streaming scorer. Audited repeat also23/23, **23 stop / 0 length**, all usage retained in results/raw SSE. No scoring changes. Scorer vision-weight byte fallback is not measured weight verification.
+
+GSM client wire parsing audit initially attempted JSON rather than SSE and was corrected without rerunning GSM. Token-gate harness initially lacked frozen NUM regex; fixed before any token requests. Initial vision run lacked wire finish fields; audited repeat explicitly recorded separately.
+
+P2 overall remains incomplete: GSM length outputs, Code8 blocked, independent longneedle admission and SPEC restoration absent. No external process/container was killed.

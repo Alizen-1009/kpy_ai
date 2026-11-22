@@ -1,0 +1,100 @@
+{
+  "run_id": "p1-vision1-20261121T205625Z-244b8fbf",
+  "scope": "P1/P3 runtime smoke only; not P2 quality",
+  "status": "runtime_smoke_completed",
+  "requests": [
+    {
+      "index": 0,
+      "http_status": 200,
+      "text": "21颗",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 25,
+        "total_tokens": 28,
+        "completion_tokens": 3
+      },
+      "ttft_seconds": 11.992804174078628,
+      "end_to_end_seconds": 19.72145380708389,
+      "content_chunk_intervals_seconds": [
+        7.508349712006748
+      ],
+      "interval_definition": "content chunk arrival intervals, NOT token ITL",
+      "end_to_end_output_tps": 0.1521186028852705,
+      "decode_tps": null,
+      "decode_tps_definition": "not computed: exact token timing unavailable"
+    },
+    {
+      "index": 1,
+      "http_status": 200,
+      "text": "你的纸船叫**青栗**。",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 29,
+        "total_tokens": 39,
+        "completion_tokens": 10
+      },
+      "ttft_seconds": 0.39119156799279153,
+      "end_to_end_seconds": 1.989067360991612,
+      "content_chunk_intervals_seconds": [
+        0.17900217813439667,
+        0.17889603483490646,
+        0.1769684401806444,
+        0.17586659896187484,
+        0.1752440540585667,
+        0.17794413794763386,
+        0.18141249101608992,
+        0.17673156084492803
+      ],
+      "interval_definition": "content chunk arrival intervals, NOT token ITL",
+      "end_to_end_output_tps": 5.027481821940253,
+      "decode_tps": null,
+      "decode_tps_definition": "not computed: exact token timing unavailable"
+    },
+    {
+      "index": 2,
+      "http_status": 200,
+      "text": "```python\ndef sum_even(numbers):\n    return sum(n for n in numbers if n % 2 == 0)\n```",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 22,
+        "total_tokens": 50,
+        "completion_tokens": 28
+      },
+      "ttft_seconds": 0.46964973397552967,
+      "end_to_end_seconds": 5.794027657946572,
+      "content_chunk_intervals_seconds": [
+        0.19614810612984002,
+        0.19669004599563777,
+        0.19494534889236093,
+        0.19463598798029125,
+        0.19448411115445197,
+        0.19868731289170682,
+        0.19548945012502372,
+        0.19513272680342197,
+        0.19552545109763741,
+        0.19771028612740338,
+        0.19880262692458928,
+        0.19576316000893712,
+        0.19614535593427718,
+        0.19564441591501236,
+        0.19688113313168287,
+        0.19743668497540057,
+        0.19617844698950648,
+        0.19596130796708167,
+        0.19778508809395134,
+        0.19636182393878698,
+        0.1990265150088817,
+        0.19661980401724577,
+        0.196948966011405,
+        0.19842537306249142,
+        0.19770173379220068,
+        0.19764849310740829
+      ],
+      "interval_definition": "content chunk arrival intervals, NOT token ITL",
+      "end_to_end_output_tps": 4.832562364730465,
+      "decode_tps": null,
+      "decode_tps_definition": "not computed: exact token timing unavailable"
+    }
+  ],
+  "models_http_status": 200
+}

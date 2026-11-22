@@ -1,0 +1,7 @@
+{"event": "process", "pid": 2207298, "start_ticks": "175851895", "boot_id": "20bd7f0d-55e0-4cf5-b001-eab251f97b15", "started_unix": 1795267135.5728822, "script": "/root/syf/data_yf/yuhao_vllm_ascend_repro_yh/tools/run_download_restart.py", "tool_sha256": "6c3d7e49a2366b9b6d62593ae64e877d97d30b7c3b44364f06eb59e349127ad9"}
+{"event": "verified_existing", "path": ".gitattributes"}
+{"event": "verified_existing", "path": "README.md"}
+{"event": "verified_existing", "path": "config.json"}
+{"event": "verified_existing", "path": "configuration.json"}
+{"event": "download", "path": "engram_extra.safetensors", "size": 629310402}
+{"event": "redirect_allowed", "status": 302, "hostname": "cdn-lfs-cn-1.modelscope.cn"}
