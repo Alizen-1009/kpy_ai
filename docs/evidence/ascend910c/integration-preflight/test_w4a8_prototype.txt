@@ -1,0 +1,10 @@
+test_all_codes_and_axes (__main__.PrototypeTests.test_all_codes_and_axes) ... ok
+test_assist_abi_and_oracle (__main__.PrototypeTests.test_assist_abi_and_oracle) ... ok
+test_observed_device_scale_truncation (__main__.PrototypeTests.test_observed_device_scale_truncation) ... ok
+test_real_geometry_lightweight (__main__.PrototypeTests.test_real_geometry_lightweight) ... ok
+test_ties_zero_and_nonfinite (__main__.PrototypeTests.test_ties_zero_and_nonfinite) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.150s
+
+OK

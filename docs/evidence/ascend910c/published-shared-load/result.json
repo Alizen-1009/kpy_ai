@@ -1,0 +1,131 @@
+{
+  "layer": 30,
+  "requantized": false,
+  "device": "cpu",
+  "torch": "2.10.0+cpu",
+  "tensors": {
+    "up_codes": {
+      "shape": [
+        4608,
+        5120
+      ],
+      "dtype": "torch.int8",
+      "device": "cpu"
+    },
+    "up_scale": {
+      "shape": [
+        4608
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu"
+    },
+    "down_codes": {
+      "shape": [
+        5120,
+        2304
+      ],
+      "dtype": "torch.int8",
+      "device": "cpu"
+    },
+    "down_scale": {
+      "shape": [
+        5120
+      ],
+      "dtype": "torch.float32",
+      "device": "cpu"
+    }
+  },
+  "manifest": [
+    {
+      "name": "layers.30.ffn.shared_experts.w1.weight",
+      "shard": "quant_model_weights-00034-of-00072.safetensors",
+      "shape": [
+        2304,
+        5120
+      ],
+      "dtype": "I8",
+      "sha256": "389ea9a0ab467c3ce19e75f2a2de4e2dae2c9585bdf13f92f570fd3793dbfd37"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w1.weight_scale",
+      "shard": "quant_model_weights-00034-of-00072.safetensors",
+      "shape": [
+        2304,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "4e9cef8eadd0a105fe62be88526d6dbe81d88cb06c3cb37dc8d7a19c60c8ca74"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w1.weight_offset",
+      "shard": "quant_model_weights-00034-of-00072.safetensors",
+      "shape": [
+        2304,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w3.weight",
+      "shard": "quant_model_weights-00025-of-00072.safetensors",
+      "shape": [
+        2304,
+        5120
+      ],
+      "dtype": "I8",
+      "sha256": "2fe1214dfda4e1d18ccc7618a7cbb13b1f5792f84ba45498c461d2e156ae8ac8"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w3.weight_scale",
+      "shard": "quant_model_weights-00025-of-00072.safetensors",
+      "shape": [
+        2304,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "979db9f8db9d9af4bdf56a6df99a9c04f0247f3526243b0836ffa8bf43f2014d"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w3.weight_offset",
+      "shard": "quant_model_weights-00025-of-00072.safetensors",
+      "shape": [
+        2304,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w2.weight",
+      "shard": "quant_model_weights-00043-of-00072.safetensors",
+      "shape": [
+        5120,
+        2304
+      ],
+      "dtype": "I8",
+      "sha256": "857270ebe7f5db2285c65c38953ac17a35a690b8e6a2105b30abe430bf678c96"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w2.weight_scale",
+      "shard": "quant_model_weights-00043-of-00072.safetensors",
+      "shape": [
+        5120,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "55fdbd5189806bca66fd2d510551031d26cc04c601ee27dc9e8dc9a433866353"
+    },
+    {
+      "name": "layers.30.ffn.shared_experts.w2.weight_offset",
+      "shard": "quant_model_weights-00043-of-00072.safetensors",
+      "shape": [
+        5120,
+        1
+      ],
+      "dtype": "F32",
+      "sha256": "cc61635da46b2c9974335ea37e0b5fd660a5c8a42a89b271fa7ec2ac4b8b26f6"
+    }
+  ],
+  "model_quality_pass": null
+}

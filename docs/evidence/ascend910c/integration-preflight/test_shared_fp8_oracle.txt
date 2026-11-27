@@ -1,0 +1,10 @@
+test_all_finite_fp8_codes (__main__.SharedOracleTests.test_all_finite_fp8_codes) ... ok
+test_block_axes_and_tail (__main__.SharedOracleTests.test_block_axes_and_tail) ... ok
+test_decoder_rejects (__main__.SharedOracleTests.test_decoder_rejects) ... ok
+test_full_chain_against_dequantized_reference (__main__.SharedOracleTests.test_full_chain_against_dequantized_reference) ... ok
+test_geometry_and_clamp_rejection (__main__.SharedOracleTests.test_geometry_and_clamp_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.045s
+
+OK

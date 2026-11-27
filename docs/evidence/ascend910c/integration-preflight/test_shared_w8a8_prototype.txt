@@ -1,0 +1,8 @@
+test_invalid_input (__main__.SharedW8Tests.test_invalid_input) ... ok
+test_quantizer (__main__.SharedW8Tests.test_quantizer) ... ok
+test_scalar_oracle (__main__.SharedW8Tests.test_scalar_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK
